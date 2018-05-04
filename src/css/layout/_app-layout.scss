@@ -1,0 +1,11 @@
+/* Layout: app-layout */
+
+.app-layout--error {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: $colorWhite;
+
+  #app-header,
+  #app-content {background: none;}
+
+}

@@ -1,0 +1,20 @@
+/* Shame */
+
+/* Temporary styles */
+/* https://csswizardry.com/2013/04/shame-css/ */
+
+
+.page-header {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $colorLight;
+}
+
+
+.highlight {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: lighten($colorLight, 10%);
+}
+
