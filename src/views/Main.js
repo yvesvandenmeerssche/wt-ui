@@ -140,7 +140,7 @@ export default class Main extends Component {
 
 
               <h2><b>Included Libraries</b></h2>
-              <p>The package includes a few libraries, to simplify the implementation of common requirements. Click the button below to get more info.</p>
+              <p className="mb-4">The package includes a few libraries, to simplify the implementation of common requirements.</p>
 
               <p className="mb-5">
                 <Link to="Secondary" className="btn btn-accent">Review the included libraries</Link>
@@ -148,13 +148,8 @@ export default class Main extends Component {
 
 
               <h2><b>Style Guide</b></h2>
-              <p>It was also included a style guide that showcases all the elements and components customized according to the branding guidelines of <b>Winding Tree</b>.</p>
-              <p className="mb-0">The configuration settings for the style guide are located in <code>webpack\prod\postcss.config.js</code></p>
-              <p className="mb-4">The CSS properties used to modify the style guide itself, are located in <code>css\styleguide\style.css</code></p>
-
-              <p className="mb-5">
-                <a href="/styleguide" className="btn btn-accent disabled">Review the Style Guide</a>
-              </p>
+              <p>It was also included a style guide that showcases all the UI-related assets, customized according to the branding guidelines of <b>Winding Tree</b>.</p>
+              <p className="mb-4">To review the styleguide use <code>npm run sg-s</code>.</p>
 
           </div>
         </div>
