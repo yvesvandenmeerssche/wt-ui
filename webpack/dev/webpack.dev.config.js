@@ -5,9 +5,10 @@ const {version} = require('../../package');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
-const parentDir = path.join(__dirname, '../../');
-const APP_DIR = path.resolve(parentDir, 'src');
-const BUILD_DIR = path.resolve(parentDir, 'public');
+const DIR_ROOT = path.join(__dirname, '../../');
+const DIR_SOURCE = path.resolve(DIR_ROOT, 'src') + '/';
+const DIR_PUBLIC = path.resolve(DIR_ROOT, 'public') + '/';
+
 const GIT_REV = process.env.GIT_REV || 'unknown';
 const VERSION_NUMBER = version || '0.0.0';
 
@@ -16,43 +17,47 @@ console.log('Starting App ... \n================\n');
 module.exports = {
   entry: [
     'babel-polyfill',
-    APP_DIR + '/index.js'
+    DIR_SOURCE + 'index.js'
   ],
   module: {
-    rules: [{
+    rules: [
+      {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
-    },{
-      test: /\.scss$/,
+      },
+      {
+        test: /\.scss$/,
         use: [
-          {loader: 'style-loader', options: { sourceMap: true }},
-          // {loader: 'css-loader', options: { sourceMap: true }},
+          {
+            loader: 'style-loader',
+            options: { sourceMap: true }
+          },
           {
             loader: 'postcss-loader',
             options: {
-              config: { path: './webpack/dev/' },
-              sourceMap: true
+              config: { path: DIR_ROOT + 'webpack/dev/' },
+              sourceMap: true,
             }
           },
-          { loader: 'sass-loader' }
+          {loader: 'sass-loader'}
         ]
       }
     ]
   },
   output: {
-    path: path.join(BUILD_DIR, '/'),
+    path: DIR_PUBLIC,
     filename: '[name].bundle.js',
     chunkFilename: '[name].js'
   },
   devServer: {
-    contentBase: path.join(BUILD_DIR, '/'),
+    contentBase: DIR_PUBLIC,
     historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: BUILD_DIR + '/index.html',
-      template: APP_DIR + '/index.template.html'
+      filename: DIR_PUBLIC + 'index.html',
+      template: DIR_SOURCE + 'index.template.html'
     }),
 
     // Create index.html in /public
@@ -60,6 +65,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'GIT_REV': JSON.stringify(GIT_REV),
       'VERSION_NUMBER': JSON.stringify(VERSION_NUMBER),
-    }) 
+    })
   ]
 }

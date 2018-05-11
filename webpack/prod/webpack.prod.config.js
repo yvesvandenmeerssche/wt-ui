@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const {version} = require('../../package');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -10,74 +9,58 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlMinifier = require('html-minifier').minify
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
+const DIR_ROOT = path.join(__dirname, '../../');
+const DIR_SOURCE = path.resolve(DIR_ROOT, 'src') + '/';
+const DIR_PUBLIC = path.resolve(DIR_ROOT, 'public') + '/';
 
-const parentDir = path.join(__dirname, '../../');
-const APP_DIR = path.resolve(parentDir, 'src');
-const BUILD_DIR = path.resolve(parentDir, 'public');
 const GIT_REV = process.env.GIT_REV || 'unknown';
 const VERSION_NUMBER = version || '0.0.0';
+
 console.log('Building App ... \n================\n');
 
 module.exports = {
   entry: [
     'babel-polyfill',
-    APP_DIR + '/index.js'
+    DIR_SOURCE + 'index.js'
   ],
   module: {
-    loaders: [{
+    loaders: [
+      {
       test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },{
+      },
+      {
         test: /\.scss$/,
-        // use: ExtractTextPlugin.extract({
-        //   fallback: 'style-loader',
-        //   use: [
-        //     {loader: 'css-loader'},
-        //     {
-        //       loader: 'postcss-loader',
-        //       options: {
-        //         config: {
-        //           path: './webpack/prod/'
-        //         }
-        //       }
-        //     },
-        //     { loader: 'sass-loader' }
-        //   ]
-        // })
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
           {
             loader: 'postcss-loader',
-            options: {
-              config: {
-                path: './webpack/prod/'
-              }
-            }
+            options: { config: { path: './webpack/prod/' } }
           },
-          { loader: 'sass-loader' }
+          {loader: 'sass-loader'}
         ]
       }
     ]
   },
   output: {
-    path: path.join(BUILD_DIR, '/'),
-    publicPath: path.join(BUILD_DIR, '/'),
+    path: DIR_PUBLIC,
+    publicPath: DIR_PUBLIC,
     filename: '[name].[chunkhash].bundle.js',
     chunkFilename: '[name].[chunkhash].js',
     publicPath: ''
   },
   devServer: {
-    contentBase: path.join(BUILD_DIR, '/'),
+    contentBase: DIR_PUBLIC,
     historyApiFallback: true
   },
   plugins: [
     // Copy files from /src to /public
     new CopyWebpackPlugin([
-      { from: APP_DIR + '/manifest.json', to: BUILD_DIR + '/manifest.json' },
-      { from: APP_DIR + '/img/', to: BUILD_DIR + '/img/' },
-      { from: APP_DIR + '/font/', to: BUILD_DIR + '/font/' },
+      { from: DIR_SOURCE + 'manifest.json', to: DIR_PUBLIC + 'manifest.json' },
+      { from: DIR_SOURCE + 'img/', to: DIR_PUBLIC + 'img/' },
+      { from: DIR_SOURCE + 'font/', to: DIR_PUBLIC + 'font/' },
     ]),
 
     // Optimize the images
@@ -86,22 +69,19 @@ module.exports = {
     // Minify JavaScript files
     new UglifyJsPlugin({ test: /\.js($|\?)/i }),
 
-    // Extract the CSS to an external minified file
-    // new ExtractTextPlugin('app.css'),
-
     // Create and minify index.html in /public
     new HtmlWebpackPlugin({
-      filename: BUILD_DIR + '/index.html',
-      template: APP_DIR + '/index.template.html',
+      filename: DIR_PUBLIC + 'index.html',
+      template: DIR_SOURCE + 'index.template.html',
       minify: {
-        // collapseWhitespace: true,
+        collapseWhitespace: true,
         html5: true,
         minifyCSS: true,
         // minifyJS: true,
         removeComments: true,
         removeEmptyAttributes: true,
         removeAttributeQuotes: true
-      }    
+      }
     }),
     new webpack.DefinePlugin({
       'GIT_REV': JSON.stringify(GIT_REV),
