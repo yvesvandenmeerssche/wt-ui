@@ -13,7 +13,7 @@ import Button from '../components/Button';
 
 
 export const actions = {
-  onClick: action('Clicked')
+  onClick: action('clicked')
 };
 
 
@@ -38,5 +38,3 @@ storiesOf('Buttons/Links', module)
   .add('Third', () => (
     <Button onClick={linkTo('Buttons/Links')}>Go to "Start"</Button>
   ));
-
-
