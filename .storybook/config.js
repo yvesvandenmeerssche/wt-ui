@@ -4,7 +4,6 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from "@storybook/addon-options";
 import { configureViewport } from '@storybook/addon-viewport';
-import { setDefaults } from '@storybook/addon-info';
 
 
 // Included styles
@@ -15,15 +14,9 @@ import '../src/css/app.scss';
 setOptions({
   name: "Winding Tree UI",
   url: "https://github.com/windingtree/wt-ui",
-  // showAddonPanel: false,
   addonPanelInRight: true,
-});
-
-
-// Addon-info
-setDefaults({
-  header: false,
-  // inline: true,
+  // showAddonPanel: false,
+  // sidebarAnimations: false,
 });
 
 
