@@ -18,7 +18,7 @@ export const actions = {
 
 
 // BUTTONS (Actions)
-storiesOf('Buttons/Actions', module)
+storiesOf('Components/Buttons/Actions', module)
   .add('Text', () => (
     <Button {...actions}>Say Hi</Button>
   ))
@@ -28,15 +28,15 @@ storiesOf('Buttons/Actions', module)
 
 
 // BUTTONS (Linked)
-storiesOf('Buttons/Links', module)
+storiesOf('Components/Buttons/Links', module)
   .add('First', () => (
-    <Button onClick={linkTo('Buttons/Links', 'Second')}>Go to "Second"</Button>
+    <Button onClick={linkTo('Components/Buttons/Links', 'Second')}>Go to "Second"</Button>
   ))
   .add('Second', () => (
-    <Button onClick={linkTo('Buttons/Links', 'First')}>Go to "First"</Button>
+    <Button onClick={linkTo('Components/Buttons/Links', 'First')}>Go to "First"</Button>
   ))
   .add('Third', () => (
-    <Button onClick={linkTo('Buttons/Links')}>Go to "Start"</Button>
+    <Button onClick={linkTo('Components/Buttons/Links')}>Go to "Start"</Button>
   ));
 
 
