@@ -10,9 +10,9 @@ class Button extends Component {
   }
 
   render() {
-
+    const { onClick } = this.props;
     return (
-      <button id="btn" className="btn btn-primary">
+      <button id="btn" className="btn btn-primary" onClick={onClick}>
         {this.props.children}
       </button>
     );
