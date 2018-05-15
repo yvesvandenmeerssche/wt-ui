@@ -34,7 +34,13 @@ module.exports = {
           },
           {loader: 'sass-loader'}
         ]
-      }
+      },
+      {
+        test: /\.md$/,
+        use: [
+          { loader: 'markdown-loader' }
+        ],
+      },
     ]
   }
 };
