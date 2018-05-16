@@ -12,29 +12,34 @@ import Button from '../components/Button';
 /* Components - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-export const actions = {
-  onClick: action('clicked')
-};
-
-
 // BUTTONS (Actions)
 storiesOf('Components/Buttons/Actions', module)
   .add('Text', () => (
-    <Button {...actions}>Say Hi</Button>
+    <Button className="btn btn-primary" onClick={ action('clicked') }>
+      Say Hi
+    </Button>
   ))
   .add('Emoji', () => (
-    <Button onClick={action('clicked')}><span role="img" aria-label="so cool">😀</span></Button>
+    <Button className="btn btn-primary" onClick={ action('clicked') }>
+      <span role="img" aria-label="so cool">😀</span>
+    </Button>
   ))
 
 
 // BUTTONS (Linked)
 storiesOf('Components/Buttons/Links', module)
   .add('First', () => (
-    <Button onClick={linkTo('Components/Buttons/Links', 'Second')}>Go to "Second"</Button>
+    <Button className="btn btn-primary" onClick={ linkTo('Components/Buttons/Links', 'Second') }>
+      Go to "Second"
+    </Button>
   ))
   .add('Second', () => (
-    <Button onClick={linkTo('Components/Buttons/Links', 'First')}>Go to "First"</Button>
+    <Button className="btn btn-info" onClick={ linkTo('Components/Buttons/Links', 'First') }>
+      Go to "First"
+    </Button>
   ))
   .add('Third', () => (
-    <Button onClick={linkTo('Components/Buttons/Links')}>Go to "Start"</Button>
+    <Button className="btn btn-danger" onClick={ linkTo('Components/Buttons/Links') }>
+      Go to "Start"
+    </Button>
   ));
