@@ -1,1 +1,26 @@
-<!-- <link rel="stylesheet" href="../src/font/wt-icons.css"/> -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800" rel="stylesheet">
+
+<script>
+  // TEST / WIP
+  var d = document.getElementsByTagName("body");
+
+  let winWidth = window.innerWidth;
+  let winHeight = window.innerHeight;
+  let isPortrait = (winWidth < winHeight) || false;
+  console.log(`w: ${winWidth} h: ${winHeight} isPortrait: ${isPortrait ? 'yes' : 'no'}`);
+
+  getDimensions = () => {
+    winWidth = window.innerWidth;
+    winHeight = window.innerHeight;
+    isPortrait = (winWidth < winHeight) || false;
+
+    console.log(`w: ${winWidth} h: ${winHeight} isPortrait: ${isPortrait ? 'yes' : 'no'}`);
+  }
+
+  window.addEventListener("resize", () => {
+    getDimensions;
+  });
+
+</script>
+
+

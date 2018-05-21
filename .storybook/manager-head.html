@@ -40,3 +40,33 @@
     display: none!important;
   }
 </style>
+
+
+<script>
+  // TEST / WIP
+  setTimeout(() => {
+    var docRoot = document.getElementById("root");
+    var demoDevice = document.getElementById("device");
+
+    var iframe = document.getElementById("storybook-preview-iframe");
+    var iframeParent = document.getElementById("storybook-preview-iframe").parentNode;
+    var docMarkdown = iframe.contentWindow.document.getElementsByTagName("markdown-body");
+
+    demoDevice.addEventListener("change", function() {
+      if(demoDevice.value !== "default")  {
+        console.log('show md');
+        docRoot.classList.add('hide-markdown');
+        iframeParent.classList.add('bg-danger');
+        docMarkdown.classList.add('d-none');
+      } else {
+        console.log('hide md');
+        docRoot.classList.remove('hide-markdown');
+        iframeParent.classList.remove('bg-danger');
+        docMarkdown.classList.remove('d-none');
+      }
+    });
+
+  }, 500);
+</script>
+
+
