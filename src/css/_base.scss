@@ -26,6 +26,13 @@ body {
   font-family: $fontPrimary;
 }
 
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $fontPrimary;
+  color: $colorDark;
+}
+
 h1, h2,
 .h1, .h2 {
   b, strong {font-weight: 800}
@@ -33,11 +40,6 @@ h1, h2,
 h3, h4, h5, h6,
 .h3, .h4, .h5, .h6 {
   b, strong {font-weight: 600}
-}
-
-h2, h3, h4, h5, h6,
-.h2, .h3, .h4, .h5, .h6 {
-  color: $colorDark;
 }
 
 a {
