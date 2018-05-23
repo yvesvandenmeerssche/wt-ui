@@ -20,6 +20,7 @@ module.exports = {
             loader: 'style-loader',
             options: { sourceMap: true }
           },
+          "css-loader",
           {
             loader: 'postcss-loader',
             options: {
@@ -29,11 +30,11 @@ module.exports = {
                   precss,
                   postcssCssnext,
                 ];
-              },
+             },
             }
           },
-          {loader: 'sass-loader'}
-        ]
+          "sass-loader"
+        ],
       },
       {
         test: /\.md$/,
