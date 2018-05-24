@@ -32,15 +32,19 @@
 }
 
 .doc-preview {
-  @media all and (max-width: 768px) {
-    border: none!important;
-    min-width: calc(100% + 60px);
-    margin: 0 -30px!important;
-  }
+  $borderStyle: 5px solid #f7f7f7;
 
   width: auto;
-  $borderStyle: 5px solid #f7f7f7;
-  border: $borderStyle!important;
+  border: $borderStyle;
+  padding: 20px 25px;
+  margin: 25px 0;
+  border-radius: 3px;
+
+  @media all and (max-width: 768px) {
+    border: none;
+    min-width: 100%;
+    margin: 0 -30px;
+  }
 
   & + .markdown-body > .language-html:first-of-type,
   & + .markdown-body > p:first-of-type:empty + .language-html {
@@ -50,10 +54,19 @@
     border-top-right-radius: 0;
   }
 
+  &.doc-preview--clean {
+    margin-bottom: 0;
+    padding: 20px 0;
+    border: 0;
+  }
+
+  &.doc-preview--layout {
+    position: relative;
+    height: 500px;
+    padding: 0;
+  }
+
 }
-
-
-
 
 
 // Resizable blocks in storybooks

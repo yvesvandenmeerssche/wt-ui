@@ -38,34 +38,19 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 
-const withSimplePreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview"
-      style={{
-        padding: '10px 25px',
-        border: '1px solid #ddd',
-        margin: '25px 0',
-        borderRadius: 3,
-      }}
-    >
-      {children}
-    </div>
-  )
+const withPreview = withDocs({
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview"> {children} </div>
 });
 
+const withCodePreview = withDocs({
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview mb-0"> {children} </div>
+});
 
 const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--clean"
-      style={{
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview doc-preview--clean"> {children} </div>
 });
 
 
@@ -109,7 +94,7 @@ storiesOf('Typography', module)
     </table>
   ))
     // Display Headings
-    .add('    Display headings', withSimplePreview(Display__Headings, () =>
+    .add('    Display headings', withCodePreview(Display__Headings, () =>
       <table className="table">
         <tr> <td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td> </tr>
         <tr> <td> <h1 className="display-2">Display 2</h1> </td> </tr>
@@ -119,14 +104,14 @@ storiesOf('Typography', module)
     ))
 
   // Lead
-  .add('Lead', withSimplePreview(Lead, () =>
+  .add('Lead', withCodePreview(Lead, () =>
     <p className="lead">
       Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
     </p>
   ))
 
   // Inline Text Elements
-  .add('Inline text elements', withSimplePreview(InlineTextElements, () =>
+  .add('Inline text elements', withCodePreview(InlineTextElements, () =>
     <div>
       <p>You can use the mark tag to <mark>highlight</mark> text.</p>
       <p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -150,7 +135,7 @@ storiesOf('Typography', module)
   )
 
   // Abbreviations
-  .add('Abbreviations', withSimplePreview(Abbreviations, () =>
+  .add('Abbreviations', withCodePreview(Abbreviations, () =>
     <div>
       <p><abbr title="attribute">attr</abbr></p>
       <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
@@ -158,18 +143,18 @@ storiesOf('Typography', module)
   ))
 
   // Blockquotes
-  .add('Blockquotes', withSimplePreview(Blockquotes, () =>
+  .add('Blockquotes', withCodePreview(Blockquotes, () =>
   <blockquote className="blockquote">
     <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </blockquote>
   ))
-    .add('    Naming a source', withSimplePreview(Blockquotes__NamingASource, () =>
+    .add('    Naming a source', withCodePreview(Blockquotes__NamingASource, () =>
       <blockquote className="blockquote">
         <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
       </blockquote>
     ))
-    .add('    Alignment', withSimplePreview(Blockquotes__Alignment, () =>
+    .add('    Alignment', withCodePreview(Blockquotes__Alignment, () =>
       <div>
         <blockquote className="blockquote text-center">
           <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -210,40 +195,33 @@ storiesOf('Typography', module)
     </ul>
   </Resizable>
   ))
-    .add('    Unstyled', withCleanPreview(Lists__Unstyled, () =>
-      <Resizable
-        className="resizable"
-        defaultSize={{ width: 'auto', height: 'auto' }}
-        bounds={'parent'}
-        enable={{ top:false, right:true, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false }}
-      >
-        <ul className="list-unstyled">
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Consectetur adipiscing elit</li>
-          <li>Integer molestie lorem at massa</li>
-          <li>Facilisis in pretium nisl aliquet</li>
-          <li>Nulla volutpat aliquam velit
-            <ul>
-              <li>Phasellus iaculis neque</li>
-              <li>Purus sodales ultricies</li>
-              <li>Vestibulum laoreet porttitor sem</li>
-              <li>Ac tristique libero volutpat at</li>
-            </ul>
-          </li>
-          <li>Faucibus porta lacus fringilla vel</li>
-          <li>Aenean sit amet erat nunc</li>
-          <li>Eget porttitor lorem</li>
-        </ul>
-      </Resizable>
+    .add('    Unstyled', withCodePreview(Lists__Unstyled, () =>
+      <ul className="list-unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ul>
       ))
-    .add('    Inline', withSimplePreview(Lists__Inline, () =>
+    .add('    Inline', withCodePreview(Lists__Inline, () =>
       <ul className="list-inline">
         <li className="list-inline-item">Lorem ipsum</li>
         <li className="list-inline-item">Phasellus iaculis</li>
         <li className="list-inline-item">Nulla volutpat</li>
       </ul>
     ))
-    .add('    Description', withSimplePreview(Lists__Description, () =>
+    .add('    Description', withCodePreview(Lists__Description, () =>
       <dl className="row">
         <dt className="col-sm-3">Description lists</dt>
         <dd className="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -273,25 +251,25 @@ storiesOf('Typography', module)
 
   // Code
   .add('Code', doc(Code))
-    .add('    Inline code', withSimplePreview(Code__Inline, () =>
+    .add('    Inline code', withCodePreview(Code__Inline, () =>
         <div>
           For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         </div>
       ))
-    .add('    Code blocks', withSimplePreview(Code__Blocks, () =>
+    .add('    Code blocks', withCodePreview(Code__Blocks, () =>
       <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
       &lt;p&gt;And another line of sample text here...&lt;/p&gt;
       </code></pre>
     ))
-    .add('    Variables', withSimplePreview(Code__Variables, () =>
+    .add('    Variables', withCodePreview(Code__Variables, () =>
       <span><var>y</var> = <var>m</var><var>x</var> + <var>b</var></span>
     ))
-    .add('    User input', withSimplePreview(Code__UserInput, () =>
+    .add('    User input', withCodePreview(Code__UserInput, () =>
       <div>
         To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br/>
         To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
       </div>
     ))
-    .add('    Sample output', withSimplePreview(Code__SampleOutput, () =>
+    .add('    Sample output', withCodePreview(Code__SampleOutput, () =>
       <samp>This text is meant to be treated as sample output from a computer program.</samp>
     ))

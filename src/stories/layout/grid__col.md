@@ -14,7 +14,7 @@ Eextra large _( 1140px)_ | `.col-xl-[W]`   | 1140px
 
 `[W]` indicates the number of columns you’d like to use out of the possible **12 per row**. So, if you want three equal-width columns across, you can use `.col-4`.
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row mb-3">
       <div class="bg-light py-2 border border-secondary col-12 col-md-8">.col-12 .col-md-8</div>
@@ -57,7 +57,7 @@ Grid breakpoints are based on minimum width media queries, meaning they apply to
 
 Columns without a specified width will automatically layout as equal width columns.
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row">
       <div class="col bg-light py-2 border border-secondary">

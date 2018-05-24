@@ -8,7 +8,7 @@ Layouts are created by using three different CSS classes:  `.container`, `.row` 
 
 In a grid layout, content must be placed within columns, and only columns may be immediate children of rows. Rows may be immediate children of columns or a container.
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row">
       <div class="col bg-light py-2 border border-secondary">

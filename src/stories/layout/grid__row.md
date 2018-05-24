@@ -3,7 +3,7 @@
 Rows are wrappers for columns. Each column has horizontal padding _(gutter)_ which createate an space between them. Rows use negative margins to make the content in your columns align correctly to the left and right sides.
 
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row">
       <div class="col border border-muted">
@@ -29,7 +29,7 @@ Rows are wrappers for columns. Each column has horizontal padding _(gutter)_ whi
 
 To remove the margin from rows and padding from columns use the `.no-gutters` class on the `.row`.
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row no-gutters">
       <div class="col">

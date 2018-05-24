@@ -6,7 +6,7 @@ Most layouts do not require to use nested containers.
 
 **Responsive, fixed-width container** _(its `max-width` changes at each breakpoint)._
 
-<div class="doc-preview py-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container" style="max-width: 70%">
     <div class="row" style="max-width: 70%; margin: 0 auto;">
       <div class="col py-5 mr-1 bg-warning rounded"
@@ -28,7 +28,7 @@ Most layouts do not require to use nested containers.
 
 **Fluid-width container** _(it’s 100% wide all the time)._
 
-<div class="doc-preview py-3 px-3">
+<div class="doc-preview mb-0 py-3 px-3">
   <div class="container">
     <div class="row">
       <div class="col py-5 mr-1 bg-warning rounded">

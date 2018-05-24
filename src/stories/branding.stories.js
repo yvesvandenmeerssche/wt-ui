@@ -25,36 +25,21 @@ const colorBox = {
   background: 'blue',
 }
 
-
-const withSimplePreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview"
-      style={{
-        padding: '10px 25px',
-        border: '1px solid #ddd',
-        margin: '25px 0',
-        borderRadius: 3,
-      }}
-    >
-      {children}
-    </div>
-  )
+const withPreview = withDocs({
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview"> {children} </div>
 });
 
+const withCodePreview = withDocs({
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview mb-0"> {children} </div>
+});
 
 const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--clean"
-      style={{
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
+  PreviewComponent: ({ children }) =>
+    <div className="doc-preview doc-preview--clean"> {children} </div>
 });
+
 
 
 storiesOf('Branding', module)
@@ -138,7 +123,7 @@ storiesOf('Branding', module)
   </div>
 ))
 
-.add('Icons', withSimplePreview(Icons, () =>
+.add('Icons', withCodePreview(Icons, () =>
   <div className="h3">
     <i className="wicon-whatshot"/>
     <i className="wicon-back"/>
