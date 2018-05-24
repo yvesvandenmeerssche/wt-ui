@@ -9,11 +9,11 @@ import { withReadme, withDocs, doc } from 'storybook-readme';
 import Resizable from 're-resizable';
 
 // Readme files
-import Fonts from './general/fonts.md';
-import Fonts__Headings from './general/fonts__headings.md';
-import Colors from './general/colors.md';
-import Icons from './general/icons.md';
-import MediaAssets from './general/media-assets.md';
+import Fonts from './branding/fonts.md';
+import Fonts__Headings from './branding/fonts__headings.md';
+import Colors from './branding/colors.md';
+import Icons from './branding/icons.md';
+import MediaAssets from './branding/media-assets.md';
 
 
 // COMPONENTS
@@ -57,7 +57,7 @@ const withCleanPreview = withDocs({
 });
 
 
-storiesOf('General', module)
+storiesOf('Branding', module)
 
 .add('Fonts', withCleanPreview(Fonts, () =>
   <div className="text-center">
