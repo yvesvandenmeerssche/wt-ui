@@ -13,4 +13,4 @@
 * Use `npm run storybook-start` to run the static version of Storybook.
 
 #### npm
-* Use `npm runnpm-build` to compile `scss` files.
+* Use `npm run npm-build` to compile `scss` files.
