@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Included addons
-import { withReadme, withDocs, doc } from 'storybook-readme';
+import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
@@ -16,21 +16,8 @@ import Dependencies from './overview/dependencies.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-
-const withUnborderedPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      style={{
-        padding: 0,
-        border: 0,
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
+// HOCs
+import { withUnborderedPreview } from './HOCs/with-docs'
 
 storiesOf('Overview', module)
   .add('About', doc(About))

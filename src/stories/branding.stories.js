@@ -3,7 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Included addons
-import { withReadme, withDocs, doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
@@ -19,28 +18,14 @@ import MediaAssets from './branding/media-assets.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+// HOCs
+import { withCodePreview, withCleanPreview } from './HOCs/with-docs'
+
 
 const colorBox = {
   height: 120,
   background: 'blue',
 }
-
-const withPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview"> {children} </div>
-});
-
-const withCodePreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview mb-0"> {children} </div>
-});
-
-const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview doc-preview--clean"> {children} </div>
-});
-
-
 
 storiesOf('Branding', module)
 

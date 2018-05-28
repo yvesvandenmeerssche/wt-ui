@@ -21,42 +21,9 @@ import Footer from './content-blocks/footer.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+// HOCs
+import { withLayoutPreview } from './HOCs/with-docs'
 
-const withPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview"> {children} </div>
-});
-
-const withCodePreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview mb-0"> {children} </div>
-});
-
-const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview doc-preview--clean"> {children} </div>
-});
-
-const withLayoutPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview doc-preview--layout"> {children} </div>
-});
-
-
-const withUnborderedPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--bordered"
-      style={{
-        padding: 0,
-        border: 0,
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
 
 
 // APP HEADER

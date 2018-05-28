@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Included addons
-import { withReadme, withDocs, doc } from 'storybook-readme';
+import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
@@ -38,20 +38,8 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 
-const withPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview"> {children} </div>
-});
-
-const withCodePreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview mb-0"> {children} </div>
-});
-
-const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) =>
-    <div className="doc-preview doc-preview--clean"> {children} </div>
-});
+// HOCs
+import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 
 storiesOf('Typography', module)
