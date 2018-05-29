@@ -30,43 +30,78 @@
 <link rel="icon" type="image/png" sizes="32x32" href="//windingtree.com/images/icons/favicon.png">
 
 <style>
-  ul[style*="min-width: 200px"] > li > div > ul:first-child > li > div:first-child > div:first-child {
+  /* Global */
+  body::before {
+    content: "Winding Tree UI Kit";
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 600;
+    display: block;
+    padding: 0 15px;
+    height: 50px;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 50px;
+    color: #fff;
+    border-bottom: 1px solid #1ac592;
+    background: #1ac592;
+    background: linear-gradient(135deg,  #00df9e 0%, #0b8fdf 100%);
+  }
+  [style*="background-color: rgb(247, 247, 247)"] {
+    background: #fff!important;
+  }
+  #root > div > div[style*="height: 100vh;"] > .vertical {
+    padding-top: 55px;
+    height: calc(100vh - 55px)!important;
+  }
+  div.Pane.vertical.Pane1[style*="width: 250px"] div[style="height: calc(100vh - 105px); margin-top: 10px; overflow: auto;"]  {
+    height: calc(100vh - 150px)!important;
+  }
+
+  /* Menu */
+
+  [role="menuitem"] {
     margin: 10px 0 5px 0;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: .1em;
+    font-weight:bold;
   }
-  ul[style*="min-width: 200px"] > li > div > ul:first-child > li > div:first-child > div:first-child > div:first-child {
-    display: none!important;
+
+  [role="menuitem"] > [data-radium] > div:first-child {
+    opacity: .4;
   }
+
+  [role="menuitem"] + div > ul {
+    margin-bottom: 20px;
+  }
+
+  [style="width: 100%; height: 100%; background-color: rgb(255, 255, 255); border: 1px solid rgb(236, 236, 236); border-radius: 4px;"] {
+    border-top: none!important;
+    border-bottom: none!important;
+    border-right: none!important;
+  }
+
+  [class*="css-glamorous-routedlink--1"] {
+    color: #fff!important;
+    background: #5709df!important;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  [class*="css-glamorous-routedlink"] {
+    margin-bottom: 1px;
+  }
+
+  [class*="css-glamorous-routedlink"]:hover {
+    color: #999;
+  }
+
+
 </style>
 
 
-<script>
-  // TEST / WIP
-  setTimeout(() => {
-    var docRoot = document.getElementById("root");
-    var demoDevice = document.getElementById("device");
 
-    var iframe = document.getElementById("storybook-preview-iframe");
-    var iframeParent = document.getElementById("storybook-preview-iframe").parentNode;
-    var docMarkdown = iframe.contentWindow.document.getElementsByTagName("markdown-body");
-
-    demoDevice.addEventListener("change", function() {
-      if(demoDevice.value !== "default")  {
-        console.log('show md');
-        docRoot.classList.add('hide-markdown');
-        iframeParent.classList.add('bg-danger');
-        docMarkdown.classList.add('d-none');
-      } else {
-        console.log('hide md');
-        docRoot.classList.remove('hide-markdown');
-        iframeParent.classList.remove('bg-danger');
-        docMarkdown.classList.remove('d-none');
-      }
-    });
-
-  }, 500);
-</script>
 
 
