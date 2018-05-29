@@ -14,6 +14,7 @@ import Display__Headings from './typography/display__headings.md';
 
 import Lead from './typography/lead.md';
 import InlineTextElements from './typography/inline-text-elements.md';
+import textUtilities from './typography/text-utilities.md';
 import Abbreviations from './typography/abbreviations.md';
 
 import Blockquotes from './typography/blockquotes.md';
@@ -113,14 +114,7 @@ storiesOf('Typography', module)
 ))
 
   // Text Utilities
-  .add('Text utilities', () =>
-    <div className="markdown-body">
-      <h1>Text utilities</h1>
-      <p>
-        Change text alignment, transform, style, weight, and color with our <a href="#" style={{pointerEvents: 'none'}}>text utilities</a> and <a href="#" style={{pointerEvents: 'none'}}>color utilities</a>.
-      </p>
-    </div>
-  )
+  .add('Text utilities', doc(textUtilities))
 
   // Abbreviations
   .add('Abbreviations', withCodePreview(Abbreviations, () =>
