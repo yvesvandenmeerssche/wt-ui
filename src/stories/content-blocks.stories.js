@@ -21,70 +21,18 @@ import Footer from './content-blocks/footer.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+// HOCs
+import { withLayoutPreview } from './HOCs/with-docs'
 
-const withSimplePreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview"
-      style={{
-        padding: '10px 25px',
-        border: '1px solid #ddd',
-        margin: '25px 0',
-        borderRadius: 3,
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
-
-const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--clean"
-      style={{
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
-
-const withUnborderedPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--bordered"
-      style={{
-        padding: 0,
-        border: 0,
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
 
 
 // APP HEADER
 storiesOf('Content Blocks', module)
 .addDecorator(StoryRouter())
-// .addDecorator(story => (
-//   <div style={{margin: '-20px'}}>
-//     {story()}
-//   </div>
-// ))
-.add('Header', withCleanPreview(Header, () => (
-  <div style={{margin: '0 -30px'}}>
+.add('Header', withLayoutPreview(Header, () => (
     <AppHeader/>
-  </div>
 )))
 .add('Content', doc(Content))
-.add('Footer', withReadme(Footer, () => (
-  <div style={{margin: '-20px'}}>
+.add('Footer', withLayoutPreview(Footer, () => (
     <AppFooter/>
-  </div>
 )));

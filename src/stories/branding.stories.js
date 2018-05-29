@@ -3,21 +3,23 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Included addons
-import { withReadme, withDocs, doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
 
 // Readme files
-import Fonts from './general/fonts.md';
-import Fonts__Headings from './general/fonts__headings.md';
-import Colors from './general/colors.md';
-import Icons from './general/icons.md';
-import MediaAssets from './general/media-assets.md';
+import Fonts from './branding/fonts.md';
+import Fonts__Headings from './branding/fonts__headings.md';
+import Colors from './branding/colors.md';
+import Icons from './branding/icons.md';
+import MediaAssets from './branding/media-assets.md';
 
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+// HOCs
+import { withCodePreview, withCleanPreview } from './HOCs/with-docs'
 
 
 const colorBox = {
@@ -25,39 +27,7 @@ const colorBox = {
   background: 'blue',
 }
 
-
-const withSimplePreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview"
-      style={{
-        padding: '10px 25px',
-        border: '1px solid #ddd',
-        margin: '25px 0',
-        borderRadius: 3,
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
-
-const withCleanPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--clean"
-      style={{
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
-
-storiesOf('General', module)
+storiesOf('Branding', module)
 
 .add('Fonts', withCleanPreview(Fonts, () =>
   <div className="text-center">
@@ -138,7 +108,7 @@ storiesOf('General', module)
   </div>
 ))
 
-.add('Icons', withSimplePreview(Icons, () =>
+.add('Icons', withCodePreview(Icons, () =>
   <div className="h3">
     <i className="wicon-whatshot"/>
     <i className="wicon-back"/>

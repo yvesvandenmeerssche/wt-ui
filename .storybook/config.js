@@ -15,6 +15,7 @@ setOptions({
   name: "Winding Tree UI",
   url: "https://github.com/windingtree/wt-ui",
   addonPanelInRight: true,
+  // Options to change presentation
   // showAddonPanel: false,
   // sidebarAnimations: false,
 });
@@ -25,14 +26,9 @@ addDecorator(story => (
   </div>
 ));
 
-
-// automatically import all files ending in *.stories.js
-// const req = require.context('../src/stories', true, /.stories.js$/);
 function loadStories() {
-  // req.keys().forEach(filename => req(filename));
-
   require('../src/stories/overview.stories.js');
-  require('../src/stories/general.stories.js');
+  require('../src/stories/branding.stories.js');
   require('../src/stories/layout.stories.js');
   require('../src/stories/content-blocks.stories.js');
   require('../src/stories/typography.stories.js');
