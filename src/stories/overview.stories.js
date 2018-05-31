@@ -16,9 +16,6 @@ import Dependencies from './overview/dependencies.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-// HOCs
-import { withUnborderedPreview } from './HOCs/with-docs'
-
 storiesOf('Overview', module)
   .add('About', doc(About))
   .add('Dependencies', doc(Dependencies))
