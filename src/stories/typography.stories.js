@@ -7,6 +7,7 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
+import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 // Readme files
 import Headings from './typography/headings.md';
@@ -36,10 +37,6 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-
-// HOCs
-import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 
 storiesOf('Typography', module)

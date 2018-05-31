@@ -16,6 +16,12 @@ import Dependencies from './overview/dependencies.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+
+//OVERVIEW
 storiesOf('Overview', module)
+
+  // ABOUT
   .add('About', doc(About))
+
+  // DEPENDENCIES
   .add('Dependencies', doc(Dependencies))

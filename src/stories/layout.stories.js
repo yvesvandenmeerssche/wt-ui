@@ -7,6 +7,7 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
+import { withCodePreview } from './HOCs/with-docs'
 
 // Readme files
 import Grid from './layout/grid.md';
@@ -21,17 +22,17 @@ import LayoutUtilities from './layout/layout-utilities.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-// HOCs
-import { withCodePreview } from './HOCs/with-docs'
 
 storiesOf('Layout', module)
 
+  // GRID
   .add('Grid', doc(Grid))
     .add('    Container', doc(Grid__Container))
     .add('    Row', doc(Grid__Row))
     .add('    Column', doc(Grid__Col))
     .add('    Grid Adjustment', doc(Grid__Adjustment))
 
+  // MEDIA OBJECT
   .add('Media Object', withCodePreview(MediaObject, () =>
     <div className="media">
       <img className="mr-3" src="http://via.placeholder.com/120x120" alt="Generic placeholder image"/>
@@ -44,5 +45,5 @@ storiesOf('Layout', module)
     </div>
   ))
 
-
+  // UTILITIES FOR LAYOUT
   .add('Utilities for layout', doc(LayoutUtilities))
