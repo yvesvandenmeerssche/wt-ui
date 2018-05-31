@@ -19,15 +19,10 @@
 }
 
 
-// Reduce the whitespace in the top to make
-// it consistent with components.
+// Reduce the whitespace in the top
 .markdown-body {
   > h1:first-of-type {
-    margin-top: -25px;
-  }
-
-  @media all and (max-width: 768px) {
-    display: none!important;
+    margin-top: -8px!important;
   }
 }
 

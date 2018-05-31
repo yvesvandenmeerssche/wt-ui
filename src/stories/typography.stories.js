@@ -12,9 +12,12 @@ import Resizable from 're-resizable';
 import Headings from './typography/headings.md';
 import Display__Headings from './typography/display__headings.md';
 
-import Lead from './typography/lead.md';
 import InlineTextElements from './typography/inline-text-elements.md';
+import Lead from './typography/lead.md';
+import Links from './typography/links.md';
+import Dividers from './typography/dividers.md';
 import Abbreviations from './typography/abbreviations.md';
+import textUtilities from './typography/text-utilities.md';
 
 import Blockquotes from './typography/blockquotes.md';
 import Blockquotes__NamingASource from './typography/blockquotes__naming_a_source.md';
@@ -25,7 +28,6 @@ import Lists__Unstyled from './typography/lists__unstyled.md';
 import Lists__Inline from './typography/lists__inline.md';
 import Lists__Description from './typography/lists__description.md';
 
-import Code from './typography/code.md';
 import Code__Inline from './typography/code__inline.md';
 import Code__Blocks from './typography/code__blocks.md';
 import Code__Variables from './typography/code__variables.md';
@@ -42,10 +44,10 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 
-storiesOf('Typography', module)
+storiesOf('Typography/-Headings', module)
 
   // Headings
-  .add('Headings', withCleanPreview(Headings, () =>
+  .add('Overview', withCleanPreview(Headings, () =>
     <table className="table table-bordered">
       <thead>
         <tr>
@@ -81,25 +83,21 @@ storiesOf('Typography', module)
       </tbody>
     </table>
   ))
-    // Display Headings
-    .add('    Display headings', withCodePreview(Display__Headings, () =>
-      <table className="table">
-        <tr> <td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td> </tr>
-        <tr> <td> <h1 className="display-2">Display 2</h1> </td> </tr>
-        <tr> <td> <h1 className="display-3">Display 3</h1> </td> </tr>
-        <tr> <td> <h1 className="display-4">Display 4</h1> </td> </tr>
-      </table>
-    ))
-
-  // Lead
-  .add('Lead', withCodePreview(Lead, () =>
-    <p className="lead">
-      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-    </p>
+  // Display Headings
+  .add('Display headings', withCodePreview(Display__Headings, () =>
+    <table className="table">
+      <tr> <td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td> </tr>
+      <tr> <td> <h1 className="display-2">Display 2</h1> </td> </tr>
+      <tr> <td> <h1 className="display-3">Display 3</h1> </td> </tr>
+      <tr> <td> <h1 className="display-4">Display 4</h1> </td> </tr>
+    </table>
   ))
 
+
+  storiesOf('Typography/-Inline text elements', module)
+
   // Inline Text Elements
-  .add('Inline text elements', withCodePreview(InlineTextElements, () =>
+  .add('Overview', withCodePreview(InlineTextElements, () =>
     <div>
       <p>You can use the mark tag to <mark>highlight</mark> text.</p>
       <p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -110,17 +108,29 @@ storiesOf('Typography', module)
       <p><strong>This line rendered as bold text.</strong></p>
       <p><em>This line rendered as italicized text.</em></p>
     </div>
-))
+  ))
 
-  // Text Utilities
-  .add('Text utilities', () =>
-    <div className="markdown-body">
-      <h1>Text utilities</h1>
-      <p>
-        Change text alignment, transform, style, weight, and color with our <a href="#" style={{pointerEvents: 'none'}}>text utilities</a> and <a href="#" style={{pointerEvents: 'none'}}>color utilities</a>.
-      </p>
+  // Lead
+  .add('Lead', withCodePreview(Lead, () =>
+    <p className="lead">
+      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+    </p>
+  ))
+
+  // Links
+  .add('Links', withCodePreview(Links, () =>
+    <a href="https://windingtree.com" target="_blank">Link sample.</a>
+  ))
+
+  // Dividers
+  .add('Dividers', withCodePreview(Dividers, () =>
+    <div>
+      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      <hr/>
+      <p>Duis mollis, est non commodo luctus.</p>
     </div>
-  )
+
+  ))
 
   // Abbreviations
   .add('Abbreviations', withCodePreview(Abbreviations, () =>
@@ -130,34 +140,41 @@ storiesOf('Typography', module)
     </div>
   ))
 
+  // Text Utilities
+  .add('Text utilities', doc(textUtilities))
+
+storiesOf('Typography/-Blockquotes', module)
+
   // Blockquotes
-  .add('Blockquotes', withCodePreview(Blockquotes, () =>
+  .add('Overview', withCodePreview(Blockquotes, () =>
   <blockquote className="blockquote">
     <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </blockquote>
   ))
-    .add('    Naming a source', withCodePreview(Blockquotes__NamingASource, () =>
-      <blockquote className="blockquote">
+  .add('Naming a source', withCodePreview(Blockquotes__NamingASource, () =>
+    <blockquote className="blockquote">
+      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  ))
+  .add('Alignment', withCodePreview(Blockquotes__Alignment, () =>
+    <div>
+      <blockquote className="blockquote text-center">
         <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
       </blockquote>
-    ))
-    .add('    Alignment', withCodePreview(Blockquotes__Alignment, () =>
-      <div>
-        <blockquote className="blockquote text-center">
-          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </blockquote>
-        <hr/>
-        <blockquote className="blockquote text-right">
-          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </blockquote>
-      </div>
-    ))
+      <hr/>
+      <blockquote className="blockquote text-right">
+        <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+  ))
 
+
+storiesOf('Typography/-Lists', module)
   // Lists
-  .add('Lists', withCleanPreview(Lists, () =>
+  .add('Overview', withCleanPreview(Lists, () =>
   <Resizable
     className="resizable"
     defaultSize={{ width: 'auto', height: 'auto' }}
@@ -183,7 +200,7 @@ storiesOf('Typography', module)
     </ul>
   </Resizable>
   ))
-    .add('    Unstyled', withCodePreview(Lists__Unstyled, () =>
+    .add('Unstyled', withCodePreview(Lists__Unstyled, () =>
       <ul className="list-unstyled">
         <li>Lorem ipsum dolor sit amet</li>
         <li>Consectetur adipiscing elit</li>
@@ -202,14 +219,14 @@ storiesOf('Typography', module)
         <li>Eget porttitor lorem</li>
       </ul>
       ))
-    .add('    Inline', withCodePreview(Lists__Inline, () =>
+    .add('Inline', withCodePreview(Lists__Inline, () =>
       <ul className="list-inline">
         <li className="list-inline-item">Lorem ipsum</li>
         <li className="list-inline-item">Phasellus iaculis</li>
         <li className="list-inline-item">Nulla volutpat</li>
       </ul>
     ))
-    .add('    Description', withCodePreview(Lists__Description, () =>
+    .add('Description', withCodePreview(Lists__Description, () =>
       <dl className="row">
         <dt className="col-sm-3">Description lists</dt>
         <dd className="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -236,28 +253,28 @@ storiesOf('Typography', module)
       </dl>
     ))
 
+  storiesOf('Typography/-Code', module)
 
   // Code
-  .add('Code', doc(Code))
-    .add('    Inline code', withCodePreview(Code__Inline, () =>
+    .add('Inline code', withCodePreview(Code__Inline, () =>
         <div>
           For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         </div>
       ))
-    .add('    Code blocks', withCodePreview(Code__Blocks, () =>
+    .add('Code blocks', withCodePreview(Code__Blocks, () =>
       <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
       &lt;p&gt;And another line of sample text here...&lt;/p&gt;
       </code></pre>
     ))
-    .add('    Variables', withCodePreview(Code__Variables, () =>
+    .add('Variables', withCodePreview(Code__Variables, () =>
       <span><var>y</var> = <var>m</var><var>x</var> + <var>b</var></span>
     ))
-    .add('    User input', withCodePreview(Code__UserInput, () =>
+    .add('User input', withCodePreview(Code__UserInput, () =>
       <div>
         To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br/>
         To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
       </div>
     ))
-    .add('    Sample output', withCodePreview(Code__SampleOutput, () =>
+    .add('Sample output', withCodePreview(Code__SampleOutput, () =>
       <samp>This text is meant to be treated as sample output from a computer program.</samp>
     ))

@@ -31,7 +31,7 @@ storiesOf('Branding', module)
 
 .add('Fonts', withCleanPreview(Fonts, () =>
   <div className="text-center">
-    <h6 className="mt-5">Raleway Semibold</h6>
+    <h6>Raleway Semibold</h6>
     <p className="display-4">
       <h2>
         Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>

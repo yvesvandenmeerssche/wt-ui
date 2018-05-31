@@ -11,7 +11,7 @@
     "selector-attribute-operator-space-before": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-brackets-space-inside": "never",
-    "declaration-block-trailing-semicolon": "always",
+    "no-descending-specificity": true,
     "declaration-colon-space-before": "never",
     "declaration-colon-space-after": "always",
     "property-no-vendor-prefix": true,
