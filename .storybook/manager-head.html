@@ -29,6 +29,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="//windingtree.com/images/icons/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//windingtree.com/images/icons/favicon.png">
 
+
 <style>
   /* Global */
   body::before {
@@ -63,7 +64,7 @@
   /* Menu */
 
   [role="menuitem"] {
-    margin: 10px 0 5px 0;
+    margin: 10px 0 0 0;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: .1em;
@@ -75,7 +76,7 @@
   }
 
   [role="menuitem"] + div > ul {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   [style="width: 100%; height: 100%; background-color: rgb(255, 255, 255); border: 1px solid rgb(236, 236, 236); border-radius: 4px;"] {
@@ -84,19 +85,19 @@
     border-right: none!important;
   }
 
-  [class*="css-glamorous-routedlink--1"] {
-    color: #fff!important;
-    background: #0b8fdf!important;
-    border-radius: 3px;
-    pointer-events: none;
-  }
-
   [class*="css-glamorous-routedlink"] {
     margin-bottom: 1px;
   }
 
   [class*="css-glamorous-routedlink"]:hover {
-    color: #999;
+    color: #999!important;
+  }
+
+  [class*="css-glamorous-routedlink--1"] {
+    color: #fff!important;
+    background: #0b8fdf!important;
+    border-radius: 3px;
+    pointer-events: none;
   }
 
   /* Header */
@@ -144,10 +145,31 @@
     height: 30px!important;
     font-size: 13px!important;
     background-color: #f9f9f9;
+    padding: 10px!important;
   }
+
+  /* Subcategories - WIP */
+
+  [data-name^="-"] {
+    text-transform: capitalize;
+    margin-bottom: -5px!important;
+  }
+
+  [data-name^="-"] + div > ul {
+    padding-left: 15px!important;
+  }
+
+  [data-name^="-"]  [data-radium] > div:first-child {
+    display: none!important;
+  }
+
+  [data-name^="-"]  [data-radium] > div:first-child + div > div {
+    padding-left: 5px!important;
+  }
+
+  [data-name^="-"]  [data-radium] > div:first-child + div > div:first-letter {
+    font-size: 0;
+  }
+
 </style>
-
-
-
-
 
