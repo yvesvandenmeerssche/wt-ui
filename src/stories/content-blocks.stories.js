@@ -28,15 +28,13 @@ storiesOf('Content Blocks', module)
 
   .addDecorator(StoryRouter())
 
-  // HEADER
-  .add('Header', withLayoutPreview(Header, () => (
+  // App header
+  .add('Header', withLayoutPreview(Header, () =>
     <AppHeader/>
-  )))
-
-  // APP CONTENT
+  ))
+  // App content
   .add('Content', doc(Content))
-
-  // APP FOOTER
-  .add('Footer', withLayoutPreview(Footer, () => (
+  // App footer
+  .add('Footer', withLayoutPreview(Footer, () =>
       <AppFooter/>
-  )));
+  ));

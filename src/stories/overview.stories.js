@@ -20,8 +20,7 @@ import Dependencies from './overview/dependencies.md';
 //OVERVIEW
 storiesOf('Overview', module)
 
-  // ABOUT
+  // About
   .add('About', doc(About))
-
-  // DEPENDENCIES
+  // Dependencies
   .add('Dependencies', doc(Dependencies))

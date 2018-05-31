@@ -14,7 +14,6 @@ import Grid from './layout/grid.md';
 import Grid__Container from './layout/grid__container.md';
 import Grid__Row from './layout/grid__row.md';
 import Grid__Col from './layout/grid__col.md';
-import Grid__Adjustment from './layout/grid__adjustment.md';
 import MediaObject from './layout/media-object.md';
 import LayoutUtilities from './layout/layout-utilities.md';
 
@@ -23,16 +22,12 @@ import LayoutUtilities from './layout/layout-utilities.md';
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 
+// LAYOUT
 storiesOf('Layout', module)
 
-  // GRID
+  // Grid
   .add('Grid', doc(Grid))
-    .add('    Container', doc(Grid__Container))
-    .add('    Row', doc(Grid__Row))
-    .add('    Column', doc(Grid__Col))
-    .add('    Grid Adjustment', doc(Grid__Adjustment))
-
-  // MEDIA OBJECT
+  // Media object
   .add('Media Object', withCodePreview(MediaObject, () =>
     <div className="media">
       <img className="mr-3" src="http://via.placeholder.com/120x120" alt="Generic placeholder image"/>
@@ -44,6 +39,16 @@ storiesOf('Layout', module)
       </div>
     </div>
   ))
-
-  // UTILITIES FOR LAYOUT
+  // Utilities for layout
   .add('Utilities for layout', doc(LayoutUtilities))
+
+
+  // GRID COMPONENTS
+  storiesOf('Layout/-Grid Components', module)
+
+    //Container
+    .add('Container', doc(Grid__Container))
+    //Row
+    .add('Row', doc(Grid__Row))
+    //Column
+    .add('Column', doc(Grid__Col))

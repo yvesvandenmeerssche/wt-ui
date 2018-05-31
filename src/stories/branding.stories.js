@@ -24,10 +24,10 @@ import MediaAssets from './branding/media-assets.md';
 // BRANDING
 storiesOf('Branding', module)
 
-  // FONTS
+  // Fonts
   .add('Fonts', withCleanPreview(Fonts, () =>
     <div className="text-center">
-      <h6 className="mt-5">Raleway Semibold</h6>
+      <h6>Raleway Semibold</h6>
       <p className="display-4">
         <h2>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
@@ -53,8 +53,7 @@ storiesOf('Branding', module)
       </p>
     </div>
   ))
-
-  // COLORS
+  // Colors
   .add('Colors', withCleanPreview(Colors, () =>
     <div className="row">
 
@@ -103,8 +102,7 @@ storiesOf('Branding', module)
       </div>
     </div>
   ))
-
-  // ICONS
+  // Icons
   .add('Icons', withCodePreview(Icons, () =>
     <div className="h3">
       <i className="wicon-whatshot"/>
@@ -120,8 +118,7 @@ storiesOf('Branding', module)
       <i className="wicon-github-circled"/>
     </div>
   ))
-
-  // MEDIA ASSETS
+  // Media assets
   .add('Media assets', withCleanPreview(MediaAssets, () =>
     <div className="text-center">
         <p className="mb-4"> <img src="../img/content/logo.svg" alt="Winding Tree" width="600" className="img-fluid"/> </p>
