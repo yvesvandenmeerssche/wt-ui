@@ -22,25 +22,9 @@ const withLayoutPreview = withDocs({
 });
 
 
-const withUnborderedPreview = withDocs({
-  PreviewComponent: ({ children }) => (
-    <div
-      className="doc-preview--bordered"
-      style={{
-        padding: 0,
-        border: 0,
-        margin: '25px 0',
-      }}
-    >
-      {children}
-    </div>
-  )
-});
-
 module.exports = {
   withPreview,
   withCodePreview,
   withCleanPreview,
   withLayoutPreview,
-  withUnborderedPreview,
 }
