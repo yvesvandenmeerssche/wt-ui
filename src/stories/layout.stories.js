@@ -7,6 +7,7 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
+import { withCodePreview } from './HOCs/with-docs'
 
 // Readme files
 import Grid from './layout/grid.md';
@@ -20,18 +21,14 @@ import LayoutUtilities from './layout/layout-utilities.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-// HOCs
-import { withCodePreview } from './HOCs/with-docs'
 
-
-storiesOf('Layout/-Grid Components', module)
-.add('Container', doc(Grid__Container))
-.add('Row', doc(Grid__Row))
-.add('Column', doc(Grid__Col))
-
+// LAYOUT
 storiesOf('Layout', module)
-.add('Grid', doc(Grid))
-.add('Media Object', withCodePreview(MediaObject, () =>
+
+  // Grid
+  .add('Grid', doc(Grid))
+  // Media object
+  .add('Media Object', withCodePreview(MediaObject, () =>
     <div className="media">
       <img className="mr-3" src="http://via.placeholder.com/120x120" alt="Generic placeholder image"/>
       <div className="media-body">
@@ -42,6 +39,16 @@ storiesOf('Layout', module)
       </div>
     </div>
   ))
-
-
+  // Utilities for layout
   .add('Utilities for layout', doc(LayoutUtilities))
+
+
+  // GRID COMPONENTS
+  storiesOf('Layout/-Grid Components', module)
+
+    //Container
+    .add('Container', doc(Grid__Container))
+    //Row
+    .add('Row', doc(Grid__Row))
+    //Column
+    .add('Column', doc(Grid__Col))
