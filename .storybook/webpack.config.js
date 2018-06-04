@@ -42,6 +42,19 @@ module.exports = {
           { loader: 'markdown-loader' }
         ],
       },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
+        ]
+      },
     ]
   }
 };
