@@ -32,7 +32,7 @@
     "react-router-dom": "^4.2.2",
     "serve": "^6.5.5",
     "webpack-dev-server": "^2.11.1",
-    "windingtree-media": "git+https://github.com/windingtree/media.git"
+    "windingtree-media-web": "git+https://github.com/windingtree/media.git#web-assets"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.7",
