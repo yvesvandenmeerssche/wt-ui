@@ -17,12 +17,13 @@ import Icons from './branding/icons.md';
 import MediaAssets from './branding/media-assets.md';
 
 // Images
-import imgLogo from '../../node_modules/windingtree-media/logo-variants/full-logo/png/logo--gradient-on-white.png';
-import imgLogoAlt from '../../node_modules/windingtree-media/logo-variants/full-logo/png/logo--black-on-green.png';
-import imgTree from '../../node_modules/windingtree-media/logo-variants/tree/png/tree--gradient-on-white.png';
-import imgTreeAlt from '../../node_modules/windingtree-media/logo-variants/tree/png/tree--black-on-white.png';
-import imgSign from '../../node_modules/windingtree-media/logo-variants/sign/png/sign--gradient-on-white.png';
-import imgSignAlt from '../../node_modules/windingtree-media/logo-variants/sign/png/sign--black-on-green.png';
+import imgLogo from 'windingtree-media-web/logo-variants/full-logo/png/logo--gradient_black-text.png';
+import imgLogoAlt from 'windingtree-media-web/logo-variants/full-logo/png/logo--white.png';
+import imgTree from 'windingtree-media-web/logo-variants/tree/png/tree--gradient.png';
+import imgTreeAlt from 'windingtree-media-web/logo-variants/tree/png/tree--black.png';
+import imgSign from 'windingtree-media-web/logo-variants/sign/png/sign--gradient.png';
+// Disabled until the image is available
+// import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -129,17 +130,20 @@ storiesOf('Branding', module)
 // Media Assets
 .add('Media assets', withCleanPreview(MediaAssets, () =>
   <div className="text-center col">
-    <p className="mb-4">
+    <p className="mb-4" style={{padding: '0 20px'}}>
       <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
     </p>
-    <p className="mb-4">
+    <p className="mb-4" style={{padding: '40px 20px', backgroundColor: '#1AC592'}}>
       <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
     </p>
     <p>
       <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
       <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
       <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
+      {/*
+      Disabled until the image is available.
       <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
+      */}
     </p>
   </div>
 ))
