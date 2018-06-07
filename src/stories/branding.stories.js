@@ -16,6 +16,14 @@ import Colors from './branding/colors.md';
 import Icons from './branding/icons.md';
 import MediaAssets from './branding/media-assets.md';
 
+// Images
+import imgLogo from 'windingtree-media-web/logo-variants/full-logo/png/logo--gradient_black-text.png';
+import imgLogoAlt from 'windingtree-media-web/logo-variants/full-logo/png/logo--white.png';
+import imgTree from 'windingtree-media-web/logo-variants/tree/png/tree--gradient.png';
+import imgTreeAlt from 'windingtree-media-web/logo-variants/tree/png/tree--black.png';
+import imgSign from 'windingtree-media-web/logo-variants/sign/png/sign--gradient.png';
+// Disabled until the image is available
+// import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -100,34 +108,42 @@ storiesOf('Branding', module)
           </small>
         </div>
       </div>
+
     </div>
-  ))
-  // Icons
-  .add('Icons', withCodePreview(Icons, () =>
-    <div className="h3">
-      <i className="wicon-whatshot"/>
-      <i className="wicon-back"/>
-      <i className="wicon-timelapse"/>
-      <i className="wicon-account_balance_wallet"/>
-      <i className="wicon-help-outline"/>
-      <i className="wicon-info"/>
-      <i className="wicon-arrow-right"/>
-      <i className="wicon-right-dir"/>
-      <i className="wicon-link"/>
-      <i className="wicon-twitter"/>
-      <i className="wicon-github-circled"/>
-    </div>
-  ))
-  // Media assets
-  .add('Media assets', withCleanPreview(MediaAssets, () =>
-    <div className="text-center">
-        <p className="mb-4"> <img src="../img/content/logo.svg" alt="Winding Tree" width="600" className="img-fluid"/> </p>
-        <p className="mb-4"> <img src="../img/content/logo_black.png" alt="Winding Tree" width="700" className="img-fluid"/> </p>
-        <p>
-          <img className="mb-4 mr-3 d-inline-block img-fluid" src="../img/content/tree_gradient.png" alt="Winding Tree" width="150"/>
-          <img className="mb-4 mr-3 d-inline-block img-fluid" src="../img/content/Tree_black.png" alt="Winding Tree" width="150"/>
-          <img className="mb-4 mr-3 d-inline-block img-fluid" src="../img/content/sign_gradient.png" alt="Winding Tree" width="60"/>
-          <img className="mb-4 d-inline-block img-fluid" src="../img/content/sign_black.png" alt="Winding Tree" width="60"/>
-        </p>
-    </div>
-  ))
+))
+// Icons
+.add('Icons', withCodePreview(Icons, () =>
+  <div className="h3">
+    <i className="wicon-whatshot"/>
+    <i className="wicon-back"/>
+    <i className="wicon-timelapse"/>
+    <i className="wicon-account_balance_wallet"/>
+    <i className="wicon-help-outline"/>
+    <i className="wicon-info"/>
+    <i className="wicon-arrow-right"/>
+    <i className="wicon-right-dir"/>
+    <i className="wicon-link"/>
+    <i className="wicon-twitter"/>
+    <i className="wicon-github-circled"/>
+  </div>
+))
+// Media Assets
+.add('Media assets', withCleanPreview(MediaAssets, () =>
+  <div className="text-center col">
+    <p className="mb-4" style={{padding: '0 20px'}}>
+      <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
+    </p>
+    <p className="mb-4" style={{padding: '40px 20px', backgroundColor: '#1AC592'}}>
+      <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
+    </p>
+    <p>
+      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
+      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
+      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
+      {/*
+      Disabled until the image is available.
+      <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
+      */}
+    </p>
+  </div>
+))

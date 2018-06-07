@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook-dev": "start-storybook -p 6006 -s ./src -c .storybook",
-    "storybook-build": "cp -a src/font docs/font && cp -a src/img docs/img && build-storybook -c .storybook -o docs",
+    "storybook-build": "build-storybook -c .storybook -o docs && cp -a src/font src/img docs/",
     "storybook-start": "serve --port 5001 --single ./docs",
     "npm-clean": "rm -rf dist && mkdir dist",
     "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js"
@@ -31,7 +31,8 @@
     "react-graceful-image": "^1.2.6",
     "react-router-dom": "^4.2.2",
     "serve": "^6.5.5",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "windingtree-media-web": "git+https://github.com/windingtree/media.git#web-assets"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.7",
