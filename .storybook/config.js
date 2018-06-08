@@ -34,6 +34,7 @@ function loadStories() {
   require('../src/stories/typography.stories.js');
   require('../src/stories/images.stories.js');
   require('../src/stories/controls.stories.js');
+  require('../src/stories/navigation.stories.js');
 }
 
 configure(loadStories, module);
