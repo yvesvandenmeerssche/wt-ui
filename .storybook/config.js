@@ -7,8 +7,7 @@ import { configureViewport } from '@storybook/addon-viewport';
 
 
 // Included styles
-import '../src/css/app.scss';
-
+process.env.NODE_ENV === 'production' ? require('../dist/styles.css') : require('../src/css/app.scss');
 
 // Addon-options
 setOptions({
