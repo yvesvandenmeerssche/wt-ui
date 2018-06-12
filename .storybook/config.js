@@ -35,6 +35,8 @@ function loadStories() {
   require('../src/stories/images.stories.js');
   require('../src/stories/controls.stories.js');
   require('../src/stories/navigation.stories.js');
+  // require('../src/stories/containers.stories.js'); disabled until merge
+  require('../src/stories/feedback.stories.js');
 }
 
 configure(loadStories, module);
