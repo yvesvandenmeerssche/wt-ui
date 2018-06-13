@@ -19,8 +19,10 @@
 }
 
 
-// Reduce the whitespace in the top
 .markdown-body {
+  margin-bottom: 25px;
+
+  // Reduce the whitespace in the top
   > h1:first-of-type {
     margin-top: -8px!important;
   }
@@ -32,13 +34,15 @@
   width: auto;
   border: $borderStyle;
   padding: 20px 25px;
-  margin: 25px 0;
+  margin: 0 0 25px 0;
   border-radius: 3px;
 
   @media all and (max-width: 768px) {
-    border: none;
-    min-width: 100%;
-    margin: 0 -25px;
+    &:not(.doc-preview--layout) {
+      border: none;
+      min-width: 100%;
+      margin: 0 -25px;
+    }
   }
 
   & + .markdown-body > .language-html:first-of-type,
@@ -50,15 +54,16 @@
   }
 
   &.doc-preview--clean {
-    margin-bottom: 0;
     padding: 20px 0;
+    margin-bottom: 0;
     border: 0;
   }
 
   &.doc-preview--layout {
     position: relative;
-    height: 500px;
+    height: 400px;
     padding: 0;
+    margin-bottom: 0;
   }
 
 }
