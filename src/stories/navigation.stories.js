@@ -17,6 +17,7 @@ import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
 import Pagination from './navigation/pagination.md';
 import Scrollspy from './navigation/scrollspy.md';
+import {withDropdown} from "./HOCs/bootstrap";
 
 
 // COMPONENTS
@@ -46,7 +47,7 @@ storiesOf('Navigation', module)
   ))
 
   // Tabs
-  .add('Tabs', withCodePreview(Tabs, () =>
+  .add('Tabs', withCodePreview(Tabs, withDropdown(() =>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -68,11 +69,11 @@ storiesOf('Navigation', module)
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-  ))
+  )))
 
 
   // Pills
-  .add('Pills', withCodePreview(Pills, () =>
+  .add('Pills', withCodePreview(Pills, withDropdown(() =>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -94,11 +95,11 @@ storiesOf('Navigation', module)
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-  ))
+  )))
 
 
   // Navbar
-  .add('Navbar', withCodePreview(Navbar, () =>
+  .add('Navbar', withCodePreview(Navbar, withDropdown(() =>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -134,7 +135,7 @@ storiesOf('Navigation', module)
         </form>
       </div>
     </nav>
-  ))
+  )))
 
 
   // Breadcrumb
@@ -165,7 +166,7 @@ storiesOf('Navigation', module)
 
 
   // Dropdown
-  .add('Dropdown', withCodePreview(Dropdown, () =>
+  .add('Dropdown', withCodePreview(Dropdown, withDropdown(() =>
     <div>
       {/* Single button dropdown */}
       <div class="d-inline-block mr-2 mb-2">
@@ -198,7 +199,7 @@ storiesOf('Navigation', module)
         </div>
       </div>
     </div>
-  ))
+  )))
 
 
   // Pagination
