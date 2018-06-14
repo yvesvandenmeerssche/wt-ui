@@ -6,13 +6,15 @@ import { storiesOf } from '@storybook/react';
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 // Readme files
+import Jumbotron from './containers/jumbotron.md';
 import Table from './containers/table.md';
+import ListGroup from './containers/list-group.md';
 import Figure from './containers/figure.md';
 import Card from './containers/card.md';
 import Collapse from './containers/collapse.md';
-import Jumbotron from './containers/jumbotron.md';
 import Modal from './containers/modal.md';
 import Carousel from './containers/carousel.md';
+
 
 
 // COMPONENTS
@@ -20,6 +22,20 @@ import Carousel from './containers/carousel.md';
 
 
 storiesOf('Containers', module)
+
+  // Jumbotron
+  .add('Jumbotron', withCodePreview(Jumbotron, () =>
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4"/>
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+  ))
+
 
   // Table
   .add('Table', withCodePreview(Table, () =>
@@ -54,6 +70,37 @@ storiesOf('Containers', module)
       </tbody>
     </table>
   ))
+
+
+  // List Group
+  .add('List Group', withCodePreview(ListGroup, () =>
+    <div className="row">
+
+    <div className="col">
+      <ul class="list-group">
+        <li class="list-group-item active">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">Morbi leo risus <span class="badge badge-primary badge-pill">14</span></li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item disabled">Vestibulum at eros</li>
+      </ul>
+    </div>
+
+    <div className="col">
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action active">
+          Cras justo odio
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Morbi leo risus <span class="badge badge-primary badge-pill">14</span></a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+      </div>
+    </div>
+
+    </div>
+  ))
+
 
   // Figure
   .add('Figure', withCodePreview(Figure, () =>
@@ -91,19 +138,6 @@ storiesOf('Containers', module)
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
         </div>
       </div>
-    </div>
-  ))
-
-  // Jumbotron
-  .add('Jumbotron', withCodePreview(Jumbotron, () =>
-    <div class="jumbotron">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4"/>
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
     </div>
   ))
 
