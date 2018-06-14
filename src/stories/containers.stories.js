@@ -9,6 +9,7 @@ import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 import Jumbotron from './containers/jumbotron.md';
 import Table from './containers/table.md';
 import ListGroup from './containers/list-group.md';
+import TabbablePanes from './containers/tabbable-panes.md';
 import Figure from './containers/figure.md';
 import Card from './containers/card.md';
 import Collapse from './containers/collapse.md';
@@ -98,6 +99,29 @@ storiesOf('Containers', module)
       </div>
     </div>
 
+    </div>
+  ))
+
+
+  // Tabbable Panes
+  .add('Tabbable Panes', withCodePreview(TabbablePanes, () =>
+    <div>
+      <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Panel 1</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Panel 2</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Panel 3</div>
+      </div>
     </div>
   ))
 
