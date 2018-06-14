@@ -10,8 +10,8 @@ import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 // Readme files
 import BaseNav from './navigation/base-nav.md';
-import Tabs from './navigation/tabs.md';
-import Pills from './navigation/pills.md';
+import NavTabs from './navigation/nav-tabs.md';
+import NavPills from './navigation/nav-pills.md';
 import Navbar from './navigation/navbar.md';
 import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
@@ -25,7 +25,7 @@ import Scrollspy from './navigation/scrollspy.md';
 
 storiesOf('Navigation', module)
 
-  // Base nav
+  // Base Nav
   .add('Base nav', withCodePreview(BaseNav, () =>
     <div>
       <ul class="nav">
@@ -45,8 +45,8 @@ storiesOf('Navigation', module)
     </div>
   ))
 
-  // Tabs
-  .add('Tabs', withCodePreview(Tabs, () =>
+  // Nav Tabs
+  .add('Nav Tabs', withCodePreview(NavTabs, () =>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -71,8 +71,8 @@ storiesOf('Navigation', module)
   ))
 
 
-  // Pills
-  .add('Pills', withCodePreview(Pills, () =>
+  // Nav Pills
+  .add('Nav Pills', withCodePreview(NavPills, () =>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
