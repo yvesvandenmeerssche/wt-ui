@@ -1,13 +1,13 @@
-# Pills
+# Nav Tabs
 
-Take the basic nav and add the `.nav-pills` class to generate a tabbed interface.
+Take the basic nav and add the `.nav-tabs` class to generate a tabbed interface.
 
 Add dropdown menus with a little extra HTML and the dropdowns [JavaScript plugin](https://getbootstrap.com/docs/4.0/components/dropdowns/#usage).
 
 <!-- STORY -->
 
 ```html
-<ul class="nav nav-pills"> ... </ul>
+<ul class="nav nav-tabs">
   ...
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -22,3 +22,4 @@ Add dropdown menus with a little extra HTML and the dropdowns [JavaScript plugin
   ...
 </ul>
 ```
+
