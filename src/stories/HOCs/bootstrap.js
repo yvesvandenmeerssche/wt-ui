@@ -37,3 +37,17 @@ export function withDropdown(WrappedComponent) {
   }
   return () => <WithDropdown/>
 }
+
+export function withScrollSpy(WrappedComponent) {
+  class WithScrollSpy extends React.Component {
+    componentDidMount() {
+      $('[data-spy="scroll"]').each(function () {
+        $(this).scrollspy('refresh')
+      })
+    }
+    render() {
+      return <WrappedComponent {...this.props}/>
+    }
+  }
+  return () => <WithScrollSpy/>
+}

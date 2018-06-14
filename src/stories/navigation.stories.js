@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import 'bootstrap'
 
 // Included addons
 import { doc } from 'storybook-readme';
@@ -17,7 +18,7 @@ import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
 import Pagination from './navigation/pagination.md';
 import Scrollspy from './navigation/scrollspy.md';
-import {withDropdown} from "./HOCs/bootstrap";
+import {withDropdown, withScrollSpy} from "./HOCs/bootstrap";
 
 
 // COMPONENTS
@@ -47,7 +48,7 @@ storiesOf('Navigation', module)
   ))
 
   // Tabs
-  .add('Tabs', withCodePreview(Tabs, withDropdown(() =>
+  .add('Tabs', withCodePreview(Tabs, () =>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -69,11 +70,11 @@ storiesOf('Navigation', module)
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-  )))
+  ))
 
 
   // Pills
-  .add('Pills', withCodePreview(Pills, withDropdown(() =>
+  .add('Pills', withCodePreview(Pills, () =>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -95,46 +96,24 @@ storiesOf('Navigation', module)
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-  )))
+  ))
 
 
   // Navbar
   .add('Navbar', withCodePreview(Navbar, withDropdown(() =>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h4 class="text-white">Collapsed content</h4>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
       </div>
-    </nav>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
   )))
 
 
@@ -166,7 +145,7 @@ storiesOf('Navigation', module)
 
 
   // Dropdown
-  .add('Dropdown', withCodePreview(Dropdown, withDropdown(() =>
+  .add('Dropdown', withCodePreview(Dropdown, () =>
     <div>
       {/* Single button dropdown */}
       <div class="d-inline-block mr-2 mb-2">
@@ -199,7 +178,7 @@ storiesOf('Navigation', module)
         </div>
       </div>
     </div>
-  )))
+  ))
 
 
   // Pagination
@@ -261,7 +240,7 @@ storiesOf('Navigation', module)
 
 
   // Scrollspy
-  .add('Scrollspy', withCodePreview(Scrollspy, () =>
+  .add('Scrollspy', withCodePreview(Scrollspy, withScrollSpy(() =>
     <div className="row">
       <div className="col-3">
       <div id="list-example" class="list-group">
@@ -284,7 +263,5 @@ storiesOf('Navigation', module)
         <p style={{marginBottom: 130}}>Officiis id quis aspernatur beatae.</p>
       </div>
       </div>
-
-
     </div>
-  ))
+  )))
