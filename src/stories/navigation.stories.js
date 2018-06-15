@@ -137,8 +137,6 @@ storiesOf('Navigation', module)
       </div>
     </nav>
   )))
-
-
   // Breadcrumb
   .add('Breadcrumb', withCodePreview(Breadcrumb, () =>
     <div>
@@ -164,8 +162,6 @@ storiesOf('Navigation', module)
       </nav>
     </div>
   ))
-
-
   // Dropdown
   .add('Dropdown', withCodePreview(Dropdown, () =>
     <div>
@@ -182,7 +178,6 @@ storiesOf('Navigation', module)
           </div>
         </div>
       </div>
-
       {/* Split danger button */}
       <div className="d-inline-block">
         <div className="btn-group">
@@ -201,8 +196,6 @@ storiesOf('Navigation', module)
       </div>
     </div>
   ))
-
-
   // Pagination
   .add('Pagination', withCodePreview(Pagination, () =>
     <div>
@@ -259,8 +252,6 @@ storiesOf('Navigation', module)
       </nav>
     </div>
   ))
-
-
   // Scrollspy
   .add('Scrollspy', withCodePreview(Scrollspy, withScrollSpy(() =>
     <div className="row">

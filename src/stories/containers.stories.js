@@ -36,8 +36,6 @@ storiesOf('Containers', module)
       </p>
     </div>
   ))
-
-
   // Table
   .add('Table', withCodePreview(Table, () =>
     <table className="table">
@@ -71,8 +69,6 @@ storiesOf('Containers', module)
       </tbody>
     </table>
   ))
-
-
   // List Group
   .add('List Group', withCodePreview(ListGroup, () =>
     <div className="row">
@@ -101,8 +97,6 @@ storiesOf('Containers', module)
 
     </div>
   ))
-
-
   // Tabbable Panes
   .add('Tabbable Panes', withCodePreview(TabbablePanes, () =>
     <div>
@@ -124,8 +118,6 @@ storiesOf('Containers', module)
       </div>
     </div>
   ))
-
-
   // Figure
   .add('Figure', withCodePreview(Figure, () =>
     <figure className="figure">
@@ -133,7 +125,6 @@ storiesOf('Containers', module)
       <figcaption className="figure-caption">A caption for the above image.</figcaption>
     </figure>
   ))
-
   // Card
   .add('Card', withCodePreview(Card, () =>
     <div className="card" style={{width: '18rem'}}>
@@ -145,7 +136,6 @@ storiesOf('Containers', module)
       </div>
     </div>
   ))
-
   // Collapse
   .add('Collapse', withCodePreview(Collapse, () =>
     <div>
@@ -164,32 +154,30 @@ storiesOf('Containers', module)
       </div>
     </div>
   ))
-
-
   // Modal
   .add('Modal', withCodePreview(Modal, () =>
     <div>
-    <div className="modal" tabIndex="-1" role="dialog" style={{display: 'block', position: 'static'}}>
-      <div className="modal-dialog" role="document">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Modal title</h5>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div className="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div className="modal-footer">
-            <button type="button" className="btn btn-primary">Save changes</button>
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div className="modal" tabIndex="-1" role="dialog" style={{display: 'block', position: 'static'}}>
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Modal title</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary">Save changes</button>
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <hr/>
+      <hr/>
 
       <button type="button" className="btn btn-light btn-sm" data-toggle="modal" data-target="#exampleModal2">
         Launch demo modal
@@ -216,7 +204,6 @@ storiesOf('Containers', module)
       </div>
     </div>
   ))
-
   // Carousel
   .add('Carousel', withCodePreview(Carousel, () =>
     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">

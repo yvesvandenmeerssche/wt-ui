@@ -61,10 +61,8 @@ storiesOf('Feedback', module)
       <a href="#" className="mr-1 badge badge-dark">Dark</a>
     </div>
   ))
-
   // Progress
   .add('Progress', withCodePreview(Progress, () =>
-
   <div>
     <div className="progress mb-3">
       <div className="progress-bar" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -87,10 +85,7 @@ storiesOf('Feedback', module)
     </div>
 
   </div>
-
   ))
-
-
   // Popover
   .add('Popover', withCodePreview(Popover, withPopover(() =>
     <div>
@@ -112,8 +107,6 @@ storiesOf('Feedback', module)
       </button>
     </div>
   )))
-
-
   // Tooltip
   .add('Tooltip', withCodePreview(Tooltip, withTooltip(() =>
     <div>
@@ -138,8 +131,6 @@ storiesOf('Feedback', module)
       </button>
     </div>
   )))
-
-
   // Alert
   .add('Alert', withCodePreview(Alert, () =>
     <div>

@@ -35,11 +35,9 @@ storiesOf('Images', module)
       <img src="http://via.placeholder.com/895x250" className="img-fluid" alt="Responsive image"/>
     </Resizable>
   ))
-
   // Image Thumbnails
   .add('Image Thumbnails', withCleanPreview(ImageThumbnails, () =>
     <img src="http://via.placeholder.com/200x200" alt="Thumbnail" className="img-thumbnail"/>
   ))
-
   // Picture
   .add('Picture', doc(Picture))

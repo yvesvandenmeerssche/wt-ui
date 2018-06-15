@@ -51,7 +51,6 @@ storiesOf('Utilities', module)
       </div>
     </div>
   ))
-
   // Background Color
   .add('BackgroundColor', withCodePreview(BackgroundColor, () =>
     <div>
@@ -89,7 +88,6 @@ storiesOf('Utilities', module)
       </div>
     </div>
   ))
-
   // Border color
   .add('BorderColor', withCodePreview(BorderColor, () =>
     <div>
@@ -104,7 +102,5 @@ storiesOf('Utilities', module)
       <span className="d-inline-block p-4 mr-2 border border-white"></span>
     </div>
   ))
-
-
   // Other Utilities
   .add('Other Utilities', doc(OtherUtilities))

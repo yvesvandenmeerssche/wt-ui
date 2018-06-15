@@ -33,20 +33,20 @@ import InputGroup from './controls/input-group.md';
 // BUTTON
 storiesOf('Controls/Button', module)
 
-// Overview
-.add('Overview', withCodePreview(Button, () =>
-  <div>
-    <button type="button" className="mr-2 btn btn-primary">Primary</button>
-    <button type="button" className="mr-2 btn btn-secondary">Secondary</button>
-    <button type="button" className="mr-2 btn btn-success">Success</button>
-    <button type="button" className="mr-2 btn btn-danger">Danger</button>
-    <button type="button" className="mr-2 btn btn-warning">Warning</button>
-    <button type="button" className="mr-2 btn btn-info">Info</button>
-    <button type="button" className="mr-2 btn btn-light">Light</button>
-    <button type="button" className="btn btn-dark">Dark</button>
-    <button type="button" className="btn btn-link">Link</button>
-  </div>
-))
+  // Overview
+  .add('Overview', withCodePreview(Button, () =>
+    <div>
+      <button type="button" className="mr-2 btn btn-primary">Primary</button>
+      <button type="button" className="mr-2 btn btn-secondary">Secondary</button>
+      <button type="button" className="mr-2 btn btn-success">Success</button>
+      <button type="button" className="mr-2 btn btn-danger">Danger</button>
+      <button type="button" className="mr-2 btn btn-warning">Warning</button>
+      <button type="button" className="mr-2 btn btn-info">Info</button>
+      <button type="button" className="mr-2 btn btn-light">Light</button>
+      <button type="button" className="btn btn-dark">Dark</button>
+      <button type="button" className="btn btn-link">Link</button>
+    </div>
+  ))
   // Button tags
   .add('Button tags', withCodePreview(Button__Tags, () =>
     <div>
