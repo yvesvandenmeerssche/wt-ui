@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import 'bootstrap'
 
 // Included addons
 import { doc } from 'storybook-readme';
@@ -17,6 +18,7 @@ import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
 import Pagination from './navigation/pagination.md';
 import Scrollspy from './navigation/scrollspy.md';
+import {withDropdown, withScrollSpy} from "./HOCs/bootstrap";
 
 
 // COMPONENTS
@@ -98,7 +100,7 @@ storiesOf('Navigation', module)
 
 
   // Navbar
-  .add('Navbar', withCodePreview(Navbar, () =>
+  .add('Navbar', withCodePreview(Navbar, withDropdown(() =>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="#">Navbar</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -134,7 +136,7 @@ storiesOf('Navigation', module)
         </form>
       </div>
     </nav>
-  ))
+  )))
 
 
   // Breadcrumb
@@ -260,7 +262,7 @@ storiesOf('Navigation', module)
 
 
   // Scrollspy
-  .add('Scrollspy', withCodePreview(Scrollspy, () =>
+  .add('Scrollspy', withCodePreview(Scrollspy, withScrollSpy(() =>
     <div className="row">
       <div className="col-3">
       <div id="list-example" className="list-group">
@@ -283,7 +285,5 @@ storiesOf('Navigation', module)
         <p style={{marginBottom: 130}}>Officiis id quis aspernatur beatae.</p>
       </div>
       </div>
-
-
     </div>
-  ))
+  )))

@@ -14,18 +14,11 @@ import Progress from './feedback/progress.md';
 import Popover from './feedback/popover.md';
 import Tooltip from './feedback/tooltip.md';
 import Alert from './feedback/alert.md';
+import {withPopover, withTooltip} from "./HOCs/bootstrap";
 
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-
-// JavaScript required by Stories
-document.addEventListener("DOMContentLoaded", function(event) {
-  $('[data-toggle="popover"]').popover();
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
 
 storiesOf('Feedback', module)
 
@@ -99,7 +92,7 @@ storiesOf('Feedback', module)
 
 
   // Popover
-  .add('Popover', withCodePreview(Popover, () =>
+  .add('Popover', withCodePreview(Popover, withPopover(() =>
     <div>
       <button type="button" className="mr-2 btn btn-primary"  data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
         Popover on top
@@ -118,11 +111,11 @@ storiesOf('Feedback', module)
         Popover on left
       </button>
     </div>
-  ))
+  )))
 
 
   // Tooltip
-  .add('Tooltip', withCodePreview(Tooltip, () =>
+  .add('Tooltip', withCodePreview(Tooltip, withTooltip(() =>
     <div>
       <button type="button" className="mr-2 btn btn-primary"  data-toggle="tooltip" data-placement="top" title="Tooltip on top">
         Tooltip on top
@@ -144,7 +137,7 @@ storiesOf('Feedback', module)
         Tooltip with HTML
       </button>
     </div>
-  ))
+  )))
 
 
   // Alert
