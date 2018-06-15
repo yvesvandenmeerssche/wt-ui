@@ -7,7 +7,7 @@ Its default background color is equivalento to the "info" color, but it can be c
 <!-- STORY -->
 
 ```html
-<header id="app-header" className="app-header--themed">
+<header id="app-header" class="app-header--themed">
   <h1>
     <a href="#">
       <img class="img-fluid" src="..." alt="WindingTree"/>
@@ -17,7 +17,7 @@ Its default background color is equivalento to the "info" color, but it can be c
 
 <!-- With custom color -->
 
-<header id="app-header" className="bg-dark">
+<header id="app-header" class="bg-dark">
   <h1>
     <a href="#">
       <img class="img-fluid" src="..." alt="WindingTree"/>
@@ -27,7 +27,7 @@ Its default background color is equivalento to the "info" color, but it can be c
 
 <!-- Themed -->
 
-<header id="app-header" className="app-header--themed">
+<header id="app-header" class="app-header--themed">
   <h1>
     <a href="#">
       <img class="img-fluid" src="..." alt="WindingTree"/>

@@ -38,7 +38,7 @@ storiesOf('Images', module)
 
   // Image Thumbnails
   .add('Image Thumbnails', withCleanPreview(ImageThumbnails, () =>
-    <img src="http://via.placeholder.com/200x200" alt="Thumbnail" class="img-thumbnail"/>
+    <img src="http://via.placeholder.com/200x200" alt="Thumbnail" className="img-thumbnail"/>
   ))
 
   // Picture

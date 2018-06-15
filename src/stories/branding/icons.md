@@ -5,15 +5,15 @@ The icons are packaged into a single font that takes advantage of the typographi
 <!-- STORY -->
 
 ```html
-  <i className="wicon-whatshot"/>
-  <i className="wicon-back"/>
-  <i className="wicon-timelapse"/>
-  <i className="wicon-account_balance_wallet"/>
-  <i className="wicon-help-outline"/>
-  <i className="wicon-info"/>
-  <i className="wicon-arrow-right"/>
-  <i className="wicon-right-dir"/>
-  <i className="wicon-link"/>
-  <i className="wicon-twitter"/>
-  <i className="wicon-github-circled"/>
+  <i class="wicon-whatshot"/>
+  <i class="wicon-back"/>
+  <i class="wicon-timelapse"/>
+  <i class="wicon-account_balance_wallet"/>
+  <i class="wicon-help-outline"/>
+  <i class="wicon-info"/>
+  <i class="wicon-arrow-right"/>
+  <i class="wicon-right-dir"/>
+  <i class="wicon-link"/>
+  <i class="wicon-twitter"/>
+  <i class="wicon-github-circled"/>
 ```

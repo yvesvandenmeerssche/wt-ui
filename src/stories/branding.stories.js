@@ -36,29 +36,23 @@ storiesOf('Branding', module)
   .add('Fonts', withCleanPreview(Fonts, () =>
     <div className="text-center">
       <h6>Raleway Semibold</h6>
-      <p className="display-4">
         <h2>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
           Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
           1234567890
         </h2>
-      </p>
       <h6 className="mt-5" style={{fontWeight: 600}}>Raleway Semibold</h6>
-      <p className="display-4">
         <h2 style={{fontWeight: 600}}>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
           Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
           1234567890
         </h2>
-      </p>
       <h6 className="mt-5" style={{fontWeight: 800}}>Raleway ExtraBold</h6>
-      <p className="display-4">
         <h2 style={{fontWeight: 800}}>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
           Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
           1234567890
         </h2>
-      </p>
     </div>
   ))
   // Colors
