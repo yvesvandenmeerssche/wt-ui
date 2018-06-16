@@ -13,7 +13,7 @@ import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 import TextColor from './utilities/text-color.md';
 import BackgroundColor from './utilities/background-color.md';
 import BorderColor from './utilities/border-color.md';
-import Other from './utilities/other.md';
+import OtherUtilities from './utilities/other-utilities.md';
 
 
 // COMPONENTS
@@ -51,7 +51,6 @@ storiesOf('Utilities', module)
       </div>
     </div>
   ))
-
   // Background Color
   .add('BackgroundColor', withCodePreview(BackgroundColor, () =>
     <div>
@@ -89,7 +88,6 @@ storiesOf('Utilities', module)
       </div>
     </div>
   ))
-
   // Border color
   .add('BorderColor', withCodePreview(BorderColor, () =>
     <div>
@@ -104,7 +102,5 @@ storiesOf('Utilities', module)
       <span className="d-inline-block p-4 mr-2 border border-white"></span>
     </div>
   ))
-
-
-  // Other
-  .add('Other', doc(Other))
+  // Other Utilities
+  .add('Other Utilities', doc(OtherUtilities))

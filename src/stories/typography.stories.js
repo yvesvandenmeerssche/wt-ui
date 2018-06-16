@@ -83,10 +83,12 @@ storiesOf('Typography/-Headings', module)
   // Display Headings
   .add('Display headings', withCodePreview(Display__Headings, () =>
     <table className="table">
-      <tr> <td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td> </tr>
-      <tr> <td> <h1 className="display-2">Display 2</h1> </td> </tr>
-      <tr> <td> <h1 className="display-3">Display 3</h1> </td> </tr>
-      <tr> <td> <h1 className="display-4">Display 4</h1> </td> </tr>
+      <tbody>
+        <tr><td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td></tr>
+        <tr><td> <h1 className="display-2">Display 2</h1> </td></tr>
+        <tr><td> <h1 className="display-3">Display 3</h1> </td></tr>
+        <tr><td> <h1 className="display-4">Display 4</h1> </td></tr>
+      </tbody>
     </table>
   ))
 
