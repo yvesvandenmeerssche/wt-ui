@@ -25,6 +25,7 @@ import imgSign from 'windingtree-media-web/logo-variants/sign/png/sign--gradient
 // Disabled until the image is available
 // import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
 
+
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
@@ -57,52 +58,137 @@ storiesOf('Branding', module)
   ))
   // Colors
   .add('Colors', withCleanPreview(Colors, () =>
-    <div className="row">
+    <div>
+      <div className="row">
 
-      <div className="col">
-        <div className="card">
-          <div className="card-img-top" style={{height: 110, background: '#00df9e'}}></div>
-          <small className="card-body">
-            <b>CMYK:</b> 64 0 56 0<br/>
-            <b>RGB:</b> 0 223 158<br/>
-            <b>HEX:</b> 00df9e
-          </small>
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#18e9a6'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 24 233 166<br/>
+              <b>HEX:</b> 18e9a6
+            </small>
+          </div>
         </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#12bc86'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 18 188 134<br/>
+              <b>HEX:</b> 12bc86
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#0b8fdf'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 11 143 223<br/>
+              <b>HEX:</b> 0b8fdf
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#164fdd'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 22 79 221<br/>
+              <b>HEX:</b> 164fdd
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#0f3697'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 15 54 151<br/>
+              <b>HEX:</b> 0f3697
+            </small>
+          </div>
+        </div>
+
+      </div>
+      <div className="row">
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#5f2987'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 95 41 135<br/>
+              <b>HEX:</b> 5f2987
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#6c757d'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 108 117 125<br/>
+              <b>HEX:</b> 6c757d
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#dee2e6'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 222 226 230<br/>
+              <b>HEX:</b> dee2e6
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#f2f2f2'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 242 242 242<br/>
+              <b>HEX:</b> f2f2f2
+            </small>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#e7edfb'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 231 237 251<br/>
+              <b>HEX:</b> e7edfb
+            </small>
+          </div>
+        </div>
+
       </div>
 
-      <div className="col">
-        <div className="card">
-          <div className="card-img-top" style={{height: 110, background: '#1ac592'}}></div>
-          <small className="card-body">
-            <b>CMYK:</b> 71 0 59 0<br/>
-            <b>RGB:</b> 26 197 146<br/>
-            <b>HEX:</b> 1ac592
-          </small>
+      <div className="row">
+        <div className="col">
+          <div className="card mb-3">
+            <div className="card-img-top" style={{height: 110, background: '#000'}}></div>
+            <small className="card-body">
+              <b>CMYK:</b> - - -<br/>
+              <b>RGB:</b> 0 0 0<br/>
+              <b>HEX:</b> 000
+            </small>
+          </div>
         </div>
-      </div>
 
-      <div className="col">
-        <div className="card">
-          <div className="card-img-top" style={{height: 110, background: '#0b8fdf'}}></div>
-          <small className="card-body">
-            <b>CMYK:</b> 76 35 0 0<br/>
-            <b>RGB:</b> 11 143 223<br/>
-            <b>HEX:</b> 0b8fdf
-          </small>
-        </div>
       </div>
-
-      <div className="col">
-        <div className="card">
-          <div className="card-img-top" style={{height: 110, background: '#191919'}}></div>
-          <small className="card-body">
-            <b>CMYK:</b> 73 67 65 79<br/>
-            <b>RGB:</b> 25 25 25<br/>
-            <b>HEX:</b> 191919
-          </small>
-        </div>
-      </div>
-
     </div>
 ))
 // Icons
