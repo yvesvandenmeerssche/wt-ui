@@ -44,7 +44,7 @@ storiesOf('Layout', module)
 
 
   // GRID COMPONENTS
-  storiesOf('Layout/-Grid Components', module)
+  storiesOf('Layout/XGrid Components', module)
 
     //Container
     .add('Container', doc(Grid__Container))
