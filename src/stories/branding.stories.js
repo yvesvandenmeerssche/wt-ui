@@ -226,7 +226,7 @@ storiesOf('Branding', module)
   </div>
 ))
 // Media Assets
-storiesOf('Branding/-Media assets', module)
+storiesOf('Branding/XMedia assets', module)
   .add('Logo variants', withCleanPreview(MediaAssets__LogoVariants, () =>
     <div className="text-center col">
       <p className="mb-4" style={{padding: '0 20px'}}>
