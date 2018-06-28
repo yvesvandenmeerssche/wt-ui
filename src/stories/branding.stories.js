@@ -14,7 +14,8 @@ import Fonts from './branding/fonts.md';
 import Fonts__Headings from './branding/fonts__headings.md';
 import Colors from './branding/colors.md';
 import Icons from './branding/icons.md';
-import MediaAssets from './branding/media-assets.md';
+import MediaAssets__LogoVariants from './branding/media-assets__logo-variants.md';
+import MediaAssets__CustomIcons from './branding/media-assets__custom-icons.md';
 
 // Images
 import imgLogo from 'windingtree-media-web/logo-variants/full-logo/png/logo--gradient_black-text.png';
@@ -122,22 +123,29 @@ storiesOf('Branding', module)
   </div>
 ))
 // Media Assets
-.add('Media assets', withCleanPreview(MediaAssets, () =>
-  <div className="text-center col">
-    <p className="mb-4" style={{padding: '0 20px'}}>
-      <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
-    </p>
-    <p className="mb-4" style={{padding: '40px 20px', backgroundColor: '#1AC592'}}>
-      <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
-    </p>
-    <p>
-      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
-      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
-      <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
-      {/*
-      Disabled until the image is available.
-      <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
-      */}
-    </p>
-  </div>
-))
+storiesOf('Branding/-Media assets', module)
+  .add('Logo variants', withCleanPreview(MediaAssets__LogoVariants, () =>
+    <div className="text-center col">
+      <p className="mb-4" style={{padding: '0 20px'}}>
+        <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
+      </p>
+      <p className="mb-4" style={{padding: '40px 20px', backgroundColor: '#1AC592'}}>
+        <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
+      </p>
+      <p>
+        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
+        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
+        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
+        {/*
+        Disabled until the image is available.
+        <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
+        */}
+      </p>
+    </div>
+  ))
+  // Media Assets
+  .add('Custom Icons', withCleanPreview(MediaAssets__CustomIcons, () =>
+    <div className="text-center col">
+      Icons will be added later...
+    </div>
+  ))
