@@ -225,7 +225,7 @@ storiesOf('Branding', module)
     <i className="wicon-github-circled"/>
   </div>
 ))
-// Media Assets
+// Media Assets / Logo Variants
 storiesOf('Branding/XMedia assets', module)
   .add('Logo variants', withCleanPreview(MediaAssets__LogoVariants, () =>
     <div className="text-center col">
@@ -246,7 +246,7 @@ storiesOf('Branding/XMedia assets', module)
       </p>
     </div>
   ))
-  // Media Assets
+  // Media Assets / Custom Icons
   .add('Custom Icons', withCodePreview(MediaAssets__CustomIcons, () =>
     <div className="text-center">
       <img src={airplaneTicket} alt="icon" width="100" className="img-fluid"/>
