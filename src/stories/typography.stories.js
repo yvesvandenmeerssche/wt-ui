@@ -41,7 +41,7 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 // HEADINGS
-storiesOf('Typography/XHeadings', module)
+storiesOf('Typography/Headings', module)
 
   // Overview
   .add('Overview', withCleanPreview(Headings, () =>
@@ -94,7 +94,7 @@ storiesOf('Typography/XHeadings', module)
 
 
 // INLINE TEXT ELEMENTS
-storiesOf('Typography/XInline text elements', module)
+storiesOf('Typography/Inline text elements', module)
 
   // Overview
   .add('Overview', withCodePreview(InlineTextElements, () =>
@@ -139,7 +139,7 @@ storiesOf('Typography/XInline text elements', module)
 
 
 // BLOCKQUOTES
-storiesOf('Typography/XBlockquotes', module)
+storiesOf('Typography/Blockquotes', module)
 
   // Overview
   .add('Overview', withCodePreview(Blockquotes, () =>
@@ -171,7 +171,7 @@ storiesOf('Typography/XBlockquotes', module)
 
 
 // LISTS
-storiesOf('Typography/XLists', module)
+storiesOf('Typography/Lists', module)
 
   // Overview
   .add('Overview', withCleanPreview(Lists, () =>
@@ -258,7 +258,7 @@ storiesOf('Typography/XLists', module)
 
 
 // CODE
-storiesOf('Typography/XCode', module)
+storiesOf('Typography/Code', module)
 
   // Inline code
   .add('Inline code', withCodePreview(Code__Inline, () =>
