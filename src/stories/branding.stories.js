@@ -23,8 +23,7 @@ import imgLogoAlt from 'windingtree-media-web/logo-variants/full-logo/png/logo--
 import imgTree from 'windingtree-media-web/logo-variants/tree/png/tree--gradient.png';
 import imgTreeAlt from 'windingtree-media-web/logo-variants/tree/png/tree--black.png';
 import imgSign from 'windingtree-media-web/logo-variants/sign/png/sign--gradient.png';
-// Disabled until the image is available
-// import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
+import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
 
 // Icon images
 import airplaneTicket from 'windingtree-media-web/custom-icons/svg/wt-icon--airplane-ticket.svg';
@@ -240,10 +239,7 @@ storiesOf('Branding/Media assets', module)
         <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
         <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
         <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
-        {/*
-        Disabled until the image is available.
         <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
-        */}
       </p>
     </div>
   ))
