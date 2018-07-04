@@ -4,20 +4,20 @@
 // look and feel of the framework to the Winding Three brand.
 
 // Typography
-@import "typography/type";
+@import "theme/typography/type";
 
 // Images
-@import "images/images";
+@import "theme/images/images";
 
 // Controls
-@import "controls/buttons";
-@import "controls/forms";
+@import "theme/controls/buttons";
+@import "theme/controls/forms";
 
 // Navigation
-@import "navigation/dropdown";
-@import "navigation/nav";
-@import "navigation/navbar";
+@import "theme/navigation/dropdown";
+@import "theme/navigation/nav";
+@import "theme/navigation/navbar";
 
 // Containers
-@import "containers/card";
-@import "containers/modal";
+@import "theme/containers/card";
+@import "theme/containers/modal";
