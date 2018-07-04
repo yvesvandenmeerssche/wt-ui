@@ -1,44 +1,49 @@
-h4,
-.h4 {
-    @include scale($h4-font-size, up);
-}
+// TYPOGRAPHY - - - - - - - - - - - - - - - - - - - - - - - - -
 
-h5,
-.h5 {
-    @include scale($h5-font-size, up);
-}
 
-h6,
-.h6 {
-    @include scale($h6-font-size, up);
-}
+// Headings
+h4, .h4 { @include scale($h4-font-size, up); }
+h5, .h5 { @include scale($h5-font-size, up); }
+h6, .h6 { @include scale($h6-font-size, up); }
 
-small,
-.small {
-    @include scale($small-font-size, up);
-}
 
+// Font variants
+small, .small { @include scale($small-font-size, up); }
+
+
+// Blockquote
 .blockquote {
-    > p {
-        .mdi {
-            position: absolute;
-            color: $primary;
-
-            &.mdi-format-quote-open {
-                top: -36px;
-                left: 0;
-            }
-
-            &.mdi-format-quote-close {
-                bottom: -36px;
-                right: 0;
-            }
-        }
+  > p {
+    .mdi[class*="mdi-format-quote"] {
+      position: absolute;
+      color: $primary;
+      &.mdi-format-quote-open {
+        top: -36px;
+        left: 0;
+      }
+      &.mdi-format-quote-close {
+        bottom: -36px;
+        right: 0;
+      }
     }
+  }
 }
 
 .blockquote-footer {
-    &::before {
-        display: none;
+  &::before { display: none; }
+}
+
+
+// Alternative blockquote
+.blockquote.blockquote--alt {
+  margin-bottom: 0;
+  a {
+    &:last-child {
+      margin-left: 1rem;
+      @include scale($small-font-size, up);
     }
+  }
+  .media {
+    font-size: $font-size-base;
+  }
 }
