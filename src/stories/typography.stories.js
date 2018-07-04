@@ -141,6 +141,61 @@ storiesOf('Typography/Inline text elements', module)
 // BLOCKQUOTES
 storiesOf('Typography/Blockquotes', module)
 
+  // Default quote
+  .add('Default quote', withCodePreview(Blockquotes, () =>
+    <blockquote className="blockquote d-md-flex flex-md-column-reverse align-items-center h-100 my-1 my-md-0">
+      <article className="team-member media d-block d-md-flex align-items-md-center pr-md-1 text-center text-md-left mb-1 mb-md-0 mt-md-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="108" height="120" viewBox="0 0 108 120" className="mr-1">
+              <defs>
+                  <path d="M53.5135135,0 C51.5026531,0 49.0462292,0.612640549 46.7027027,1.93548387 L6.81081081,25.1612903 C2.70204694,27.2838443 0,31.9809136 0,36.7741935 L0,83.2258065 C0,87.9373729 2.70204694,92.6344421 6.81081081,94.8387097 L46.7027027,118.064516 C49.0462292,119.346494 51.5026531,120 53.5135135,120 C56.4564123,120 58.9127966,119.346494 61.2972973,118.064516 L101.189189,94.8387097 C105.257015,92.6344421 108,87.9373729 108,83.2258065 L108,36.7741935 C108,31.9809136 105.257015,27.2838443 101.189189,25.1612903 L61.2972973,1.93548387 C58.9127966,0.612640549 56.4564123,0 53.5135135,0 Z" id="path"></path>
+              </defs>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <mask id="mask" fill="white">
+                      <use xlinkHref="#path"></use>
+                  </mask>
+                  <image mask="url(#mask)" width="108" height="120" xlinkHref="http://windingtree.com/assets/img/team/max.jpg"></image>
+              </g>
+          </svg>
+
+          <div className="media-body pr-md-1">
+              <h6>
+                  Maksim Izmaylov
+              </h6>
+
+              <p className="small text-muted text-uppercase">
+                  Founder, CEO
+              </p>
+          </div>
+      </article>
+
+      <p className="lead position-relative mb-1 px-1 px-md-2 text-center text-md-left">
+          <i className="mdi mdi-36px mdi-format-quote-open"></i>
+          In a decentralized travel distribution system, for example, there is no room for rent-seeking intermediaries, therefore the wealth they are currently hoarding will be distributed to the rest of the network, making travel cheaper for travelers and more profitable for travel companies.
+          <i className="mdi mdi-36px mdi-format-quote-close"></i>
+      </p>
+    </blockquote>
+  ))
+  // Alternative quote
+  .add('Alternative quote', withCodePreview(Blockquotes, () =>
+    <blockquote className="blockquote blockquote--alt text-center text-md-left">
+
+      <div className="media flex-column flex-md-row align-items-center mb-1">
+          <img className="mb-1 mb-md-0 mr-md-1 rounded-circle" src="http://windingtree.com/assets/img/in-the-press/quotes/avatars/lisa-farrar.jpg" width="60" height="60" alt="Lisa Farrar"/>
+          <div className="media-body">
+              Lisa Farrar
+              <br/>
+              Chief digital officer at Nordic Choice Hotels
+          </div>
+      </div>
+
+      <p className="d-flex flex-column align-items-center d-md-block">
+          "It's very exciting, but very early. It's a simpler and cheaper distribution chain that can challenge the booking giants"
+          <a href="http://nordic.businessinsider.com/a-norwegian-hotel-billionaire-wants-to-use-blockchain-to-cut-out-expedia--/" className="mt-1 mt-md-0 border-bottom">
+              Read full article
+          </a>
+      </p>
+    </blockquote>
+  ))
   // Overview
   .add('Overview', withCodePreview(Blockquotes, () =>
     <blockquote className="blockquote">
