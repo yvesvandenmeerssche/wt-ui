@@ -1,0 +1,66 @@
+// Custom Variables
+
+$fontPrimary: "Raleway", sans-serif;
+$fontSecondary: "Catamaran", sans-serif;
+
+/* brand colors */
+$brandGreen: #00df9e;
+$brandGreen--Subtle: #1ac592;
+$brandBlue: #0b8fdf;
+$brandBlack: #191919;
+$brandGradient: linear-gradient(
+  135deg,
+  $brandGreen 0,
+  $brandBlue 100%
+);
+
+$altGreen: #02ffb3;
+$altTeal: #0ad7df;
+$altBlue: #0948e0;
+$altBlue--Dark: #0948e0;
+$altPurple: #9f09e0;
+$altPurple--Dark: #5709df;
+$altMagenta: #df097e;
+
+/* app colors */
+$colorPrimary: $brandGreen;
+$colorAccent: $brandBlue;
+$colorSecondary: $altGreen;
+$colorSuccess: $brandGreen--Subtle;
+$colorDanger: $altMagenta;
+$colorWarning: #efb547;
+$colorInfo: $altTeal;
+$colorLight: #dedede;
+$colorDark: $brandBlack;
+$colorMuted: #878f97;
+$colorWhite: #fff;
+
+/* specific colors */
+$shadowColor: rgba(0, 0, 0, .2);
+$shadowColor--subtle: rgba(0, 0, 0, .07);
+
+/* shadows */
+$shadow: 2px 2px 20px $shadowColor--subtle;
+$shadow--xl: 5px 5px 40px $shadowColor,
+  1px 5px 20px $shadowColor--subtle;
+
+$footerHeight: 295px;
+
+// - - - - - - - - - - - - -
+
+$color-gradient-primary: #29cb96;
+$color-gradient-secondary: #5f2987;
+
+$radial-gradient-from-top: radial-gradient(circle at 50% 75%, $color-gradient-primary, $color-gradient-secondary 66.6%);
+$radial-gradient-from-bottom: radial-gradient(circle at 50% 0, $color-gradient-primary, $color-gradient-secondary 66.6%);
+$radial-gradient-from-left: radial-gradient(circle at 100% 50%, $color-gradient-primary, $color-gradient-secondary);
+
+$linear-gradient-to-bottom: linear-gradient(to bottom, $color-gradient-primary, $color-gradient-secondary);
+$linear-gradient-to-left: linear-gradient(to left, $color-gradient-primary, $color-gradient-secondary);
+
+$image-max-width: 160px;
+$image-max-height: 80px;
+
+// Hardcoding navbar height in styles to assign a value to a property more quickly than from JS
+$navbar-height: 5.5rem;
+$navbar-height-md: 11rem;
