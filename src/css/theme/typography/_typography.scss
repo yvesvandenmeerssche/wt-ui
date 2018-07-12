@@ -31,6 +31,7 @@ small, .small { @include scale($small-font-size, up); }
 
 .blockquote-footer {
   &::before { display: none; }
+  cite.media-body {font-style: normal;}
 }
 
 
