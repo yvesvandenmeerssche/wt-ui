@@ -2,6 +2,8 @@
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
+<p><b>Note:</b> <em>Toolbars were not used on the website. This component styles must be reviewed.</em></p>
+
 <!-- STORY -->
 
 ```html
@@ -20,7 +22,6 @@ Combine sets of button groups into button toolbars for more complex components. 
   </div>
 </div>
 ```
-
-<small>Feel free to mix input groups with button groups in your toolbars. Review [Bootstrap's documentation][0] for more information.</small>
+Read [Bootstrap's documentation][0] for more information.
 
 [0]: https://getbootstrap.com/docs/4.0/components/button-group/#button-toolbar
