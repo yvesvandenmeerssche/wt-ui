@@ -5,9 +5,13 @@
   text-transform: uppercase;
 }
 
-.btn-primary {
+.btn-primary:not([disabled]) {
   @include hover {
     background: $secondary;
     border-color: $secondary;
   }
+}
+
+.btn-sm {
+  font-size: 70%;
 }
