@@ -52,3 +52,8 @@
   line-height: 75px !important;
   strong {font-weight: 900 !important;}
 }
+
+.block-shadow {
+  box-shadow: 0 -5px 35px 5px rgba($black, .1) !important;
+  // REVIEW: Consider overwrite bootstrap box-shadow utilities (.shadow-lg)
+}
