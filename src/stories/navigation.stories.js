@@ -8,17 +8,18 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
+import {withDropdown, withScrollSpy, withVariableNavBar} from "./HOCs/bootstrap";
 
 // Readme files
 import BaseNav from './navigation/base-nav.md';
 import NavTabs from './navigation/nav-tabs.md';
+import NavPointers from './navigation/nav-pointers.md';
 import NavPills from './navigation/nav-pills.md';
 import Navbar from './navigation/navbar.md';
 import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
 import Pagination from './navigation/pagination.md';
 import Scrollspy from './navigation/scrollspy.md';
-import {withDropdown, withScrollSpy} from "./HOCs/bootstrap";
 
 
 // COMPONENTS
@@ -46,7 +47,6 @@ storiesOf('Navigation', module)
       </ul>
     </div>
   ))
-
   // Nav Tabs
   .add('Nav Tabs', withCodePreview(NavTabs, () =>
     <ul className="nav nav-tabs">
@@ -71,8 +71,50 @@ storiesOf('Navigation', module)
       </li>
     </ul>
   ))
+  // Nav Pointers
+  .add('Nav Pointers', withCodePreview(NavPointers, () =>
+    <div>
+      <ul className="nav nav-pointers" role="tablist">
+        <li className="nav-item col-4 col-md-3">
+          <a className="nav-link active" data-toggle="tab" href="#quote-1" role="tab" aria-selected="true">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/businessinsider.png" alt="Business Insider"/>
+          </a>
+        </li>
+        <li className="nav-item col-4 col-md-3">
+          <a className="nav-link" data-toggle="tab" href="#quote-2" role="tab" aria-selected="false">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/Swissport.png" alt="Swissport"/>
+          </a>
+        </li>
+        <li className="nav-item col-4 col-md-3">
+          <a className="nav-link" data-toggle="tab" href="#quote-3" role="tab" aria-selected="false">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/coindesk.png" alt="Coindesk"/>
+          </a>
+        </li>
+        <li className="nav-item col-4 col-md-3">
+          <a className="nav-link" data-toggle="tab" href="#quote-4" role="tab" aria-selected="false">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/skift.svg" alt="Skift"/>
+          </a>
+        </li>
+      </ul>
 
+      <div style={{ height: 0, overflow: 'hidden!important' }}>
+        <div className="tab-content block-shadow px-2 py-3 bg-white">
+          <div className="tab-pane fade show active" id="quote-1" role="tabpanel">
+          </div>
 
+          <div className="tab-pane fade " id="quote-2" role="tabpanel">
+          </div>
+
+          <div className="tab-pane fade " id="quote-3" role="tabpanel">
+          </div>
+
+          <div className="tab-pane fade " id="quote-4" role="tabpanel">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  ))
   // Nav Pills
   .add('Nav Pills', withCodePreview(NavPills, () =>
     <ul className="nav nav-pills">
@@ -97,45 +139,55 @@ storiesOf('Navigation', module)
       </li>
     </ul>
   ))
-
-
   // Navbar
-  .add('Navbar', withCodePreview(Navbar, withDropdown(() =>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">Navbar</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+  .add('Navbar', withCleanPreview(Navbar, withVariableNavBar(() =>
+    <div style={{
+      overflow: 'hidden', height: 320,
+      backgroundColor: '#5F2987',
+      backgroundImage: 'radial-gradient(circle at 50% 255%, #29cb96, #5f2987 80.6%)'
+    }}>
+      <nav className="navbar navbar-dark navbar-expand-lg" id="navbar">
+        <div className="container">
+          <a href="/" className="navbar-brand d-block">Winding Tree</a>
+          {/* <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"> */}
+          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+            <i className="mdi mdi-24px mdi-menu"></i>
+          </button>
+          <div className="collapse navbar-collapse" id="navbar-content">
+            {/* <ul className="navbar-nav ml-auto" id="navbar-nav" style={{transform: 'translateX(212px)'}}> */}
+            <ul className="navbar-nav ml-auto" id="navbar-nav">
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#">Action</a>
-              <a className="dropdown-item" href="#">Another action</a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+              {/* Normal item */}
+              <li className="nav-item h5">
+                <a href="/" className="nav-link">
+                Normal item
+                </a>
+              </li>
+
+              {/* Dropdown */}
+              <li className="nav-item h5 dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div className="dropdown-menu">
+                  <a href="/" className="dropdown-item">
+                    Dropdown item
+                  </a>
+                </div>
+              </li>
+
+              {/* Action button */}
+              <li className="nav-item">
+                <a href="/" className="btn btn-block btn-primary" id="navbar-btn">
+                  Join Platform
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   )))
   // Breadcrumb
   .add('Breadcrumb', withCodePreview(Breadcrumb, () =>
