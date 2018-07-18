@@ -25,15 +25,13 @@ The base `.nav` component allows the building all types of navigation components
 
 Use `<ul>`s like above, or roll your own with say a `<nav>` element.
 
-<div class="doc-preview mb-0 py-3 px-3">
-<div class="container">
+<div class="doc-preview mb-0">
   <nav class="nav">
     <a class="nav-link active" href="#">Active</a>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link disabled" href="#">Disabled</a>
   </nav>
-</div>
 </div>
 
 
@@ -61,15 +59,13 @@ Change the horizontal alignment of your nav with [flexbox utilities](https://get
 
 Stack the navigation items by changing the flex item direction with the `.flex-column utility` (or  `.flex-sm-column` fot responsive variations).
 
-<div class="doc-preview mb-0 py-3 px-3">
-<div class="container">
+<div class="doc-preview mb-0">
   <nav class="nav flex-column">
     <a class="nav-link active" href="#">Active</a>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link disabled" href="#">Disabled</a>
   </nav>
-</div>
 </div>
 
 ```html
@@ -80,15 +76,13 @@ Stack the navigation items by changing the flex item direction with the `.flex-c
 
 Force your `.nav`’s contents **to extend the full available width** `.nav-fill`.
 
-<div class="doc-preview mb-0 py-3 px-3">
-<div class="container">
+<div class="doc-preview mb-0">
   <nav class="nav nav-fill">
     <a class="nav-item nav-link active" href="#">Active</a>
     <a class="nav-item nav-link" href="#">Link</a>
     <a class="nav-item nav-link" href="#">Link</a>
     <a class="nav-item nav-link disabled" href="#">Disabled</a>
   </nav>
-</div>
 </div>
 
 ```html
@@ -97,15 +91,13 @@ Force your `.nav`’s contents **to extend the full available width** `.nav-fill
 
 For **equal-width list items**, use `.nav-justified`.
 
-<div class="doc-preview mb-0 py-3 px-3">
-<div class="container">
+<div class="doc-preview mb-0">
   <nav class="nav nav-justified">
     <a class="nav-item nav-link active" href="#">Active</a>
     <a class="nav-item nav-link" href="#">Link</a>
     <a class="nav-item nav-link" href="#">Link</a>
     <a class="nav-item nav-link disabled" href="#">Disabled</a>
   </nav>
-</div>
 </div>
 
 ```html
