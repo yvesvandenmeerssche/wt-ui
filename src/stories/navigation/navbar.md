@@ -17,7 +17,6 @@ Navbars come with built-in support for sub-components, as you can see below. Rev
 
     <!-- Menu toggler (mobile) -->
     <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
       <i className="mdi mdi-24px mdi-menu"></i>
     </button>
 

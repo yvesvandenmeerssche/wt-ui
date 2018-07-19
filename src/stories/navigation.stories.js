@@ -151,7 +151,6 @@ storiesOf('Navigation', module)
           <a href="/" className="navbar-brand d-block">Winding Tree</a>
           {/* <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"> */}
           <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
             <i className="mdi mdi-24px mdi-menu"></i>
           </button>
           <div className="collapse navbar-collapse" id="navbar-content">
