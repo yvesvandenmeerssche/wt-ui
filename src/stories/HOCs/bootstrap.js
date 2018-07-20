@@ -158,7 +158,6 @@ export function withVariableNavBar(WrappedComponent) {
       $("#navbar-toggler").on('click', function(){
         mobileMenu(this);
         $("#navbar-content").collapse('toggle');
-        console.log('aaa');
       });
 
       navbarToggler.addEventListener('touchend', function() {
