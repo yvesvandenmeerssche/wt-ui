@@ -41,6 +41,14 @@ import plusSign from 'windingtree-media-web/custom-icons/svg/wt-icon--plus-sign.
 import securityBadge from 'windingtree-media-web/custom-icons/svg/wt-icon--security-badge.svg';
 import tree from 'windingtree-media-web/custom-icons/svg/wt-icon--tree.svg';
 import worldAndPin from 'windingtree-media-web/custom-icons/svg/wt-icon--world-and-pin.svg';
+import plug from 'windingtree-media-web/custom-icons/svg/wt-icon--plug.svg';
+// Alt icon images
+import altToken from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--token.svg';
+import altHandClick from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--hand-click.svg';
+import altIdea from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--idea.svg';
+import altNodes from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--nodes.svg';
+import altPath from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--path.svg';
+import altPuzzle from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--puzzle.svg';
 
 
 // COMPONENTS
@@ -211,17 +219,27 @@ storiesOf('Branding', module)
 // Icons
 .add('Icons', withCodePreview(Icons, () =>
   <div className="h3">
-    <i className="wicon-whatshot"/>
-    <i className="wicon-back"/>
-    <i className="wicon-timelapse"/>
-    <i className="wicon-account_balance_wallet"/>
-    <i className="wicon-help-outline"/>
-    <i className="wicon-info"/>
-    <i className="wicon-arrow-right"/>
-    <i className="wicon-right-dir"/>
-    <i className="wicon-link"/>
-    <i className="wicon-twitter"/>
-    <i className="wicon-github-circled"/>
+    {/* <!-- Social icons --> */}
+    <i class="mdi mdi-github-circle"/>
+    <i class="mdi mdi-24px mdi-github-box"/>
+    <i class="mdi mdi-twitter"/>
+    <i class="mdi mdi-medium"/>
+    <i class="mdi mdi-youtube"/>
+    <i class="mdi mdi-telegram"/>
+    <i class="mdi mdi-reddit"/>
+    <i class="mdi mdi-linkedin"/>
+    <i class="mdi mdi-link-variant mr-2"/>
+
+    {/* <!-- Other icons --> */}
+    <i class="mdi mdi-bitcoin"/>
+    <i class="mdi mdi-close"/>
+    <i class="mdi mdi-chevron-right"/>
+    <i class="mdi mdi-menu mr-2"/>
+
+    {/* <!-- Different sizes --> */}
+    <i class="mdi mdi-36px mdi-format-quote-open"/>
+    <i class="mdi mdi-36px mdi-format-quote-close"/>
+    <i class="mdi mdi-48px mdi-close"/>
   </div>
 ))
 
@@ -261,5 +279,16 @@ storiesOf('Branding/Media assets', module)
       <img src={securityBadge} alt="icon" width="100" className="img-fluid"/>
       <img src={tree} alt="icon" width="100" className="img-fluid"/>
       <img src={worldAndPin} alt="icon" width="100" className="img-fluid"/>
+      <img src={plug} alt="icon" width="100" className="img-fluid"/>
+
+      <hr className="my-2"/>
+
+      <img src={altToken} alt="icon" width="85" className="img-fluid"/>
+      <img src={altHandClick} alt="icon" width="85" className="img-fluid"/>
+      <img src={altIdea} alt="icon" width="85" className="img-fluid"/>
+      <img src={altNodes} alt="icon" width="85" className="img-fluid"/>
+      <img src={altPath} alt="icon" width="85" className="img-fluid"/>
+      <img src={altPuzzle} alt="icon" width="85" className="img-fluid"/>
+
     </div>
   ))

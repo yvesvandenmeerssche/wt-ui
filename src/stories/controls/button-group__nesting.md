@@ -2,6 +2,8 @@
 
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
+<p><b>Note:</b> <em>This component was not used on the website and the styles must be reviewed.</em></p>
+
 <!-- STORY -->
 
 ```html

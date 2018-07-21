@@ -24,6 +24,7 @@ import ButtonGroup__Vertical from './controls/button-group__vertical.md';
 
 import Form from './controls/form.md';
 import InputGroup from './controls/input-group.md';
+import InputGroup__Subscription from './controls/input-group__subscribe.md';
 
 
 // COMPONENTS
@@ -36,54 +37,82 @@ storiesOf('Controls/Button', module)
   // Overview
   .add('Overview', withCodePreview(Button, () =>
     <div>
-      <button type="button" className="mr-2 btn btn-primary">Primary</button>
-      <button type="button" className="mr-2 btn btn-secondary">Secondary</button>
-      <button type="button" className="mr-2 btn btn-success">Success</button>
-      <button type="button" className="mr-2 btn btn-danger">Danger</button>
-      <button type="button" className="mr-2 btn btn-warning">Warning</button>
-      <button type="button" className="mr-2 btn btn-info">Info</button>
-      <button type="button" className="mr-2 btn btn-light">Light</button>
-      <button type="button" className="btn btn-dark">Dark</button>
-      <button type="button" className="btn btn-link">Link</button>
+      <button type="button" className="mr-1 mb-1 btn btn-primary">Primary</button>
+      <button type="button" className="mr-1 mb-1 btn btn-secondary">Secondary</button>
+
+      <button type="button" className="mr-1 mb-1 btn btn-light">Light</button>
+      <button type="button" className="mr-1 mb-1 btn btn-dark">Dark</button>
+      <button type="button" className="mr-1 mb-1 btn btn-link">Link</button>
+
+      <hr className="mb-1"/>
+      <p className="mt-1 mb-1">The following variants retain the Bootstrap default colors, since were not used on the website.</p>
+
+      <button type="button" className="mr-1 mb-1 btn btn-success">Success</button>
+      <button type="button" className="mr-1 mb-1 btn btn-danger">Danger</button>
+      <button type="button" className="mr-1 mb-1 btn btn-warning">Warning</button>
+      <button type="button" className="mr-1 mb-1 btn btn-info">Info</button>
     </div>
   ))
   // Button tags
   .add('Button tags', withCodePreview(Button__Tags, () =>
     <div>
-      <a className="mr-2 btn btn-primary" href="#" role="button">Link</a>
-      <button className="mr-2 btn btn-primary" type="submit">Button</button>
-      <input className="mr-2 btn btn-primary" type="button" value="Input"/>
-      <input className="mr-2 btn btn-primary" type="submit" value="Submit"/>
-      <input className="mr-2 btn btn-primary" type="reset" value="Reset"/>
+      <a className="mr-1 mb-1 btn btn-primary" href="#" role="button">Link</a>
+      <button className="mr-1 mb-1 btn btn-primary" type="submit">Button</button>
+      <input className="mr-1 mb-1 btn btn-primary" type="button" value="Input"/>
+      <input className="mr-1 mb-1 btn btn-primary" type="submit" value="Submit"/>
+      <input className="mr-1 mb-1 btn btn-primary" type="reset" value="Reset"/>
     </div>
   ))
   // Outline buttons
   .add('Outline buttons', withCodePreview(Button__Outline, () =>
     <div>
-      <button type="button" className="mr-2 btn btn-outline-primary">Primary</button>
-      <button type="button" className="mr-2 btn btn-outline-secondary">Secondary</button>
-      <button type="button" className="mr-2 btn btn-outline-success">Success</button>
-      <button type="button" className="mr-2 btn btn-outline-danger">Danger</button>
-      <button type="button" className="mr-2 btn btn-outline-warning">Warning</button>
-      <button type="button" className="mr-2 btn btn-outline-info">Info</button>
-      <button type="button" className="mr-2 btn btn-outline-light">Light</button>
-      <button type="button" className="mr-2 btn btn-outline-dark">Dark</button>
+      <div className="container">
+        <div className="row mb-1">
+          <div className="col px-1 py-1 text-center" style={{
+            background: '#2ebd95',
+            background: 'linear-gradient(135deg, #5f2b88 0%, #2ebd95 100%)'
+          }}>
+            <button type="button" className="btn btn-outline-light">Light</button>
+          </div>
+          <div className="col px-1 py-1 text-center">
+            <button type="button" className="btn btn-outline-dark">Dark</button>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        <em>* Use the light variant only over a dark background</em>
+      </p>
+
+      <hr className="my-1"/>
+      <p className="mt-1 mb-1">The following variants retain the Bootstrap default colors, since were not used on the website.</p>
+
+      <button type="button" className="mr-1 mb-1 btn btn-outline-primary">Primary</button>
+      <button type="button" className="mr-1 mb-1 btn btn-outline-secondary">Secondary</button>
+      <button type="button" className="mr-1 mb-1 btn btn-outline-success">Success</button>
+      <button type="button" className="mr-1 mb-1 btn btn-outline-danger">Danger</button>
+      <button type="button" className="mr-1 mb-1 btn btn-outline-warning">Warning</button>
+      <button type="button" className="mr-1 mb-1 btn btn-outline-info">Info</button>
     </div>
   ))
   // Button sizes
   .add('Button sizes', withCodePreview(Button__Sizes, () =>
     <div>
-      <button type="button" className="mb-2 btn btn-primary btn-lg">Large button</button><br/>
-      <button type="button" className="mb-2 btn btn-primary btn-sm">Small button</button><br/>
+      <button type="button" className="mb-1 btn btn-primary btn-lg">Large button</button><br/>
       <button type="button" className="btn btn-primary btn-lg btn-block">Block level button</button>
+
+      <hr className="my-1"/>
+      <p className="mt-1 mb-1">The following variant was not used on the website.</p>
+
+      <button type="button" className="btn btn-primary btn-sm">Small button</button><br/>
     </div>
   ))
   // Button states
   .add('Button states', withCodePreview(Button__States, () =>
     <div>
-      <a href="#" className="mr-2 btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-      <button type="button" className="mr-2 btn btn-lg btn-primary" disabled>Primary button</button>
-      <a href="#" className="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+      <a href="#" className="mr-1 mb-1 btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+      <button type="button" className="mr-1 mb-1 btn btn-lg btn-primary" disabled>Primary button</button>
+      <a href="#" className="mb-1 btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
     </div>
   ))
   // Button plugins
@@ -121,19 +150,19 @@ storiesOf('Controls/ Button Group', module)
   // ButtonGroup__Sizing
   .add('Sizing', withCodePreview(ButtonGroup__Sizing, () =>
     <div className="bd-example">
-      <div className="mb-2 btn-group btn-group-lg" role="group" aria-label="Large button group">
+      <div className="mb-1 btn-group btn-group-lg" role="group" aria-label="Large button group">
         <button type="button" className="btn btn-primary">Left</button>
         <button type="button" className="btn btn-primary">Middle</button>
         <button type="button" className="btn btn-primary">Right</button>
       </div>
       <br/>
-      <div className="mb-2 btn-group" role="group" aria-label="Default button group">
+      <div className="mb-1 btn-group" role="group" aria-label="Default button group">
         <button type="button" className="btn btn-primary">Left</button>
         <button type="button" className="btn btn-primary">Middle</button>
         <button type="button" className="btn btn-primary">Right</button>
       </div>
       <br/>
-      <div className="mb-2 btn-group btn-group-sm" role="group" aria-label="Small button group">
+      <div className="btn-group btn-group-sm" role="group" aria-label="Small button group">
         <button type="button" className="btn btn-primary">Left</button>
         <button type="button" className="btn btn-primary">Middle</button>
         <button type="button" className="btn btn-primary">Right</button>
@@ -190,13 +219,14 @@ storiesOf('Controls/Form', module)
         <label htmlFor="exampleInputPassword1">Password</label>
         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
-      <div className="form-check">
+      <div className="form-check mb-1">
         <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
         <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
       </div>
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
   ))
+
 
 storiesOf('Controls/Input Group', module)
   // Input Group
@@ -242,3 +272,29 @@ storiesOf('Controls/Input Group', module)
       </div>
     </div>
   ))
+  // Subscription
+  .add('Subscription', withCodePreview(InputGroup__Subscription, () =>
+  <div>
+    <form action="#" className="input-group mb-2">
+        <input type="email" className="form-control form-control-lg" placeholder="Enter e-mail"/>
+        <div className="input-group-append">
+          <button className="btn btn-block btn-lg btn-primary" type="submit">
+            Subscribe
+          </button>
+        </div>
+    </form>
+
+    <p className="mb-2">If you want to make the component responsive add the <code>.input-group--responsive</code> modifier,
+    the text field and the button will be displayed one on top of the other on small viewports.</p>
+
+    <form action="#" className="input-group input-group--responsive">
+      <input type="email" className="form-control form-control-lg" placeholder="Enter e-mail"/>
+      <div className="input-group-append">
+        <button className="btn btn-block btn-lg btn-primary" type="submit">
+          Subscribe
+        </button>
+      </div>
+    </form>
+
+  </div>
+))

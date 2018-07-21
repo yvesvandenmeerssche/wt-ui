@@ -151,7 +151,7 @@ storiesOf('Typography/Blockquotes', module)
 // WT blockquote
 .add('WT blockquote', withCodePreview(Blockquotes__WTblockquote, () =>
   <blockquote className="blockquote d-flex flex-column-reverse flex-md-column align-items-center h-100 my-1 my-md-0">
-    <p className="lead position-relative mb-1 px-1 px-md-2 text-center text-md-left">
+    <p className="position-relative mb-1 px-1 px-md-2 text-center text-md-left">
       <i className="mdi mdi-36px mdi-format-quote-open"></i>
       In a decentralized travel distribution system, for example, there is no room for rent-seeking intermediaries, therefore the wealth they are currently hoarding will be distributed to the rest of the network, making travel cheaper for travelers and more profitable for travel companies.
       <i className="mdi mdi-36px mdi-format-quote-close"></i>

@@ -7,14 +7,14 @@
     will-change: opacity;
   }
 
-  @include media-breakpoint-down('sm') {
+  @include media-breakpoint-down('md') {
     padding-right: ($grid-gutter-width / 2);
     padding-left: ($grid-gutter-width / 2);
   }
 
   &.navbar-dark {
     .navbar-nav {
-      @include media-breakpoint-up('md') {
+      @include media-breakpoint-up('lg') {
         .nav-item {
           .btn {
             transform: translateX(50vw);
@@ -30,10 +30,10 @@
     box-shadow: $box-shadow;
 
     .navbar-brand {
-      background-image: url($baseurl + "/assets/img/logo/sm-color.svg");
+      background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--gradient_black-text--sm.svg");
 
       @include media-breakpoint-up('md') {
-        background-image: url($baseurl + "/assets/img/logo/md-color.svg");
+        background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--gradient_black-text--md.svg");
       }
     }
 
@@ -51,70 +51,73 @@
 }
 
 .navbar-brand {
+
     @include size(133px, 25px);
-    background: url($baseurl + "/assets/img/logo/sm-white.svg") transparent center no-repeat;
+    background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--white_white-text--sm.svg");
 
     @include media-breakpoint-up('md') {
-        @include size(172px, 70px);
-        background-image: url($baseurl + "/assets/img/logo/md-white.svg");
+      @include size(172px, 70px);
+      background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--white_white-text--md.svg");
     }
+
+    background-repeat: no-repeat;
 }
 
 .navbar-nav {
     transition: transform .3s ease .15s;
     will-change: transform;
 
-    @include media-breakpoint-down('sm') {
+    @include media-breakpoint-down('md') {
         margin-top: 2rem;
 
         .dropdown-toggle {
-            display: flex;
-            align-items: center;
+          display: flex;
+          align-items: center;
 
-            &::after {
-                margin: 0 7px 0 auto;
-            }
+          &::after {
+            margin: 0 7px 0 auto;
+          }
         }
 
         .dropdown-menu {
-            margin-top: -1.25rem;
-            padding-top: 0;
-            box-shadow: none;
+          margin-top: -1.25rem;
+          padding-top: 0;
+          box-shadow: none;
         }
 
         .dropdown-item {
-            padding-right: 0;
-            padding-left: 0;
+          padding-right: 0;
+          padding-left: 0;
         }
     }
 
-    @include media-breakpoint-up('md') {
-        align-items: center;
+    @include media-breakpoint-up('lg') {
+      align-items: center;
     }
 
     .nav-item {
-        @include media-breakpoint-down('sm') {
-            border-top: 2px solid $gray-100;
+      @include media-breakpoint-down('md') {
+        border-top: 2px solid $gray-100;
 
-            .btn {
-                margin-top: 2rem;
-            }
+        .btn {
+          margin-top: 2rem;
         }
+      }
 
-        @include media-breakpoint-up('md') {
-            &:not(:last-child) {
-                margin-right: ($spacer * 3);
-            }
+      @include media-breakpoint-up('lg') {
+        &:not(:last-child) {
+          margin-right: ($spacer * 3);
         }
+      }
     }
 
     .nav-link {
-        @include hover {
-            opacity: .7;
-        }
+      @include hover {
+        opacity: .7;
+      }
 
-        @include media-breakpoint-down('sm') {
-            padding: 2rem 0;
-        }
+      @include media-breakpoint-down('md') {
+        padding: 2rem 0;
+      }
     }
 }

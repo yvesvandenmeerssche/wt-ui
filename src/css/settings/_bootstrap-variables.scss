@@ -597,7 +597,7 @@ $dropdown-item-padding-x:           2rem;
 // Navs
 
 // $nav-link-padding-y:                .5rem;
-$nav-link-padding-x:                0;
+// $nav-link-padding-x:                0; // <----- under review
 // $nav-link-disabled-color:           $gray-600;
 
 // $nav-tabs-border-color:             $gray-300;
@@ -620,7 +620,7 @@ $nav-link-padding-x:                0;
 $navbar-padding-y:                  ($spacer * 2);
 $navbar-padding-x:                  0;
 
-$navbar-nav-link-padding-x:         0;
+$navbar-nav-link-padding-x:         0; // <----- under review
 
 $navbar-brand-font-size:            0;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link

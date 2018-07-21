@@ -7,6 +7,7 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs';
+import {withPopover, withTooltip} from "./HOCs/bootstrap";
 
 // Readme files
 import Badge from './feedback/badge.md';
@@ -14,7 +15,6 @@ import Progress from './feedback/progress.md';
 import Popover from './feedback/popover.md';
 import Tooltip from './feedback/tooltip.md';
 import Alert from './feedback/alert.md';
-import {withPopover, withTooltip} from "./HOCs/bootstrap";
 
 
 // COMPONENTS

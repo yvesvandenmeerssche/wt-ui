@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const {version} = require('../../package');
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -43,18 +42,26 @@ module.exports = {
         },
         'sass-loader'
         ],
-      }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
+        ]
+      },
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-          filename: "styles.css",
-          chunkFilename: "[id].css"
-        }),
-    // Copy files from /src to /public
-    new CopyWebpackPlugin([
-      { from: DIR_SOURCE + 'img/', to: DIR_PUBLIC + 'img/' },
-      { from: DIR_SOURCE + 'font/', to: DIR_PUBLIC + 'font/' },
-    ]),
+      filename: "styles.css",
+      chunkFilename: "[id].css"
+    })
   ]
 }
