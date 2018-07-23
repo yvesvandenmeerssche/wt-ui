@@ -62,3 +62,15 @@ small, .small { @include scale($small-font-size, up); }
     font-size: $font-size-base;
   }
 }
+
+
+
+// MDI Icons
+.mdi {
+  &.mdi-xxl {
+    &::before {
+      font-size: 200px;
+      line-height: 200px;
+    }
+  }
+}

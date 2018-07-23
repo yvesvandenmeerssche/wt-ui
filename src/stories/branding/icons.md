@@ -30,6 +30,7 @@ Check the [materialicons website][0] website for a full list of the available ic
 <i class="mdi mdi-36px mdi-format-quote-open"/>
 <i class="mdi mdi-36px mdi-format-quote-close"/>
 <i class="mdi mdi-48px mdi-close"/>
+<i class="mdi mdi-xxl mdi-office-building"/>
 ```
 
 [0]: https://cdn.materialdesignicons.com/2.5.94/
