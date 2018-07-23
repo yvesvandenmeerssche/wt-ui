@@ -17,6 +17,7 @@ import { withLayoutPreview, withCodePreview } from './HOCs/with-docs'
 import Header from './content-blocks/header.md';
 import Content from './content-blocks/content.md';
 import Footer from './content-blocks/footer.md';
+import SectionWrapper from './content-blocks/section-wrapper.md';
 
 
 // COMPONENTS
@@ -42,5 +43,13 @@ storiesOf('Content Blocks', module)
   .add('Content', doc(Content))
   // App footer
   .add('Footer', withLayoutPreview(Footer, () =>
-      <AppFooter/>
-  ));
+    <AppFooter/>
+  ))
+  // Section Wrapper
+  .add('Section Wrapper', withLayoutPreview(SectionWrapper, () =>
+    <article className="section-wrapper bg-primary">
+      <h1>
+        Section Wrapper
+      </h1>
+    </article>
+  ))
