@@ -1,4 +1,5 @@
 .navbar {
+  // opacity: 0;
   transition: background-color .15s ease, opacity .15s ease;
 
   .mod_js & {
@@ -30,10 +31,12 @@
     box-shadow: $box-shadow;
 
     .navbar-brand {
-      background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--gradient_black-text--sm.svg");
+      // background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--gradient_black-text--sm.svg");
+      background-image: url("https://windingtree.com/assets/img/logo/sm-color.svg");
 
       @include media-breakpoint-up('md') {
-        background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--gradient_black-text--md.svg");
+        // background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--gradient_black-text--md.svg");
+        background-image: url("https://windingtree.com/assets/img/logo/md-color.svg");
       }
     }
 
@@ -53,11 +56,13 @@
 .navbar-brand {
 
     @include size(133px, 25px);
-    background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--white_white-text--sm.svg");
+    // background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--white_white-text--sm.svg");
+    background-image: url("https://windingtree.com/assets/img/logo/sm-white.svg");
 
     @include media-breakpoint-up('md') {
       @include size(172px, 70px);
-      background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--white_white-text--md.svg");
+      // background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--white_white-text--md.svg");
+      background-image: url("https://windingtree.com/assets/img/logo/md-white.svg");
     }
 
     background-repeat: no-repeat;
