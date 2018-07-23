@@ -91,29 +91,36 @@ export function withVariableNavBar(WrappedComponent) {
 
       function navbarShow() {
         // if (Modernizr.mq(MQ.up)) {
-        if (window.matchMedia(MQ.up).matches) {
-          navbarNav.setAttribute('style', 'transform: translateX(' + (navbarBtn.offsetWidth + 30) + 'px)');
-        } else {
-          navbarNav.removeAttribute('style');
-        }
 
-        setTimeout(function() {
-          navbar.setAttribute('style', 'opacity: 1; visibility: visible;');
-        }, 900); // .navbar-nav translateX transition duration * 2
+        if (typeof(navbarBtn) != 'undefined' && navbarBtn != null) {
+          if (navbarNav.classList.contains("navbar-nav--animated-btn")) {
+            if (window.matchMedia(MQ.up).matches) {
+              navbarNav.setAttribute('style', 'transform: translateX(' + (navbarBtn.offsetWidth + 30) + 'px)');
+            } else {
+              navbarNav.removeAttribute('style');
+            }
+          }
+
+          setTimeout(function() {
+            navbar.setAttribute('style', 'opacity: 1; visibility: visible;');
+          }, 900); // .navbar-nav translateX transition duration * 2
+        }
       }
 
       function navbarToggle() {
-        if (navbarToggler.getAttribute('aria-expanded') === 'false') {
-          if (window.pageYOffset > navbar.offsetHeight) {
-            navbar.classList.add('navbar-light');
-            navbar.classList.add('bg-white');
-            navbar.classList.remove('navbar-dark');
-          } else {
+        if (navbar.classList.contains("navbar--toggle-bg")) {
+          if (navbarToggler.getAttribute('aria-expanded') === 'false') {
+            if (window.pageYOffset > navbar.offsetHeight) {
+              navbar.classList.add('navbar-light');
+              navbar.classList.add('bg-white');
+              navbar.classList.remove('navbar-dark');
+            } else {
               navbar.classList.add('navbar-dark');
               navbar.classList.remove('navbar-light');
               navbar.classList.remove('bg-white');
             }
           }
+        }
       }
 
       navbarToggle();
@@ -126,7 +133,9 @@ export function withVariableNavBar(WrappedComponent) {
       window.addEventListener('optimizedResize', function() {
         // if (Modernizr.mq(MQ.up)) {
         if (window.matchMedia(MQ.up).matches) {
-          navbar.setAttribute('style', 'opacity: 0; visibility: hidden;');
+          if (typeof(navbarBtn) != 'undefined' && navbarBtn != null) {
+            navbar.setAttribute('style', 'opacity: 0; visibility: hidden;');
+          }
         }
         navbarShow();
       });

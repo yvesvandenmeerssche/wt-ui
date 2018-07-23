@@ -16,6 +16,7 @@ import NavTabs from './navigation/nav-tabs.md';
 import NavPointers from './navigation/nav-pointers.md';
 import NavPills from './navigation/nav-pills.md';
 import Navbar from './navigation/navbar.md';
+import NavbarAnimated from './navigation/navbar-animated.md';
 import Breadcrumb from './navigation/breadcrumb.md';
 import Dropdown from './navigation/dropdown.md';
 import Pagination from './navigation/pagination.md';
@@ -140,13 +141,66 @@ storiesOf('Navigation', module)
     </ul>
   ))
   // Navbar
-  .add('Navbar', withCleanPreview(Navbar, withVariableNavBar(() =>
+  .add('Navbar', withCodePreview(Navbar, withVariableNavBar(() =>
+    <div style={{
+      overflow: 'hidden', height: 320,
+      backgroundColor: '#fff',
+    }}>
+      <nav className="navbar navbar-expand-xl navbar-light" id="navbar">
+        <div className="container">
+          <a className="navbar-brand mr-2" href="#">Navbar</a>
+
+          {/* Toggle button */}
+          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <i className="mdi mdi-24px mdi-menu"></i>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbar-content">
+            <ul className="navbar-nav mr-auto" id="navbar-nav">
+
+              {/* Normal (active) item */}
+              <li className="nav-item active">
+                <a className="nav-link h5" href="#">Home <span className="sr-only">(current)</span></a>
+              </li>
+
+              {/* Dropdown */}
+              <li className="nav-item dropdown">
+                <a className="nav-link h5 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a className="dropdown-item" href="#">Action</a>
+                  <a className="dropdown-item" href="#">Another action</a>
+                  <div className="dropdown-divider"></div>
+                  <a className="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+
+              {/* Disabled item */}
+              <li className="nav-item">
+                <a className="nav-link h5 disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+
+            {/* Action form */}
+            <form className="form-inline my-2 my-lg-0">
+              <input className="form-control form-control-lg mr-sm-1" type="search" placeholder="Search" aria-label="Search"/>
+              <button className="btn btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+  )))
+  // Navbar (Animated)
+  .add('Navbar (Animated)', withCleanPreview(NavbarAnimated, withVariableNavBar(() =>
     <div style={{
       overflow: 'hidden', height: 320,
       backgroundColor: '#5F2987',
       backgroundImage: 'radial-gradient(circle at 50% 255%, #29cb96, #5f2987 80.6%)'
     }}>
-      <nav className="navbar navbar-dark navbar-expand-lg" id="navbar">
+      <nav className="navbar navbar-dark navbar-expand-lg navbar--toggle-bg" id="navbar" style={{opacity: 0}}>
         <div className="container">
           <a href="/" className="navbar-brand d-block">Winding Tree</a>
           {/* <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"> */}
@@ -155,7 +209,7 @@ storiesOf('Navigation', module)
           </button>
           <div className="collapse navbar-collapse" id="navbar-content">
             {/* <ul className="navbar-nav ml-auto" id="navbar-nav" style={{transform: 'translateX(212px)'}}> */}
-            <ul className="navbar-nav ml-auto" id="navbar-nav">
+            <ul className="navbar-nav ml-auto navbar-nav--animated-btn" id="navbar-nav">
 
               {/* Normal item */}
               <li className="nav-item h5">
