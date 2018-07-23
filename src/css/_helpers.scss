@@ -16,6 +16,10 @@
 .text-muted { color: $colorMuted !important }
 .text-white { color: $colorWhite !important }
 
+.bg--gradient-toright {
+  background: #5f2b88 !important;
+  background: linear-gradient(to right, #5f2b88, #2ebd95) !important;
+}
 .bg--gradient {
   background: #5f2b88 !important;
   background: linear-gradient(135deg, #5f2b88 0%, #2ebd95 100%) !important;
@@ -28,6 +32,13 @@
   background: #5f2b88 !important;
   background: radial-gradient(circle at 50% 180%, #29cb96, #5f2987 80%) !important;
 }
+.bg--gradient-ri {
+  background: #5f2b88 !important;
+  background: radial-gradient(circle at 50% -30%, #29cb96, #5f2987 66.6%) !important;
+}
+
+.bg--purple { background-color: #5f2987 !important }
+
 .bg-primary { background-color: $colorPrimary !important }
 .bg-accent { background-color: $colorAccent !important }
 .bg-secondary { background-color: $colorSecondary !important }
