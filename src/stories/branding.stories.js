@@ -220,26 +220,27 @@ storiesOf('Branding', module)
 .add('Icons', withCodePreview(Icons, () =>
   <div className="h3">
     {/* <!-- Social icons --> */}
-    <i class="mdi mdi-github-circle"/>
-    <i class="mdi mdi-24px mdi-github-box"/>
-    <i class="mdi mdi-twitter"/>
-    <i class="mdi mdi-medium"/>
-    <i class="mdi mdi-youtube"/>
-    <i class="mdi mdi-telegram"/>
-    <i class="mdi mdi-reddit"/>
-    <i class="mdi mdi-linkedin"/>
-    <i class="mdi mdi-link-variant mr-2"/>
+    <i className="mdi mdi-github-circle"/>
+    <i className="mdi mdi-24px mdi-github-box"/>
+    <i className="mdi mdi-twitter"/>
+    <i className="mdi mdi-medium"/>
+    <i className="mdi mdi-youtube"/>
+    <i className="mdi mdi-telegram"/>
+    <i className="mdi mdi-reddit"/>
+    <i className="mdi mdi-linkedin"/>
+    <i className="mdi mdi-link-variant mr-2"/>
 
     {/* <!-- Other icons --> */}
-    <i class="mdi mdi-bitcoin"/>
-    <i class="mdi mdi-close"/>
-    <i class="mdi mdi-chevron-right"/>
-    <i class="mdi mdi-menu mr-2"/>
+    <i className="mdi mdi-bitcoin"/>
+    <i className="mdi mdi-close"/>
+    <i className="mdi mdi-chevron-right"/>
+    <i className="mdi mdi-menu mr-2"/>
 
     {/* <!-- Different sizes --> */}
-    <i class="mdi mdi-36px mdi-format-quote-open"/>
-    <i class="mdi mdi-36px mdi-format-quote-close"/>
-    <i class="mdi mdi-48px mdi-close"/>
+    <i className="mdi mdi-36px mdi-format-quote-open"/>
+    <i className="mdi mdi-36px mdi-format-quote-close"/>
+    <i className="mdi mdi-48px mdi-close"/>
+    <i className="mdi mdi-xxl mdi-office-building"/>
   </div>
 ))
 

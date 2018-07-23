@@ -1,6 +1,20 @@
 // TYPOGRAPHY - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
+//Linkd
+a.d-block {
+  * {
+    transition: opacity 0.1s ease-out;
+  }
+  &:hover {
+    text-decoration: none;
+    * {
+      opacity: .9;
+      transition: opacity 0.2s ease-out;
+    }
+  }
+}
+
 // Headings
 h4, .h4 { @include scale($h4-font-size, up); }
 h5, .h5 { @include scale($h5-font-size, up); }
@@ -46,5 +60,17 @@ small, .small { @include scale($small-font-size, up); }
   }
   .media {
     font-size: $font-size-base;
+  }
+}
+
+
+
+// MDI Icons
+.mdi {
+  &.mdi-xxl {
+    &::before {
+      font-size: 200px;
+      line-height: 200px;
+    }
   }
 }
