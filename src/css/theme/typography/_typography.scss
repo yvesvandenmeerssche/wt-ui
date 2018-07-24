@@ -15,6 +15,25 @@ a.d-block {
   }
 }
 
+a:hover {
+  text-decoration:none;
+}
+
+.text--alpha {
+  transition: all .2s ease-in-out;
+  opacity: .3;
+}
+
+a.text--alpha {
+  @extend .text--alpha;
+  &:hover {opacity: 1;}
+}
+a.text--alpha-inverse {
+  transition: all .2s ease-in-out;
+  opacity: 1;
+  &:hover {opacity: .7;}
+}
+
 // Headings
 h4, .h4 { @include scale($h4-font-size, up); }
 h5, .h5 { @include scale($h5-font-size, up); }
