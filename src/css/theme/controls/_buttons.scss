@@ -1,4 +1,7 @@
 .btn {
+
+  &.disabled {pointer-events: none;}
+
   @include scale($small-font-size, up);
 
   letter-spacing: 1px;
@@ -15,3 +18,57 @@
 .btn-sm {
   font-size: 70%;
 }
+
+
+.btn-group {
+  &.btn-group--switch {
+    input[type="radio"] {
+      display: none;
+
+      & + label {
+        &:first-of-type {border-radius: $border-radius 0 0 $border-radius;}
+        &:last-of-type {border-radius: 0 $border-radius $border-radius 0;}
+      }
+    }
+    input[type="radio"] + label {
+      @extend .btn;
+      @extend .btn-outline-primary;
+    }
+    input[type="radio"]:checked + label {
+      &, &:hover {
+        @extend .btn;
+        @extend .btn-primary;
+        background: $primary!important;
+        border-color: $primary!important;
+        color: $gray-900!important;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.btn-group {
+  &.btn-group--switch-alt {
+    input[type="radio"] {
+      display: none;
+
+      & + label {
+        &:first-of-type {border-radius: $border-radius 0 0 $border-radius;}
+        &:last-of-type {border-radius: 0 $border-radius $border-radius 0;}
+      }
+    }
+    input[type="radio"] + label {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+    input[type="radio"]:checked + label {
+      &, &:hover {
+        @extend .btn;
+        @extend .btn-primary:active;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+  }
