@@ -15,6 +15,7 @@ import Progress from './feedback/progress.md';
 import Popover from './feedback/popover.md';
 import Tooltip from './feedback/tooltip.md';
 import Alert from './feedback/alert.md';
+import Loader from './feedback/loader.md';
 
 
 // COMPONENTS
@@ -173,6 +174,39 @@ storiesOf('Feedback', module)
         <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
         <hr/>
         <p className="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </div>
+    </div>
+  ))
+  // Loader
+  .add('Loader', withCodePreview(Loader, () =>
+    <div>
+      <hr className="my-1"/>
+
+      <i className="mdi mdi-loading mdi-36px mdi-spin text-primary"/>
+
+      <hr className="my-1"/>
+
+      <button className="btn btn-primary disabled mr-1" disabled>
+        <i className="mdi mdi-loading mdi-spin text-dark"/> Loading...
+      </button>
+
+      <button className="btn btn-secondary disabled" disabled>
+        <i className="mdi mdi-loading mdi-spin text-light"/> Loading...
+      </button>
+
+      <hr className="my-1"/>
+
+      <div className="loader">
+        <i className="mdi mdi-loading mdi-36px"/>
+      </div>
+
+      <hr className="my-1"/>
+
+      <div className="loader" style={{height: 250, border: '1px solid #ccc'}}>
+        <div>
+          <i className="mdi mdi-loading mdi-36px"/>
+          <p>Loading... </p>
+        </div>
       </div>
     </div>
   ))
