@@ -33,6 +33,17 @@
     input[type="radio"] + label {
       @extend .btn;
       @extend .btn-outline-primary;
+
+      & .mdi {
+        display: inline-block;
+        vertical-align: middle;
+        &::before {
+          position: relative;
+          top: -2px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
     }
     input[type="radio"]:checked + label {
       &, &:hover {
