@@ -57,9 +57,14 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  @include media-breakpoint-down('sm') {
-    // padding-left: 80px; // UNDER REVIEW
+  ul li {text-align:left;}
+
+  &.d-flex.flex-column.small {
+    @include media-breakpoint-down('sm') {
+      padding-left: 80px; // UNDER REVIEW
+    }
   }
+
 
   .border-bottom {
     border-bottom-color: rgba($link-color, .3);
@@ -75,9 +80,14 @@
     margin-bottom: 0;
   }
 
+
+
   @include media-breakpoint-down('sm') {
     position: relative;
-    // padding-right: 3.4rem; // UNDER REVIEW
+
+    &.d-flex.flex-column.small {
+      padding-right: 3.4rem; // UNDER REVIEW
+    }
 
     img {
       position: absolute;
