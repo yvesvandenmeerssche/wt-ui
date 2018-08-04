@@ -114,3 +114,8 @@
     }
   }
 }
+
+
+// FIX - TO REVIEW
+// Content in cads is not clickable on mobile
+.card-body, .card-footer {position: relative;}
