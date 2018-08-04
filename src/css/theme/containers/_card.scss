@@ -58,7 +58,7 @@
   padding-bottom: 3rem;
 
   @include media-breakpoint-down('sm') {
-    padding-left: 80px;
+    // padding-left: 80px; // UNDER REVIEW
   }
 
   .border-bottom {
@@ -77,7 +77,7 @@
 
   @include media-breakpoint-down('sm') {
     position: relative;
-    padding-right: 3.4rem;
+    // padding-right: 3.4rem; // UNDER REVIEW
 
     img {
       position: absolute;
