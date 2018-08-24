@@ -96,6 +96,7 @@ Thumbs.db
 /docs
 /_assets
 
+/.firebase
 .firebaserc
 firebase.json
 
