@@ -1,6 +1,6 @@
 # Fonts
 
-The font of the basic set is [**Raleway**](https://fonts.google.com/specimen/Raleway). Large volumes of text are typed in *Thin*, *ExtraLight*, *Light*, *Regular*.
-Headings are typed with the inscriptions *Medium*, *SemiBold*, *Bold*. For an additional accent use ExtraBold and Black.
+The font of the basic set is [**Raleway**](https://fonts.google.com/specimen/Raleway). A complementary font family, [**Roboto**](https://fonts.google.com/specimen/Roboto), is used for numbers.
+
 
 <!-- STORY -->
