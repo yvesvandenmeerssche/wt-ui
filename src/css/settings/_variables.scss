@@ -5,36 +5,28 @@ $fontPrimary: $font-family-base;
 $fontSecondary: "Roboto", sans-serif;
 
 /* brand colors */
-$brandGreen: #00df9e;
-$brandGreen--Subtle: #1ac592;
-$brandBlue: #0b8fdf;
-$brandBlack: #191919;
+$brandGreen: $primary;
+$brandBlue: $secondary;
+$brandPurple: $purple;
+$brandBlack: $dark;
+
 $brandGradient: linear-gradient(
   135deg,
   $brandGreen 0,
   $brandBlue 100%
 );
 
-$altGreen: #02ffb3;
-$altTeal: #0ad7df;
-$altBlue: #0948e0;
-$altBlue--Dark: #0948e0;
-$altPurple: #9f09e0;
-$altPurple--Dark: #5709df;
-$altMagenta: #df097e;
+// $altGreen: #02ffb3;
+// $altTeal: #0ad7df;
+// $altBlue: #0948e0;
+// $altBlue--Dark: #0948e0;
+// $altPurple: #9f09e0;
+// $altPurple--Dark: #5709df;
 
-/* app colors */
-$colorPrimary: $brandGreen;
-$colorAccent: $brandBlue;
-$colorSecondary: $altGreen;
-$colorSuccess: $brandGreen--Subtle;
-$colorDanger: $altMagenta;
-$colorWarning: #efb547;
-$colorInfo: $altTeal;
-$colorLight: #f2f2f2;
-$colorDark: $brandBlack;
+/* Additional app colors */
+$colorAccent: $brandPurple;
+
 $colorMuted: #878f97;
-$colorWhite: #fff;
 
 /* specific colors */
 $shadowColor: rgba(0, 0, 0, .2);

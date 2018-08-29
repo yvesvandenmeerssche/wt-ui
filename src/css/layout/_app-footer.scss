@@ -4,7 +4,7 @@
   overflow: hidden;
   position: relative;
   padding: 40px 30px;
-  background: $colorLight;
+  background: $light;
 
   .row > * {
     z-index: 10;
@@ -31,7 +31,7 @@
   display: block;
   height: 30px;
   width: 100%;
-  background-color: $colorLight;
+  background-color: $light;
 }
 
 

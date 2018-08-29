@@ -4,17 +4,17 @@
   font-family: $fontSecondary !important;
 }
 
-.text-primary { color: $primary !important }
-.text-accent { color: $colorAccent !important }
-.text-secondary { color: $secondary !important }
-.text-success { color: $colorSuccess !important }
-.text-danger { color: $colorDanger !important }
-.text-warning { color: $colorWarning !important }
-.text-info { color: darken($colorInfo, 5%) !important }
-.text-light { color: $colorLight !important }
-.text-dark { color: $colorDark !important }
-.text-muted { color: $colorMuted !important }
-.text-white { color: $colorWhite !important }
+// .text-primary { color: $primary !important }
+// .text-accent { color: $colorAccent !important }
+// .text-secondary { color: $secondary !important }
+// .text-success { color: $success !important }
+// .text-danger { color: $danger !important }
+// .text-warning { color: $warning !important }
+// .text-info { color: darken($info, 5%) !important }
+// .text-light { color: $light !important }
+// .text-dark { color: $dark !important }
+// .text-muted { color: $text-muted !important }
+// .text-white { color: $white !important }
 
 .bg--gradient-toright {
   background-color: #5f2987 !important;
@@ -37,32 +37,31 @@
   background-image: radial-gradient(circle at 50% -30%, #29cb96, #5f2987 66.6%) !important;
 }
 
-.bg--purple { background-color: #5f2987 !important }
+.bg--purple { background-color: $purple !important }
 
-.bg-primary { background-color: $colorPrimary !important }
-.bg-accent { background-color: $colorAccent !important }
-.bg-secondary { background-color: $colorSecondary !important }
-.bg-success { background-color: $colorSuccess !important }
-.bg-danger { background-color: $colorDanger !important }
-.bg-warning { background-color: $colorWarning !important }
-.bg-info { background-color: $colorInfo !important }
-.bg-light { background-color: $colorLight !important }
-.bg-dark { background-color: $colorDark !important }
-.bg-muted { background-color: $colorMuted !important }
-.bg-white { background-color: $colorWhite !important }
+// .bg-primary { background-color: $primary !important }
+.bg--accent { background-color: $colorAccent !important }
+// .bg-secondary { background-color: $secondary !important }
+// .bg-success { background-color: $success !important }
+// .bg-danger { background-color: $danger !important }
+// .bg-warning { background-color: $warning !important }
+// .bg-info { background-color: $info !important }
+// .bg-light { background-color: $light !important }
+// .bg-dark { background-color: $dark !important }
+// .bg-white { background-color: $white !important }
 .bg--marker {background: yellow !important }
 
-.link-primary { color: $colorPrimary !important }
-.link-accent { color: $colorAccent !important }
-.link-secondary { color: $colorSecondary !important }
-.link-success { color: $colorSuccess !important }
-.link-danger { color: $colorDanger !important }
-.link-warning { color: $colorWarning !important }
-.link-info { color: darken($colorInfo, 5%) !important }
-.link-light { color: $colorLight !important }
-.link-dark { color: $colorDark !important }
-.link-muted { color: $colorMuted !important }
-.link-white { color: $colorWhite !important }
+// .link-primary { color: $primary !important }
+// .link-accent { color: $colorAccent !important }
+// .link-secondary { color: $secondary !important }
+// .link-success { color: $success !important }
+// .link-danger { color: $danger !important }
+// .link-warning { color: $warning !important }
+// .link-info { color: darken($info, 5%) !important }
+// .link-light { color: $light !important }
+// .link-dark { color: $dark !important }
+// .link-muted { color: $colorMuted !important }
+// .link-white { color: $white !important }
 
 .text--breakword {word-wrap: break-word !important; }
 .text--xs { font-size: 11px !important; }
