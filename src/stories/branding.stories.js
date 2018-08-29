@@ -61,24 +61,27 @@ storiesOf('Branding', module)
   // Fonts
   .add('Fonts', withCleanPreview(Fonts, () =>
     <div className="text-center">
-    <h6>Raleway Normal</h6>
+
+    <h6 className="mb-2">RALEWAY FONT FAMILY</h6>
+
+    <h6 className="text-muted "><small>Normal</small></h6>
     <h2 style={{fontWeight: 400}}>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
           Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz
         </h2>
-      <h6 className="mt-3">Raleway Bold</h6>
+      <h6 className="text-muted mt-2"><small>Bold</small></h6>
         <h2 style={{fontWeight: 700}}>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
           Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz
         </h2>
 
-      <hr className="my-3"/>
+    <h6 className="mt-3 mb-2">ROBOTO FONT FAMILY</h6>
 
-      <h6>Roboto Normal</h6>
+      <h6 className="text-muted "><small>Normal</small></h6>
         <h2 className="font--alt" style={{fontWeight: 400}}>
           1234567890
         </h2>
-      <h6 className="mt-3">Roboto Bold</h6>
+      <h6 className="text-muted mt-2"><small>Bold</small></h6>
         <h2 className="font--alt" style={{fontWeight: 700}}>
           1234567890
         </h2>
