@@ -9,7 +9,6 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import Resizable from 're-resizable';
-import AppHeader from '../components/AppHeader';
 import AppFooter from '../components/AppFooter';
 import { withLayoutPreview, withCodePreview } from './HOCs/with-docs'
 
@@ -30,15 +29,7 @@ storiesOf('Content Blocks', module)
   .addDecorator(StoryRouter())
 
   // App header
-  .add('Header', withCodePreview(Header, () =>
-    <div>
-      <AppHeader bgClass={'bg-success'}/>
-      <hr/>
-      <AppHeader bgClass={'bg-dark'}/>
-      <hr/>
-      <AppHeader bgClass={'app-header--themed'}/>
-    </div>
-  ))
+  .add('Header', doc(Header))
   // App content
   .add('Content', doc(Content))
   // App footer

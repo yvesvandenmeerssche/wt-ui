@@ -1,32 +1,6 @@
 /* Layout: App-header */
 
 #app-header {
-  padding: 16px 30px;
-  color: $white;
-  background: $success;
 
-  > * {margin-bottom: 0;}
 }
 
-
-/* THEME */
-
-#app-header.app-header--themed {
-  position: relative;
-  background-color: #19615e;
-  background-image: url('/img/style/bg-header.png');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 110%;
-
-  @media all and (max-width: 600px) {
-    background-size: 200%;
-  }
-
-  transition: all .5s ease-out;
-
-  &:hover {
-    background-position: 50% -20px;
-    box-shadow: 0 -5px 15px $shadowColor inset;
-  }
-}
