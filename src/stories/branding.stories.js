@@ -276,6 +276,24 @@ storiesOf('Branding', module)
 
       </div>
 
+      <div className="row">
+        <div className="col text-center mb-2"><h6>GRADIENT</h6></div>
+      </div>
+
+
+      <div className="row justify-content-md-center">
+
+        <div className="col-12">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg--grad"></div>
+            <small className="card-body">
+              <h6>Brand's gradient</h6>
+              <p>#5F2987 to #29cb96</p>
+            </small>
+          </div>
+        </div>
+
+      </div>
 
     </div>
     </div>

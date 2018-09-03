@@ -10,29 +10,20 @@ $brandBlue: $secondary;
 $brandPurple: $purple;
 $brandBlack: $dark;
 
-$brandGradient: linear-gradient(
-  135deg,
-  $brandGreen 0,
-  $brandBlue 100%
-);
-
-// $altGreen: #02ffb3;
-// $altTeal: #0ad7df;
-// $altBlue: #0948e0;
-// $altBlue--Dark: #0948e0;
-// $altPurple: #9f09e0;
-// $altPurple--Dark: #5709df;
-
 /* Additional app colors */
 $colorAccent: $brandPurple;
+$brandGreen--gradient: #29cb96;
 
-$colorMuted: #878f97;
+/* Gradients */
+$brandGradient: radial-gradient(circle at 100% 50%, $brandGreen--gradient, $purple);
+$brandGradient--up: radial-gradient(circle at 50% 75%, $brandGreen--gradient, $purple 66.6%);
+$brandGradient--down: radial-gradient(circle at 50% -30%, $brandGreen--gradient, $purple 66.6%);
 
-/* specific colors */
+/* Specific colors */
 $shadowColor: rgba(0, 0, 0, .2);
 $shadowColor--subtle: rgba(0, 0, 0, .07);
 
-/* shadows */
+/* Shadows */
 $shadow: 2px 2px 20px $shadowColor--subtle;
 $shadow--xl: 5px 5px 40px $shadowColor,
   1px 5px 20px $shadowColor--subtle;
@@ -40,16 +31,6 @@ $shadow--xl: 5px 5px 40px $shadowColor,
 $footerHeight: 295px;
 
 // - - - - - - - - - - - - -
-
-$color-gradient-primary: #29cb96;
-$color-gradient-secondary: #5f2987;
-
-$radial-gradient-from-top: radial-gradient(circle at 50% 75%, $color-gradient-primary, $color-gradient-secondary 66.6%);
-$radial-gradient-from-bottom: radial-gradient(circle at 50% 0, $color-gradient-primary, $color-gradient-secondary 66.6%);
-$radial-gradient-from-left: radial-gradient(circle at 100% 50%, $color-gradient-primary, $color-gradient-secondary);
-
-$linear-gradient-to-bottom: linear-gradient(to bottom, $color-gradient-primary, $color-gradient-secondary);
-$linear-gradient-to-left: linear-gradient(to left, $color-gradient-primary, $color-gradient-secondary);
 
 $image-max-width: 160px;
 $image-max-height: 80px;
