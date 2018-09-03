@@ -1,41 +1,11 @@
 /* Layout: App-footer */
 
 #app-footer {
-  overflow: hidden;
-  position: relative;
-  padding: 40px 30px;
-  background: $light;
-
-  .row > * {
-    z-index: 10;
-  }
-  .pulse-box {
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    right: 0;
-    z-index: 1;
-  }
+  color: $white;
+  background: $colorAccent;
 }
 
-/*
-  Fix pulse-box issue:
-  Hides the white space that appears when scrolling to bottom
-*/
-#html::after {
-  position: fixed;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  content: "";
-  display: block;
-  height: 30px;
-  width: 100%;
-  background-color: $light;
-}
-
-
-/* Sticky footer styles
+/* Sticky footer styles // REVIEW
 -------------------------------------------------- */
 html.stiky-footer {
   position: relative;
