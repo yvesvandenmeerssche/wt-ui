@@ -12,6 +12,7 @@ import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 // Readme files
 import TextColor from './utilities/text-color.md';
 import BackgroundColor from './utilities/background-color.md';
+import BackgroundGradients from './utilities/background-gradients.md';
 import BorderColor from './utilities/border-color.md';
 import OtherUtilities from './utilities/other-utilities.md';
 
@@ -56,56 +57,59 @@ storiesOf('Utilities', module)
     <div>
       <div className="row">
         <div className="col">
-          <div className="p-3 mb-2 bg-primary text-white">.bg-primary</div>
-          <div className="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
-          <div className="p-3 mb-2 bg-success text-white">.bg-success</div>
-          <div className="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-          <div className="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+          <div className="p-2 mb-2 bg-primary text-white">.bg-primary</div>
         </div>
         <div className="col">
-          <div className="p-3 mb-2 bg-info text-white">.bg-info</div>
-          <div className="p-3 mb-2 bg-light text-dark">.bg-light</div>
-          <div className="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-          <div className="p-3 mb-2 bg-white text-dark">.bg-white</div>
+          <div className="p-2 mb-2 bg-secondary text-white">.bg-secondary</div>
+        </div>
+        <div className="col">
+          <div className="p-2 mb-2 bg--accent text-white">.bg--accent</div>
+        </div>
+        <div className="col">
+          <div className="p-2 mb-2 bg-success text-white">.bg-success</div>
         </div>
       </div>
-
-      <hr/>
-
       <div className="row">
         <div className="col">
-          <div className="p-3 mb-2 bg--gradient text-white">.bg--gradient</div>
+          <div className="p-2 mb-2 bg-danger text-white">.bg-danger</div>
         </div>
         <div className="col">
-          <div className="p-3 mb-2 bg--gradient-v text-white">.bg--gradient-v</div>
+          <div className="p-2 mb-2 bg-warning text-dark">.bg-warning</div>
         </div>
-        </div>
-        <div className="row">
         <div className="col">
-          <div className="p-3 mb-2 bg--gradient-r text-white">.bg--gradient-r</div>
+          <div className="p-2 mb-2 bg-info text-white">.bg-info</div>
+        </div>
+        <div className="col">
+          <div className="p-2 mb-2 bg-light text-dark">.bg-light</div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <div className="p-2 mb-2 bg-dark text-white border border-dark">.bg-dark</div>
+        </div>
+        <div className="col">
+          <div className="p-2 mb-2 bg-white text-dark border border-light">.bg-white</div>
         </div>
       </div>
 
-      {/* {
-        Disabled until defined if we will use them
-        ------------------------------------------
-        <hr/>
-
-        <div className="row">
-          <div className="col">
-            <div className="p-3 mb-2 bg-gradient-primary text-white">.bg-gradient-primary</div>
-            <div className="p-3 mb-2 bg-gradient-secondary text-white">.bg-gradient-secondary</div>
-            <div className="p-3 mb-2 bg-gradient-success text-white">.bg-gradient-success</div>
-            <div className="p-3 mb-2 bg-gradient-danger text-white">.bg-gradient-danger</div>
-          </div>
-          <div className="col">
-            <div className="p-3 mb-2 bg-gradient-warning text-dark">.bg-gradient-warning</div>
-            <div className="p-3 mb-2 bg-gradient-info text-white">.bg-gradient-info</div>
-            <div className="p-3 mb-2 bg-gradient-light text-dark">.bg-gradient-light</div>
-            <div className="p-3 mb-2 bg-gradient-dark text-white">.bg-gradient-dark</div>
-          </div>
-        </div>}
-      */}
+    </div>
+  ))
+  // Background Gradients
+  .add('Background Gradients', withCodePreview(BackgroundGradients, () =>
+    <div>
+      <div className="row">
+        <div className="col">
+          <div className="p-3 mb-2 bg--grad text-white">.bg--grad</div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <div className="p-3 mb-2 bg--grad-up text-white">.bg--grad-up</div>
+        </div>
+        <div className="col">
+          <div className="p-3 mb-2 bg--grad-down text-white">.bg--grad-down</div>
+        </div>
+      </div>
     </div>
   ))
   // Border color

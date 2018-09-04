@@ -61,159 +61,241 @@ storiesOf('Branding', module)
   // Fonts
   .add('Fonts', withCleanPreview(Fonts, () =>
     <div className="text-center">
-      <h6>Raleway Semibold</h6>
-        <h2>
+
+    <h6 className="mb-2">RALEWAY FONT FAMILY</h6>
+
+    <h6 className="text-muted "><small>Normal</small></h6>
+    <h2 style={{fontWeight: 400}}>
           Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
-          Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
+          Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz
+        </h2>
+      <h6 className="text-muted mt-2"><small>Bold</small></h6>
+        <h2 style={{fontWeight: 700}}>
+          Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
+          Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz
+        </h2>
+
+    <h6 className="mt-3 mb-2">ROBOTO FONT FAMILY</h6>
+
+      <h6 className="text-muted "><small>Normal</small></h6>
+        <h2 className="font--alt" style={{fontWeight: 400}}>
           1234567890
         </h2>
-      <h6 className="mt-5" style={{fontWeight: 600}}>Raleway Semibold</h6>
-        <h2 style={{fontWeight: 600}}>
-          Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
-          Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
-          1234567890
-        </h2>
-      <h6 className="mt-5" style={{fontWeight: 800}}>Raleway ExtraBold</h6>
-        <h2 style={{fontWeight: 800}}>
-          Aa Bb Cc Dd Ee Ff Gg Hh Ii Kk Ll Mm<br/>
-          Nn Oo Pp Qq Rr Ss Tt Vv Xx Yy Zz<br/>
+      <h6 className="text-muted mt-2"><small>Bold</small></h6>
+        <h2 className="font--alt" style={{fontWeight: 700}}>
           1234567890
         </h2>
     </div>
   ))
   // Colors
   .add('Colors', withCleanPreview(Colors, () =>
-    <div>
+    <div className="row justify-content-md-center">
+    <div className="col col-lg-8">
+
       <div className="row">
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#18e9a6'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 24 233 166<br/>
-              <b>HEX:</b> 18e9a6
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#12bc86'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 18 188 134<br/>
-              <b>HEX:</b> 12bc86
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#0b8fdf'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 11 143 223<br/>
-              <b>HEX:</b> 0b8fdf
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#164fdd'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 22 79 221<br/>
-              <b>HEX:</b> 164fdd
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#0f3697'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 15 54 151<br/>
-              <b>HEX:</b> 0f3697
-            </small>
-          </div>
-        </div>
-
+        <div className="col text-center mb-2"><h6>MAIN COLORS</h6></div>
       </div>
+
+      <div className="row justify-content-md-center">
+
+        <div className="col-6 col-md-3">
+          <div className="card mb-3">
+            <div className="pt-5 bg-primary"></div>
+            <small className="card-body">
+              <h6>PRIMARY</h6>
+              <b>RGB:</b> 24, 233, 166<br/>
+              <b>HEX:</b> 18E9A6
+            </small>
+          </div>
+        </div>
+
+        <div className="col-6 col-md-3">
+          <div className="card mb-3">
+          <div className="pt-5 bg-secondary">
+          </div>
+            <small className="card-body">
+              <h6>SECONDARY</h6>
+              <b>RGB:</b> 11, 143, 223<br/>
+              <b>HEX:</b> 0B8FDF
+            </small>
+          </div>
+        </div>
+
+
+        <div className="col-6 col-md-3">
+          <div className="card mb-3">
+          <div className="pt-5 bg--accent">
+          </div>
+            <small className="card-body">
+              <h6>ACCENT</h6>
+              <b>RGB:</b> 95, 41, 135<br/>
+              <b>HEX:</b> 5F2987
+            </small>
+          </div>
+        </div>
+        <div className="col-6 col-md-3">
+        <div className="card mb-3">
+          <div className="pt-5" style={{background: '#434343'}}></div>
+            <small className="card-body">
+              <h6>TEXT</h6>
+              <b>RGB:</b> 67, 67, 67<br/>
+              <b>HEX:</b> 434343
+            </small>
+          </div>
+        </div>
+      </div>
+
       <div className="row">
+        <div className="col text-center mb-2"><h6>COMPLEMENTARY COLORS</h6></div>
+      </div>
 
-        <div className="col">
+      <div className="row justify-content-md-center">
+
+        <div className="col col-md-3">
           <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#5f2987'}}></div>
+          <div className="pt-5" style={{background: '#164FDD'}}></div>
             <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 95 41 135<br/>
-              <b>HEX:</b> 5f2987
+              <h6>LINK</h6>
+              <b>RGB:</b> 22, 79, 221<br/>
+              <b>HEX:</b> 164FDD
             </small>
           </div>
         </div>
 
-        <div className="col">
+        <div className="col col-md-3">
           <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#6c757d'}}></div>
+          <div className="pt-5" style={{background: '#0F3697'}}></div>
             <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 108 117 125<br/>
-              <b>HEX:</b> 6c757d
+              <h6>LINK HOVER</h6>
+              <b>RGB:</b> 15, 54, 151<br/>
+              <b>HEX:</b> 0F3697
             </small>
           </div>
         </div>
 
-        <div className="col">
+        <div className="col col-md-3">
           <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#dee2e6'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 222 226 230<br/>
-              <b>HEX:</b> dee2e6
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#f2f2f2'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 242 242 242<br/>
-              <b>HEX:</b> f2f2f2
-            </small>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#e7edfb'}}></div>
-            <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 231 237 251<br/>
-              <b>HEX:</b> e7edfb
-            </small>
-          </div>
+            <div className="pt-5" style={{background: '#E7EDFB'}}></div>
+              <small className="card-body">
+                <h6>LIGHT ACCENT</h6>
+                <b>RGB:</b> 231, 237, 251<br/>
+                <b>HEX:</b> E7EDFB
+              </small>
+            </div>
         </div>
 
       </div>
 
-      <div className="row">
-        <div className="col">
+      <div className="row justify-content-md-center">
+
+        <div className="col col-md-3">
           <div className="card mb-3">
-            <div className="card-img-top" style={{height: 110, background: '#000'}}></div>
+          <div className="pt-5" style={{background: '#f2f2f2'}}></div>
             <small className="card-body">
-              <b>CMYK:</b> - - -<br/>
-              <b>RGB:</b> 0 0 0<br/>
+              <h6>LIGHT</h6>
+              <b>RGB:</b> 242, 242, 242<br/>
+              <b>HEX:</b> F2F2F2
+            </small>
+          </div>
+        </div>
+
+        <div className="col col-md-3">
+          <div className="card mb-3">
+          <div className="pt-5" style={{background: '#6c757d'}}></div>
+            <small className="card-body">
+              <h6>MUTED</h6>
+              <b>RGB:</b> 108, 117, 125<br/>
+              <b>HEX:</b> 6C757D
+            </small>
+          </div>
+        </div>
+
+        <div className="col col-md-3">
+          <div className="card mb-3">
+          <div className="pt-5" style={{background: '#000'}}></div>
+            <small className="card-body">
+              <h6>DARK</h6>
+              <b>RGB:</b> 0, 0, 0<br/>
               <b>HEX:</b> 000
             </small>
           </div>
         </div>
 
       </div>
+
+
+      <div className="row">
+        <div className="col text-center mb-2"><h6>FEEDBACK COLORS</h6></div>
+      </div>
+
+      <div className="row justify-content-md-center">
+
+        <div className="col-4 col-md-3">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg-info"></div>
+            <small className="card-body">
+              <h6>INFO</h6>
+              <b>RGB:</b> 19, 204, 212<br/>
+              <b>HEX:</b> 13CCD4
+            </small>
+          </div>
+        </div>
+
+        <div className="col-4 col-md-3">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg-success"></div>
+            <small className="card-body">
+              <h6>SUCCESS</h6>
+              <b>RGB:</b> 15, 195, 129<br/>
+              <b>HEX:</b> 0FC381
+            </small>
+          </div>
+        </div>
+
+        <div className="col-4 col-md-3">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg-warning"></div>
+            <small className="card-body">
+              <h6>WARNING</h6>
+              <b>RGB:</b> 239, 181, 71<br/>
+              <b>HEX:</b> EFB547
+            </small>
+          </div>
+        </div>
+
+        <div className="col-4 col-md-3">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg-danger"></div>
+            <small className="card-body">
+              <h6>DANGER</h6>
+              <b>RGB:</b> 189, 0, 79<br/>
+              <b>HEX:</b> BD004F
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="row">
+        <div className="col text-center mb-2"><h6>GRADIENT</h6></div>
+      </div>
+
+
+      <div className="row justify-content-md-center">
+
+        <div className="col-12">
+          <div className="card mb-3">
+            <div className="card-img-top py-3 bg--grad"></div>
+            <small className="card-body">
+              <h6>Brand's gradient</h6>
+              <p>#5F2987 to #29cb96</p>
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
     </div>
 ))
 // Icons

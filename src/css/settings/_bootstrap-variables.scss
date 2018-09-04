@@ -34,15 +34,15 @@ $black:    #000;
 //    "900": $gray-900
 //), $grays);
 
-// $blue:    #007bff;
+$blue:    #0b8fdf;
 // $indigo:  #6610f2;
-// $purple:  #6f42c1;
+$purple:  #5F2987;
 // $pink:    #e83e8c;
-// $red:     #dc3545;
+$red:     #bd004f;
 // $orange:  #fd7e14;
-// $yellow:  #ffc107;
-$green:   #1ac592;
-// $teal:    #20c997;
+$yellow:  #efb547;
+$green:   #18e9a6;
+$teal:    #13ccd4;
 // $cyan:    #17a2b8;
 
 // $colors: ();
@@ -62,12 +62,14 @@ $green:   #1ac592;
 //    "gray-dark":  $gray-800
 //), $colors);
 
-$primary:       #18e9a6;
-$secondary:     #0b8fdf;
-// $success:       $green;
-// $info:          $cyan;
-// $warning:       $yellow;
-// $danger:        $red;
+$primary:       $green;
+$secondary:     $blue;
+
+$success:       #0fc381;
+$info:          $teal;
+$warning:       $yellow;
+$danger:        $red;
+
 // $light:         $gray-100;
 $dark:          $black;
 
@@ -148,9 +150,10 @@ $body-color:                $gray-700;
 
 // Style anchor elements.
 
-$link-color:                #164fdd;
+$link-color:                #164FDD;
 // $link-decoration:           none;
 // $link-hover-color:          darken($link-color, 15%);
+$link-hover-color:          #0F3697; // <----- TO-REVIEW
 
 // Paragraphs
 
@@ -236,8 +239,8 @@ $font-family-base:            "Raleway", $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1.6rem; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base;
-$font-size-sm:                $font-size-base;
+// $font-size-lg:                $font-size-base; // <----- TO-REVIEW
+// $font-size-sm:                $font-size-base; // <----- TO-REVIEW
 
 // $font-weight-light:           300;
 $font-weight-normal:          400;
@@ -597,7 +600,7 @@ $dropdown-item-padding-x:           2rem;
 // Navs
 
 // $nav-link-padding-y:                .5rem;
-// $nav-link-padding-x:                0; // <----- under review
+// $nav-link-padding-x:                0; // <----- TO-REVIEW
 // $nav-link-disabled-color:           $gray-600;
 
 // $nav-tabs-border-color:             $gray-300;
@@ -620,7 +623,7 @@ $dropdown-item-padding-x:           2rem;
 $navbar-padding-y:                  ($spacer * 2);
 $navbar-padding-x:                  0;
 
-$navbar-nav-link-padding-x:         0; // <----- under review
+$navbar-nav-link-padding-x:         0; // <----- TO-REVIEW
 
 $navbar-brand-font-size:            0;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link

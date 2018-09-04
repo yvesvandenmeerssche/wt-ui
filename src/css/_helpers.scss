@@ -1,69 +1,21 @@
 /* Helpers */
 
+// Backgrounds
+.bg--accent { background-color: $colorAccent !important }
+
+// Gradients
+[class*="bg--grad"] { background-color: $purple !important; }
+.bg--grad {background-image: $brandGradient !important;}
+.bg--grad-up {background-image: $brandGradient--up !important;}
+.bg--grad-down {background-image: $brandGradient--down !important;}
+
+
+// Fonts
 .font--alt {
   font-family: $fontSecondary !important;
 }
 
-.text-primary { color: $primary !important }
-.text-accent { color: $colorAccent !important }
-.text-secondary { color: $secondary !important }
-.text-success { color: $colorSuccess !important }
-.text-danger { color: $colorDanger !important }
-.text-warning { color: $colorWarning !important }
-.text-info { color: darken($colorInfo, 5%) !important }
-.text-light { color: $colorLight !important }
-.text-dark { color: $colorDark !important }
-.text-muted { color: $colorMuted !important }
-.text-white { color: $colorWhite !important }
-
-.bg--gradient-toright {
-  background-color: #5f2987 !important;
-  background-image: linear-gradient(to left, #29cb96, #5f2987) !important;
-}
-.bg--gradient {
-  background-color: #5f2b88 !important;
-  background-image: linear-gradient(135deg, #5f2b88 0%, #2ebd95 100%) !important;
-}
-.bg--gradient-v {
-  background-color: #5f2b88 !important;
-  background-image: linear-gradient(0,  #2ebd95 0%, #5f2b88 100%) !important;
-}
-.bg--gradient-r {
-  background-color: #5f2b88 !important;
-  background-image: radial-gradient(circle at 50% 180%, #29cb96, #5f2987 80%) !important;
-}
-.bg--gradient-ri {
-  background-color: #5f2b88 !important;
-  background-image: radial-gradient(circle at 50% -30%, #29cb96, #5f2987 66.6%) !important;
-}
-
-.bg--purple { background-color: #5f2987 !important }
-
-.bg-primary { background-color: $colorPrimary !important }
-.bg-accent { background-color: $colorAccent !important }
-.bg-secondary { background-color: $colorSecondary !important }
-.bg-success { background-color: $colorSuccess !important }
-.bg-danger { background-color: $colorDanger !important }
-.bg-warning { background-color: $colorWarning !important }
-.bg-info { background-color: $colorInfo !important }
-.bg-light { background-color: $colorLight !important }
-.bg-dark { background-color: $colorDark !important }
-.bg-muted { background-color: $colorMuted !important }
-.bg-white { background-color: $colorWhite !important }
-.bg--marker {background: yellow !important }
-
-.link-primary { color: $colorPrimary !important }
-.link-accent { color: $colorAccent !important }
-.link-secondary { color: $colorSecondary !important }
-.link-success { color: $colorSuccess !important }
-.link-danger { color: $colorDanger !important }
-.link-warning { color: $colorWarning !important }
-.link-info { color: darken($colorInfo, 5%) !important }
-.link-light { color: $colorLight !important }
-.link-dark { color: $colorDark !important }
-.link-muted { color: $colorMuted !important }
-.link-white { color: $colorWhite !important }
-
+// Text size
 .text--breakword {word-wrap: break-word !important; }
 .text--xs { font-size: 11px !important; }
 .text--sm { font-size: 14px !important; }
@@ -76,6 +28,7 @@
   strong {font-weight: 900 !important;}
 }
 
+// Decorators
 .block-shadow {
   box-shadow: 0 -5px 35px 5px rgba($black, .1) !important;
   // REVIEW: Consider overwrite bootstrap box-shadow utilities (.shadow-lg)

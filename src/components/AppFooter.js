@@ -13,7 +13,7 @@ export default class AppFooter extends Component {
     const {loadItems} = this.props;
 
     return (
-      <footer className="footer bg--purple text-white">
+      <footer id="app-footer">
         <div className="container">
 
           <div className="pt-2 pb-1">
