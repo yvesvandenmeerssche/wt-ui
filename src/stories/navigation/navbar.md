@@ -15,7 +15,7 @@ One difference with the default Bootstrap's `.navbar` is the toggle button, for 
     <a class="navbar-brand mr-2" href="#">Navbar</a>
 
     <!-- Toggle button -->
-    <button class="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
       <i class="mdi mdi-24px mdi-menu"></i>
     </button>
 
