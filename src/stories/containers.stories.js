@@ -3,7 +3,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Included addons
-import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
+import { withCleanPreview, withCodePreview} from './HOCs/with-docs';
+import { withCollapse, withVariableNavBar } from "./HOCs/bootstrap";
 
 // Readme files
 import Jumbotron from './containers/jumbotron.md';
@@ -137,7 +138,7 @@ storiesOf('Containers', module)
     </div>
   ))
   // Collapse
-  .add('Collapse', withCodePreview(Collapse, () =>
+  .add('Collapse', withCodePreview(Collapse, withCollapse(() =>
     <div>
       <p>
         <a className="btn btn-primary mr-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -153,7 +154,7 @@ storiesOf('Containers', module)
         </div>
       </div>
     </div>
-  ))
+  )))
   // Modal
   .add('Modal', withCodePreview(Modal, () =>
     <div>

@@ -8,7 +8,7 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
-import {withDropdown, withScrollSpy, withVariableNavBar} from "./HOCs/bootstrap";
+import { withDropdown, withScrollSpy, withVariableNavBar} from "./HOCs/bootstrap";
 
 // Readme files
 import BaseNav from './navigation/base-nav.md';
@@ -146,12 +146,12 @@ storiesOf('Navigation', module)
       overflow: 'hidden', height: 320,
       backgroundColor: '#fff',
     }}>
-      <nav className="navbar navbar-expand-xl navbar-light" id="navbar">
+      <nav className="navbar navbar-expand-lg navbar-light" id="navbar">
         <div className="container">
           <a className="navbar-brand mr-2" href="#">Navbar</a>
 
           {/* Toggle button */}
-          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
             <i className="mdi mdi-24px mdi-menu"></i>
           </button>
 
@@ -183,10 +183,16 @@ storiesOf('Navigation', module)
             </ul>
 
             {/* Action form */}
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control form-control-lg mr-sm-1" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div className="col px-0 pl-lg-5 pr-lg-0">
+              <form class="input-group input-group--responsive">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter e-mail"/>
+                <div class="input-group-append">
+                  <button class="btn btn-block btn-lg btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
 
           </div>
         </div>
@@ -203,8 +209,7 @@ storiesOf('Navigation', module)
       <nav className="navbar navbar-dark navbar-expand-lg navbar--toggle-bg" id="navbar" style={{opacity: 0}}>
         <div className="container">
           <a href="/" className="navbar-brand d-block">Winding Tree</a>
-          {/* <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"> */}
-          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
             <i className="mdi mdi-24px mdi-menu"></i>
           </button>
           <div className="collapse navbar-collapse" id="navbar-content">
@@ -268,7 +273,7 @@ storiesOf('Navigation', module)
     </div>
   ))
   // Dropdown
-  .add('Dropdown', withCodePreview(Dropdown, () =>
+  .add('Dropdown', withCodePreview(Dropdown, withDropdown(() =>
     <div>
       {/* Single button dropdown */}
       <div className="d-inline-block mr-2 mb-2">
@@ -300,7 +305,7 @@ storiesOf('Navigation', module)
         </div>
       </div>
     </div>
-  ))
+  )))
   // Pagination
   .add('Pagination', withCodePreview(Pagination, () =>
     <div>

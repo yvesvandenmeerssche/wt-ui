@@ -29,13 +29,25 @@ export function withTooltip(WrappedComponent) {
 export function withDropdown(WrappedComponent) {
   class WithDropdown extends React.Component {
     componentDidMount() {
-      $('[data-toggle="dropdown"]').dropdown()
+      $('[data-toggle="dropdown"]').dropdown();
     }
     render() {
       return <WrappedComponent {...this.props}/>
     }
   }
   return () => <WithDropdown/>
+}
+
+export function withCollapse(WrappedComponent) {
+  class WithCollapse extends React.Component {
+    componentDidMount() {
+      $('[data-toggle="collapse"]').collapse();
+    }
+    render() {
+      return <WrappedComponent {...this.props}/>
+    }
+  }
+  return () => <WithCollapse/>
 }
 
 export function withScrollSpy(WrappedComponent) {
@@ -56,6 +68,8 @@ export function withVariableNavBar(WrappedComponent) {
   class WithVariableNavBar extends React.Component {
 
     componentDidMount() {
+
+      $('[data-toggle="collapse"]').collapse();
 
       // Optimized resize
       // https://developer.mozilla.org/ru/docs/Web/Events/resize
@@ -90,8 +104,6 @@ export function withVariableNavBar(WrappedComponent) {
       };
 
       function navbarShow() {
-        // if (Modernizr.mq(MQ.up)) {
-
         if (typeof(navbarBtn) != 'undefined' && navbarBtn != null) {
           if (navbarNav.classList.contains("navbar-nav--animated-btn")) {
             if (window.matchMedia(MQ.up).matches) {
@@ -131,7 +143,6 @@ export function withVariableNavBar(WrappedComponent) {
       });
 
       window.addEventListener('optimizedResize', function() {
-        // if (Modernizr.mq(MQ.up)) {
         if (window.matchMedia(MQ.up).matches) {
           if (typeof(navbarBtn) != 'undefined' && navbarBtn != null) {
             navbar.setAttribute('style', 'opacity: 0; visibility: hidden;');
@@ -145,16 +156,20 @@ export function withVariableNavBar(WrappedComponent) {
         const icon = toggleButton.querySelector('.mdi');
 
         if (toggleButton.getAttribute('aria-expanded') === 'false') {
-          navbar.classList.add('navbar-light', 'bg-white');
-          navbar.classList.remove('navbar-dark');
+          if (navbar.classList.contains("navbar--toggle-bg")) {
+            navbar.classList.add('navbar-light', 'bg-white');
+            navbar.classList.remove('navbar-dark');
+          }
 
           icon.classList.remove('mdi-menu');
           icon.classList.add('mdi-close');
         } else {
           setTimeout(function() {
-            if (document.documentElement.scrollTop <= navbar.offsetHeight) {
-              navbar.classList.add('navbar-dark');
-              navbar.classList.remove('navbar-light', 'bg-white');
+            if (navbar.classList.contains("navbar--toggle-bg")) {
+              if (document.documentElement.scrollTop <= navbar.offsetHeight) {
+                navbar.classList.add('navbar-dark');
+                navbar.classList.remove('navbar-light', 'bg-white');
+              }
             }
 
             icon.classList.remove('mdi-close');
@@ -166,7 +181,6 @@ export function withVariableNavBar(WrappedComponent) {
       $('[data-toggle="dropdown"]').dropdown();
       $("#navbar-toggler").on('click', function(){
         mobileMenu(this);
-        $("#navbar-content").collapse('toggle');
       });
 
       navbarToggler.addEventListener('touchend', function() {
