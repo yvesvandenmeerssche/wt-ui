@@ -1,0 +1,132 @@
+.navbar {
+  // opacity: 0;
+  transition: background-color .15s ease, opacity .15s ease;
+
+  .mod_js & {
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity;
+  }
+
+  @include media-breakpoint-down('md') {
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+  }
+
+  &.navbar-dark {
+    .navbar-nav {
+      @include media-breakpoint-up('lg') {
+        .nav-item {
+          .btn {
+            transform: translateX(50vw);
+            transition: transform .45s ease .15s, $transition-base;
+            will-change: transform;
+          }
+        }
+      }
+    }
+  }
+
+  &.navbar-light {
+    box-shadow: $box-shadow;
+
+    .navbar-brand {
+      // Images temporairly disabled
+      // background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--gradient_black-text--sm.svg");
+      background-image: url("https://windingtree.com/assets/img/logo/sm-color.svg");
+
+      @include media-breakpoint-up('md') {
+        // Images temporairly disabled
+        // background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--gradient_black-text--md.svg");
+        background-image: url("https://windingtree.com/assets/img/logo/md-color.svg");
+      }
+    }
+
+    .navbar-nav {
+      transform: translateX(0) !important;
+
+      .nav-item {
+        .btn {
+          transition: transform .3s ease, $transition-base;
+          will-change: transform;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+
+    @include size(133px, 25px);
+    // Images temporairly disabled
+    // background-image: url("~windingtree-media-web/logo-variants/sign/svg/sign--white_white-text--sm.svg");
+    background-image: url("https://windingtree.com/assets/img/logo/sm-white.svg");
+
+    @include media-breakpoint-up('md') {
+      @include size(172px, 70px);
+      // Images temporairly disabled
+      // background-image: url("~windingtree-media-web/logo-variants/full-logo/svg/logo--white_white-text--md.svg");
+      background-image: url("https://windingtree.com/assets/img/logo/md-white.svg");
+    }
+
+    background-repeat: no-repeat;
+}
+
+.navbar-nav {
+    transition: transform .3s ease .15s;
+    will-change: transform;
+
+    @include media-breakpoint-down('md') {
+        margin-top: 2rem;
+
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+
+          &::after {
+            margin: 0 7px 0 auto;
+          }
+        }
+
+        .dropdown-menu {
+          margin-top: -1.25rem;
+          padding-top: 0;
+          box-shadow: none;
+        }
+
+        .dropdown-item {
+          padding-right: 0;
+          padding-left: 0;
+        }
+    }
+
+    @include media-breakpoint-up('lg') {
+      align-items: center;
+    }
+
+    .nav-item {
+      @include media-breakpoint-down('md') {
+        border-top: 2px solid $gray-100;
+
+        .btn {
+          margin-top: 2rem;
+        }
+      }
+
+      @include media-breakpoint-up('lg') {
+        &:not(:last-child) {
+          margin-right: ($spacer * 3);
+        }
+      }
+    }
+
+    .nav-link {
+      @include hover {
+        opacity: .7;
+      }
+
+      @include media-breakpoint-down('md') {
+        padding: 2rem 0;
+      }
+    }
+}

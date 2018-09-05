@@ -1,64 +1,16 @@
 /* Layout: App-footer */
 
-/*---
-title: App Footer
-section: Layout
----
-
-The `#app-footer` is a wrapper to contain elements or components that will be
-placed on the bottom area of each view (when based on the main layout).
-
-Its background color is based on `--colorLight`, and also has a padding and a top
-border.<br/>
-
-```example:html
-<div id="app-footer">
-  <p>content...</p>
-</div>
-```
-*/
-
 #app-footer {
-  overflow: hidden;
-  position: relative;
-  padding: 40px 30px;
-  background: $colorLight;
-
-  .row > * {
-    z-index: 10;
-  }
-  .pulse-box {
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    right: 0;
-    z-index: 1;
-  }
+  color: $white;
+  background: $colorAccent;
 }
 
-/*
-  Fix pulse-box issue:
-  Hides the white space that appears when scrolling to bottom
-*/
-#html::after {
-  position: fixed;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  content: "";
-  display: block;
-  height: 30px;
-  width: 100%;
-  background-color: $colorLight;
-}
-
-
-/* Sticky footer styles
+/* Sticky footer styles // REVIEW
 -------------------------------------------------- */
 html.stiky-footer {
   position: relative;
   min-height: 100%;
-  
+
   body {
     margin-bottom: $footerHeight; /* Margin bottom by footer height */
   }

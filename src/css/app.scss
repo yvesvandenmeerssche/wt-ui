@@ -1,7 +1,16 @@
+// MAIN CSS FILE - - - - - - - - - - - - - - - - - - - - -
+
 @import "settings";
-@import "~bootstrap/scss/bootstrap";
-@import 'layout';
-@import 'base';
-@import 'components';
-@import 'helpers';
-@import 'shame';
+@import "layout";
+@import "theme";
+
+// Custom components (under consideration)
+// @import "components";
+
+// Vendors (under consideration)
+// @import "vendors/syntax";
+// @import "vendors/slick";
+
+// Tools
+@import "helpers";
+@import "shame";

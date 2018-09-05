@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
+import imgLogoWhite from 'windingtree-media-web/logo-variants/full-logo/png/logo--white.png';
+
 export default class AppHeader extends Component {
 
   constructor(props) {
@@ -17,25 +19,15 @@ export default class AppHeader extends Component {
     const background = 'img/style/bg-header.png';
 
     return (
-      <header id="app-header" className="app-header--themed" style={{'height': 121}}>
-
-        <div className="container">
-          <div className="row">
-            <div className="col">
+      <div>
+        <header id="app-header" className={this.props.bgClass}>
           <h1>
-          {/* {currentUser.name} */}
             <Link to="/" hrefLang="en">
-              <img className="brand-badge__logo" src={lifLogo} alt="WindingTree PWA" width="200"/>
+              <img className="img-fluid" src={imgLogoWhite} alt="WindingTree" width="220"/>
             </Link>
-            {/* <Link className="brand-badge" to="/" hrefLang="en">
-              <img className="brand-badge__logo" src={lifLogo} alt="WindingTree PWA" width="250"/>
-            </Link> */}
           </h1>
-
-            </div>
-          </div>
-        </div>
-      </header>
+        </header>
+      </div>
     );
   }
 }

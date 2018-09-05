@@ -1,0 +1,40 @@
+// Custom Variables
+
+/* fonts */
+$fontPrimary: $font-family-base;
+$fontSecondary: "Roboto", sans-serif;
+
+/* brand colors */
+$brandGreen: $primary;
+$brandBlue: $secondary;
+$brandPurple: $purple;
+$brandBlack: $dark;
+
+/* Additional app colors */
+$colorAccent: $brandPurple;
+$brandGreen--gradient: #29cb96;
+
+/* Gradients */
+$brandGradient: radial-gradient(circle at 100% 50%, $brandGreen--gradient, $purple);
+$brandGradient--up: radial-gradient(circle at 50% 75%, $brandGreen--gradient, $purple 66.6%);
+$brandGradient--down: radial-gradient(circle at 50% -30%, $brandGreen--gradient, $purple 66.6%);
+
+/* Specific colors */
+$shadowColor: rgba(0, 0, 0, .2);
+$shadowColor--subtle: rgba(0, 0, 0, .07);
+
+/* Shadows */
+$shadow: 2px 2px 20px $shadowColor--subtle;
+$shadow--xl: 5px 5px 40px $shadowColor,
+  1px 5px 20px $shadowColor--subtle;
+
+$footerHeight: 295px;
+
+// - - - - - - - - - - - - -
+
+$image-max-width: 160px;
+$image-max-height: 80px;
+
+// Hardcoding navbar height in styles to assign a value to a property more quickly than from JS
+$navbar-height: 5.5rem;
+$navbar-height-md: 11rem;

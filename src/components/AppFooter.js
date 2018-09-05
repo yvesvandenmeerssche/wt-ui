@@ -13,43 +13,156 @@ export default class AppFooter extends Component {
     const {loadItems} = this.props;
 
     return (
-      <footer id="app-footer" className="app-footer--stiky">
+      <footer id="app-footer">
         <div className="container">
-          <div className="row">
-            <section className="col-12 col-md-6">
-              <h4><strong>About Winding Tree</strong></h4>
-              <p className="font--alt">Winding Tree is a blockchain-based decentralized <a href="https://github.com/windingtree/">open-source</a> travel distribution platform. We make travel cheaper for the end user, while making it more profitable for suppliers.</p>
-              <p><a href="https://windingtree.com" className="btn btn-primary btn-sm mb-3">Visit our website</a></p>
-            </section>
-            <section className="col-12 col-md-6">
-               <h4><strong>Winding Tree Limited</strong></h4>
-              <p className="font--alt">Suite 23 Portland House, Glacis Road<br/>Gibraltar GX11 1AA</p>
-              <ul className="list-unstyled font--alt">
-                <li><i className="wicon-github-circled text-primary"></i> <a href="https://github.com/windingtree/">GitHub</a></li>
-                <li><i className="wicon-twitter text-primary"></i> <a href="https://twitter.com/windingtree">Twitter</a></li>
-                <li><i className="wicon-link text-primary"></i> <a href="http://demo.windingtree.com/">Demo App</a></li>
-              </ul>
-            </section>
+
+          <div className="pt-2 pb-1">
+
+            <div className="row">
+
+              <div className="col-md-4">
+                <img src="https://windingtree.com/assets/img/logo/sm-white.svg" alt="Winding Tree" className="d-md-none mb-2"/>
+                <img src="https://windingtree.com/assets/img/logo/md-white.svg" height="60" alt="Winding Tree" className="d-none d-md-inline"/>
+              </div>
+
+              <div className="col-md-8">
+                <div className="row">
+
+                  <div className="col-6 col-md-3">
+                    <dl className="mb-1">
+                      <dt className="mb-1">Solutions</dt>
+                      <dd>
+                        <nav className="nav flex-column small">
+                          <a href="/suppliers.html" className="nav-link px-0 text-white text--alpha-inverse">For travel suppliers</a>
+                          <a href="/sellers.html" className="nav-link px-0 text-white text--alpha-inverse">For sellers of travel</a>
+                          <a href="/software-vendors.html" className="nav-link px-0 text-white text--alpha-inverse">For software vendors</a>
+                          <a href="https://github.com/windingtree/" className="nav-link px-0 text-white text--alpha-inverse">API</a>
+                        </nav>
+                      </dd>
+                    </dl>
+                  </div>
+
+                  <div className="col-6 col-md-3">
+                    <dl className="mb-1">
+                      <dt className="mb-1">Lif Token</dt>
+                      <dd>
+                        <nav className="nav flex-column small">
+                          <a href="/lif-token.html" className="nav-link px-0 text-white text--alpha-inverse">About token</a>
+                          <a href="/lif-token.html" className="nav-link px-0 text-white text--alpha-inverse">Buy Lifs</a>
+                          <a href="/lif-token.html" className="nav-link px-0 text-white text--alpha-inverse">Smart contract</a>
+                        </nav>
+                      </dd>
+                    </dl>
+                  </div>
+
+                  <div className="col-6 col-md-3">
+                    <dl className="mb-1">
+                    <dt className="mb-1">About</dt>
+                      <dd>
+                        <nav className="nav flex-column small">
+                          <a href="/foundation.html" className="nav-link px-0 text-white text--alpha-inverse">Foundation</a>
+                          <a href="https://blog.windingtree.com/" className="nav-link px-0 text-white text--alpha-inverse">Blog</a>
+                          <a href="/foundation.html#roadmap" className="nav-link px-0 text-white text--alpha-inverse">Roadmap</a>
+                          <a href="/foundation.html#team" className="nav-link px-0 text-white text--alpha-inverse">Team</a>
+                          <a href="/assets/files/White_Paper_EN.pdf" className="nav-link px-0 text-white text--alpha-inverse">Read the White paper</a>
+                        </nav>
+                      </dd>
+                    </dl>
+                  </div>
+
+                  <div className="col-6 col-md-3">
+                    <dl className="mb-1">
+                    <dt className="mb-1">Contacts</dt>
+                      <dd>
+                        <nav className="nav flex-column small">
+                          <span className="nav-link px-0">
+                            Gubelstrasse 11, 6300 Zug, Switzerland
+                          </span>
+                          <a href="mailto:info@windingtree.com" className="nav-link px-0 text-white text--alpha-inverse text-truncate">info@windingtree.com</a>
+                        </nav>
+                      </dd>
+                    </dl>
+                  </div>
+
+                  <div className="col-6 col-md-3">
+                    <dl className="mb-1">
+                      <dt className="mb-1">Community</dt>
+                      <dd>
+                        <nav className="nav flex-column small">
+                          <a href="/startups-and-developers.html" className="nav-link px-0 text-white text--alpha-inverse">For developers &amp;&nbsp;startups</a>
+                        </nav>
+                      </dd>
+                    </dl>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <p className="mb-0 font--alt">© Winding Tree</p>
+
+          <hr className="text--alpha"/>
+
+          <div className="py-1">
+            <div className="d-flex flex-column-reverse flex-md-row align-items-center">
+              <div className="d-flex flex-column flex-md-row align-items-center align-items-md-baseline">
+                <small>©&nbsp;2017–<script>document.write(new Date().getFullYear());</script>2018, Winding Tree</small>
+                <a href="https://windingtree.com/" target="_blank" className="ml-md-2 small text-white text--alpha-inverse border-bottom">powered by Winding Tree</a>
+              </div>
+
+              <div className="mb-1 mb-md-0 ml-md-auto">
+                <ul className="social list-inline text-center text-md-right">
+
+                  <li className="list-inline-item">
+                    <a href="https://github.com/windingtree" title="GitHub" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-github-circle"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="https://twitter.com/windingtree" title="Twitter" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="http://blog.windingtree.com/" title="Medium" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-medium"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="https://www.youtube.com/channel/UCFuemEOhCfenYMoNdjD0Aew" title="YouTube" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-youtube"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="https://t.me/windingtree" title="Telegram" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-telegram"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="https://reddit.com/r/windingtree" title="Reddit" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-reddit"></i>
+                    </a>
+                  </li>
+
+                  <li className="list-inline-item">
+                    <a href="https://bitcointalk.org/index.php?topic=1946065" title="BitcoinTalk" className="text-white text--alpha">
+                      <i className="mdi mdi-24px mdi-bitcoin"></i>
+                    </a>
+                  </li>
+
+                </ul>
+
+
+              </div>
+
             </div>
           </div>
         </div>
-
-
-        <div className="pulse-container">
-          <div className="pulse-box">
-            <svg className="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <circle className="circle first-circle" cx="25" cy="25" r="25"></circle>
-              <circle className="circle second-circle" cx="25" cy="25" r="25"></circle>
-              <circle className="circle third-circle" cx="25" cy="25" r="25"></circle>
-              <circle className="circle" fill="none" cx="25" cy="25" r="25"></circle>
-            </svg>
-          </div>
-        </div>
-
       </footer>
     );
   }

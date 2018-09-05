@@ -4,28 +4,20 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from "@storybook/addon-options";
 import { configureViewport } from '@storybook/addon-viewport';
-import { setDefaults } from '@storybook/addon-info';
 
 
 // Included styles
-import '../src/css/app.scss';
-
+process.env.NODE_ENV === 'production' ? require('../dist/styles.css') : require('../src/css/app.scss');
 
 // Addon-options
 setOptions({
   name: "Winding Tree UI",
   url: "https://github.com/windingtree/wt-ui",
-  // showAddonPanel: false,
   addonPanelInRight: true,
+  // Options to change presentation
+  // showAddonPanel: false,
+  // sidebarAnimations: false,
 });
-
-
-// Addon-info
-setDefaults({
-  header: false,
-  // inline: true,
-});
-
 
 addDecorator(story => (
   <div style={{margin: '20px'}}>
@@ -33,11 +25,18 @@ addDecorator(story => (
   </div>
 ));
 
-
-// automatically import all files ending in *.stories.js
-const req = require.context('../src/stories', true, /.stories.js$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  require('../src/stories/overview.stories.js');
+  require('../src/stories/branding.stories.js');
+  require('../src/stories/layout.stories.js');
+  require('../src/stories/content-blocks.stories.js');
+  require('../src/stories/typography.stories.js');
+  require('../src/stories/images.stories.js');
+  require('../src/stories/controls.stories.js');
+  require('../src/stories/navigation.stories.js');
+  require('../src/stories/containers.stories.js');
+  require('../src/stories/feedback.stories.js');
+  require('../src/stories/utilities.stories.js');
 }
 
 configure(loadStories, module);

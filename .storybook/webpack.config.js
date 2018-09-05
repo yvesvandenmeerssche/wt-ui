@@ -14,12 +14,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           {
             loader: 'style-loader',
             options: { sourceMap: true }
           },
+          "css-loader",
           {
             loader: 'postcss-loader',
             options: {
@@ -29,12 +30,31 @@ module.exports = {
                   precss,
                   postcssCssnext,
                 ];
-              },
+             },
             }
           },
-          {loader: 'sass-loader'}
+          "sass-loader"
+        ],
+      },
+      {
+        test: /\.md$/,
+        use: [
+          { loader: 'markdown-loader' }
+        ],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
         ]
-      }
+      },
     ]
   }
 };
