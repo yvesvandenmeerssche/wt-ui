@@ -1,0 +1,23 @@
+dist: trusty
+sudo: false
+group: beta
+language: node_js
+cache:
+  directories:
+    - $HOME/.npm
+node_js:
+- 10.3.0
+jobs:
+  include:
+  - stage: NPM release
+    if: tag IS present
+    script: echo 'Deploying to NPM...'
+    before_deploy: npm run build
+    deploy:
+      provider: npm
+      email: "$NPM_EMAIL"
+      skip_cleanup: true
+      api_key: "$NPM_TOKEN"
+      on:
+        repo: windingtree/wt-ui
+tags: true
