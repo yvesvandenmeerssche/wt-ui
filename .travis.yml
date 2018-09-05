@@ -20,4 +20,4 @@ jobs:
       api_key: "$NPM_TOKEN"
       on:
         repo: windingtree/wt-ui
-tags: true
+        tags: true
