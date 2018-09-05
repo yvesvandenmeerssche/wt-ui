@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.node-xmlhttprequest-sync-[0-9]*
+allFiredEvents
+package-lock.json
+src
+.storybook
+webpack
+.babelrc
+.editorconfig
+.travis.yml
+.github
