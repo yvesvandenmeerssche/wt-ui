@@ -11,7 +11,7 @@
     "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js"
   },
   "author": "Winding Tree",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/windingtree/wt-ui.git"
