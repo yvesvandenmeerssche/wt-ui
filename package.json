@@ -1,5 +1,5 @@
 {
-  "name": "windingtree-ui",
+  "name": "@windingtree/wt-ui",
   "version": "1.0.0",
   "description": "Winding Tree's UI Components",
   "main": "index.js",
@@ -12,6 +12,9 @@
   },
   "author": "Winding Tree",
   "license": "Apache-2.0",
+  "publishConfig": {
+  "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/windingtree/wt-ui.git"
