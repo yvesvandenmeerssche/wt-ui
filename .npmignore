@@ -10,3 +10,4 @@ webpack
 .editorconfig
 .travis.yml
 .github
+.stylelintrc
