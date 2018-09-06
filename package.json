@@ -1,5 +1,5 @@
 {
-  "name": "windingtree-ui",
+  "name": "@windingtree/wt-ui",
   "version": "1.0.0",
   "description": "Winding Tree's UI Components",
   "main": "index.js",
@@ -11,11 +11,19 @@
     "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js"
   },
   "author": "Winding Tree",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "publishConfig": {
+  "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/windingtree/wt-ui.git"
   },
+  "keywords": [
+  "winding-tree",
+  "ui",
+  "bootstrap"
+],
   "dependencies": {
     "bootstrap": "^4.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
