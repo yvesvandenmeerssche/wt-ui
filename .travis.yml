@@ -12,7 +12,7 @@ jobs:
   - stage: NPM release
     if: tag IS present
     script: echo 'Deploying to NPM...'
-    before_deploy: npm run build
+    before_deploy: npm run npm-build
     deploy:
       provider: npm
       email: "$NPM_EMAIL"
