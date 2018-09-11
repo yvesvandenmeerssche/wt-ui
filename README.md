@@ -16,6 +16,10 @@ $ npm install @windingtree/wt-ui
 import '@windingtree/wt-ui/dist/styles.css';
 ```
 
+### Documentation
+Documentation is built with [Storybook]() , and hosted by [Github pages](https://windingtree.github.io/wt-ui).
+You can run docs locally following steps detailed in Build storybook.
+
 ## Development
 ### Set-up
 * Clone the repo.
@@ -24,10 +28,9 @@ import '@windingtree/wt-ui/dist/styles.css';
 ### Develop
 * Use `npm run storybook-dev` to start storybook in development mode.
 
-### Build
-#### Storybook
+### Build Storybook
 * Use `npm run storybook-build` to build the static version of Storybook.
 * Use `npm run storybook-start` to run the static version of Storybook.
 
-#### npm
+### Build npm
 * Use `npm run npm-build` to compile `scss` files.
