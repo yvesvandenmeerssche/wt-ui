@@ -9,9 +9,18 @@ node_js:
 - 10.3.0
 jobs:
   include:
+  - stage: Deploy to GH Pages
+    before_deploy: npm run storybook-build
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      local_dir: docs
+      github_token: $GITHUB_TOKEN
+      keep-history: true
+      on:
+        branch: master
   - stage: NPM release
     if: tag IS present
-    script: echo 'Deploying to NPM...'
     before_deploy: npm run npm-build
     deploy:
       provider: npm
