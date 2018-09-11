@@ -2,7 +2,8 @@
 [![Build Status](https://travis-ci.org/windingtree/wt-ui.svg?branch=v1.0.0)](https://travis-ci.org/windingtree/wt-ui)
 
 ## What is it?
-wt-ui is a framework used to speed up projects. It provides basic styling to provide Winding Tree look and feel.
+WT-UI is a CSS framework that can be used to speed up the UI building and keep the design consistent across different projects.
+The framework is based on Bootstrap, and includes additional features.
 
 ## Quick start
 ### Installation
