@@ -17,7 +17,7 @@ import '@windingtree/wt-ui/dist/styles.css';
 ```
 
 ### Documentation
-Documentation is built with [Storybook](https://storybook.js.org/) , and hosted by [Github pages](https://windingtree.github.io/wt-ui).
+Documentation is built with [Storybook](https://storybook.js.org/) , and hosted by [Github pages](https://ui.windingtree.com/).
 You can run docs locally following steps detailed in Build storybook.
 
 ## Development
