@@ -2,45 +2,29 @@
   "name": "@windingtree/wt-ui",
   "version": "1.0.0",
   "description": "Winding Tree's UI Components",
-  "main": "index.js",
-  "scripts": {
-    "storybook-dev": "NODE_ENV=developement start-storybook -p 6006 -s ./src -c .storybook",
-    "storybook-build": "npm run npm-build && build-storybook -c .storybook -o docs && cp -a src/img docs/",
-    "storybook-start": "NODE_ENV=production serve --port 5001 --single ./docs",
-    "npm-clean": "rm -rf dist && mkdir dist",
-    "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js"
-  },
-  "author": "Winding Tree",
-  "license": "Apache-2.0",
-  "publishConfig": {
-  "access": "public"
-  },
+  "keywords": [
+    "bootstrap",
+    "ui",
+    "winding-tree"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/windingtree/wt-ui.git"
   },
-  "keywords": [
-  "winding-tree",
-  "ui",
-  "bootstrap"
-],
+  "license": "Apache-2.0",
+  "author": "Winding Tree",
+  "main": "index.js",
+  "scripts": {
+    "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js",
+    "npm-clean": "rm -rf dist && mkdir dist",
+    "storybook-build": "npm run npm-build && build-storybook -c .storybook -o docs && cp -a src/img docs/",
+    "storybook-dev": "NODE_ENV=developement start-storybook -p 6006 -s ./src -c .storybook",
+    "storybook-start": "NODE_ENV=production serve --port 5001 --single ./docs"
+  },
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "html-loader": "^0.5.5",
     "jquery": "^3.3.1",
-    "markdown-loader": "^2.0.2",
-    "popper.js": "^1.14.3",
-    "prop-types": "^15.6.1",
-    "re-resizable": "^4.4.8",
-    "react": "^16.2.0",
-    "react-animate-on-scroll": "^2.1.3",
-    "react-dom": "^16.2.0",
-    "react-graceful-image": "^1.2.6",
-    "react-router-dom": "^4.2.2",
-    "serve": "^6.5.5",
-    "webpack-dev-server": "^2.11.1",
-    "windingtree-media-web": "git+https://github.com/windingtree/media.git#web-assets"
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.7",
@@ -62,20 +46,36 @@
     "babel-runtime": "^6.26.0",
     "css-loader": "^0.28.9",
     "expose-loader": "^0.7.5",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
     "html-webpack-harddisk-plugin": "^0.2.0",
+    "markdown-loader": "^2.0.2",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.2",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^2.1.5",
     "precss": "^3.1.2",
+    "prop-types": "^15.6.1",
+    "re-resizable": "^4.4.8",
+    "react": "^16.2.0",
+    "react-animate-on-scroll": "^2.1.3",
+    "react-dom": "^16.2.0",
+    "react-graceful-image": "^1.2.6",
+    "react-router-dom": "^4.2.2",
     "sass-loader": "^7.0.1",
+    "serve": "^6.5.5",
     "storybook-react-router": "^1.0.1",
     "storybook-readme": "^3.3.0",
     "style-loader": "^0.20.2",
     "stylelint-config-recommended": "^2.1.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
-    "webpack-create-file-plugin": "^0.1.0"
+    "webpack-create-file-plugin": "^0.1.0",
+    "webpack-dev-server": "^2.11.1",
+    "windingtree-media-web": "git+https://github.com/windingtree/media.git#web-assets"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
