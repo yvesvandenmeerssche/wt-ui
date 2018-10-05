@@ -15,7 +15,9 @@
   "author": "Winding Tree",
   "main": "index.js",
   "scripts": {
-    "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js",
+    "build": "npm run npm-clean && npm run npm-build && npm run npm-build-with-dependencies", 
+    "npm-build": "webpack --bail -p --config ./webpack/webpack.custom.config.js",
+    "npm-build-with-dependencies": "webpack --bail -p --config ./webpack/webpack.dependencies.config.js",
     "npm-clean": "rm -rf dist && mkdir dist",
     "storybook-build": "npm run npm-build && build-storybook -c .storybook -o docs && cp -a src/img docs/",
     "storybook-dev": "NODE_ENV=developement start-storybook -p 6006 -s ./src -c .storybook",
