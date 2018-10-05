@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const {version} = require('../../package');
+const {version} = require('../package');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -8,18 +8,18 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const precss = require('precss');
 const postcssCssnext = require('postcss-cssnext');
 
-const DIR_ROOT = path.join(__dirname, '../../');
+const DIR_ROOT = path.join(__dirname, '../');
 const DIR_SOURCE = path.resolve(DIR_ROOT, 'src') + '/';
 const DIR_PUBLIC = path.resolve(DIR_ROOT, 'dist') + '/';
 
-console.log('Building dist directory ... \n===========================\n');
+console.log('Building dist/custom.js');
 
 module.exports = {
   entry: [ DIR_SOURCE + 'css/app.scss'],
   output: {
     path: DIR_PUBLIC,
     publicPath: DIR_PUBLIC,
-    filename: 'main.js',
+    filename: 'custom.js',
   },
   module: {
     rules: [
