@@ -18,37 +18,50 @@ import MediaAssets__LogoVariants from './branding/media-assets__logo-variants.md
 import MediaAssets__CustomIcons from './branding/media-assets__custom-icons.md';
 
 // Logo images
-import imgLogo from 'windingtree-media-web/logo-variants/full-logo/png/logo--gradient_black-text.png';
-import imgLogoAlt from 'windingtree-media-web/logo-variants/full-logo/png/logo--white.png';
-import imgTree from 'windingtree-media-web/logo-variants/tree/png/tree--gradient.png';
-import imgTreeAlt from 'windingtree-media-web/logo-variants/tree/png/tree--black.png';
-import imgSign from 'windingtree-media-web/logo-variants/sign/png/sign--gradient.png';
-import imgSignAlt from 'windingtree-media-web/logo-variants/sign/png/sign--black.png';
+import wtGrad from '@windingtree/wt-ui-assets/logo-variants/full-logo/svg/wt-grad.svg';
+import wtGradTW from '@windingtree/wt-ui-assets/logo-variants/full-logo/svg/wt-grad--text-white.svg';
+import wtBlack from '@windingtree/wt-ui-assets/logo-variants/full-logo/svg/wt-black.svg';
+import wtWhite from '@windingtree/wt-ui-assets/logo-variants/full-logo/svg/wt-white.svg';
+
+import wtGradSM from '@windingtree/wt-ui-assets/logo-variants/full-logo/--sm/svg/wt-grad.svg';
+import wtGradTWSM from '@windingtree/wt-ui-assets/logo-variants/full-logo/--sm/svg/wt-grad--text-white.svg';
+import wtBlackSM from '@windingtree/wt-ui-assets/logo-variants/full-logo/--sm/svg/wt-black.svg';
+import wtWhiteSM from '@windingtree/wt-ui-assets/logo-variants/full-logo/--sm/svg/wt-white.svg';
+
+import wtSignGrad from '@windingtree/wt-ui-assets/logo-variants/sign/svg/wt-grad.svg';
+import wtSignBlack from '@windingtree/wt-ui-assets/logo-variants/sign/svg/wt-black.svg';
+import wtSignWhite from '@windingtree/wt-ui-assets/logo-variants/sign/svg/wt-white.svg';
+
+import wtFaviconGrad from '@windingtree/wt-ui-assets/logo-variants/favicon/svg/wt-grad--32x32.svg';
+import wtFaviconBlack from '@windingtree/wt-ui-assets/logo-variants/favicon/svg/wt-black--32x32.svg';
+import wtFaviconWhite from '@windingtree/wt-ui-assets/logo-variants/favicon/svg/wt-white--32x32.svg';
+
+
 
 // Icon images
-import airplaneTicket from 'windingtree-media-web/custom-icons/svg/wt-icon--airplane-ticket.svg';
-import chart from 'windingtree-media-web/custom-icons/svg/wt-icon--chart.svg';
-import coinsUp from 'windingtree-media-web/custom-icons/svg/wt-icon--coins-up.svg';
-import commentBubble from 'windingtree-media-web/custom-icons/svg/wt-icon--comment-bubble.svg';
-import documents from 'windingtree-media-web/custom-icons/svg/wt-icon--documents.svg';
-import githubLogo from 'windingtree-media-web/custom-icons/svg/wt-icon--github-logo.svg';
-import governmentBuillding from 'windingtree-media-web/custom-icons/svg/wt-icon--government-buillding.svg';
-import handOffer from 'windingtree-media-web/custom-icons/svg/wt-icon--hand-offer.svg';
-import lifToken from 'windingtree-media-web/custom-icons/svg/wt-icon--lif-token.svg';
-import noBorders from 'windingtree-media-web/custom-icons/svg/wt-icon--no-borders.svg';
-import payment from 'windingtree-media-web/custom-icons/svg/wt-icon--payment.svg';
-import plusSign from 'windingtree-media-web/custom-icons/svg/wt-icon--plus-sign.svg';
-import securityBadge from 'windingtree-media-web/custom-icons/svg/wt-icon--security-badge.svg';
-import tree from 'windingtree-media-web/custom-icons/svg/wt-icon--tree.svg';
-import worldAndPin from 'windingtree-media-web/custom-icons/svg/wt-icon--world-and-pin.svg';
-import plug from 'windingtree-media-web/custom-icons/svg/wt-icon--plug.svg';
+import airplaneTicket from '@windingtree/wt-ui-assets/custom-icons/wt-icon--airplane-ticket.svg';
+import chart from '@windingtree/wt-ui-assets/custom-icons/wt-icon--chart.svg';
+import coinsUp from '@windingtree/wt-ui-assets/custom-icons/wt-icon--coins-up.svg';
+import commentBubble from '@windingtree/wt-ui-assets/custom-icons/wt-icon--comment-bubble.svg';
+import documents from '@windingtree/wt-ui-assets/custom-icons/wt-icon--documents.svg';
+import githubLogo from '@windingtree/wt-ui-assets/custom-icons/wt-icon--github-logo.svg';
+import governmentBuillding from '@windingtree/wt-ui-assets/custom-icons/wt-icon--government-buillding.svg';
+import handOffer from '@windingtree/wt-ui-assets/custom-icons/wt-icon--hand-offer.svg';
+import lifToken from '@windingtree/wt-ui-assets/custom-icons/wt-icon--lif-token.svg';
+import noBorders from '@windingtree/wt-ui-assets/custom-icons/wt-icon--no-borders.svg';
+import payment from '@windingtree/wt-ui-assets/custom-icons/wt-icon--payment.svg';
+import plusSign from '@windingtree/wt-ui-assets/custom-icons/wt-icon--plus-sign.svg';
+import securityBadge from '@windingtree/wt-ui-assets/custom-icons/wt-icon--security-badge.svg';
+import tree from '@windingtree/wt-ui-assets/custom-icons/wt-icon--tree.svg';
+import worldAndPin from '@windingtree/wt-ui-assets/custom-icons/wt-icon--world-and-pin.svg';
+import plug from '@windingtree/wt-ui-assets/custom-icons/wt-icon--plug.svg';
 // Alt icon images
-import altToken from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--token.svg';
-import altHandClick from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--hand-click.svg';
-import altIdea from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--idea.svg';
-import altNodes from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--nodes.svg';
-import altPath from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--path.svg';
-import altPuzzle from 'windingtree-media-web/custom-icons/svg/alt/wt-icon--puzzle.svg';
+import altToken from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--token.svg';
+import altHandClick from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--hand-click.svg';
+import altIdea from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--idea.svg';
+import altNodes from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--nodes.svg';
+import altPath from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--path.svg';
+import altPuzzle from '@windingtree/wt-ui-assets/custom-icons/alt/wt-icon--puzzle.svg';
 
 
 // COMPONENTS
@@ -325,53 +338,166 @@ storiesOf('Branding', module)
     <i className="mdi mdi-xxl mdi-office-building"/>
   </div>
 ))
-
 // Media Assets / Logo Variants
 storiesOf('Branding/Media assets', module)
   .add('Logo variants', withCleanPreview(MediaAssets__LogoVariants, () =>
-    <div className="text-center col">
-      <p className="mb-4" style={{padding: '0 20px'}}>
-        <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
-      </p>
-      <p className="mb-4 bg-dark" style={{padding: '40px 20px'}}>
-        <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
-      </p>
-      <p>
-        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTree} alt="Winding Tree Tree" width="150"/>
-        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgTreeAlt} alt="Winding Tree Tree variant" width="150"/>
-        <img className="mb-4 mr-3 d-inline-block img-fluid" src={imgSign} alt="Winding Tree Sign" width="60"/>
-        <img className="mb-4 d-inline-block img-fluid" src={imgSignAlt} alt="Winding Tree Sign Variant" width="60"/>
-      </p>
+    <div className="row">
+      <div className="col-lg-4">
+        <div className="border p-2 mb-1">
+
+          <h5 className="text--alpha mb-1">Full Isologotype</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtGrad} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtBlack} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text--alpha my-1">Full Isologotype (mobile)</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtGradSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtBlackSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text--alpha my-1">Isologo</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtSignGrad} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtSignBlack} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text--alpha my-1">Sign / Favicon</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtFaviconGrad} alt="Winding Tree Logo" width="32" className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtFaviconBlack} alt="Winding Tree Logo" width="32" className="img-fluid"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="col-lg-4">
+        <div className="border p-2 mb-1 bg-dark">
+
+          <h5 className="text-white text--alpha mb-1">Full Isologotype</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtGradTW} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtWhite} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Full Isologotype (mobile)</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtGradTWSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtWhiteSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Isologo</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtSignGrad} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtSignWhite} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Sign / Favicon</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtFaviconGrad} alt="Winding Tree Logo" width="32" className="img-fluid"/>
+            </div>
+            <div className="col-sm-6 mb-1">
+              <img src={wtFaviconWhite} alt="Winding Tree Logo" width="32" className="img-fluid"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="col-lg-4">
+        <div className="border p-2 mb-1 bg--accent">
+
+          <h5 className="text-white text--alpha mb-1">Full Isologotype</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtWhite} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Full Isologotype (mobile)</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtWhiteSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Isologo</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtSignWhite} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
+            </div>
+          </div>
+
+          <h5 className="text-white text--alpha my-1">Sign / Favicon</h5>
+          <div className="row">
+            <div className="col-sm-6 mb-1">
+              <img src={wtFaviconWhite} alt="Winding Tree Logo" width="32" className="img-fluid"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   ))
-  // Media Assets / Custom Icons
-  .add('Custom Icons', withCodePreview(MediaAssets__CustomIcons, () =>
-    <div className="text-center">
-      <img src={airplaneTicket} alt="icon" width="100" className="img-fluid"/>
-      <img src={chart} alt="icon" width="100" className="img-fluid"/>
-      <img src={coinsUp} alt="icon" width="100" className="img-fluid"/>
-      <img src={commentBubble} alt="icon" width="100" className="img-fluid"/>
-      <img src={documents} alt="icon" width="100" className="img-fluid"/>
-      <img src={githubLogo} alt="icon" width="100" className="img-fluid"/>
-      <img src={governmentBuillding} alt="icon" width="100" className="img-fluid"/>
-      <img src={handOffer} alt="icon" width="100" className="img-fluid"/>
-      <img src={lifToken} alt="icon" width="100" className="img-fluid"/>
-      <img src={noBorders} alt="icon" width="100" className="img-fluid"/>
-      <img src={payment} alt="icon" width="100" className="img-fluid"/>
-      <img src={plusSign} alt="icon" width="100" className="img-fluid"/>
-      <img src={securityBadge} alt="icon" width="100" className="img-fluid"/>
-      <img src={tree} alt="icon" width="100" className="img-fluid"/>
-      <img src={worldAndPin} alt="icon" width="100" className="img-fluid"/>
-      <img src={plug} alt="icon" width="100" className="img-fluid"/>
+// Media Assets / Custom Icons
+.add('Custom Icons', withCodePreview(MediaAssets__CustomIcons, () =>
+  <div className="text-center">
+    <img src={airplaneTicket} alt="icon" width="100" className="img-fluid"/>
+    <img src={chart} alt="icon" width="100" className="img-fluid"/>
+    <img src={coinsUp} alt="icon" width="100" className="img-fluid"/>
+    <img src={commentBubble} alt="icon" width="100" className="img-fluid"/>
+    <img src={documents} alt="icon" width="100" className="img-fluid"/>
+    <img src={githubLogo} alt="icon" width="100" className="img-fluid"/>
+    <img src={governmentBuillding} alt="icon" width="100" className="img-fluid"/>
+    <img src={handOffer} alt="icon" width="100" className="img-fluid"/>
+    <img src={lifToken} alt="icon" width="100" className="img-fluid"/>
+    <img src={noBorders} alt="icon" width="100" className="img-fluid"/>
+    <img src={payment} alt="icon" width="100" className="img-fluid"/>
+    <img src={plusSign} alt="icon" width="100" className="img-fluid"/>
+    <img src={securityBadge} alt="icon" width="100" className="img-fluid"/>
+    <img src={tree} alt="icon" width="100" className="img-fluid"/>
+    <img src={worldAndPin} alt="icon" width="100" className="img-fluid"/>
+    <img src={plug} alt="icon" width="100" className="img-fluid"/>
 
-      <hr className="my-2"/>
+    <hr className="my-2"/>
 
-      <img src={altToken} alt="icon" width="85" className="img-fluid"/>
-      <img src={altHandClick} alt="icon" width="85" className="img-fluid"/>
-      <img src={altIdea} alt="icon" width="85" className="img-fluid"/>
-      <img src={altNodes} alt="icon" width="85" className="img-fluid"/>
-      <img src={altPath} alt="icon" width="85" className="img-fluid"/>
-      <img src={altPuzzle} alt="icon" width="85" className="img-fluid"/>
+    <img src={altToken} alt="icon" width="85" className="img-fluid"/>
+    <img src={altHandClick} alt="icon" width="85" className="img-fluid"/>
+    <img src={altIdea} alt="icon" width="85" className="img-fluid"/>
+    <img src={altNodes} alt="icon" width="85" className="img-fluid"/>
+    <img src={altPath} alt="icon" width="85" className="img-fluid"/>
+    <img src={altPuzzle} alt="icon" width="85" className="img-fluid"/>
 
-    </div>
-  ))
+  </div>
+))
