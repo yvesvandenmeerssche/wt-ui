@@ -333,7 +333,7 @@ storiesOf('Branding/Media assets', module)
       <p className="mb-4" style={{padding: '0 20px'}}>
         <img src={imgLogo} alt="Winding Tree Logo" width="600" className="img-fluid"/>
       </p>
-      <p className="mb-4" style={{padding: '40px 20px', backgroundColor: '#1AC592'}}>
+      <p className="mb-4 bg-dark" style={{padding: '40px 20px'}}>
         <img src={imgLogoAlt} alt="Winding Tree Logo Variant" width="600" className="img-fluid"/>
       </p>
       <p>
