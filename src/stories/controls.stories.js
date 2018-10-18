@@ -7,11 +7,11 @@ import { doc } from 'storybook-readme';
 
 // Included components
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
+import { withDropdown } from "./HOCs/bootstrap";
 
 // Readme files
 import Button from './controls/button.md';
-import Button__Tags from './controls/button__tags.md';
-import Button__Outline from './controls/button__outline.md';
+import Button__WithIcon from './controls/button__with-icon.md';
 import Button__Sizes from './controls/button__sizes.md';
 import Button__States from './controls/button__states.md';
 import Button__Plugin from './controls/button__plugin.md';
@@ -37,82 +37,82 @@ storiesOf('Controls/Button', module)
   // Overview
   .add('Overview', withCodePreview(Button, () =>
     <div>
-      <button type="button" className="mr-1 mb-1 btn btn-primary">Primary</button>
-      <button type="button" className="mr-1 mb-1 btn btn-secondary">Secondary</button>
-
-      <button type="button" className="mr-1 mb-1 btn btn-light">Light</button>
-      <button type="button" className="mr-1 mb-1 btn btn-dark">Dark</button>
-      <button type="button" className="mr-1 mb-1 btn btn-link">Link</button>
-
-      <hr className="mb-1"/>
-      <p className="mt-1 mb-1">The following variants retain the Bootstrap default colors, since were not used on the website.</p>
-
-      <button type="button" className="mr-1 mb-1 btn btn-success">Success</button>
-      <button type="button" className="mr-1 mb-1 btn btn-danger">Danger</button>
-      <button type="button" className="mr-1 mb-1 btn btn-warning">Warning</button>
-      <button type="button" className="mr-1 mb-1 btn btn-info">Info</button>
-    </div>
-  ))
-  // Button tags
-  .add('Button tags', withCodePreview(Button__Tags, () =>
-    <div>
-      <a className="mr-1 mb-1 btn btn-primary" href="#" role="button">Link</a>
-      <button className="mr-1 mb-1 btn btn-primary" type="submit">Button</button>
-      <input className="mr-1 mb-1 btn btn-primary" type="button" value="Input"/>
-      <input className="mr-1 mb-1 btn btn-primary" type="submit" value="Submit"/>
-      <input className="mr-1 mb-1 btn btn-primary" type="reset" value="Reset"/>
-    </div>
-  ))
-  // Outline buttons
-  .add('Outline buttons', withCodePreview(Button__Outline, () =>
-    <div>
-      <div className="container">
-        <div className="row mb-1">
-          <div className="col px-1 py-1 text-center" style={{
-            background: '#2ebd95',
-            background: 'linear-gradient(135deg, #5f2b88 0%, #2ebd95 100%)'
-          }}>
-            <button type="button" className="btn btn-outline-light">Light</button>
-          </div>
-          <div className="col px-1 py-1 text-center">
-            <button type="button" className="btn btn-outline-dark">Dark</button>
-          </div>
+        <h6 className="mb-1">Primary <span class="text-muted">( .btn-primary )</span></h6>
+        <div className="mb-2 px-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn-primary btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-primary">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-primary btn-lg">Large</button>
         </div>
-      </div>
 
-      <p>
-        <em>* Use the light variant only over a dark background</em>
-      </p>
+        <h6 className="mb-1">Secondary <span class="text-muted">( .btn-outline-light )</span></h6>
+        <div className="bg--grad mb-2 p-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light btn-lg">Large</button>
+        </div>
 
-      <hr className="my-1"/>
-      <p className="mt-1 mb-1">The following variants retain the Bootstrap default colors, since were not used on the website.</p>
+        <h6 className="mb-1">Secondary <span class="text-muted">( .btn-outline-dark )</span></h6>
+        <div className="mb-2 px-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-dark btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-dark">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-outline-dark btn-lg">Large</button>
+        </div>
 
-      <button type="button" className="mr-1 mb-1 btn btn-outline-primary">Primary</button>
-      <button type="button" className="mr-1 mb-1 btn btn-outline-secondary">Secondary</button>
-      <button type="button" className="mr-1 mb-1 btn btn-outline-success">Success</button>
-      <button type="button" className="mr-1 mb-1 btn btn-outline-danger">Danger</button>
-      <button type="button" className="mr-1 mb-1 btn btn-outline-warning">Warning</button>
-      <button type="button" className="mr-1 mb-1 btn btn-outline-info">Info</button>
+        <h6 className="mb-1">Accent <span class="text-muted">( .btn--accent )</span></h6>
+        <div className="mb-2 px-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn--accent btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn--accent">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn--accent btn-lg">Large</button>
+        </div>
+
+        <h6 className="mb-1">Subtle <span class="text-muted">( .btn-light )</span></h6>
+        <div className="mb-2 px-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn-light btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-light">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-light btn-lg">Large</button>
+        </div>
+
+        <h6 className="mb-1">Minimal <span class="text-muted">( .btn-link )</span></h6>
+        <div className="mb-1 px-1">
+          <button type="button" className="mr-1 mr-sm-2 btn btn-link btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-link">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-link btn-lg">Large</button>
+        </div>
+    </div>
+  ))
+  // Button with icon
+  .add('Button with icon', withCodePreview(Button__WithIcon, () =>
+    <div>
+      <button className="mr-1 mb-1 btn btn-light btn-sm" type="submit">
+        <i className="mdi mdi-github-circle"/> Small
+      </button>
+      <button className="mr-1 mb-1 btn btn-light" type="submit">
+        <i className="mdi mdi-github-circle"/> Default
+      </button>
+      <button className="mr-1 mb-1 btn btn-light btn-lg" type="submit">
+        <i className="mdi mdi-github-circle"/> Large
+      </button>
     </div>
   ))
   // Button sizes
   .add('Button sizes', withCodePreview(Button__Sizes, () =>
     <div>
-      <button type="button" className="mb-1 btn btn-primary btn-lg">Large button</button><br/>
-      <button type="button" className="btn btn-primary btn-lg btn-block">Block level button</button>
-
-      <hr className="my-1"/>
-      <p className="mt-1 mb-1">The following variant was not used on the website.</p>
-
-      <button type="button" className="btn btn-primary btn-sm">Small button</button><br/>
+      <button type="button" className="btn btn-primary btn-sm mb-1">Small button</button><br/>
+      <button type="button" className="btn btn-primary btn-lg mb-1">Large button</button><br/>
+      <button type="button" className="btn btn-primary btn-block">Block level button</button>
     </div>
   ))
   // Button states
   .add('Button states', withCodePreview(Button__States, () =>
     <div>
-      <a href="#" className="mr-1 mb-1 btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-      <button type="button" className="mr-1 mb-1 btn btn-lg btn-primary" disabled>Primary button</button>
-      <a href="#" className="mb-1 btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+      <a href="#" className="mr-1 mb-1 btn btn-primary active" role="button" aria-pressed="true">Primary link</a>
+      <button type="button" className="mr-1 mb-1 btn btn-primary" disabled>Primary button</button>
+      <a href="#" className="mb-1 btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+      <hr className="my-1"/>
+      <h6 className="mb-1">Create a loading button by adding a loading icon</h6>
+      <button className="btn btn-primary disabled" disabled>
+        <i className="mdi mdi-loading mdi-spin text-dark"/> Loading...
+      </button>
     </div>
   ))
   // Button plugins
@@ -170,7 +170,7 @@ storiesOf('Controls/ Button Group', module)
     </div>
   ))
   // ButtonGroup__Nesting
-  .add('Nesting', withCodePreview(ButtonGroup__Nesting, () =>
+  .add('Nesting', withCodePreview(ButtonGroup__Nesting, withDropdown(() =>
     <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
       <button type="button" className="btn btn-primary">1</button>
       <button type="button" className="btn btn-primary">2</button>
@@ -180,14 +180,15 @@ storiesOf('Controls/ Button Group', module)
           Dropdown
         </button>
         <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a className="dropdown-item" href="#">Dropdown link</a>
-          <a className="dropdown-item" href="#">Dropdown link</a>
+          <a className="dropdown-item" href="#">Action</a>
+          <a className="dropdown-item" href="#">Another action</a>
+          <a className="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
     </div>
-  ))
+  )))
   // ButtonGroup__Vertical
-  .add('Vertical', withCodePreview(ButtonGroup__Vertical, () =>
+  .add('Vertical', withCodePreview(ButtonGroup__Vertical, withDropdown(() =>
     <div className="btn-group btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
       <button type="button" className="btn btn-primary">1</button>
       <button type="button" className="btn btn-primary">2</button>
@@ -197,12 +198,13 @@ storiesOf('Controls/ Button Group', module)
           Dropdown
         </button>
         <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a className="dropdown-item" href="#">Dropdown link</a>
-          <a className="dropdown-item" href="#">Dropdown link</a>
+          <a className="dropdown-item" href="#">Action</a>
+          <a className="dropdown-item" href="#">Another action</a>
+          <a className="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
     </div>
-  ))
+  )))
 
 
 // FORM

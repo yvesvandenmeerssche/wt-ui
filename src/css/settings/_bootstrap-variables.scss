@@ -210,9 +210,10 @@ $grid-gutter-width:           30px;
 // $border-width:                1px;
 // $border-color:                $gray-300;
 
-$border-radius:               4px;
-// $border-radius-lg:            .3rem;
-// $border-radius-sm:            .2rem;
+$border-radius:               4px; //4px
+$border-radius-lg:            4px; //.3rem
+$border-radius-sm:            4px; //.2rem
+
 
 // $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
 $box-shadow:                  0 5px 20px 0 rgba(16, 57, 87, .1);
@@ -332,7 +333,7 @@ $hr-margin-y:                 0;
 
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-// $input-btn-padding-y:         .375rem;
+//$input-btn-padding-y:         .9rem; //.375rem;
 // $input-btn-padding-x:         .75rem;
 // $input-btn-line-height:       $line-height-base;
 
@@ -340,12 +341,12 @@ $hr-margin-y:                 0;
 // $input-btn-focus-color:       rgba($component-active-bg, .25);
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
-// $input-btn-padding-y-sm:      .25rem;
+ //$input-btn-padding-y-sm:     .8rem;
 // $input-btn-padding-x-sm:      .5rem;
 // $input-btn-line-height-sm:    $line-height-sm;
 
-// $input-btn-padding-y-lg:      .5rem;
-// $input-btn-padding-x-lg:      1rem;
+//$input-btn-padding-y-lg:      .95rem;
+// $input-btn-padding-x-lg:     1rem;
 // $input-btn-line-height-lg:    $line-height-lg;
 
 // $input-btn-border-width:      $border-width;
@@ -356,18 +357,18 @@ $hr-margin-y:                 0;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               9px;
-$btn-padding-x:               28px;
+$btn-padding-x:               28px; //2.8rem;
 // $btn-line-height:             $input-btn-line-height;
 
-// $btn-padding-y-sm:            $input-btn-padding-y-sm;
-// $btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-padding-y-sm:           8px; // $input-btn-padding-y-sm;
+$btn-padding-x-sm:            16px; //1.6rem;
 // $btn-line-height-sm:          $input-btn-line-height-sm;
 
-$btn-padding-y-lg:            13px;
-$btn-padding-x-lg:            40px;
+$btn-padding-y-lg:           9px; // $input-btn-padding-y-lg;
+$btn-padding-x-lg:             35px; //3.5rem;
 // $btn-line-height-lg:          $input-btn-line-height-lg;
 
-$btn-border-width:            2px;
+$btn-border-width:            .2rem; //2px;
 
 $btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              none;
@@ -392,15 +393,15 @@ $btn-box-shadow:              none;
 
 // $label-margin-bottom:                   .5rem;
 
-// $input-padding-y:                       $input-btn-padding-y;
+$input-padding-y:                       9px; // $input-btn-padding-y;
 $input-padding-x:                       15px;
 // $input-line-height:                     $input-btn-line-height;
 
-// $input-padding-y-sm:                    $input-btn-padding-y-sm;
-// $input-padding-x-sm:                    $input-btn-padding-x-sm;
+$input-padding-y-sm:                    8px; // $input-btn-padding-y-sm;
+$input-padding-x-sm:                    16px; // $input-btn-padding-x-sm;
 // $input-line-height-sm:                  $input-btn-line-height-sm;
 
-$input-padding-y-lg:                    13px;
+$input-padding-y-lg:                    9px; //13px;
 $input-padding-x-lg:                    20px;
 // $input-line-height-lg:                  $input-btn-line-height-lg;
 
@@ -561,7 +562,7 @@ $input-box-shadow:                      none;
 
 // $dropdown-min-width:                10rem;
 $dropdown-padding-y:                1.25rem;
-$dropdown-spacer:                   1.75rem;
+// $dropdown-spacer:                   1.75rem; <-- TOREVIEW
 // $dropdown-bg:                       $white;
 // $dropdown-border-color:             rgba($black, .15);
 // $dropdown-border-radius:            $border-radius;
@@ -758,12 +759,16 @@ $card-deck-margin:                  $card-group-margin;
 // $badge-padding-y:                   .25em;
 // $badge-padding-x:                   .4em;
 // $badge-border-radius:               $border-radius;
+$badge-padding-y:                   .40em;
+$badge-padding-x:                   .7em;
+$badge-border-radius:               $border-radius*1.5;
 
 // $badge-pill-padding-x:              .6em;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 // $badge-pill-border-radius:          10rem;
-
+$badge-pill-border-radius:          4em;
+$badge-pill-padding-x:              .7em;
 
 // Modals
 
