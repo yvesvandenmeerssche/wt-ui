@@ -26,40 +26,29 @@ storiesOf('Feedback', module)
   // Badge
   .add('Badge', withCodePreview(Badge, () =>
     <div>
-      <h1>Example heading <span className="badge badge-secondary">New</span></h1>
-      <h2>Example heading <span className="badge badge-secondary">New</span></h2>
-      <h3>Example heading <span className="badge badge-secondary">New</span></h3>
-      <h4>Example heading <span className="badge badge-secondary">New</span></h4>
-      <h5>Example heading <span className="badge badge-secondary">New</span></h5>
-      <h6>Example heading <span className="badge badge-secondary">New</span></h6>
-
+      <p className="p-1">
+        <span className="mr-1 badge badge-primary">Primary</span>
+        <span className="mr-1 badge badge-secondary">Secondary</span>
+        <span className="mr-1 badge badge--accent">Accent</span>
+        <span className="mr-1 badge badge-success">Success</span>
+        <span className="mr-1 badge badge-danger">Danger</span>
+        <span className="mr-1 badge badge-warning">Warning</span>
+        <span className="mr-1 badge badge-info">Info</span>
+        <span className="mr-1 badge badge-light">Light</span>
+        <span className="mr-1 badge badge-dark">Dark</span>
+      </p>
       <hr/>
-
-      <button type="button" className="btn btn-primary">
-        Notifications <span className="badge badge-light">4</span>
-      </button>
-
-      <hr/>
-
-      <span className="mr-1 badge badge-pill badge-primary">Primary</span>
-      <span className="mr-1 badge badge-pill badge-secondary">Secondary</span>
-      <span className="mr-1 badge badge-pill badge-success">Success</span>
-      <span className="mr-1 badge badge-pill badge-danger">Danger</span>
-      <span className="mr-1 badge badge-pill badge-warning">Warning</span>
-      <span className="mr-1 badge badge-pill badge-info">Info</span>
-      <span className="mr-1 badge badge-pill badge-light">Light</span>
-      <span className="mr-1 badge badge-pill badge-dark">Dark</span>
-
-      <hr/>
-
-      <a href="#" className="mr-1 badge badge-primary">Primary</a>
-      <a href="#" className="mr-1 badge badge-secondary">Secondary</a>
-      <a href="#" className="mr-1 badge badge-success">Success</a>
-      <a href="#" className="mr-1 badge badge-danger">Danger</a>
-      <a href="#" className="mr-1 badge badge-warning">Warning</a>
-      <a href="#" className="mr-1 badge badge-info">Info</a>
-      <a href="#" className="mr-1 badge badge-light">Light</a>
-      <a href="#" className="mr-1 badge badge-dark">Dark</a>
+      <p className="p-1">
+        <span className="mr-1 badge badge-pill badge-primary">Primary</span>
+        <span className="mr-1 badge badge-pill badge-secondary">Secondary</span>
+        <span className="mr-1 badge badge-pill badge--accent">Accent</span>
+        <span className="mr-1 badge badge-pill badge-success">Success</span>
+        <span className="mr-1 badge badge-pill badge-danger">Danger</span>
+        <span className="mr-1 badge badge-pill badge-warning">Warning</span>
+        <span className="mr-1 badge badge-pill badge-info">Info</span>
+        <span className="mr-1 badge badge-pill badge-light">Light</span>
+        <span className="mr-1 badge badge-pill badge-dark">Dark</span>
+      </p>
     </div>
   ))
   // Progress
@@ -188,10 +177,6 @@ storiesOf('Feedback', module)
 
       <button className="btn btn-primary disabled mr-1" disabled>
         <i className="mdi mdi-loading mdi-spin text-dark"/> Loading...
-      </button>
-
-      <button className="btn btn-secondary disabled" disabled>
-        <i className="mdi mdi-loading mdi-spin text-light"/> Loading...
       </button>
 
       <hr className="my-1"/>

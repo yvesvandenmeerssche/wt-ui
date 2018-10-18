@@ -5,9 +5,7 @@ Add `.btn-lg` or `.btn-sm` for additional sizes, or create block level buttons t
 <!-- STORY -->
 
 ```html
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-
-<!-- Unused -->
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-block">Block level button</button>
 ```

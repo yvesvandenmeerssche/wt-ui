@@ -10,9 +10,14 @@ As the `<a>` element doesn't support the `disabled` attribute, you must add the 
 
 ```html
 <!-- Active -->
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Primary link</a>
 
 <!-- Disabled -->
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+<button type="button" class="btn btn-primary" disabled>Primary button</button>
+<a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+
+<!-- Loading -->
+<button class="btn btn-primary disabled mr-1" disabled>
+  <i class="mdi mdi-loading mdi-spin text-dark"/> Loading...
+</button>
 ```
