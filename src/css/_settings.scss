@@ -18,3 +18,7 @@ $baseurl: "/";
 // Bootstrap overrides
 @import "settings/bootstrap-mixins";
 @import "settings/bootstrap-reboot";
+
+::selection {
+  background: lighten($brandPurple, 55%);
+}

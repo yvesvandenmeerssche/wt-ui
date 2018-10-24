@@ -1,26 +1,145 @@
-.form-control {
-  @include scale;
+// FORM
+
+// Restyling
+
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: $fontSizeXs;
+  color: $colorMuted;
+}
+.custom-checkbox,
+.custom-radio {
+  label {
+    font-weight: normal;
+    text-transform: none;
+    font-size: $fontSizeMd;
+    color: $colorMuted;
+    &:hover {
+      color: $body-color;
+    }
+  }
+}
+.form-check,
+.form-radio {
+  label {
+    font-size: $fontSizeMd;
+    font-weight: normal;
+    text-transform: none;
+  }
+  input {margin-top: 5px;}
+}
+
+// Form-control sizes
+.form-control-sm {
+  font-size: $fontSizeXs;
+}
+.form-control-lg {
+  font-size: $fontSizeMd;
+}
+
+// Redefine form controls
+input, textarea {
+  @extend .form-control;
+}
+
+.input--sm {
+  @extend .form-control-sm;
+}
+.input--lg {
+  @extend .form-control-lg;
 }
 
 
-  .input-group.input-group--responsive {
-    @include media-breakpoint-down('sm') {
-        flex-direction: column;
+// Redefine select
+select {
+  @extend .custom-select;
+}
+.select--sm {
+  @extend .custom-select-sm;
+}
+.select--lg {
+  @extend .custom-select-lg;
+}
 
-        .form-control,
-        .btn {
-            border-radius: $border-radius;
-        }
+// Redefine checkbox and radio
+.custom-checkbox,
+.custom-radio {
+  @extend .custom-control;
+}
+.custom-checkbox--inline,
+.custom-radio--inline {
+  @extend .custom-control-inline;
+}
+.custom-control > input:first-child {
+  @extend .custom-control-input;
+}
+.custom-control > input:first-child + label {
+  @extend .custom-control-label;
+}
 
-        .form-control {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+select option {
+  color: $gray-600;
+}
+
+
+.custom-select {
+  @include media-breakpoint-down('sm') {
+    font-size: $fontSizeXs;
+  }
+}
+
+.form-text {
+  color: $colorMuted;
+}
+
+// Input group customization
+.input-group.input-group--responsive {
+  @include media-breakpoint-down('sm') {
+    flex-direction: column;
+    .form-control,
+    .btn {
+      border-radius: $border-radius;
     }
-    .input-group-append {
-      @include media-breakpoint-down('sm') {
-          margin: 0 1px;
-      }
+    .form-control {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  .input-group-append {
+    @include media-breakpoint-down('sm') {
+        margin: 0 1px;
+    }
+  }
+}
+
+
+
+
+.custom-control {
+
+  .custom-control-label {
+    text-transform: none;
+    font-size: $fontSizeMd;
+    font-weight: normal;
+    padding-left: 8px;
+
+    &::before,
+    &::after {
+      font-size: $fontSizeMd;
+      width: 15px;
+      height: 15px;
+
     }
   }
 
+
+
+
+
+}

@@ -75,24 +75,24 @@ storiesOf('Containers', module)
     <div className="row">
 
     <div className="col">
-      <ul class="list-group">
-        <li class="list-group-item active">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">Morbi leo risus <span class="badge badge-primary badge-pill">14</span></li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item disabled">Vestibulum at eros</li>
+      <ul className="list-group">
+        <li className="list-group-item active">Cras justo odio</li>
+        <li className="list-group-item">Dapibus ac facilisis in</li>
+        <li className="list-group-item d-flex justify-content-between align-items-center">Morbi leo risus <span className="badge badge-primary badge-pill">14</span></li>
+        <li className="list-group-item">Porta ac consectetur ac</li>
+        <li className="list-group-item disabled">Vestibulum at eros</li>
       </ul>
     </div>
 
     <div className="col">
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action active">
+      <div className="list-group list-group-flush">
+        <a href="#" className="list-group-item list-group-item-action active">
           Cras justo odio
         </a>
-        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Morbi leo risus <span class="badge badge-primary badge-pill">14</span></a>
-        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+        <a href="#" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" className="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Morbi leo risus <span className="badge badge-primary badge-pill">14</span></a>
+        <a href="#" className="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" className="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
       </div>
     </div>
 
@@ -101,21 +101,21 @@ storiesOf('Containers', module)
   // Tabbable Panes
   .add('Tabbable Panes', withCodePreview(TabbablePanes, () =>
     <div>
-      <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+      <ul className="nav nav-tabs mb-3" id="myTab" role="tablist">
+        <li className="nav-item">
+          <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        <li className="nav-item">
+          <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        <li className="nav-item">
+          <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
         </li>
       </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Panel 1</div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Panel 2</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Panel 3</div>
+      <div className="tab-content" id="myTabContent">
+        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Panel 1</div>
+        <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Panel 2</div>
+        <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Panel 3</div>
       </div>
     </div>
   ))

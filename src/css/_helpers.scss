@@ -1,5 +1,8 @@
 /* Helpers */
 
+// Colors
+.text--accent { color: $colorAccent !important }
+
 // Backgrounds
 .bg--accent { background-color: $colorAccent !important }
 
@@ -17,11 +20,11 @@
 
 // Text size
 .text--breakword {word-wrap: break-word !important; }
-.text--xs { font-size: 11px !important; }
-.text--sm { font-size: 14px !important; }
-.text--md { font-size: 16px !important; }
-.text--lg { font-size: 18px !important; }
-.text--xl { font-size: 45px !important; }
+.text--xs { font-size: $fontSizeXs !important; }
+.text--sm { font-size: $fontSizeSm !important; }
+.text--md { font-size: $fontSizeMd !important; }
+.text--lg { font-size: $fontSizeLg !important; }
+.text--xl { font-size: $fontSizeXl !important; }
 .text--xxl {
   font-size: 60px !important;
   line-height: 75px !important;
