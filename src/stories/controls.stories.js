@@ -285,21 +285,21 @@ storiesOf('Controls/Form', module)
 
   <div>
     <form>
-      <div class="form-row">
-        <div class="col-md-4 mb-1">
+      <div className="form-row">
+        <div className="col-md-4 mb-1">
           <label for="validationDefault01">First name</label>
           <input type="text" id="validationDefault01" placeholder="First name" value="Mark" required/>
         </div>
-        <div class="col-md-4 mb-1">
+        <div className="col-md-4 mb-1">
           <label for="validationDefault02">Last name</label>
           <input type="text" id="validationDefault02" placeholder="Last name" value="Otto" required/>
         </div>
-        <div class="col-md-4 mb-1">
+        <div className="col-md-4 mb-1">
           <label for="validationDefaultUsername">Username</label>
           <input type="text" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required/>
         </div>
       </div>
-      <button class="btn btn-primary" type="submit">Submit</button>
+      <button className="btn btn-primary" type="submit">Submit</button>
     </form>
 
     <hr className="my-2"/>
@@ -308,13 +308,13 @@ storiesOf('Controls/Form', module)
       <div className="form-group">
         <label for="exampleInputValid">Email address</label>
         <input className="is-valid" type="email" id="exampleInputValid" placeholder="name@example.com"/>
-        <div class="valid-feedback">Looks good!</div>
+        <div className="valid-feedback">Looks good!</div>
       </div>
 
       <div className="form-group">
         <label for="exampleInputInvalid">Email address</label>
         <input className="is-invalid" type="email" id="exampleInputInvalid" placeholder="name@example.com"/>
-        <div class="invalid-feedback">Please enter a valid email address.</div>
+        <div className="invalid-feedback">Please enter a valid email address.</div>
       </div>
 
 
