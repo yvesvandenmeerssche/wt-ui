@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>wt-icon--icons/custom/no-borders</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/custom/no-borders" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wt-icon--no-borders" transform="translate(0.000000, 6.000000)" fill-rule="nonzero">
+            <path d="M38.1775025,64.4790966 L75.336429,60.4360137 L58.4627114,7.91788358 L37.3318675,0.566046238 L0.764953339,31.5409048 L38.1775025,64.4790966 Z" id="Shape" stroke="#18E9A6" fill="#18E9A6"></path>
+            <g id="Group" transform="translate(3.848101, 12.426471)" fill="#0B8FDF">
+                <ellipse id="Oval" cx="17.3164557" cy="17.3989706" rx="17.3164557" ry="17.3989706"></ellipse>
+                <path d="M44.1357975,3.74897059 L40.4050633,7.49889706 L40.4050633,17.3989706 C40.4050633,30.1915441 30.0478987,40.5982353 17.3164557,40.5982353 L7.46243038,40.5982353 L0.844658228,47.2473529 L4.92653165,51.3480882 L9.85402532,46.3975735 L17.3164557,46.3975735 C33.2302785,46.3975735 46.1772152,33.3889706 46.1772152,17.3989706 L46.1772152,9.90102941 L48.2186329,7.84970588 L51.9493671,11.5996324 L51.9493671,0 L40.4050633,0 L44.1357975,3.74897059 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
