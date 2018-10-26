@@ -1,0 +1,13 @@
+// ICONS
+
+// MDI Icons
+
+// Icon size modifier
+.mdi {
+  &.mdi-xxl {
+    &::before {
+      font-size: 200px;
+      line-height: 200px;
+    }
+  }
+}

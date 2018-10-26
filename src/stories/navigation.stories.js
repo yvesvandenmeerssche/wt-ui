@@ -184,10 +184,10 @@ storiesOf('Navigation', module)
 
             {/* Action form */}
             <div className="col px-0 pl-lg-5 pr-lg-0">
-              <form class="input-group input-group--responsive">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter e-mail"/>
-                <div class="input-group-append">
-                  <button class="btn btn-block btn-lg btn-primary" type="submit">
+              <form className="input-group input-group--responsive">
+                <input type="email" className="form-control form-control-lg" placeholder="Enter e-mail"/>
+                <div className="input-group-append">
+                  <button className="btn btn-block btn-lg btn-primary" type="submit">
                     Subscribe
                   </button>
                 </div>

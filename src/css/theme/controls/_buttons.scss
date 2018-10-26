@@ -1,24 +1,88 @@
+// BUTTONS
+
+// Style Adjustments
 .btn {
-
   &.disabled {pointer-events: none;}
-
-  @include scale($small-font-size, up);
-
+  font-size: $fontSizeSm;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .btn-primary:not([disabled]) {
-  @include hover {
+  &:hover {
     background: $secondary;
     border-color: $secondary;
   }
 }
 
-.btn-sm {
-  font-size: 70%;
+.btn-link {
+  text-transform: inherit;
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):focus:active {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
+
+// Button sizes
+.btn-sm {
+  font-size: $fontSizeXs;
+}
+.btn-lg {
+  font-size: $fontSizeMd;
+}
+
+
+// Icons inside buttons
+.btn {
+
+  > .mdi {
+    display:inline-block;
+    width: 20px;
+    position: relative;
+    margin-right: 2px;
+    &::before {
+      color: inherit;
+      font-size: 150%;
+      position: absolute;
+      top: -21px;
+      left: 0;
+    }
+  }
+
+  &.btn-sm {
+    > .mdi {
+      width: 16px;
+      &::before {
+        font-size: 160%;
+        top: -17px;
+      }
+    }
+  }
+
+  &.btn-lg {
+    > .mdi {
+      width: 25px;
+      &::before {
+        top: -25px;
+      }
+    }
+  }
+}
+
+// New style (Accent)
+.btn--accent {
+  @extend .btn-secondary;
+  border-color: $colorAccent;
+  background-color: $colorAccent;
+
+  &:hover {
+    background: $secondary;
+    border-color: $secondary;
+  }
+}
 
 
 .btn-group {

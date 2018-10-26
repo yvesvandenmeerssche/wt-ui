@@ -16,8 +16,9 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
       Dropdown
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <a class="dropdown-item" href="#">Dropdown link</a>
-      <a class="dropdown-item" href="#">Dropdown link</a>
+      <a className="dropdown-item" href="#">Action</a>
+      <a className="dropdown-item" href="#">Another action</a>
+      <a className="dropdown-item" href="#">Something else here</a>
     </div>
   </div>
 </div>

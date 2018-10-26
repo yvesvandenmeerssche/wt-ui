@@ -6,6 +6,9 @@
 // Typography
 @import "theme/typography/typography";
 
+// Assets
+@import "theme/assets/icons";
+
 // Images
 @import "theme/images/images";
 
@@ -21,3 +24,7 @@
 // Containers
 @import "theme/containers/card";
 @import "theme/containers/modal";
+
+// Feedback
+@import "theme/feedback/badge";
+@import "theme/feedback/loader";

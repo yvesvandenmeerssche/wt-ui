@@ -19,11 +19,6 @@ If necesary, add an inline style to the `.loader`to set its height, the icon wil
   <i class="mdi mdi-loading mdi-spin text-dark"/> Loading...
 </button>
 
-<button class="btn btn-secondary disabled" disabled>
-  <i class="mdi mdi-loading mdi-spin text-light"/> Loading...
-</button>
-
-
 <!-- Inside a loader container -->
 <div class="loader">
   <i class="mdi mdi-loading mdi-36px"/>

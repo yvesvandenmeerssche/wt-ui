@@ -1,0 +1,10 @@
+// BADGES - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.badge {
+  text-transform: lowercase;
+}
+
+.badge--accent {
+  color: $white;
+  background-color: $colorAccent;
+}

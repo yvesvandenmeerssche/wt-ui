@@ -3,6 +3,11 @@
 /* fonts */
 $fontPrimary: $font-family-base;
 $fontSecondary: "Roboto", sans-serif;
+$fontSizeXs: 12px;
+$fontSizeSm: 14px;
+$fontSizeMd: 16px;
+$fontSizeLg: 18px;
+$fontSizeXl: 45px;
 
 /* brand colors */
 $brandGreen: $primary;
@@ -12,6 +17,7 @@ $brandBlack: $dark;
 
 /* Additional app colors */
 $colorAccent: $brandPurple;
+$colorMuted: $gray-600;
 $brandGreen--gradient: #29cb96;
 
 /* Gradients */

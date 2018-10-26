@@ -1,0 +1,21 @@
+// LOADER - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Loader icon.
+.mdi-spin::before {
+  animation: mdi-spin 1s infinite linear;
+}
+
+.loader {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  display: block;
+  width: auto;
+  height: 100%;
+  text-align:center;
+
+  .mdi {
+    @extend .mdi-spin;
+    color: $primary;
+  }
+}
