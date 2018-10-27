@@ -473,31 +473,31 @@ storiesOf('Branding/Media assets', module)
 // Media Assets / Custom Icons
 .add('Custom Icons', withCodePreview(MediaAssets__CustomIcons, () =>
   <div className="text-center">
-    <img src={airplaneTicket} alt="icon" width="100" className="img-fluid"/>
-    <img src={chart} alt="icon" width="100" className="img-fluid"/>
-    <img src={coinsUp} alt="icon" width="100" className="img-fluid"/>
-    <img src={commentBubble} alt="icon" width="100" className="img-fluid"/>
-    <img src={documents} alt="icon" width="100" className="img-fluid"/>
-    <img src={githubLogo} alt="icon" width="100" className="img-fluid"/>
-    <img src={governmentBuillding} alt="icon" width="100" className="img-fluid"/>
-    <img src={handOffer} alt="icon" width="100" className="img-fluid"/>
-    <img src={lifToken} alt="icon" width="100" className="img-fluid"/>
-    <img src={noBorders} alt="icon" width="100" className="img-fluid"/>
-    <img src={payment} alt="icon" width="100" className="img-fluid"/>
-    <img src={plusSign} alt="icon" width="100" className="img-fluid"/>
-    <img src={securityBadge} alt="icon" width="100" className="img-fluid"/>
-    <img src={tree} alt="icon" width="100" className="img-fluid"/>
-    <img src={worldAndPin} alt="icon" width="100" className="img-fluid"/>
-    <img src={plug} alt="icon" width="100" className="img-fluid"/>
+    <img src={airplaneTicket} alt="icon" className="img-fluid"/>
+    <img src={chart} alt="icon" className="img-fluid"/>
+    <img src={coinsUp} alt="icon" className="img-fluid"/>
+    <img src={commentBubble} alt="icon" className="img-fluid"/>
+    <img src={documents} alt="icon" className="img-fluid"/>
+    <img src={githubLogo} alt="icon" className="img-fluid"/>
+    <img src={governmentBuillding} alt="icon" className="img-fluid"/>
+    <img src={handOffer} alt="icon" className="img-fluid"/>
+    <img src={lifToken} alt="icon" className="img-fluid"/>
+    <img src={noBorders} alt="icon" className="img-fluid"/>
+    <img src={payment} alt="icon" className="img-fluid"/>
+    <img src={plusSign} alt="icon" className="img-fluid"/>
+    <img src={securityBadge} alt="icon" className="img-fluid"/>
+    <img src={tree} alt="icon" className="img-fluid"/>
+    <img src={worldAndPin} alt="icon" className="img-fluid"/>
+    <img src={plug} alt="icon" className="img-fluid"/>
 
     <hr className="my-2"/>
 
-    <img src={altToken} alt="icon" width="85" className="img-fluid"/>
-    <img src={altHandClick} alt="icon" width="85" className="img-fluid"/>
-    <img src={altIdea} alt="icon" width="85" className="img-fluid"/>
-    <img src={altNodes} alt="icon" width="85" className="img-fluid"/>
-    <img src={altPath} alt="icon" width="85" className="img-fluid"/>
-    <img src={altPuzzle} alt="icon" width="85" className="img-fluid"/>
+    <img src={altToken} alt="icon" className="img-fluid"/>
+    <img src={altHandClick} alt="icon" className="img-fluid"/>
+    <img src={altIdea} alt="icon" className="img-fluid"/>
+    <img src={altNodes} alt="icon" className="img-fluid"/>
+    <img src={altPath} alt="icon" className="img-fluid"/>
+    <img src={altPuzzle} alt="icon" className="img-fluid"/>
 
   </div>
 ))
