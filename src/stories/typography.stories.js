@@ -10,13 +10,14 @@ import Resizable from 're-resizable';
 import { withCleanPreview, withCodePreview, } from './HOCs/with-docs'
 
 // Readme files
-import Headings from './typography/headings.md';
-import Display__Headings from './typography/display__headings.md';
+import FrequentConstructions from './typography/frequent-constructions.md';
+
+import Titles from './typography/titles.md';
+import Display__Title from './typography/display__title.md';
 
 import InlineTextElements from './typography/inline-text-elements.md';
 import Lead from './typography/lead.md';
 import Links from './typography/links.md';
-import Dividers from './typography/dividers.md';
 import Abbreviations from './typography/abbreviations.md';
 import textUtilities from './typography/text-utilities.md';
 
@@ -40,56 +41,50 @@ import Code__SampleOutput from './typography/code__sample-output.md';
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-// HEADINGS
-storiesOf('Typography/Headings', module)
-
+// TITLES
+storiesOf('Typography/Titles', module)
   // Overview
-  .add('Overview', withCleanPreview(Headings, () =>
-    <table className="table table-bordered">
-      <thead>
-        <tr>
-          <th>Heading</th>
-          <th>Example</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
-          <td><span className="h1">h1. Heading</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
-          <td><span className="h2">h2. Heading</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
-          <td><span className="h3">h3. Heading</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
-          <td><span className="h4">h4. Heading</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
-          <td><span className="h5">h5. Heading</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
-          <td><span className="h6">h6. Heading</span></td>
-        </tr>
-      </tbody>
-    </table>
+  .add('Overview', withCleanPreview(Titles, () =>
+    <div>
+      <table className="table table-bordered mb-2">
+        <thead>
+          <tr>
+            <th>Heading</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+            <td><span className="h1">h1. Heading</span></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
+            <td><span className="h2">h2. Heading</span></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
+            <td><span className="h3">h3. Heading</span></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
+            <td><span className="h4">h4. Heading</span></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
+            <td><span className="h5">h5. Heading</span></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
+            <td><span className="h6">h6. Heading</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   ))
-  // Display Headings
-  .add('Display headings', withCodePreview(Display__Headings, () =>
-    <table className="table">
-      <tbody>
-        <tr><td className="border-top-0"> <h1 className="display-1">Display 1</h1> </td></tr>
-        <tr><td> <h1 className="display-2">Display 2</h1> </td></tr>
-        <tr><td> <h1 className="display-3">Display 3</h1> </td></tr>
-        <tr><td> <h1 className="display-4">Display 4</h1> </td></tr>
-      </tbody>
-    </table>
+  // Display Titles
+  .add('Display titles', withCodePreview(Display__Title, () =>
+    <h1 className="mb-0 title--display">Title Display</h1>
   ))
 
 
@@ -117,14 +112,9 @@ storiesOf('Typography/Inline text elements', module)
   ))
   // Links
   .add('Links', withCodePreview(Links, () =>
-    <a href="https://windingtree.com" target="_blank">Link sample.</a>
-  ))
-  // Dividers
-  .add('Dividers', withCodePreview(Dividers, () =>
     <div>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-      <hr/>
-      <p>Duis mollis, est non commodo luctus.</p>
+      <p> <a href="https://windingtree.com" target="_blank">Link example.</a> </p>
+      <p> <a href="https://windingtree.com" target="_blank" rel="noopener noreferrer">Second link example.</a> </p>
     </div>
   ))
   // Abbreviations
@@ -321,4 +311,77 @@ storiesOf('Typography/Code', module)
   // Sample output
   .add('Sample output', withCodePreview(Code__SampleOutput, () =>
     <samp>This text is meant to be treated as sample output from a computer program.</samp>
+  ))
+
+// FREQUENT TYPE CONSTRUCTIONS
+storiesOf('Typography', module)
+  // Fonts
+  .add('Frequent type constructions', withCleanPreview(FrequentConstructions, () =>
+    <div>
+
+      <div className="col-6 mx-auto text-center">
+        <h1>This is an H1 title, is limited to three lines.</h1>
+        <p className="lead">This is a centered .lead paragraph, must have from one to three lines.</p>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="col-10 mx-auto text-center">
+        <h2>This is a centered H2 title</h2>
+        <p className="lead">This is a longer .lead paragraph, keep it shorter than two lines, consectetuer adipiscing diam nonummy nibh euismod.</p>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="col-10 mx-auto text-center">
+        <h2>This is a centered H2 title</h2>
+        <p>Standard paragraph lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="row">
+        <div className="col">
+          <h2>H2 title to the left</h2>
+          <p className="lead">This is a .lead paragraph lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
+        </div>
+        <div className="col">
+          <h2>H2 title to the left</h2>
+          <p>Standard paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        </div>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="col-8 mx-auto text-center">
+        <h3>Centered H3 title.</h3>
+        <p>Standard paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="row">
+        <div className="col">
+          <h3>H3 title to the left.</h3>
+          <p>Standard paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+        </div>
+        <div className="col">
+          <h3 className="text-muted">This is a muted H3 title.</h3>
+          <p>Standard paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+        </div>
+      </div>
+
+      <hr className="my-3"/>
+
+      <div className="row">
+        <div className="col">
+          <h4>Centered h4 title.</h4>
+          <p className="text-muted">Muted paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+        </div>
+        <div className="col">
+          <h4  className="text-muted">This is an h4 title.</h4>
+          <p  className="text-muted">Muted paragraph lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+        </div>
+      </div>
+    </div>
   ))

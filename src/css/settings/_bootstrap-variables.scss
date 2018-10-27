@@ -117,15 +117,15 @@ $enable-shadows:            true;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // stylelint-disable
-$spacer: 1rem;
+$spacer: 10px; //1rem;
 $spacers: ();
 $spacers: map-merge((
-    0: 0,
-    1: ($spacer * 2),
-    2: ($spacer * 4),
-    3: ($spacer * 6),
-    4: ($spacer * 8),
-    5: ($spacer * 10)
+  0: 0,
+  1: ($spacer * 2),
+  2: ($spacer * 4),
+  3: ($spacer * 6),
+  4: ($spacer * 8),
+  5: ($spacer * 10)
 ), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -159,7 +159,7 @@ $link-hover-color:          #0F3697; // <----- TO-REVIEW
 
 // Style p element.
 
-$paragraph-margin-bottom:   0;
+$paragraph-margin-bottom:   10px;
 
 
 // Grid breakpoints
@@ -250,14 +250,14 @@ $font-weight-bold:            700;
 // $font-weight-base:            $font-weight-normal;
 // $line-height-base:            1.5;
 
-$h1-font-size:                5.5rem;
-$h2-font-size:                4rem;
-$h3-font-size:                2.6rem;
-$h4-font-size:                2.2rem;
-$h5-font-size:                1.8rem;
-// $h6-font-size:                $font-size-base;
+$h1-font-size:                55px;
+$h2-font-size:                40px;
+$h3-font-size:                26px;
+$h4-font-size:                16px; //22px;
+$h5-font-size:                14px; //18px;
+$h6-font-size:            12px; //    $font-size-base;
 
-$headings-margin-bottom:      0;
+$headings-margin-bottom:      10px;
 // $headings-font-family:        inherit;
 $headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.25;
@@ -266,7 +266,7 @@ $headings-color:              $black;
 $display1-size:               9rem;
 $display2-size:               8rem;
 $display3-size:               7rem;
-$display4-size:               6rem;
+$display4-size:               55px; //6rem;
 
 // $display1-weight:             300;
 // $display2-weight:             300;
@@ -284,7 +284,7 @@ $text-muted:                  $gray-600;
 // $blockquote-small-color:      $gray-600;
 $blockquote-font-size:        $h3-font-size;
 
-$hr-border-color:             $gray-100;
+$hr-border-color:             $gray-200;
 // $hr-border-width:             $border-width;
 
 // $mark-padding:                .2em;
@@ -298,7 +298,7 @@ $list-inline-padding:         2rem;
 
 // $mark-bg:                     #fcf8e3;
 
-$hr-margin-y:                 0;
+$hr-margin-y:                 ($spacer * 2);
 
 
 // Tables
@@ -391,7 +391,7 @@ $btn-box-shadow:              none;
 
 // Forms
 
-// $label-margin-bottom:                   .5rem;
+$label-margin-bottom:                   ($spacer); //.5rem;
 
 $input-padding-y:                       9px; // $input-btn-padding-y;
 $input-padding-x:                       15px;
@@ -448,7 +448,7 @@ $form-check-input-gutter:               16px; //1.25rem;
 // $form-check-inline-margin-x:            .75rem;
 // $form-check-inline-input-margin-x:      .3125rem;
 
-// $form-group-margin-bottom:              1rem;
+$form-group-margin-bottom:              ($spacer); //1rem;
 
 // $input-group-addon-color:               $input-color;
 // $input-group-addon-bg:                  $gray-200;
@@ -773,27 +773,27 @@ $badge-pill-padding-x:              .7em;
 // Modals
 
 // Padding applied to the modal body
-// $modal-inner-padding:               1rem;
+$modal-inner-padding:               2.5rem; //1rem;
 
 // $modal-dialog-margin:               .5rem;
-// $modal-dialog-margin-y-sm-up:       1.75rem;
+$modal-dialog-margin-y-sm-up:       20rem; //1.75rem;
 
 // $modal-title-line-height:           $line-height-base;
 
 // $modal-content-bg:                  $white;
-// $modal-content-border-color:        rgba($black, .2);
+$modal-content-border-color:        $gray-200; //rgba($black, .2);
 // $modal-content-border-width:        $border-width;
 // $modal-content-border-radius:       $border-radius-lg;
-// $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
-// $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
+$modal-content-box-shadow-xs:       0 5px 20px rgba($black, .2); //0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-sm-up:    0 5px 20px rgba($black, .2); //0 .5rem 1rem rgba($black, .5);
 
-// $modal-backdrop-bg:                 $black;
+$modal-backdrop-bg:                 $purple; //$black;
 $modal-backdrop-opacity:            .7;
 // $modal-header-border-color:         $gray-200;
-// $modal-footer-border-color:         $modal-header-border-color;
-// $modal-header-border-width:         $modal-content-border-width;
-// $modal-footer-border-width:         $modal-header-border-width;
-// $modal-header-padding:              1rem;
+//$modal-footer-border-color:         $modal-header-border-color;
+$modal-header-border-width:         0; //$modal-content-border-width;
+$modal-footer-border-width:         0; //$modal-header-border-width;
+$modal-header-padding:              2.5rem; //1rem;
 
 $modal-lg:                          900px;
 $modal-md:                          600px;
@@ -808,7 +808,7 @@ $modal-md:                          600px;
 
 // $alert-padding-y:                   .75rem;
 // $alert-padding-x:                   1.25rem;
-// $alert-margin-bottom:               1rem;
+$alert-margin-bottom:               ($spacer); //1rem;
 // $alert-border-radius:               $border-radius;
 // $alert-link-font-weight:            $font-weight-bold;
 // $alert-border-width:                $border-width;
@@ -877,7 +877,7 @@ $figure-caption-color:              $text-muted;
 // $breadcrumb-padding-x:              1rem;
 // $breadcrumb-item-padding:           .5rem;
 
-// $breadcrumb-margin-bottom:          1rem;
+$breadcrumb-margin-bottom:          ($spacer); //1rem;
 
 // $breadcrumb-bg:                     $gray-200;
 // $breadcrumb-divider-color:          $gray-600;

@@ -157,7 +157,7 @@ storiesOf('Containers', module)
   )))
   // Modal
   .add('Modal', withCodePreview(Modal, () =>
-    <div>
+    <div className="bg--accent">
       <div className="modal" tabIndex="-1" role="dialog" style={{display: 'block', position: 'static'}}>
         <div className="modal-dialog" role="document">
           <div className="modal-content">
@@ -168,19 +168,17 @@ storiesOf('Containers', module)
               </button>
             </div>
             <div className="modal-body">
-              <p>Modal body text goes here.</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-light" data-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
+              <button type="button" className="btn btn-link" data-dismiss="modal">Cancel</button>
+              <button type="button" className="btn btn-primary">Accept</button>
             </div>
           </div>
         </div>
       </div>
 
-      <hr/>
-
-      <button type="button" className="btn btn-light btn-sm" data-toggle="modal" data-target="#exampleModal2">
+      <button type="button" className="btn btn-outline-light btn-sm m-1" data-toggle="modal" data-target="#exampleModal2">
         Launch demo modal
       </button>
 
@@ -190,15 +188,15 @@ storiesOf('Containers', module)
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModal2Label">Modal title</h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <i className="mdi mdi-close"></i>
               </button>
             </div>
             <div className="modal-body">
-              Modal body goes here
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
+              <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Save</button>
             </div>
           </div>
         </div>

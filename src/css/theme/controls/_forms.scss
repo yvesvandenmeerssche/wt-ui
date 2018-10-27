@@ -3,10 +3,7 @@
 // Restyling
 
 label {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: $fontSizeXs;
-  color: $colorMuted;
+  @extend h6;
 }
 .custom-checkbox,
 .custom-radio {
