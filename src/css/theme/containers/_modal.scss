@@ -1,19 +1,37 @@
 .modal {
 
-  .modal-header, .modal-body, .modal-footer {
-    padding: 17px 25px;
-  }
-
   .modal-header {
-    .modal-title {
-      @extend .h4;
-      padding-top: 1rem;
-      padding-bottom: .5rem;
-    }
-    .close {margin-top: 2px;}
+    padding-bottom: 0;
+  }
+  .modal-body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .modal-footer {
+    padding-top: 0;
   }
 
-  .modal-footer {border:none;}
+  .close {
+    transition: opacity .1s ease-in-out;
+    opacity: .3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .modal-title {
+    @extend .h3;
+  }
+
+
+
+
+
+
+
+
+
 
   &.modal-video {
     .close {

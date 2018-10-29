@@ -1,49 +1,52 @@
 // TYPOGRAPHY - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-//Linkd
-a.d-block {
-  * {
-    transition: opacity 0.1s ease-out;
-  }
-  &:hover {
-    text-decoration: none;
-    * {
-      opacity: .9;
-      transition: opacity 0.2s ease-out;
-    }
-  }
-}
-
-a:hover {
-  text-decoration:none;
-}
-
-.text--alpha {
-  transition: all .2s ease-in-out;
-  opacity: .3;
-}
-
-a.text--alpha {
-  @extend .text--alpha;
-  &:hover {opacity: 1;}
-}
-a.text--alpha-inverse {
-  transition: all .2s ease-in-out;
-  opacity: 1;
-  &:hover {opacity: .7;}
-}
-
 // Headings
-h4, .h4 { @include scale($h4-font-size, up); }
-h5, .h5 { @include scale($h5-font-size, up); }
-h6, .h6 { @include scale($h6-font-size, up); }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+.lead {
+  margin-bottom: ($spacer * 2);
+  &.title--display {
+    @extend .display-4;
+  }
+}
+h5, .h5,
+h6, .h6 {
+  margin-bottom: ($spacer);
+}
+h6, .h6 {
+  text-transform: uppercase;
+  color: $colorMuted;
+}
 
+// Links
+a:hover {
+  text-decoration: none;
+}
 
 // Font variants
 small {
-font-size: $fontSizeSm;
-font-weight: inherit;
+  font-size: $fontSizeSm;
+  font-weight: inherit;
+}
+
+// Text & Link modifiers
+
+.text--alpha,
+a.text--alpha {
+  transition: opacity .2s ease-in-out;
+  opacity: .3;
+}
+a.text--alpha:hover {
+  opacity: 1;
+}
+
+a.text--alpha-inverse {
+  transition: opacity .2s ease-in-out;
+  opacity: 1;
+  &:hover {opacity: .7;}
 }
 
 
@@ -85,7 +88,3 @@ font-weight: inherit;
   }
 }
 
-
-//HR
-
-hr {border-color: $gray-200}

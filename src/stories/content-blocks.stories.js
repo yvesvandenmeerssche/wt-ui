@@ -38,9 +38,19 @@ storiesOf('Content Blocks', module)
   ))
   // Section Wrapper
   .add('Section Wrapper', withLayoutPreview(SectionWrapper, () =>
-    <article className="section-wrapper bg-primary">
-      <h1>
-        Section Wrapper
-      </h1>
+    <article className="section-wrapper bg--grad">
+      <div className="container">
+      <div className="row">
+
+      <div className="col-12 col-md-5">
+        <h2 className="text-white">
+          Líf Token
+        </h2>
+        <p className="lead text-white">
+          Líf is used to exchange data and value between Winding Tree smart contracts, companies and users.
+        </p>
+      </div>
+      </div>
+      </div>
     </article>
   ))

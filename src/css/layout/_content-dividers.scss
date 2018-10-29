@@ -1,0 +1,13 @@
+/* Layout: Content Dividers */
+
+hr.divider {
+  height: 40px;
+  border: none;
+  box-shadow: 0 15px 30px -3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+
+}
+
+@include media-breakpoint-down('sm') {
+  hr {margin: 54px;}
+}
