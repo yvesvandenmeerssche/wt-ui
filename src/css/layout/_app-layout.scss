@@ -2,9 +2,9 @@
 
 
 .section-wrapper {
-  padding: 100px 0;
+  padding: ($spacer * 10) 0;
   @include media-breakpoint-down('sm') {
-    padding: 54px 0;
+    padding: ($spacer * 5) ($spacer * 2);
   }
 }
 
