@@ -62,6 +62,11 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+  & + .markdown-body blockquote {
+    padding: inherit;
+    color: inherit;
+    border-left: 0;
+  }
 
   &.doc-preview--clean {
     padding: 20px 25px;
@@ -75,7 +80,6 @@
     padding: 0;
     margin-bottom: 0;
   }
-
 }
 
 
