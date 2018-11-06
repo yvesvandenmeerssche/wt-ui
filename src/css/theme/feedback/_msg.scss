@@ -1,0 +1,40 @@
+// Inline Messages - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.msg {
+  font-weight: bold;
+  > .msg-icon {
+    position: relative;
+    top: .1rem;
+    margin-right: .25rem;
+    line-height: 1;
+    font-size: 110%;
+    font-weight: normal;
+  }
+}
+
+
+
+.msg-neutral {
+  color: $body-color;
+}
+
+.msg-disabled {
+  color: $gray-400;
+  text-decoration: line-through;
+}
+
+.msg-success {
+  color: $success;
+}
+
+.msg-info {
+  color: $info;
+}
+
+.msg-warning {
+  color: $warning;
+}
+
+.msg-danger {
+  color: $danger;
+}

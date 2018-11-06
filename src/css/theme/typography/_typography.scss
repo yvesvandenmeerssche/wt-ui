@@ -18,7 +18,7 @@ h6, .h6 {
 }
 h6, .h6 {
   text-transform: uppercase;
-  color: $colorMuted;
+  color: $text-muted;
 }
 
 // Links
@@ -34,16 +34,16 @@ small {
 
 // Text & Link modifiers
 
-.text--alpha,
-a.text--alpha {
+.text-alpha,
+a.text-alpha {
   transition: opacity .2s ease-in-out;
   opacity: .3;
 }
-a.text--alpha:hover {
+a.text-alpha:hover {
   opacity: 1;
 }
 
-a.text--alpha-inverse {
+a.text-alpha-inverse {
   transition: opacity .2s ease-in-out;
   opacity: 1;
   &:hover {opacity: .7;}

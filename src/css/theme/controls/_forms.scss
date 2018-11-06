@@ -11,7 +11,7 @@ label {
     font-weight: normal;
     text-transform: none;
     font-size: $fontSizeMd;
-    color: $colorMuted;
+    color: $text-muted;
     &:hover {
       color: $body-color;
     }
@@ -40,10 +40,10 @@ input, textarea {
   @extend .form-control;
 }
 
-.input--sm {
+.input-sm {
   @extend .form-control-sm;
 }
-.input--lg {
+.input-lg {
   @extend .form-control-lg;
 }
 
@@ -52,10 +52,10 @@ input, textarea {
 select {
   @extend .custom-select;
 }
-.select--sm {
+.select-sm {
   @extend .custom-select-sm;
 }
-.select--lg {
+.select-lg {
   @extend .custom-select-lg;
 }
 
@@ -92,7 +92,7 @@ select option {
 }
 
 .form-text {
-  color: $colorMuted;
+  color: $text-muted;
 }
 
 // Input group customization

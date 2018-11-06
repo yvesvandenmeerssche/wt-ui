@@ -1,31 +1,25 @@
 /* Helpers */
 
-// Colors
-.text--accent { color: $colorAccent !important }
-
-// Backgrounds
-.bg--accent { background-color: $colorAccent !important }
-
 // Gradients
-[class*="bg--grad"] { background-color: $purple !important; }
-.bg--grad {background-image: $brandGradient !important;}
-.bg--grad-up {background-image: $brandGradient--up !important;}
-.bg--grad-down {background-image: $brandGradient--down !important;}
+[class*="bg-grad"] { background-color: $purple !important; }
+.bg-grad {background-image: $brandGradient !important;}
+.bg-grad-up {background-image: $brandGradient-up !important;}
+.bg-grad-down {background-image: $brandGradient-down !important;}
 
 
 // Fonts
-.font--alt {
+.font-alt {
   font-family: $fontSecondary !important;
 }
 
 // Text size
-.text--breakword {word-wrap: break-word !important; }
-.text--xs { font-size: $fontSizeXs !important; }
-.text--sm { font-size: $fontSizeSm !important; }
-.text--md { font-size: $fontSizeMd !important; }
-.text--lg { font-size: $fontSizeLg !important; }
-.text--xl { font-size: $fontSizeXl !important; }
-.text--xxl {
+.text-breakword {word-wrap: break-word !important; }
+.text-xs { font-size: $fontSizeXs !important; }
+.text-sm { font-size: $fontSizeSm !important; }
+.text-md { font-size: $fontSizeMd !important; }
+.text-lg { font-size: $fontSizeLg !important; }
+.text-xl { font-size: $fontSizeXl !important; }
+.text-xxl {
   font-size: 60px !important;
   line-height: 75px !important;
   strong {font-weight: 900 !important;}
@@ -33,6 +27,6 @@
 
 // Decorators
 .block-shadow {
-  box-shadow: 0 -5px 35px 5px rgba($black, .1) !important;
+  box-shadow: $shadow !important;
   // REVIEW: Consider overwrite bootstrap box-shadow utilities (.shadow-lg)
 }

@@ -157,7 +157,7 @@ storiesOf('Containers', module)
   )))
   // Modal
   .add('Modal', withCodePreview(Modal, () =>
-    <div className="bg--accent">
+    <div className="bg-accent">
       <div className="modal" tabIndex="-1" role="dialog" style={{display: 'block', position: 'static'}}>
         <div className="modal-dialog" role="document">
           <div className="modal-content">

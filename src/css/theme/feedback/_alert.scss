@@ -1,0 +1,100 @@
+// Inline Messages - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.alert {
+  @extend .alert-dismissible;
+  font-size: $fontSizeLg;
+  color: $white;
+
+  & *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.alert-warning {
+    color: $body-color;
+  }
+
+  & > .close {
+    float: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    opacity: 1;
+    text-shadow: none;
+    color: $white;
+    > * {
+      @extend a.text-alpha-inverse;
+    }
+  }
+
+  & > .alert-heading {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    @extend .text-alpha-inverse;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  hr {
+    margin: ($spacer 0);
+  }
+
+  // Announcements
+  &.alert-announce {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    text-align: center;
+    padding-left: ($spacer * 3);
+    padding-right: ($spacer * 3);
+  }
+
+  // Notifications
+  &.alert-notify {
+    position: fixed;
+    top: ($spacer * 5);
+    left: 0;
+    right: 0;
+    padding-left: ($spacer * 3);
+    padding-right: ($spacer * 5);
+    border-radius: 100px;
+    text-align: center;
+
+    box-shadow: $shadow-down;
+
+    animation: fadeInTop .3s ease-out forwards;
+
+    .close {
+      top: 50%;
+      margin-top: -8px;
+      @include media-breakpoint-up('md') {
+        margin-top: -12px;
+      }
+    }
+
+    @include media-breakpoint-up('md') {
+      width: auto;
+      left: auto;
+      right: ($spacer * 3);
+      max-width: 700px;
+    }
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    top: ($spacer * 3);
+  }
+  to {
+    top: ($spacer * 5);
+  }
+}

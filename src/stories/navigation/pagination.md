@@ -9,7 +9,7 @@ Use `.disabled` for links that appear un-clickable and `.active` to indicate the
 
 ### Sizing
 
-Add `.pagination-lg` or `.pagination-sm` for additional sizes.
+Add `.pagination-sm` for reduce the size (the use of lg variant is discouraged).
 
 ### Alignment
 
@@ -34,15 +34,16 @@ Change the alignment of pagination components with [flexbox utilities](https://g
   </ul>
 </nav>
 
-<!-- Sizing & Alignment -->
+<!-- Centered & Small -->
 <nav aria-label="...">
   <ul class="pagination pagination-sm justify-content-center">
     ...
   </ul>
 </nav>
 
+<!-- Right Aligned -->
 <nav aria-label="...">
-  <ul class="pagination pagination-lg justify-content-end">
+  <ul class="pagination justify-content-end">
     ...
   </ul>
 </nav>

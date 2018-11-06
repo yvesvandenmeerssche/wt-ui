@@ -6,6 +6,8 @@ Navbars come with built-in support for sub-components, as you can see below. Rev
 
 One difference with the default Bootstrap's `.navbar` is the toggle button, for which we are using a material design icon.
 
+To fix the position of the navBar on the top of the viewporw, refer to th app-header component or use the animated version.
+
 <!-- STORY -->
 
 ```html
@@ -24,12 +26,12 @@ One difference with the default Bootstrap's `.navbar` is the toggle button, for 
 
         <!-- Normal (active) item -->
         <li class="nav-item active">
-          <a class="nav-link h5" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
 
         <!-- Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link h5 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,16 +44,22 @@ One difference with the default Bootstrap's `.navbar` is the toggle button, for 
 
         <!-- Disabled item -->
         <li class="nav-item">
-          <a class="nav-link h5 disabled" href="#">Disabled</a>
+          <a class="nav-link disabled" href="#">Disabled</a>
         </li>
 
       </ul>
 
       <!-- Action form -->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control form-control-lg mr-sm-1" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div class="col px-0 pl-lg-5 pr-lg-0">
+        <form class="input-group input-group--responsive">
+          <input type="email" class="form-control" placeholder="Enter e-mail"/>
+          <div class="input-group-append">
+            <button class="btn btn-block btn-primary" type="submit">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
 
     </div>
   </div>

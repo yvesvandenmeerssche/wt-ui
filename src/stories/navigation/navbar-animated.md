@@ -33,14 +33,14 @@ You'll also require javascript to make it work, as described below.
       <ul class="navbar-nav ml-auto navbar-nav--animated-btn" id="navbar-nav">
 
         <!-- Normal item -->
-        <li class="nav-item h5">
+        <li class="nav-item">
           <a href="/" class="nav-link">
           Normal item
           </a>
         </li>
 
         <!-- Dropdown -->
-        <li class="nav-item h5 dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>

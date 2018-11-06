@@ -15,6 +15,9 @@ import Progress from './feedback/progress.md';
 import Popover from './feedback/popover.md';
 import Tooltip from './feedback/tooltip.md';
 import Alert from './feedback/alert.md';
+import Announce from './feedback/alert-announce.md';
+import Notify from './feedback/alert-notify.md';
+import InlineMessages from './feedback/inline-messages.md';
 import Loader from './feedback/loader.md';
 
 
@@ -29,7 +32,7 @@ storiesOf('Feedback', module)
       <p className="p-1">
         <span className="mr-1 badge badge-primary">Primary</span>
         <span className="mr-1 badge badge-secondary">Secondary</span>
-        <span className="mr-1 badge badge--accent">Accent</span>
+        <span className="mr-1 badge badge-accent">Accent</span>
         <span className="mr-1 badge badge-success">Success</span>
         <span className="mr-1 badge badge-danger">Danger</span>
         <span className="mr-1 badge badge-warning">Warning</span>
@@ -41,7 +44,7 @@ storiesOf('Feedback', module)
       <p className="p-1">
         <span className="mr-1 badge badge-pill badge-primary">Primary</span>
         <span className="mr-1 badge badge-pill badge-secondary">Secondary</span>
-        <span className="mr-1 badge badge-pill badge--accent">Accent</span>
+        <span className="mr-1 badge badge-pill badge-accent">Accent</span>
         <span className="mr-1 badge badge-pill badge-success">Success</span>
         <span className="mr-1 badge badge-pill badge-danger">Danger</span>
         <span className="mr-1 badge badge-pill badge-warning">Warning</span>
@@ -124,45 +127,159 @@ storiesOf('Feedback', module)
   // Alert
   .add('Alert', withCodePreview(Alert, () =>
     <div>
-      <div className="alert alert-primary" role="alert">
-        This is a primary alert—check it out!
-      </div>
-      <div className="alert alert-secondary" role="alert">
-        This is a secondary alert with an <a className="alert-link" href="/">example link</a>.
-      </div>
       <div className="alert alert-success" role="alert">
-        This is a success alert—check it out!
-      </div>
-      <div className="alert alert-danger" role="alert">
-        This is a danger alert—check it out!
-      </div>
-      <div className="alert alert-warning" role="alert">
-        This is a warning alert—check it out!
+        This is a success alert, and includes a <a href="#">link</a>!
       </div>
       <div className="alert alert-info" role="alert">
-        This is a info alert—check it out!
+        This is a info alert, and includes a <a href="#">link</a>!
       </div>
-      <div className="alert alert-light" role="alert">
-        This is a light alert—check it out!
+      <div className="alert alert-warning" role="alert">
+        This is a warning alert, and includes a <a href="#">link</a>!
       </div>
-      <div className="alert alert-dark" role="alert">
-        This is a dark alert—check it out!
+      <div className="alert alert-danger" role="alert">
+        This is a danger alert, and includes a <a href="#">link</a>!
       </div>
 
-      <hr className="mt-4 mb-4"/>
+      <h6 className="mt-2">Alternative content layout and close button</h6>
 
-      <div className="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <div className="alert alert-warning fade show" role="alert">
         <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <i className="mdi mdi-close-circle"></i>
         </button>
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
       </div>
 
-      <div className="alert alert-success" role="alert">
-        <h4 className="alert-heading">Well done!</h4>
+      <div className="alert alert-success fade show text-center" role="alert">
+        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+          <i className="mdi mdi-close-circle"></i>
+        </button>
+        <h3 className="alert-heading">Well done!</h3>
         <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-        <hr/>
-        <p className="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </div>
+    </div>
+  ))
+  // Announce
+  .add('Announce', withCodePreview(Announce, () =>
+    <div style={{position: 'relative', height: 300, overflow: 'hidden'}} className="border border-muted p-2">
+      <div className="alert alert-info alert-announce fade show" role="announcement" style={{position: 'absolute', margin: 0}}>
+        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+          <i className="mdi mdi-close-circle"></i>
+        </button>
+        <div className="container">
+          <h3 className="alert-heading">New announcement!</h3>
+          <p>Aww yeah, you successfully read this <a href="#">important announcement</a> message. This example text is going to run a bit longer so that you can see how spacing within an announce works with this kind of content.</p>
+        </div>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      <p>Elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      <p>Elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      <p><b className="text-success text-lg">Awesome! :)</b></p>
+    </div>
+  ))
+  // Notify
+  .add('Notify', withCodePreview(Notify, () =>
+    <div>
+      <div className="alert alert-success alert-notify fade show" role="notification">
+        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+          <i className="mdi mdi-close-circle"></i>
+        </button>
+        <p><strong>All set!</strong> Please check your email.</p>
+      </div>
+    </div>
+  ))
+  // Inline Messages
+  .add('Inline messages', withCodePreview(InlineMessages, () =>
+    <div>
+      <h6>Neutral styles</h6>
+      <p className="msg msg-neutral" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-calendar"/>
+        </span>
+        Inline neutral message
+      </p>
+      <p className="msg msg-disabled" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-calendar"/>
+        </span>
+        Inline disabled message
+      </p>
+
+      <h6 className="mt-1">Feedback styles</h6>
+      <p className="msg msg-success" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-check-circle"/>
+        </span>
+        Inline succes message
+      </p>
+      <p className="msg msg-info" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-information-outline"/>
+        </span>
+        Inline info message
+      </p>
+      <p className="msg msg-warning" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-information-outline"/>
+        </span>
+        Inline warning message
+      </p>
+      <p className="msg msg-danger" role="notification">
+        <span className="msg-icon">
+          <i className="mdi mdi-close-octagon"/>
+        </span>
+        Inline danger message
+      </p>
+
+      <hr className="divider my-1"/>
+
+      <h6 className="mt-1">Combined cases</h6>
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <p className="msg msg-neutral" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-calendar"/>
+            </span>
+            Available from <span className="font-alt">$750</span>
+          </p>
+          <p className="msg msg-info mb-2" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-information-outline"/>
+            </span>
+            Abailability Unknow
+          </p>
+        </div>
+
+        <div class="col-12 col-sm-4">
+          <p className="msg msg-neutral" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-calendar"/>
+            </span>
+            Available from <span className="font-alt">$750</span>
+          </p>
+          <p className="msg msg-warning mb-2" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-information-outline"/>
+            </span>
+            Last two remaining
+          </p>
+        </div>
+
+        <div class="col-12 col-sm-4">
+          <p className="msg msg-disabled" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-calendar"/>
+            </span>
+            Available from <span className="font-alt">$750</span>
+          </p>
+          <p className="msg msg-danger" role="notification">
+            <span className="msg-icon">
+              <i className="mdi mdi-close-octagon"/>
+            </span>
+            Sold out
+          </p>
+        </div>
       </div>
     </div>
   ))
