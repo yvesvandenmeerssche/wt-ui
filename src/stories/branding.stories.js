@@ -91,11 +91,11 @@ storiesOf('Branding', module)
     <h6 className="mt-3 mb-2">ROBOTO FONT FAMILY</h6>
 
       <h6 className="text-muted "><small>Normal</small></h6>
-        <h2 className="font--alt" style={{fontWeight: 400}}>
+        <h2 className="font-alt" style={{fontWeight: 400}}>
           1234567890
         </h2>
       <h6 className="text-muted mt-2"><small>Bold</small></h6>
-        <h2 className="font--alt" style={{fontWeight: 700}}>
+        <h2 className="font-alt" style={{fontWeight: 700}}>
           1234567890
         </h2>
     </div>
@@ -137,7 +137,7 @@ storiesOf('Branding', module)
 
         <div className="col-6 col-md-3">
           <div className="card mb-3">
-          <div className="pt-5 bg--accent">
+          <div className="pt-5 bg-accent">
           </div>
             <small className="card-body">
               <h6>ACCENT</h6>
@@ -298,7 +298,7 @@ storiesOf('Branding', module)
 
         <div className="col-12">
           <div className="card mb-3">
-            <div className="card-img-top py-3 bg--grad"></div>
+            <div className="card-img-top py-3 bg-grad"></div>
             <small className="card-body">
               <h6>Brand's gradient</h6>
               <p>#5F2987 to #29cb96</p>
@@ -345,7 +345,7 @@ storiesOf('Branding/Media assets', module)
       <div className="col-lg-4">
         <div className="border p-2 mb-1">
 
-          <h5 className="text--alpha mb-1">Full Isologotype</h5>
+          <h5 className="text-alpha mb-1">Full Isologotype</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtGrad} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
@@ -355,7 +355,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text--alpha my-1">Full Isologotype (mobile)</h5>
+          <h5 className="text-alpha my-1">Full Isologotype (mobile)</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtGradSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
@@ -365,7 +365,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text--alpha my-1">Isologo</h5>
+          <h5 className="text-alpha my-1">Isologo</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtSignGrad} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
@@ -375,7 +375,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text--alpha my-1">Sign / Favicon</h5>
+          <h5 className="text-alpha my-1">Sign / Favicon</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtFaviconGrad} alt="Winding Tree Logo" width="32" className="img-fluid"/>
@@ -391,7 +391,7 @@ storiesOf('Branding/Media assets', module)
       <div className="col-lg-4">
         <div className="border p-2 mb-1 bg-dark">
 
-          <h5 className="text-white text--alpha mb-1">Full Isologotype</h5>
+          <h5 className="text-white text-alpha mb-1">Full Isologotype</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtGradTW} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
@@ -401,7 +401,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Full Isologotype (mobile)</h5>
+          <h5 className="text-white text-alpha my-1">Full Isologotype (mobile)</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtGradTWSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
@@ -411,7 +411,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Isologo</h5>
+          <h5 className="text-white text-alpha my-1">Isologo</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtSignGrad} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
@@ -421,7 +421,7 @@ storiesOf('Branding/Media assets', module)
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Sign / Favicon</h5>
+          <h5 className="text-white text-alpha my-1">Sign / Favicon</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtFaviconGrad} alt="Winding Tree Logo" width="32" className="img-fluid"/>
@@ -435,30 +435,30 @@ storiesOf('Branding/Media assets', module)
       </div>
 
       <div className="col-lg-4">
-        <div className="border p-2 mb-1 bg--accent">
+        <div className="border p-2 mb-1 bg-accent">
 
-          <h5 className="text-white text--alpha mb-1">Full Isologotype</h5>
+          <h5 className="text-white text-alpha mb-1">Full Isologotype</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtWhite} alt="Winding Tree Logo" style={{width: 400, maxWidth: '100%'}} className="img-fluid"/>
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Full Isologotype (mobile)</h5>
+          <h5 className="text-white text-alpha my-1">Full Isologotype (mobile)</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtWhiteSM} alt="Winding Tree Logo" style={{width: 200, maxWidth: '100%'}} className="img-fluid"/>
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Isologo</h5>
+          <h5 className="text-white text-alpha my-1">Isologo</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtSignWhite} alt="Winding Tree Logo" style={{maxWidth: 90}} className="img-fluid"/>
             </div>
           </div>
 
-          <h5 className="text-white text--alpha my-1">Sign / Favicon</h5>
+          <h5 className="text-white text-alpha my-1">Sign / Favicon</h5>
           <div className="row">
             <div className="col-sm-6 mb-1">
               <img src={wtFaviconWhite} alt="Winding Tree Logo" width="32" className="img-fluid"/>
@@ -473,31 +473,52 @@ storiesOf('Branding/Media assets', module)
 // Media Assets / Custom Icons
 .add('Custom Icons', withCodePreview(MediaAssets__CustomIcons, () =>
   <div className="text-center">
-    <img src={airplaneTicket} alt="icon" className="img-fluid"/>
-    <img src={chart} alt="icon" className="img-fluid"/>
-    <img src={coinsUp} alt="icon" className="img-fluid"/>
-    <img src={commentBubble} alt="icon" className="img-fluid"/>
-    <img src={documents} alt="icon" className="img-fluid"/>
-    <img src={githubLogo} alt="icon" className="img-fluid"/>
-    <img src={governmentBuillding} alt="icon" className="img-fluid"/>
-    <img src={handOffer} alt="icon" className="img-fluid"/>
-    <img src={lifToken} alt="icon" className="img-fluid"/>
-    <img src={noBorders} alt="icon" className="img-fluid"/>
-    <img src={payment} alt="icon" className="img-fluid"/>
-    <img src={plusSign} alt="icon" className="img-fluid"/>
-    <img src={securityBadge} alt="icon" className="img-fluid"/>
-    <img src={tree} alt="icon" className="img-fluid"/>
-    <img src={worldAndPin} alt="icon" className="img-fluid"/>
-    <img src={plug} alt="icon" className="img-fluid"/>
+    <img src={airplaneTicket} alt="icon"/>
+    <img src={chart} alt="icon"/>
+    <img src={coinsUp} alt="icon"/>
+    <img src={commentBubble} alt="icon"/>
+    <img src={documents} alt="icon"/>
+    <img src={githubLogo} alt="icon"/>
+    <img src={governmentBuillding} alt="icon"/>
+    <img src={handOffer} alt="icon"/>
+    <img src={lifToken} alt="icon"/>
+    <img src={noBorders} alt="icon"/>
+    <img src={payment} alt="icon"/>
+    <img src={plusSign} alt="icon"/>
+    <img src={securityBadge} alt="icon"/>
+    <img src={tree} alt="icon"/>
+    <img src={worldAndPin} alt="icon"/>
+    <img src={plug} alt="icon"/>
 
-    <hr className="my-2"/>
+    <h6 className="mt-2 mb-1">Alternative version</h6>
 
-    <img src={altToken} alt="icon" className="img-fluid"/>
-    <img src={altHandClick} alt="icon" className="img-fluid"/>
-    <img src={altIdea} alt="icon" className="img-fluid"/>
-    <img src={altNodes} alt="icon" className="img-fluid"/>
-    <img src={altPath} alt="icon" className="img-fluid"/>
-    <img src={altPuzzle} alt="icon" className="img-fluid"/>
+    <img src={altToken} alt="icon"/>
+    <img src={altHandClick} alt="icon"/>
+    <img src={altIdea} alt="icon"/>
+    <img src={altNodes} alt="icon"/>
+    <img src={altPath} alt="icon"/>
+    <img src={altPuzzle} alt="icon"/>
+
+    <h6 className="mt-2 mb-1">Common use cases</h6>
+
+    <div className="row">
+      <div className="col-12 col-md-6">
+        <h5><img src={altNodes} alt="icon"/></h5>
+        <h3 className="text-muted">Decentralized Infrastructure</h3>
+        <p className="mb-1 mb-md-0">In an open market, the decentralized model is the only way to eliminate the risk of eventual monopolization of distribution.</p>
+      </div>
+
+      <div className="col-12 col-md-3 text-left">
+        <h5 className="mb-1"><img src={chart} alt="icon"/></h5>
+        <h4>Open Marketplace</h4>
+        <p className="text-muted mb-1 mb-md-0"><small>Winding Tree is a piece of public infrastructure. Blockchain technology allows us, for the first time in history, to remove intermediaries that currently charge excessive fees and act as gatekeepers.</small></p>
+      </div>
+
+      <div className="col-12 col-md-3">
+        <h5 className="mb-1"><img src={plug} alt="icon"/></h5>
+        <p>Do you need help integrating with Winding Tree? Do you need a specific product that is not included in the open-source set of tools?</p>
+      </div>
+    </div>
 
   </div>
 ))

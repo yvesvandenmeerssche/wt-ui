@@ -160,12 +160,12 @@ storiesOf('Navigation', module)
 
               {/* Normal (active) item */}
               <li className="nav-item active">
-                <a className="nav-link h5" href="#">Home <span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
               </li>
 
               {/* Dropdown */}
               <li className="nav-item dropdown">
-                <a className="nav-link h5 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -178,16 +178,16 @@ storiesOf('Navigation', module)
 
               {/* Disabled item */}
               <li className="nav-item">
-                <a className="nav-link h5 disabled" href="#">Disabled</a>
+                <a className="nav-link disabled" href="#">Disabled</a>
               </li>
             </ul>
 
             {/* Action form */}
             <div className="col px-0 pl-lg-5 pr-lg-0">
               <form className="input-group input-group--responsive">
-                <input type="email" className="form-control form-control-lg" placeholder="Enter e-mail"/>
+                <input type="email" className="form-control" placeholder="Enter e-mail"/>
                 <div className="input-group-append">
-                  <button className="btn btn-block btn-lg btn-primary" type="submit">
+                  <button className="btn btn-block btn-primary" type="submit">
                     Subscribe
                   </button>
                 </div>
@@ -217,14 +217,14 @@ storiesOf('Navigation', module)
             <ul className="navbar-nav ml-auto navbar-nav--animated-btn" id="navbar-nav">
 
               {/* Normal item */}
-              <li className="nav-item h5">
+              <li className="nav-item">
                 <a href="/" className="nav-link">
                 Normal item
                 </a>
               </li>
 
               {/* Dropdown */}
-              <li className="nav-item h5 dropdown">
+              <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
                 </a>
@@ -288,11 +288,11 @@ storiesOf('Navigation', module)
           </div>
         </div>
       </div>
-      {/* Split danger button */}
+      {/* Split outline-dark button */}
       <div className="d-inline-block">
         <div className="btn-group">
-          <button type="button" className="btn btn-danger">Action</button>
-          <button type="button" className="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" className="btn btn-outline-dark">Action</button>
+          <button type="button" className="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span className="sr-only">Toggle Dropdown</span>
           </button>
           <div className="dropdown-menu">
@@ -325,7 +325,7 @@ storiesOf('Navigation', module)
         </ul>
       </nav>
 
-      <hr/>
+      <hr className="my-1"/>
 
       <nav aria-label="Pagination Example Small">
         <ul className="pagination pagination-sm justify-content-center">
@@ -343,10 +343,10 @@ storiesOf('Navigation', module)
         </ul>
       </nav>
 
-      <hr/>
+      <hr className="my-1"/>
 
       <nav aria-label="Pagination Example Large">
-        <ul className="pagination pagination-lg justify-content-end">
+        <ul className="pagination justify-content-end">
           <li className="page-item disabled">
             <a className="page-link" href="#" tabIndex="-1">Previous</a>
           </li>

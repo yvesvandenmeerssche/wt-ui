@@ -7,12 +7,3 @@
     padding: ($spacer * 5) ($spacer * 2);
   }
 }
-
-.app-layout--error {
-  position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: $white;
-
-  #app-header,
-  #app-content {background: none;}
-}

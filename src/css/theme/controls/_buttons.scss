@@ -8,10 +8,12 @@
   text-transform: uppercase;
 }
 
-.btn-primary:not([disabled]) {
-  &:hover {
-    background: $secondary;
-    border-color: $secondary;
+.btn-primary, .btn-accent {
+  &:not([disabled]) {
+    &:hover {
+      background: $secondary;
+      border-color: $secondary;
+    }
   }
 }
 
@@ -105,18 +107,6 @@
         top: -24px;
       }
     }
-  }
-}
-
-// New style (Accent)
-.btn--accent, .btn-accent {
-  @extend .btn-secondary;
-  border-color: $colorAccent;
-  background-color: $colorAccent;
-
-  &:hover {
-    background: $secondary;
-    border-color: $secondary;
   }
 }
 

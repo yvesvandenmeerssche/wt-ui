@@ -48,7 +48,7 @@ storiesOf('Controls/Button', module)
         </div>
 
         <h6 className="mb-1">Secondary <span className="text-muted">( .btn-outline-light )</span></h6>
-        <div className="bg--grad mb-2 p-1">
+        <div className="bg-grad mb-2 p-1">
           <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light btn-sm">Small</button>
           <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light">Default</button>
           <button type="button" className="mr-1 mr-sm-2 btn btn-outline-light btn-lg">Large</button>
@@ -61,11 +61,11 @@ storiesOf('Controls/Button', module)
           <button type="button" className="mr-1 mr-sm-2 btn btn-outline-dark btn-lg">Large</button>
         </div>
 
-        <h6 className="mb-1">Accent <span className="text-muted">( .btn--accent )</span></h6>
+        <h6 className="mb-1">Accent <span className="text-muted">( .btn-accent )</span></h6>
         <div className="mb-2 px-1">
-          <button type="button" className="mr-1 mr-sm-2 btn btn--accent btn-sm">Small</button>
-          <button type="button" className="mr-1 mr-sm-2 btn btn--accent">Default</button>
-          <button type="button" className="mr-1 mr-sm-2 btn btn--accent btn-lg">Large</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-accent btn-sm">Small</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-accent">Default</button>
+          <button type="button" className="mr-1 mr-sm-2 btn btn-accent btn-lg">Large</button>
         </div>
 
         <h6 className="mb-1">Subtle <span className="text-muted">( .btn-light )</span></h6>
@@ -367,11 +367,11 @@ storiesOf('Controls/Form', module)
       </div>
 
       <div className="form-group mt-1">
-        <input type="text" className="input--sm" aria-describedby="sampleInputSmall" placeholder="Small input"/>
+        <input type="text" className="input-sm" aria-describedby="sampleInputSmall" placeholder="Small input"/>
       </div>
 
       <div className="form-group">
-        <input type="text" className="input--lg" aria-describedby="sampleInputLarge" placeholder="Large input"/>
+        <input type="text" className="input-lg" aria-describedby="sampleInputLarge" placeholder="Large input"/>
       </div>
     </form>
   ))
@@ -389,7 +389,7 @@ storiesOf('Controls/Form', module)
       </div>
 
       <div className="form-group mt-1">
-        <select className="select--sm">
+        <select className="select-sm">
           <option selected>Open this select menu</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -398,7 +398,7 @@ storiesOf('Controls/Form', module)
       </div>
 
       <div className="form-group">
-        <select className="select--lg">
+        <select className="select-lg">
           <option selected>Open this select menu</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -428,7 +428,7 @@ storiesOf('Controls/Form', module)
         <label for="checkbox4">Option 2</label>
       </div>
 
-      <h6 className="my-1 text--sm">Radio Buttons</h6>
+      <h6 className="my-1 text-sm">Radio Buttons</h6>
 
       <div className="custom-radio">
         <input type="radio" id="radio" name="radio" checked/>

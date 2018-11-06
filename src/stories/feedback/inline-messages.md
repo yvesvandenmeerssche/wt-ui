@@ -7,7 +7,7 @@ Inline messages are available for any length of text, but is recommended to keep
 To create a message wrapp the text in an element with `.msg` class, combine it with one of the following contextual classes depending on the case.
 
 - `.msg-neutral` for informtaion which doesn't represent a particular feedback.
-- `.msg-unavailable` to indicate unavailability.
+- `.msg-disabled` to indicate unavailability.
 - `.msg-[success|info|warning|danger]` to display feedback information, or complementary information.
 
 ### Icons
@@ -30,11 +30,11 @@ Feel free to combine the neutral styles and feedback styles as shown below.
   </span>
   Inline neutral message
 </p>
-<p class="msg msg-unavailable" role="notification">
+<p class="msg msg-disabled" role="notification">
   <span class="msg-icon">
     <i class="mdi mdi-calendar"/>
   </span>
-  Inline unavailable message
+  Inline disabled message
 </p>
 
 <h6 class="mt-1">Feedback styles</h6>

@@ -12,7 +12,7 @@ hr.divider {
   top: -($spacer * 3);
   height: ($spacer * 4);
   border: none;
-  box-shadow: 0 15px 40px -13px rgba(0, 0, 0, .12);
+  box-shadow: $shadow-down;
   overflow: hidden;
 
   @include media-breakpoint-down('sm') {

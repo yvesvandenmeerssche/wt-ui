@@ -20,6 +20,7 @@
 @import "theme/navigation/dropdown";
 @import "theme/navigation/nav";
 @import "theme/navigation/navbar";
+@import "theme/navigation/pagination";
 
 // Containers
 @import "theme/containers/card";
@@ -28,4 +29,5 @@
 // Feedback
 @import "theme/feedback/badge";
 @import "theme/feedback/loader";
+@import "theme/feedback/alert";
 @import "theme/feedback/msg";

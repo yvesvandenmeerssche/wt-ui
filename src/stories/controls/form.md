@@ -51,7 +51,7 @@ The `.form-group` class is the easiest way to add some structure to forms. It pr
       <label for="checkbox4">Option 2</label>
     </div>
 
-    <h6 className="my-1 text--sm">Radio Buttons</h6>
+    <h6 className="my-1 text-sm">Radio Buttons</h6>
 
     <!-- Radio buttons -->
     <div className="custom-radio">
