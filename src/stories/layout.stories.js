@@ -15,6 +15,7 @@ import Grid__Container from './layout/grid__container.md';
 import Grid__Row from './layout/grid__row.md';
 import Grid__Col from './layout/grid__col.md';
 import MediaObject from './layout/media-object.md';
+import ContentDividers from './layout/content-dividers.md';
 import LayoutUtilities from './layout/layout-utilities.md';
 
 
@@ -37,6 +38,16 @@ storiesOf('Layout', module)
         Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
         Fusce condimentum nunc ac nisi vulputate fringilla.
       </div>
+    </div>
+  ))
+  // Content Dividers
+  .add('Content Dividers', withCodePreview(ContentDividers, () =>
+    <div>
+
+      <hr/>
+
+      <hr className="divider"/>
+
     </div>
   ))
   // Utilities for layout

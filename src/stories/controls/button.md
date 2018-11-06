@@ -12,7 +12,7 @@ If the `.btn` class is applied to a link, which redirects to other pages or sect
 
 <!-- Defaul styles -->
 <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn--accent">Accent</button>
+<button type="button" class="btn btn-accent">Accent</button>
 <button type="button" class="btn btn-light">Light</button>
 <button type="button" class="btn btn-dark">Dark</button>
 <button type="button" class="btn light">Light</button>

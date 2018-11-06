@@ -1,0 +1,22 @@
+/* Layout: Content Dividers */
+
+hr {
+  margin: ($spacer * 10) 0;
+  @include media-breakpoint-down('sm') {
+    margin: ($spacer * 5) 0;
+  }
+}
+
+hr.divider {
+  position: relative;
+  top: -($spacer * 3);
+  height: ($spacer * 4);
+  border: none;
+  box-shadow: $shadow-down;
+  overflow: hidden;
+
+  @include media-breakpoint-down('sm') {
+    margin: ($spacer * 5) 0;
+  }
+}
+

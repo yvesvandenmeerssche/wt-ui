@@ -1,4 +1,4 @@
-# Suscribe form
+# Subscription
 
 Below is the suscription form as was used on the web site.
 

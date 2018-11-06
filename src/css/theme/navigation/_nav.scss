@@ -77,7 +77,7 @@
   }
 
   & + .tab-content {
-    @extend .block-shadow;
+    box-shadow: $shadow;
   }
 }
 

@@ -13,7 +13,7 @@ $white:    #fff;
 $gray-100: #f2f2f2;
 $gray-200: #e9ecef;
 // $gray-300: #dee2e6;
-// $gray-400: #ced4da;
+$gray-400: #c6c6c6;
 $gray-500: #a9a9a9;
 $gray-600: #6c757d;
 $gray-700: #434343;
@@ -70,20 +70,22 @@ $info:          $teal;
 $warning:       $yellow;
 $danger:        $red;
 
-// $light:         $gray-100;
+$light:         $gray-100;
 $dark:          $black;
+$accent:        $purple;
 
-// $theme-colors: ();
-// $theme-colors: map-merge((
-//    "primary":    $primary,
-//    "secondary":  $secondary,
-//    "success":    $success,
-//    "info":       $info,
-//    "warning":    $warning,
-//    "danger":     $danger,
-//    "light":      $light,
-//    "dark":       $dark
-//), $theme-colors);
+$theme-colors: ();
+$theme-colors: map-merge((
+   "primary":    $primary,
+   "secondary":  $secondary,
+   "success":    $success,
+   "info":       $info,
+   "warning":    $warning,
+   "danger":     $danger,
+   "light":      $light,
+   "dark":       $dark,
+   "accent":     $purple
+), $theme-colors);
 // stylelint-enable
 
 // Set a specific jump point for requesting color jumps
@@ -117,15 +119,15 @@ $enable-shadows:            true;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // stylelint-disable
-$spacer: 1rem;
+$spacer: 10px; //1rem;
 $spacers: ();
 $spacers: map-merge((
-    0: 0,
-    1: ($spacer * 2),
-    2: ($spacer * 4),
-    3: ($spacer * 6),
-    4: ($spacer * 8),
-    5: ($spacer * 10)
+  0: 0,
+  1: ($spacer * 2),
+  2: ($spacer * 4),
+  3: ($spacer * 6),
+  4: ($spacer * 8),
+  5: ($spacer * 10)
 ), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -159,7 +161,7 @@ $link-hover-color:          #0F3697; // <----- TO-REVIEW
 
 // Style p element.
 
-$paragraph-margin-bottom:   0;
+$paragraph-margin-bottom:   10px;
 
 
 // Grid breakpoints
@@ -220,7 +222,7 @@ $box-shadow:                  0 5px 20px 0 rgba(16, 57, 87, .1);
 // $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
 
 // $component-active-color:      $white;
-// $component-active-bg:         theme-color("primary");
+$component-active-bg:         $accent;
 
 // $caret-width:                 .3em;
 
@@ -250,14 +252,14 @@ $font-weight-bold:            700;
 // $font-weight-base:            $font-weight-normal;
 // $line-height-base:            1.5;
 
-$h1-font-size:                5.5rem;
-$h2-font-size:                4rem;
-$h3-font-size:                2.6rem;
-$h4-font-size:                2.2rem;
-$h5-font-size:                1.8rem;
-// $h6-font-size:                $font-size-base;
+$h1-font-size:                55px;
+$h2-font-size:                40px;
+$h3-font-size:                26px;
+$h4-font-size:                16px; //22px;
+$h5-font-size:                14px; //18px;
+$h6-font-size:            12px; //    $font-size-base;
 
-$headings-margin-bottom:      0;
+$headings-margin-bottom:      10px;
 // $headings-font-family:        inherit;
 $headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.25;
@@ -266,7 +268,7 @@ $headings-color:              $black;
 $display1-size:               9rem;
 $display2-size:               8rem;
 $display3-size:               7rem;
-$display4-size:               6rem;
+$display4-size:               55px; //6rem;
 
 // $display1-weight:             300;
 // $display2-weight:             300;
@@ -284,7 +286,7 @@ $text-muted:                  $gray-600;
 // $blockquote-small-color:      $gray-600;
 $blockquote-font-size:        $h3-font-size;
 
-$hr-border-color:             $gray-100;
+$hr-border-color:             $gray-200;
 // $hr-border-width:             $border-width;
 
 // $mark-padding:                .2em;
@@ -298,7 +300,7 @@ $list-inline-padding:         2rem;
 
 // $mark-bg:                     #fcf8e3;
 
-$hr-margin-y:                 0;
+$hr-margin-y:                 ($spacer * 10);
 
 
 // Tables
@@ -339,7 +341,7 @@ $hr-margin-y:                 0;
 
 // $input-btn-focus-width:       .2rem;
 // $input-btn-focus-color:       rgba($component-active-bg, .25);
-// $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-focus-box-shadow: 0; // 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
  //$input-btn-padding-y-sm:     .8rem;
 // $input-btn-padding-x-sm:      .5rem;
@@ -373,9 +375,9 @@ $btn-border-width:            2px;
 $btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              none;
 // $btn-focus-width:             $input-btn-focus-width;
-// $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
-// $btn-disabled-opacity:        .65;
-// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
+$btn-focus-box-shadow:        0; //$input-btn-focus-box-shadow;
+$btn-disabled-opacity:        .3; //.65;
+$btn-active-box-shadow:      0;// inset 0 3px 5px rgba($black, .125);
 
 // $btn-link-disabled-color:     $gray-600;
 
@@ -391,7 +393,7 @@ $btn-box-shadow:              none;
 
 // Forms
 
-// $label-margin-bottom:                   .5rem;
+$label-margin-bottom:                   ($spacer); //.5rem;
 
 $input-padding-y:                       9px; // $input-btn-padding-y;
 $input-padding-x:                       15px;
@@ -448,7 +450,7 @@ $form-check-input-gutter:               16px; //1.25rem;
 // $form-check-inline-margin-x:            .75rem;
 // $form-check-inline-input-margin-x:      .3125rem;
 
-// $form-group-margin-bottom:              1rem;
+$form-group-margin-bottom:              ($spacer); //1rem;
 
 // $input-group-addon-color:               $input-color;
 // $input-group-addon-bg:                  $gray-200;
@@ -600,15 +602,15 @@ $dropdown-item-padding-x:           2rem;
 
 // Navs
 
-// $nav-link-padding-y:                .5rem;
-// $nav-link-padding-x:                0; // <----- TO-REVIEW
-// $nav-link-disabled-color:           $gray-600;
+$nav-link-padding-y:                ($spacer / 1.2);
+$nav-link-padding-x:                ($spacer * 2);
+$nav-link-disabled-color:           $gray-400; //$gray-600;
 
 // $nav-tabs-border-color:             $gray-300;
 // $nav-tabs-border-width:             $border-width;
 // $nav-tabs-border-radius:            $border-radius;
 // $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color;
-// $nav-tabs-link-active-color:        $gray-700;
+$nav-tabs-link-active-color:        $body-color; //$gray-700;
 // $nav-tabs-link-active-bg:           $body-bg;
 // $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg;
 
@@ -663,14 +665,14 @@ $navbar-light-active-color:         $black;
 
 // $pagination-color:                  $link-color;
 // $pagination-bg:                     $white;
-// $pagination-border-width:           $border-width;
+$pagination-border-width:           0; //$border-width;
 // $pagination-border-color:           $gray-300;
 
 // $pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
 // $pagination-focus-outline:          0;
 
 // $pagination-hover-color:            $link-hover-color;
-// $pagination-hover-bg:               $gray-200;
+$pagination-hover-bg:               rgba($link-color, .1); //$gray-200;
 // $pagination-hover-border-color:     $gray-300;
 
 // $pagination-active-color:           $component-active-color;
@@ -773,27 +775,27 @@ $badge-pill-padding-x:              .7em;
 // Modals
 
 // Padding applied to the modal body
-// $modal-inner-padding:               1rem;
+$modal-inner-padding:               2.5rem; //1rem;
 
 // $modal-dialog-margin:               .5rem;
-// $modal-dialog-margin-y-sm-up:       1.75rem;
+$modal-dialog-margin-y-sm-up:       20rem; //1.75rem;
 
 // $modal-title-line-height:           $line-height-base;
 
 // $modal-content-bg:                  $white;
-// $modal-content-border-color:        rgba($black, .2);
+$modal-content-border-color:        $gray-200; //rgba($black, .2);
 // $modal-content-border-width:        $border-width;
 // $modal-content-border-radius:       $border-radius-lg;
-// $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
-// $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
+$modal-content-box-shadow-xs:       0 5px 20px rgba($black, .2); //0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-sm-up:    0 5px 20px rgba($black, .2); //0 .5rem 1rem rgba($black, .5);
 
-// $modal-backdrop-bg:                 $black;
+$modal-backdrop-bg:                 $purple; //$black;
 $modal-backdrop-opacity:            .7;
 // $modal-header-border-color:         $gray-200;
-// $modal-footer-border-color:         $modal-header-border-color;
-// $modal-header-border-width:         $modal-content-border-width;
-// $modal-footer-border-width:         $modal-header-border-width;
-// $modal-header-padding:              1rem;
+//$modal-footer-border-color:         $modal-header-border-color;
+$modal-header-border-width:         0; //$modal-content-border-width;
+$modal-footer-border-width:         0; //$modal-header-border-width;
+$modal-header-padding:              2.5rem; //1rem;
 
 $modal-lg:                          900px;
 $modal-md:                          600px;
@@ -806,16 +808,16 @@ $modal-md:                          600px;
 
 // Define alert colors, border radius, and padding.
 
-// $alert-padding-y:                   .75rem;
-// $alert-padding-x:                   1.25rem;
-// $alert-margin-bottom:               1rem;
-// $alert-border-radius:               $border-radius;
+$alert-padding-y:                   1.5rem; //.75rem;
+$alert-padding-x:                   2rem; //1.25rem;
+$alert-margin-bottom:               ($spacer); //1rem;
+$alert-border-radius:               6px; //$border-radius;
 // $alert-link-font-weight:            $font-weight-bold;
-// $alert-border-width:                $border-width;
+$alert-border-width:                0; //$border-width;
 
-// $alert-bg-level:                    -10;
+$alert-bg-level:                    0; //-10;
 // $alert-border-level:                -9;
-// $alert-color-level:                 6;
+$alert-color-level:                 -10; //6;
 
 
 // Progress bars
@@ -877,9 +879,9 @@ $figure-caption-color:              $text-muted;
 // $breadcrumb-padding-x:              1rem;
 // $breadcrumb-item-padding:           .5rem;
 
-// $breadcrumb-margin-bottom:          1rem;
+$breadcrumb-margin-bottom:          ($spacer); //1rem;
 
-// $breadcrumb-bg:                     $gray-200;
+$breadcrumb-bg:                    $white; // $gray-200;
 // $breadcrumb-divider-color:          $gray-600;
 // $breadcrumb-active-color:           $gray-600;
 // $breadcrumb-divider:                quote("/");

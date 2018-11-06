@@ -2,7 +2,7 @@
 
 Styles are limited to the `<select>`’s initial appearance and cannot modify the `<option>`s due to browser limitations.
 
-Select size can be changed using CSS modifier classes `select--sm` and `select--lg`.
+Select size can be changed using CSS modifier classes `select-sm` and `select-lg`.
 
 <!-- STORY -->
 
@@ -18,7 +18,7 @@ Select size can be changed using CSS modifier classes `select--sm` and `select--
 </div>
 
 <div className="form-group">
-  <select className="select--sm">
+  <select className="select-sm">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
     <option value="2">Two</option>
@@ -27,7 +27,7 @@ Select size can be changed using CSS modifier classes `select--sm` and `select--
 </div>
 
 <div className="form-group">
-  <select className="select--lg">
+  <select className="select-lg">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
     <option value="2">Two</option>

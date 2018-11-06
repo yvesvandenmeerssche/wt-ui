@@ -29,7 +29,23 @@ storiesOf('Content Blocks', module)
   .addDecorator(StoryRouter())
 
   // App header
-  .add('Header', doc(Header))
+  .add('Header', withLayoutPreview(Header, () =>
+    <div style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, overflow: 'auto'}}>
+      <header id="app-header" className="header-sticky border border-muted">
+        <h1 className="mb-0 p-1">Header</h1>
+      </header>
+
+      <div id="app-content" className="text-alpha">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+      </div>
+    </div>
+  ))
   // App content
   .add('Content', doc(Content))
   // App footer
@@ -38,9 +54,19 @@ storiesOf('Content Blocks', module)
   ))
   // Section Wrapper
   .add('Section Wrapper', withLayoutPreview(SectionWrapper, () =>
-    <article className="section-wrapper bg-primary">
-      <h1>
-        Section Wrapper
-      </h1>
+    <article className="section-wrapper bg-grad">
+      <div className="container">
+      <div className="row">
+
+      <div className="col-12 col-md-5">
+        <h2 className="text-white">
+          Líf Token
+        </h2>
+        <p className="lead text-white">
+          Líf is used to exchange data and value between Winding Tree smart contracts, companies and users.
+        </p>
+      </div>
+      </div>
+      </div>
     </article>
   ))

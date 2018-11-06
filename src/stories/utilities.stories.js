@@ -63,7 +63,7 @@ storiesOf('Utilities', module)
           <div className="p-2 mb-2 bg-secondary text-white">.bg-secondary</div>
         </div>
         <div className="col">
-          <div className="p-2 mb-2 bg--accent text-white">.bg--accent</div>
+          <div className="p-2 mb-2 bg-accent text-white">.bg-accent</div>
         </div>
         <div className="col">
           <div className="p-2 mb-2 bg-success text-white">.bg-success</div>
@@ -99,15 +99,15 @@ storiesOf('Utilities', module)
     <div>
       <div className="row">
         <div className="col">
-          <div className="p-3 mb-2 bg--grad text-white">.bg--grad</div>
+          <div className="p-3 mb-2 bg-grad text-white">.bg-grad</div>
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <div className="p-3 mb-2 bg--grad-up text-white">.bg--grad-up</div>
+          <div className="p-3 mb-2 bg-grad-up text-white">.bg-grad-up</div>
         </div>
         <div className="col">
-          <div className="p-3 mb-2 bg--grad-down text-white">.bg--grad-down</div>
+          <div className="p-3 mb-2 bg-grad-down text-white">.bg-grad-down</div>
         </div>
       </div>
     </div>

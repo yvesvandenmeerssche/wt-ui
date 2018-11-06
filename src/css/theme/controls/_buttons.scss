@@ -8,20 +8,58 @@
   text-transform: uppercase;
 }
 
-.btn-primary:not([disabled]) {
-  &:hover {
-    background: $secondary;
-    border-color: $secondary;
+.btn-primary, .btn-accent {
+  &:not([disabled]) {
+    &:hover {
+      background: $secondary;
+      border-color: $secondary;
+    }
   }
 }
 
 .btn-link {
-  text-transform: inherit;
+  color: $black;
+  font-weight: bold;
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled):focus:active {
     outline: none;
     box-shadow: none;
+  }
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    height: 12px;
+    top: 50%;
+    display: block;
+    border-bottom: 1px solid $gray-300;
+    transition: all 0.3s ease-out;
+  }
+
+  &.btn-sm {
+    &::after {
+      left: 16px;
+      right: 16px;
+    }
+  }
+  &.btn-lg {
+    &::after {
+      height: 18px;
+      left: 35px;
+      right: 35px;
+    }
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+    &::after {
+      border-bottom-color: $link-hover-color;
+    }
   }
 }
 
@@ -54,33 +92,21 @@
 
   &.btn-sm {
     > .mdi {
-      width: 16px;
+      width: 18px;
       &::before {
         font-size: 160%;
-        top: -17px;
+        top: -19px;
       }
     }
   }
 
   &.btn-lg {
     > .mdi {
-      width: 25px;
+      width: 23px;
       &::before {
-        top: -25px;
+        top: -24px;
       }
     }
-  }
-}
-
-// New style (Accent)
-.btn--accent {
-  @extend .btn-secondary;
-  border-color: $colorAccent;
-  background-color: $colorAccent;
-
-  &:hover {
-    background: $secondary;
-    border-color: $secondary;
   }
 }
 
