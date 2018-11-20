@@ -1,0 +1,311 @@
+/* Slick Carousel */
+
+// Devs Block
+.devs-block {
+  pointer-events: none;
+  height: 160px;
+  opacity: 0;
+  transition: $transition-base;
+  will-change: transition;
+  &.slick-initialized {
+    opacity: 1;
+    .slick-list,
+    .slick-track {
+      height: inherit;
+    }
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+    .slick-slide {
+      height: auto !important;
+      &:nth-child(odd) {
+        align-self: flex-start;
+      }
+      &:nth-child(even) {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &-dev {
+    padding-left: ($spacer * 4);
+    padding-right: ($spacer * 4);
+    text-align: center;
+
+    @include media-breakpoint-down("sm") {
+      padding-left: ($spacer * 2);
+      padding-right: ($spacer * 2);
+    }
+
+    &-img {
+      margin-bottom: ($spacer * 2);
+    }
+    &-name {
+      font-size: $fontSizeSm;
+    }
+  }
+
+  }
+
+
+// Partners Block
+.partners-block {
+  overflow: hidden;
+  max-height: 80px;
+  margin-bottom: ($spacer * 3);
+  visibility: hidden;
+  pointer-events: none;
+
+  @include media-breakpoint-down("sm") {
+    margin-bottom: ($spacer);
+  }
+
+  &.slick-initialized {
+    visibility: visible;
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    .slick-slide {
+      padding: 0 4rem;
+    }
+  }
+
+  &-img {
+    max-width: 160px;
+    max-height: 80px;
+    width: auto !important;
+  }
+
+  &-title {
+    margin: 0;
+    font-size: $fontSizeSm;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $body-color;
+  }
+
+}
+
+
+
+// Photo Slider
+.photo-slider {
+  display: none;
+
+  &.slick-initialized {
+    display: block;
+  }
+
+  &.slick-slider {
+    @include media-breakpoint-up("md") {
+      margin: 0;
+    }
+
+    .slick-list {
+      @include media-breakpoint-up("md") {
+        z-index: 1;
+        margin: ($spacer * 5) 0 ($spacer * 12);
+      }
+    }
+
+    .slick-track {
+      @include media-breakpoint-up("md") {
+        padding: 0;
+        margin: ($spacer * 5) 0;
+      }
+    }
+
+    .slick-slide {
+      figure {
+        cursor: pointer;
+
+        > figcaption {
+          margin-top: 1rem;
+          text-align: center;
+          font-size: $fontSizeSm;
+          font-weight: bold;
+        }
+      }
+
+      @include media-breakpoint-up("md") {
+        transition: $transition-base;
+        will-change: box-shadow, opacity, transform;
+
+        @include hover {
+          opacity: 1 !important;
+
+          figure {
+            &::after, > figcaption {
+              opacity: 0;
+            }
+          }
+        }
+
+        &.slick-current {
+          box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .4);
+          transform: scale(1.25) translateZ(0);
+        }
+
+        &:not(.slick-current) {
+          opacity: .4;
+          transform: scale(.51) translateZ(0);
+        }
+
+        figure {
+          position: relative;
+          margin-bottom: 0;
+          vertical-align: top;
+
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4);
+            content: "";
+            pointer-events: none;
+            transition: $transition-base;
+            will-change: opacity;
+          }
+
+          > img {
+            position: relative;
+            z-index: 1;
+            vertical-align: top;
+          }
+
+          > figcaption {
+            position: absolute;
+            right: 3rem;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 3;
+            margin-top: 0;
+            color: $white;
+            text-transform: uppercase;
+            transition: $transition-base;
+            will-change: opacity;
+          }
+        }
+      }
+    }
+
+    // prev-next
+    .slick-prev, .slick-next {
+      width: 20px;
+      height: 40px;
+
+      z-index: 2;
+
+      &::before {display: none;}
+
+      .mdi::before {
+        position: absolute;
+        top: -16px;
+        left: -24px;
+        color: $accent;
+      }
+
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+    }
+
+    // dots
+    .slick-dots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+      list-style: none;
+      bottom: -($spacer * 5);
+
+      @include media-breakpoint-down("sm") {
+        position: relative;
+        bottom: -2.25rem;
+      }
+
+      > li {
+        flex-grow: 0;
+        flex-shrink: 0;
+        position: relative;
+        padding: 0;
+        width: 6px;
+        height: 6px;
+
+        cursor: pointer;
+
+        @include media-breakpoint-up("md") {
+          width: 35px;
+          height: 35px;
+          padding: 0;
+          margin: 0 3px;
+        }
+
+        &.slick-active {
+          > button::before {
+            border-color: $accent;
+            background: $accent;
+          }
+        }
+
+        @include media-breakpoint-up("md") {
+          > button {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1000;
+            width: 35px;
+            height: 35px;
+          }
+        }
+
+        > button::before {
+          display: block;
+          width: 6px;
+          height: 6px;
+          padding: 0;
+          margin: 0;
+          background: $black;
+          border: 2px solid $black;
+          border-radius: 50%;
+          font-size: 0;
+          outline: none;
+          pointer-events: none;
+          vertical-align: top;
+          transition: $transition-base;
+
+          @include media-breakpoint-up("md") {
+            opacity: 1;
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+            border-color: $gray-400;
+            background: none;
+          }
+
+        }
+        > button:hover::before {
+          border-color: $accent;
+        }
+      }
+    }
+  }
+}
+
+

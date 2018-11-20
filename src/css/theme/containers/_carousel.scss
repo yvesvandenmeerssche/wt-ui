@@ -1,0 +1,30 @@
+/* Carousel */
+
+
+.carousel {
+  filter: drop-shadow(7px 7px 10px rgba(0,0,0,.4));
+
+  .carousel-item {
+    img {
+    }
+  }
+
+
+  .carousel-indicators {
+    & > li {
+
+      @media all and (min-width: 768px) {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid $carousel-control-color;
+        background: none;
+
+        &.active {
+          background: $carousel-control-color;
+        }
+      }
+    }
+  }
+
+}

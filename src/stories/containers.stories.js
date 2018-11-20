@@ -6,17 +6,69 @@ import { storiesOf } from '@storybook/react';
 import { withCleanPreview, withCodePreview} from './HOCs/with-docs';
 import { withCollapse, withVariableNavBar } from "./HOCs/bootstrap";
 
+// Included components
+import Slider from "react-slick";
+import BSCarousel from  "../components/Carousel";
+
 // Readme files
-import Jumbotron from './containers/jumbotron.md';
+// import Jumbotron from './containers/jumbotron.md'; UNDER REVIEW
 import Table from './containers/table.md';
 import ListGroup from './containers/list-group.md';
 import TabbablePanes from './containers/tabbable-panes.md';
 import Figure from './containers/figure.md';
 import Card from './containers/card.md';
 import Collapse from './containers/collapse.md';
-import Modal from './containers/modal.md';
-import Carousel from './containers/carousel.md';
 
+import Carousel from './containers/carousel.md';
+import PhotoSlider from './containers/photo-slider.md';
+
+import Modal from './containers/modal.md';
+import ModalImage from './containers/modal-image.md';
+import ModalCarousel from './containers/modal-carousel.md';
+
+
+function NavArrow(props) {
+  const { className, style, onClick, dir } = props;
+  return (
+    <button
+      type="button"
+      className={dir=="left" ? "slick-prev" : "slick-next"}
+      onClick={onClick}
+    >
+      <i className={"mdi mdi-lg mdi-chevron-" + (dir=="left" ? "left" : "right")} aria-hidden="true"/>
+      <span className="sr-only">{(dir=="left" ? "Previows" : "Next")}</span>
+    </button>
+  );
+}
+
+const photoSlider = {
+  settings: {
+    arrows: true,
+    draggable: false, // REVIEW: modals are launched unintentionally when dragging
+    nextArrow: <NavArrow dir="right"/>,
+    prevArrow: <NavArrow dir="left"/>,
+    centerMode: true,
+    centerPadding: 0,
+    slidesToShow: 3,
+    dots: true,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+      }
+    }]
+  },
+  data: [
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/1.jpg", desc: "Travel Tech Con 2018 (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/7.jpeg", desc: "Travel Startup Pitch Competition (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/6.jpeg", desc: "Travel Tech Meetup (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/2.jpg", desc: "Travel Tech Con 2018 (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/3.jpg", desc: "Travel Tech Con 2018 (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/4.jpg", desc: "Travel Tech Con 2018 (San Francisco)"},
+    {name: "", img: "https://windingtree.com/assets/img/photo-gallery/5.jpg", desc: "Travel Tech Con 2018 (San Francisco)"}
+  ]
+}
 
 
 // COMPONENTS
@@ -26,17 +78,17 @@ import Carousel from './containers/carousel.md';
 storiesOf('Containers', module)
 
   // Jumbotron
-  .add('Jumbotron', withCodePreview(Jumbotron, () =>
-    <div className="jumbotron">
-      <h1 className="display-4">Hello, world!</h1>
-      <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr className="my-4"/>
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p className="lead">
-        <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
-    </div>
-  ))
+  // .add('Jumbotron', withCodePreview(Jumbotron, () =>
+  //   <div className="jumbotron">
+  //     <h1 className="display-4">Hello, world!</h1>
+  //     <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  //     <hr className="my-4"/>
+  //     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  //     <p className="lead">
+  //       <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  //     </p>
+  //   </div>
+  // ))
   // Table
   .add('Table', withCodePreview(Table, () =>
     <table className="table">
@@ -155,6 +207,68 @@ storiesOf('Containers', module)
       </div>
     </div>
   )))
+
+
+// SLIDER
+storiesOf('Containers/ Slider', module)
+  // Carousel
+  .add('Carousel', withCodePreview(Carousel, () =>
+  <div id="img-carousel" className="carousel slide" data-ride="carousel" style={{maxWidth: 300}}>
+    <div className="carousel-inner">
+      <div className="carousel-item active">
+        <img className="d-block w-100" src="http://via.placeholder.com/300x180/9f09e0/ffffff" alt="First slide"/>
+      </div>
+      <div className="carousel-item">
+        <img className="d-block w-100" src="http://via.placeholder.com/300x180/1ac592/ffffff" alt="Second slide"/>
+      </div>
+      <div className="carousel-item">
+        <img className="d-block w-100" src="http://via.placeholder.com/300x180/0b8fdf/ffffff" alt="Third slide"/>
+      </div>
+    </div>
+    <a className="carousel-control-prev" href="#img-carousel" role="button" data-slide="prev">
+      <i className="mdi mdi-48px mdi-chevron-left" aria-hidden="true"/>
+      <span className="sr-only">Previous</span>
+    </a>
+    <a className="carousel-control-next" href="#img-carousel" role="button" data-slide="next">
+      <i className="mdi mdi-48px mdi-chevron-right" aria-hidden="true"/>
+      <span className="sr-only">Next</span>
+    </a>
+  </div>
+))
+// Photo Sider
+.add('Photo Sider', withCodePreview(PhotoSlider, () =>
+  <div>
+    {/* Slider */}
+    <Slider className="photo-slider" {...photoSlider.settings}>
+      {photoSlider.data.map((item, index) => {
+        return (
+        <figure data-toggle="modal" data-target={'#modal-img-' + (index + 1)}>
+          <img src={item.img} alt={item.name} className="img-fluid"/>
+          <figcaption>
+            {item.desc}
+          </figcaption>
+        </figure>
+      )})}
+    </Slider>
+    {/* Modals */}
+    {photoSlider.data.map((item, index) => {
+      return (
+        <div className="modal-img modal fade" id={'modal-img-' + (index + 1)} tabindex={'-'+ (index + 1)} role="preview" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div className="modal-content">
+              <div className="modal-body">
+                <img src={item.img} alt={item.name} className="img-fluid"/>
+              </div>
+            </div>
+          </div>
+        </div>
+    )})}
+  </div>
+))
+
+
+// MODALS
+storiesOf('Containers/ Modal', module)
   // Modal
   .add('Modal', withCodePreview(Modal, () =>
     <div className="bg-accent">
@@ -203,32 +317,50 @@ storiesOf('Containers', module)
       </div>
     </div>
   ))
-  // Carousel
-  .add('Carousel', withCodePreview(Carousel, () =>
-    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-      <ol className="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img className="d-block w-100" src="http://via.placeholder.com/800x300/9f09e0/ffffff" alt="First slide"/>
-        </div>
-        <div className="carousel-item">
-          <img className="d-block w-100" src="http://via.placeholder.com/800x300/1ac592/ffffff" alt="Second slide"/>
-        </div>
-        <div className="carousel-item">
-          <img className="d-block w-100" src="http://via.placeholder.com/800x300/0b8fdf/ffffff" alt="Third slide"/>
+  // Modal (image)
+  .add('Modal (image)', withCodePreview(ModalImage, () =>
+    <div className="bg-accent">
+
+      <button type="button" className="btn btn-outline-light btn-sm m-1" data-toggle="modal" data-target="#img-modal-demo">
+        Launch image modal
+      </button>
+
+      <div className="modal modal-img fade" id="img-modal-demo" tabindex="-1" role="preview" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div className="modal-content">
+            <div className="modal-body">
+              <img src={photoSlider.data[0].img} alt={photoSlider.data[0].name}/>
+            </div>
+          </div>
         </div>
       </div>
-      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="sr-only">Previous</span>
-      </a>
-      <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="sr-only">Next</span>
-      </a>
+
     </div>
   ))
+  // Modal (carousel)
+  .add('Modal (carousel)', withCodePreview(ModalCarousel, () =>
+    <div className="bg-accent">
+
+      <button type="button" className="btn btn-outline-light btn-sm m-1" data-toggle="modal" data-target="#carousel-modal-demo">
+        Launch carousel modal
+      </button>
+
+      <div className="modal modal-carousel" id="carousel-modal-demo" tabindex="-1" role="slideshow" aria-hidden="true">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Travel Tech Con 2018</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <i className="mdi mdi-close"></i>
+              </button>
+            </div>
+            <div className="modal-body d-flex align-items-center">
+              <BSCarousel title="Travel Tech Con 2018" list={photoSlider.data} hasIndicators />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  ))
+
