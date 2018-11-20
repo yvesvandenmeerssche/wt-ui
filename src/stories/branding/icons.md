@@ -2,35 +2,39 @@
 
 Icons are not part of the framework, they can be added as a dependency. On our website we included materialicons.
 
-Icons support different sizes, by using modifier CSS classes `.mdi-18px`, `.mdi-24px`, `.mdi-36px`, `.mdi-48px`. They also support spin animations, rotation, and color variants.
+Icons support different sizes, by using modifier CSS classes, mdi defaults are `.mdi-18px`, `.mdi-24px`, `.mdi-36px`, `.mdi-48px` and we added two additional modifier classes, `.mdi-lg` and `.mdi-xxl`.
 
-Check the [materialicons website][0] website for a full list of the available icons and modifiers.
+Icons also support spin animations, rotation, and color variants, check the [materialicons website][0] website for a full list of the available icons and modifiers.
 
 <!-- STORY -->
 
 ```html
+<!-- Standard icons -->
+<i className="mdi mdi-bitcoin mr-1"/>
+<i className="mdi mdi-close mr-1"/>
+<i className="mdi mdi-chevron-right mr-1"/>
+<i className="mdi mdi-menu"/>
 
-<!-- Social icons -->
-<i class="mdi mdi-github-circle"/>
-<i class="mdi mdi-24px mdi-github-box"/>
-<i class="mdi mdi-twitter"/>
-<i class="mdi mdi-medium"/>
-<i class="mdi mdi-youtube"/>
-<i class="mdi mdi-telegram"/>
-<i class="mdi mdi-reddit"/>
-<i class="mdi mdi-linkedin"/>
-<i class="mdi mdi-link-variant"/>
+<!-- Social icons (24px) -->
+<i className="mdi mdi-24px mdi-github-circle mr-1"/>
+<i className="mdi mdi-24px mdi-github-box mr-1"/>
+<i className="mdi mdi-24px mdi-twitter mr-1"/>
+<i className="mdi mdi-24px mdi-medium mr-1"/>
+<i className="mdi mdi-24px mdi-youtube mr-1"/>
+<i className="mdi mdi-24px mdi-telegram mr-1"/>
+<i className="mdi mdi-24px mdi-reddit mr-1"/>
+<i className="mdi mdi-24px mdi-linkedin mr-1"/>
+<i className="mdi mdi-24px mdi-link-variant mr-2"/>
 
-<!-- Other icons -->
-<i class="mdi mdi-bitcoin"/>
-<i class="mdi mdi-chevron-right"/>
-<i class="mdi mdi-menu"/>
+<!-- Other sizes -->
+<i className="mdi mdi-36px mdi-format-quote-open"/>
+<i className="mdi mdi-36px mdi-format-quote-close"/>
+<i className="mdi mdi-48px mdi-close"/>
 
-<!-- Different sizes -->
-<i class="mdi mdi-36px mdi-format-quote-open"/>
-<i class="mdi mdi-36px mdi-format-quote-close"/>
-<i class="mdi mdi-48px mdi-close"/>
-<i class="mdi mdi-xxl mdi-office-building"/>
+<!-- Custom sizes -->
+<i className="mdi mdi-lg mdi-chevron-left"/>
+<i className="mdi mdi-lg mdi-chevron-right"/>
+<i className="mdi mdi-xxl mdi-office-building"/>
 ```
 
 [0]: https://cdn.materialdesignicons.com/2.5.94/
