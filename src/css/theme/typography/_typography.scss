@@ -49,6 +49,11 @@ a.text-alpha-inverse {
   &:hover {opacity: .7;}
 }
 
+// Del
+del {
+  opacity: .8;
+  text-decoration: line-through;
+}
 
 // Blockquote
 .blockquote {
