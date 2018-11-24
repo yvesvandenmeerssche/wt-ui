@@ -893,11 +893,11 @@ $breadcrumb-bg:                    $white; // $gray-200;
 
 // $carousel-control-color:            $white;
 // $carousel-control-width:            15%;
-// $carousel-control-opacity:          .5;
+$carousel-control-opacity:          .25;
 
-// $carousel-indicator-width:          30px;
-// $carousel-indicator-height:         3px;
-// $carousel-indicator-spacer:         3px;
+$carousel-indicator-width:          6px;
+$carousel-indicator-height:         6px;
+$carousel-indicator-spacer:         10px;
 // $carousel-indicator-active-bg:      $white;
 
 // $carousel-caption-width:            70%;

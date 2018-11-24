@@ -313,28 +313,37 @@ storiesOf('Branding', module)
 ))
 // Icons
 .add('Icons', withCodePreview(Icons, () =>
-  <div className="h3">
+  <div>
+    {/* Standard icons */}
+    <h6>Standard icons</h6>
+    <i className="mdi mdi-bitcoin mr-1"/>
+    <i className="mdi mdi-close mr-1"/>
+    <i className="mdi mdi-chevron-right mr-1"/>
+    <i className="mdi mdi-menu"/>
+
+
     {/* <!-- Social icons --> */}
-    <i className="mdi mdi-github-circle"/>
-    <i className="mdi mdi-24px mdi-github-box"/>
-    <i className="mdi mdi-twitter"/>
-    <i className="mdi mdi-medium"/>
-    <i className="mdi mdi-youtube"/>
-    <i className="mdi mdi-telegram"/>
-    <i className="mdi mdi-reddit"/>
-    <i className="mdi mdi-linkedin"/>
-    <i className="mdi mdi-link-variant mr-2"/>
+    <h6 className="mt-1">Social icons (<span class="font-alt">24px</span>)</h6>
+    <i className="mdi mdi-24px mdi-github-circle mr-1"/>
+    <i className="mdi mdi-24px mdi-github-box mr-1"/>
+    <i className="mdi mdi-24px mdi-twitter mr-1"/>
+    <i className="mdi mdi-24px mdi-medium mr-1"/>
+    <i className="mdi mdi-24px mdi-youtube mr-1"/>
+    <i className="mdi mdi-24px mdi-telegram mr-1"/>
+    <i className="mdi mdi-24px mdi-reddit mr-1"/>
+    <i className="mdi mdi-24px mdi-linkedin mr-1"/>
+    <i className="mdi mdi-24px mdi-link-variant mr-2"/>
 
-    {/* <!-- Other icons --> */}
-    <i className="mdi mdi-bitcoin"/>
-    <i className="mdi mdi-close"/>
-    <i className="mdi mdi-chevron-right"/>
-    <i className="mdi mdi-menu mr-2"/>
-
-    {/* <!-- Different sizes --> */}
+    {/* <!-- Other sizes --> */}
+    <h6 className="mt-1">Other sizes</h6>
     <i className="mdi mdi-36px mdi-format-quote-open"/>
     <i className="mdi mdi-36px mdi-format-quote-close"/>
     <i className="mdi mdi-48px mdi-close"/>
+
+    {/* <!-- Custom sizes --> */}
+    <h6 className="mt-1">Custom sizes</h6>
+    <i className="mdi mdi-lg mdi-chevron-left"/>
+    <i className="mdi mdi-lg mdi-chevron-right"/>
     <i className="mdi mdi-xxl mdi-office-building"/>
   </div>
 ))
