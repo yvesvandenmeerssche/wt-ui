@@ -37,4 +37,4 @@ Icons also support spin animations, rotation, and color variants, check the [mat
 <i className="mdi mdi-xxl mdi-office-building"/>
 ```
 
-[0]: https://cdn.materialdesignicons.com/2.5.94/
+[0]: https://materialdesignicons.com/
