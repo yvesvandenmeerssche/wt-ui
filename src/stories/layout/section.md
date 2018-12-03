@@ -1,6 +1,6 @@
-# Section Wrapper
+# Section
 
-The `.section-wrapper` component is a content block intended to display highlighted information.
+The `.app-section` component is a content block intended to display highlighted information.
 
 By default it does not have a backround color, combine with background utility classes like `.bg-grad`, or `.bg-light` to change it.
 
@@ -9,7 +9,7 @@ It should not be used inside a `.container` if it has a noticeable backround, si
 <!-- STORY -->
 
 ```html
-<article class="section-wrapper bg-grad">
+<article class="app-section bg-grad">
   <div class="container">
     ...
   </div>

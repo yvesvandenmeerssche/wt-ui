@@ -1,7 +1,7 @@
 /* Layout: app-layout */
 
 
-.section-wrapper {
+.app-section {
   padding: ($spacer * 10) 0;
   @include media-breakpoint-down('sm') {
     padding: ($spacer * 5) ($spacer * 2);
