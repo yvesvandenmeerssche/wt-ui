@@ -31,6 +31,35 @@
     font-size: 125%;
     line-height: 1.4;
   }
+
+
+  .app-section {
+    h2 {
+      @extend h2;
+      font-family: Raleway;
+      font-weight: 700;
+      border: 0;
+      line-height: 1.25;
+      padding: 0;
+    }
+    p {
+      @extend p;
+      &.lead {@extend .lead;}
+    }
+    .btn {@extend .btn;}
+    .btn-primary {
+      @extend .btn-primary;
+      &:hover {
+        @extend .btn-primary:hover;
+      }
+    }
+  }
+
+  .nav-pointers {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .doc-preview {
@@ -76,7 +105,7 @@
 
   &.doc-preview--layout {
     position: relative;
-    height: 400px;
+    min-height: 400px;
     padding: 0;
     margin-bottom: 0;
   }
