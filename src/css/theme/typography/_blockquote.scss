@@ -3,7 +3,9 @@
 .blockquote {
   padding-top: 0;
 
-  &.card {max-width: 50rem; }
+  @include media-breakpoint-up('lg') {
+    &.card {max-width: 50rem; }
+  }
 
   &, &.card {
     margin-bottom: ($spacer * 2);
@@ -28,6 +30,7 @@
     position: relative;
     margin-bottom: 0;
     text-align: center;
+
     font-size: $h3-font-size - 3; // UNDER REVIEW
 
     @include media-breakpoint-down('md') {
