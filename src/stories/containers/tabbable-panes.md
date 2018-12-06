@@ -41,23 +41,23 @@ Below is an example of the same component using the `.nav-pointers` class on the
 
 <div class="doc-preview mb-0">
 
-  <ul class="nav nav-pointers mb-0 pl-0 nav-justified" role="tablist">
-    <li class="nav-item">
+  <ul class="nav nav-pointers" role="tablist">
+    <li class="nav-item col-6 col-sm-3">
       <a class="nav-link active" data-toggle="tab" href="#quote-1" role="tab" aria-selected="true">
         <img src="https://windingtree.com/assets/img/in-the-press/quotes/businessinsider.png" alt="Business Insider"/>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-6 col-sm-3">
       <a class="nav-link" data-toggle="tab" href="#quote-2" role="tab" aria-selected="false">
         <img src="https://windingtree.com/assets/img/in-the-press/quotes/Swissport.png" alt="Swissport"/>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-6 col-sm-3">
       <a class="nav-link" data-toggle="tab" href="#quote-3" role="tab" aria-selected="false">
         <img src="https://windingtree.com/assets/img/in-the-press/quotes/coindesk.png" alt="Coindesk"/>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item col-6 col-sm-3">
       <a class="nav-link" data-toggle="tab" href="#quote-4" role="tab" aria-selected="false">
         <img src="https://windingtree.com/assets/img/in-the-press/quotes/skift.svg" alt="Skift"/>
       </a>
@@ -66,7 +66,7 @@ Below is an example of the same component using the `.nav-pointers` class on the
 
   <div class="tab-content block-shadow px-2 py-3 bg-white">
     <div class="tab-pane fade show active" id="quote-1" role="tabpanel">
-      <blockquote class="blockquote blockquote--alt text-center text-md-left">
+      <blockquote class="blockquote blockquote-alt text-center text-md-left">
         <footer class="blockquote-footer media flex-column flex-md-row align-items-center mb-1">
           <img class="mb-1 mb-md-0 mr-md-1 rounded-circle" src="https://windingtree.com/assets/img/in-the-press/quotes/avatars/lisa-farrar.jpg" width="60" height="60" alt="Lisa Farrar"/>
           <cite class="media-body">
@@ -84,7 +84,7 @@ Below is an example of the same component using the `.nav-pointers` class on the
       </blockquote>
     </div>
     <div class="tab-pane fade " id="quote-2" role="tabpanel">
-      <blockquote class="blockquote blockquote--alt text-center text-md-left">
+      <blockquote class="blockquote blockquote-alt text-center text-md-left">
         <footer class="blockquote-footer media flex-column flex-md-row align-items-center mb-1">
           <img class="mb-1 mb-md-0 mr-md-1 rounded-circle" src="https://windingtree.com/assets/img/in-the-press/quotes/avatars/Christoph-Meier.jpg" width="60" height="60" alt="Christoph Meier"/>
           <cite class="media-body">
@@ -128,23 +128,23 @@ Below is an example of the same component using the `.nav-pointers` class on the
 
 
 ```html
-<ul className="nav nav-pointers nav-justified" role="tablist">
-  <li className="nav-item">
+<ul className="nav nav-pointers" role="tablist">
+  <li className="nav-item col-6 col-sm-3">
     <a className="nav-link active" data-toggle="tab" href="#quote-1" role="tab" aria-selected="true">
       <img src="..." alt="Business Insider"/>
     </a>
   </li>
-  <li className="nav-item">
+  <li className="nav-item col-6 col-sm-3">
     <a className="nav-link" data-toggle="tab" href="#quote-2" role="tab" aria-selected="true">
       <img src="..." alt="Swissport"/>
     </a>
   </li>
-  <li className="nav-item">
+  <li className="nav-item col-6 col-sm-3">
     <a className="nav-link" data-toggle="tab" href="#quote-3" role="tab" aria-selected="true">
       <img src="..." alt="Coindesk"/>
     </a>
   </li>
-  <li className="nav-item">
+  <li className="nav-item col-6 col-sm-3">
     <a className="nav-link" data-toggle="tab" href="#quote-4" role="tab" aria-selected="true">
       <img src="..." alt="Skift"/>
     </a>
