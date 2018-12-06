@@ -47,7 +47,7 @@ storiesOf('Layout', module)
               <a className="navbar-brand mr-2" href="#">Navbar</a>
 
               {/* Toggle button */}
-              <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+              <button className="navbar-toggler px-0 border-0" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation" className="text-white text-alpha-inverse">
                 <i className="mdi mdi-24px mdi-menu"></i>
               </button>
 
@@ -96,13 +96,13 @@ storiesOf('Layout', module)
       </header>
 
       <div id="app-content" className="text-alpha">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.
+          Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
-        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
-        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
-        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
+        <p>Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas adipisci dolorum ex aliquam eligendi obcaecati sunt? Doloremque, vero veritatis vitae, tenetur esse ullam assumenda eum odit dicta debitis corrupti.</p>
       </div>
     </div>
   )))
@@ -112,17 +112,65 @@ storiesOf('Layout', module)
   .add('Section', withLayoutPreview(Section, () =>
     <article className="app-section bg-grad">
       <div className="container">
-      <div className="row">
+        <div className="row flex-column flex-md-row align-items-center">
+          <div className="col-md-8 mb-1 mb-md-0">
+            <h2 className="text-white">
+              Designed for Driving Innovation
+            </h2>
+            <p className="lead text-white">
+              Winding Tree is a non-profit foundation that drives the development of open-source protocols to allow any company, big or small, or even an individual developer, to try them out and integrate with the platform in no time.
+            </p>
+            <ul className="list-inline">
+              <li className="list-inline-item">
+                <a href="https://github.com/windingtree" title="GitHub" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-github-circle"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://groups.google.com/forum/#!forum/windingtree" title="Google Groups" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-google-plus-box"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://twitter.com/windingtree" title="Twitter" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-twitter"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="http://blog.windingtree.com/" title="Medium" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-medium"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://www.youtube.com/channel/UCFuemEOhCfenYMoNdjD0Aew" title="YouTube" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-youtube"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://t.me/windingtree" title="Telegram" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-telegram"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://reddit.com/r/windingtree" title="Reddit" className="text-white text-alpha-inverse">
+                  <i className="mdi mdi-48px mdi-reddit"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="https://bitcointalk.org/index.php?topic=1946065" title="BitcoinTalk" className="text-white text-alpha-inverse">
+                    <i className="mdi mdi-48px mdi-bitcoin"></i>
+                </a>
+              </li>
+            </ul>
 
-      <div className="col-12 col-md-5">
-        <h2 className="text-white">
-          Líf Token
-        </h2>
-        <p className="lead text-white">
-          Líf is used to exchange data and value between Winding Tree smart contracts, companies and users.
-        </p>
-      </div>
-      </div>
+          </div>
+          <div className="col-md-4 text-center">
+            <i className="mdi mdi-xxl mdi-github-circle text-white"></i>
+            <a href="/startups-and-developers.html" className="btn btn-outline-light mt-1">
+              Community
+            </a>
+          </div>
+        </div>
       </div>
     </article>
   ))
