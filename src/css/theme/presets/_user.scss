@@ -1,0 +1,62 @@
+// USER
+
+.user {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include media-breakpoint-up('sm') {
+  flex-direction: row;
+  }
+
+  font-style: normal;
+  [class*="user-"] {margin-bottom: 0;}
+  .user-img {
+    margin: 0;
+    margin-bottom: ($spacer);
+
+    @include media-breakpoint-up('sm') {
+      margin-right: ($spacer * 2);
+      margin-bottom: 0;
+    }
+  }
+  .user-data {}
+  .user-name {
+    @extend .h4;
+  }
+  .user-role {
+    font-size: $fontSizeSm;
+    text-transform: uppercase;
+  }
+
+
+
+  &.user-sm {
+    .user-img {
+      @extend .rounded-circle;
+      @include media-breakpoint-up('md') {
+        margin-bottom: 0;
+        margin-right: ($spacer * 2);
+        margin-bottom: $spacer;
+      }
+    }
+
+    .user-data {
+      @include media-breakpoint-up('sm') {
+        text-align: left;
+      }
+    }
+    .user-name, .user-role {
+      font-size: $font-size-base;
+      color: $text-muted;
+      font-weight: normal;
+      text-transform: none;
+      font-style: italic;
+    }
+
+  }
+
+}
+
+
+
