@@ -13,8 +13,8 @@ import { withCodePreview } from './HOCs/with-docs'
 import Slider from "react-slick";
 
 // Readme files
-import DevsBlock from './preset-blocks/devs-block.md';
-import PartnersBlock from './preset-blocks/partners-block.md';
+import DevsMarquee from './preset-blocks/devs-marquee.md';
+import PartnersMarquee from './preset-blocks/partners-marquee.md';
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -79,15 +79,15 @@ const slider = {
 // APP HEADER
 storiesOf('Preset Blocks', module)
 
-  // Devs Block
-  .add('Devs Block', withCodePreview(DevsBlock, () =>
-    <Slider className="devs-block" {...slider.settings}>
+  // Devs Marquee
+  .add('Devs Marquee', withCodePreview(DevsMarquee, () =>
+    <Slider className="devs-marquee" {...slider.settings}>
 
       {slider.data.developers.map(developer => {
         return (
 
-        <div className="devs-block-dev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="54" height="60" viewBox="0 0 54 60" className="devs-block-dev-img">
+        <div className="devs-marquee-dev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="54" height="60" viewBox="0 0 54 60" className="devs-marquee-dev-img">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <mask id="mask2" fill="white">
                 <path d="M26.76,0a7.17,7.17,0,0,0-3.41,1L3.41,12.58A6.62,6.62,0,0,0,0,18.39V41.61a6.72,6.72,0,0,0,3.41,5.81L23.35,59a7.4,7.4,0,0,0,3.41,1,7.9,7.9,0,0,0,3.89-1L50.59,47.42A6.76,6.76,0,0,0,54,41.61V18.39a6.66,6.66,0,0,0-3.41-5.81L30.65,1A7.7,7.7,0,0,0,26.76,0Z" id="path2"></path>
@@ -95,37 +95,37 @@ storiesOf('Preset Blocks', module)
               <image mask="url(#mask2)" width="54" height="60" xlinkHref={developer.img}></image>
             </g>
           </svg>
-          <p className="devs-block-dev-name">{developer.name}</p>
+          <p className="devs-marquee-dev-name">{developer.name}</p>
         </div>
 
       )})}
 
     </Slider>
   ))
-  // Partners Block
-  .add('Partners Block', withCodePreview(PartnersBlock, () =>
+  // Partners Marquee
+  .add('Partners Marquee', withCodePreview(PartnersMarquee, () =>
     <div>
-      <Slider className="partners-block" {...slider.settings}>
-        <h4 className="partners-block-title">Already joined us</h4>
+      <Slider className="partners-marquee" {...slider.settings}>
+        <h4 className="partners-marquee-title">Already joined us</h4>
         {slider.data.partners[0].map(partner => {
         return (
-          <img className="partners-block-img" src={partner.img} alt={partner.name}/>
+          <img className="partners-marquee-img" src={partner.img} alt={partner.name}/>
         )})}
       </Slider>
 
-      <Slider className="partners-block" {...slider.settings} rtl={true}>
-        <h4 className="partners-block-title">Already joined us</h4>
+      <Slider className="partners-marquee" {...slider.settings} rtl={true}>
+        <h4 className="partners-marquee-title">Already joined us</h4>
         {slider.data.partners[1].map(partner => {
         return (
-          <img className="partners-block-img" src={partner.img} alt={partner.name}/>
+          <img className="partners-marquee-img" src={partner.img} alt={partner.name}/>
         )})}
       </Slider>
 
-      <Slider className="partners-block" {...slider.settings}>
-        <h4 className="partners-block-title">Tech partners</h4>
+      <Slider className="partners-marquee" {...slider.settings}>
+        <h4 className="partners-marquee-title">Tech partners</h4>
         {slider.data.partners[2].map(partner => {
         return (
-          <img className="partners-block-img" src={partner.img} alt={partner.name}/>
+          <img className="partners-marquee-img" src={partner.img} alt={partner.name}/>
         )})}
       </Slider>
     </div>
