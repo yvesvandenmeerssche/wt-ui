@@ -21,9 +21,8 @@ import Links from './typography/links.md';
 import Abbreviations from './typography/abbreviations.md';
 import textUtilities from './typography/text-utilities.md';
 
-import Blockquotes from './typography/blockquotes.md';
-import Blockquotes__WTblockquote from './typography/blockquotes__wt-blockquote.md';
-import Blockquotes__WTblockquoteAlt from './typography/blockquotes__wt-blockquote-alt.md';
+import Blockquote from './typography/blockquote.md';
+import BlockquoteCard from './typography/blockquote-card.md';
 
 import Lists from './typography/lists.md';
 import Lists__Unstyled from './typography/lists__unstyled.md';
@@ -131,15 +130,8 @@ storiesOf('Typography/Inline text elements', module)
 // BLOCKQUOTES
 storiesOf('Typography/Blockquotes', module)
 
-// Overview
-.add('Overview', withCodePreview(Blockquotes, () =>
-  <blockquote className="blockquote">
-    <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-  </blockquote>
-))
-// WT blockquote
-.add('WT blockquote', withCodePreview(Blockquotes__WTblockquote, () =>
+// Blockquote
+.add('Blockquote', withCodePreview(Blockquote, () =>
     <div>
 
         <blockquote className="blockquote">
@@ -148,7 +140,7 @@ storiesOf('Typography/Blockquotes', module)
             In a decentralized travel distribution system, for example, there is no room for rent-seeking intermediaries, therefore the wealth they are currently hoarding will be distributed to the rest of the network, making travel cheaper for travelers and more profitable for travel companies.
             <i className="mdi mdi-36px mdi-format-quote-close"></i>
           </p>
-          <cite className="blockquote-footer">
+          <footer className="blockquote-footer">
             <div className="user">
               <svg className="user-img" xmlns="http://www.w3.org/2000/svg" width="108" height="120" viewBox="0 0 108 120">
                 <defs>
@@ -166,27 +158,74 @@ storiesOf('Typography/Blockquotes', module)
                 <p className="user-role">Founder, CEO</p>
               </div>
             </div>
-          </cite>
+          </footer>
         </blockquote>
 
+    <h6 className="mt-2 mb-1">Alternative Style</h6>
 
-    <h6 className="mb-1">Aligned Bloclquotes</h6>
+    <blockquote className="blockquote blockquote-alt">
+      <p className="blockquote-body">
+        "It's very exciting, but very early. It's a simpler and cheaper distribution chain that can challenge the booking giants"
+        <a href="http://nordic.businessinsider.com/a-norwegian-hotel-billionaire-wants-to-use-blockchain-to-cut-out-expedia--/">
+          Read full article
+        </a>
+      </p>
+      <footer className="blockquote-footer">
+        <div className="user user-sm">
+        <img className="user-img" src="http://windingtree.com/assets/img/in-the-press/quotes/avatars/lisa-farrar.jpg" width="60" height="60" alt="Lisa Farrar"/>
+          <div className="user-data">
+            <p className="user-name">Lisa Farrar</p>
+            <p className="user-role">Chief digital officer at Nordic Choice Hotels</p>
+          </div>
+        </div>
+      </footer>
+    </blockquote>
 
-    <p className="mb-2">If need to display <code>blockquotes</code> in a row, keeping the height and width consistent, combine with the <code>.card</code> class, and add
-    the <code>.card-deck</code> class on its container. And wrap the contents in a <code>.card-body</code>.
+  </div>
+  ))
+  // Blockquote (card)
+  .add('Blockquote (card)', withCodePreview(BlockquoteCard, () =>
+    <div className="card-deck justify-content-center">
 
-</p>
+      <blockquote className="blockquote card">
+        <div className="card-body">
+          <p className="blockquote-body">
+            <i className="mdi mdi-36px mdi-format-quote-open"></i>
+            In a decentralized travel distribution system, for example, there is no room for rent-seeking intermediaries, therefore the wealth they are currently hoarding will be distributed to the rest of the network, making travel cheaper for travelers and more profitable for travel companies.
+            <i className="mdi mdi-36px mdi-format-quote-close"></i>
+          </p>
+          <footer className="blockquote-footer">
+            <div className="user">
+              <svg className="user-img" xmlns="http://www.w3.org/2000/svg" width="108" height="120" viewBox="0 0 108 120">
+                <defs>
+                  <path d="M53.5135135,0 C51.5026531,0 49.0462292,0.612640549 46.7027027,1.93548387 L6.81081081,25.1612903 C2.70204694,27.2838443 0,31.9809136 0,36.7741935 L0,83.2258065 C0,87.9373729 2.70204694,92.6344421 6.81081081,94.8387097 L46.7027027,118.064516 C49.0462292,119.346494 51.5026531,120 53.5135135,120 C56.4564123,120 58.9127966,119.346494 61.2972973,118.064516 L101.189189,94.8387097 C105.257015,92.6344421 108,87.9373729 108,83.2258065 L108,36.7741935 C108,31.9809136 105.257015,27.2838443 101.189189,25.1612903 L61.2972973,1.93548387 C58.9127966,0.612640549 56.4564123,0 53.5135135,0 Z" id="path"></path>
+                </defs>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <mask id="mask" fill="white">
+                    <use xlinkHref="#path"></use>
+                  </mask>
+                  <image mask="url(#mask)" width="108" height="120" xlinkHref="http://windingtree.com/assets/img/team/max.jpg"></image>
+                </g>
+              </svg>
+              <div className="user-data">
+                <p className="user-name">Maksim Izmaylov</p>
+                <p className="user-role">Founder, CEO</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </blockquote>
 
-    <div className="card-deck">
+      <div class="w-100 d-block d-lg-none"></div>
 
-        <blockquote className="blockquote card">
-          <div className="card-body">
+      <blockquote className="blockquote card">
+        <div className="card-body">
             <p className="blockquote-body">
               <i className="mdi mdi-36px mdi-format-quote-open"></i>
-              In a decentralized travel distribution system, for example, there is no room for rent-seeking intermediaries, therefore the wealth they are currently hoarding will be distributed to the rest of the network, making travel cheaper for travelers and more profitable for travel companies.
+              The Internet is a decentralized ecosystem. Nevertheless, the platforms which are built on top of the Internet tend to monopolize it. Blockchain can help preserving Internet's decentralized nature. The Internet would not exist without open-source and still it is an uneasy task to find proper funding strategies to support open-source projects. Blockchain is bringing value directly attached to the code.
               <i className="mdi mdi-36px mdi-format-quote-close"></i>
             </p>
-            <cite className="blockquote-footer">
+            <footer className="blockquote-footer">
               <div className="user">
                 <svg className="user-img" xmlns="http://www.w3.org/2000/svg" width="108" height="120" viewBox="0 0 108 120">
                   <defs>
@@ -196,71 +235,19 @@ storiesOf('Typography/Blockquotes', module)
                     <mask id="mask" fill="white">
                       <use xlinkHref="#path"></use>
                     </mask>
-                    <image mask="url(#mask)" width="108" height="120" xlinkHref="http://windingtree.com/assets/img/team/max.jpg"></image>
+                    <image mask="url(#mask)" width="108" height="120" xlinkHref="http://windingtree.com/assets/img/team/jakub.jpg"></image>
                   </g>
                 </svg>
                 <div className="user-data">
-                  <p className="user-name">Maksim Izmaylov</p>
-                  <p className="user-role">Founder, CEO</p>
+                  <p className="user-name">Jakub Vysoky</p>
+                  <p className="user-role">Founder, CTO</p>
                 </div>
               </div>
-            </cite>
-          </div>
-        </blockquote>
-
-        <div class="w-100 d-block d-lg-none"></div>
-
-        <blockquote className="blockquote card">
-          <div className="card-body">
-              <p className="blockquote-body">
-                <i className="mdi mdi-36px mdi-format-quote-open"></i>
-                The Internet is a decentralized ecosystem. Nevertheless, the platforms which are built on top of the Internet tend to monopolize it. Blockchain can help preserving Internet's decentralized nature. The Internet would not exist without open-source and still it is an uneasy task to find proper funding strategies to support open-source projects. Blockchain is bringing value directly attached to the code.
-                <i className="mdi mdi-36px mdi-format-quote-close"></i>
-              </p>
-              <cite className="blockquote-footer">
-                <div className="user">
-                  <svg className="user-img" xmlns="http://www.w3.org/2000/svg" width="108" height="120" viewBox="0 0 108 120">
-                    <defs>
-                      <path d="M53.5135135,0 C51.5026531,0 49.0462292,0.612640549 46.7027027,1.93548387 L6.81081081,25.1612903 C2.70204694,27.2838443 0,31.9809136 0,36.7741935 L0,83.2258065 C0,87.9373729 2.70204694,92.6344421 6.81081081,94.8387097 L46.7027027,118.064516 C49.0462292,119.346494 51.5026531,120 53.5135135,120 C56.4564123,120 58.9127966,119.346494 61.2972973,118.064516 L101.189189,94.8387097 C105.257015,92.6344421 108,87.9373729 108,83.2258065 L108,36.7741935 C108,31.9809136 105.257015,27.2838443 101.189189,25.1612903 L61.2972973,1.93548387 C58.9127966,0.612640549 56.4564123,0 53.5135135,0 Z" id="path"></path>
-                    </defs>
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <mask id="mask" fill="white">
-                        <use xlinkHref="#path"></use>
-                      </mask>
-                      <image mask="url(#mask)" width="108" height="120" xlinkHref="http://windingtree.com/assets/img/team/jakub.jpg"></image>
-                    </g>
-                  </svg>
-                  <div className="user-data">
-                    <p className="user-name">Jakub Vysoky</p>
-                    <p className="user-role">Founder, CTO</p>
-                  </div>
-                </div>
-              </cite>
-          </div>
-        </blockquote>
-
-  </div>
-  </div>
-  ))
-  // WT blockquote (alternative)
-  .add('WT blockquote (alt)', withCodePreview(Blockquotes__WTblockquoteAlt, () =>
-    <blockquote className="blockquote blockquote-alt">
-      <p className="blockquote-body">
-        "It's very exciting, but very early. It's a simpler and cheaper distribution chain that can challenge the booking giants"
-        <a href="http://nordic.businessinsider.com/a-norwegian-hotel-billionaire-wants-to-use-blockchain-to-cut-out-expedia--/">
-          Read full article
-        </a>
-      </p>
-      <cite className="blockquote-footer">
-        <div className="user user-sm">
-        <img className="user-img" src="http://windingtree.com/assets/img/in-the-press/quotes/avatars/lisa-farrar.jpg" width="60" height="60" alt="Lisa Farrar"/>
-          <div className="user-data">
-            <p className="user-name">Lisa Farrar</p>
-            <p className="user-role">Chief digital officer at Nordic Choice Hotels</p>
-          </div>
+            </footer>
         </div>
-      </cite>
-    </blockquote>
+      </blockquote>
+
+    </div>
   ))
 
 

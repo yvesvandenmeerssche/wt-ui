@@ -1,8 +1,9 @@
 // BLOCKQUOTE - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
 .blockquote {
   padding-top: 0;
+
+  &.card {max-width: 50rem; }
 
   &, &.card {
     margin-bottom: ($spacer * 2);
@@ -25,7 +26,9 @@
 
   .blockquote-body {
     position: relative;
+    margin-bottom: 0;
     text-align: center;
+    font-size: $h3-font-size - 3; // UNDER REVIEW
 
     @include media-breakpoint-down('md') {
       margin-bottom: ($spacer * 2);
@@ -65,6 +68,7 @@
   .blockquote-footer {
     margin-bottom: ($spacer *2);
     text-align: center;
+    font-size: $font-size-base;
 
     @include media-breakpoint-up('md') {
       display: flex;
