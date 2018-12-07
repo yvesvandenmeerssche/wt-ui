@@ -76,42 +76,46 @@ storiesOf('Navigation', module)
   .add('Nav Pointers', withCodePreview(NavPointers, () =>
     <div>
       <ul className="nav nav-pointers" role="tablist">
-        <li className="nav-item col-4 col-md-3">
-          <a className="nav-link active" data-toggle="tab" href="#quote-1" role="tab" aria-selected="true">
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link active" data-toggle="tab" href="#demo-1" role="tab" aria-selected="true">
             <img src="https://windingtree.com/assets/img/in-the-press/quotes/businessinsider.png" alt="Business Insider"/>
           </a>
         </li>
-        <li className="nav-item col-4 col-md-3">
-          <a className="nav-link" data-toggle="tab" href="#quote-2" role="tab" aria-selected="false">
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link" data-toggle="tab" href="#demo-2" role="tab" aria-selected="false">
             <img src="https://windingtree.com/assets/img/in-the-press/quotes/Swissport.png" alt="Swissport"/>
           </a>
         </li>
-        <li className="nav-item col-4 col-md-3">
-          <a className="nav-link" data-toggle="tab" href="#quote-3" role="tab" aria-selected="false">
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link" data-toggle="tab" href="#demo-3" role="tab" aria-selected="false">
             <img src="https://windingtree.com/assets/img/in-the-press/quotes/coindesk.png" alt="Coindesk"/>
           </a>
         </li>
-        <li className="nav-item col-4 col-md-3">
-          <a className="nav-link" data-toggle="tab" href="#quote-4" role="tab" aria-selected="false">
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link" data-toggle="tab" href="#demo-4" role="tab" aria-selected="false">
             <img src="https://windingtree.com/assets/img/in-the-press/quotes/skift.svg" alt="Skift"/>
+          </a>
+        </li>
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link" data-toggle="tab" href="#demo-5" role="tab" aria-selected="false">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/businessinsider.png" alt="Business Insider"/>
+          </a>
+        </li>
+        <li className="nav-item col-6 col-sm-4 col-md-2">
+          <a className="nav-link" data-toggle="tab" href="#demo-6" role="tab" aria-selected="false">
+            <img src="https://windingtree.com/assets/img/in-the-press/quotes/Swissport.png" alt="Swissport"/>
           </a>
         </li>
       </ul>
 
       <div style={{ height: 0, overflow: 'hidden!important' }}>
         <div className="tab-content block-shadow px-2 py-3 bg-white">
-          <div className="tab-pane fade show active" id="quote-1" role="tabpanel">
-          </div>
-
-          <div className="tab-pane fade " id="quote-2" role="tabpanel">
-          </div>
-
-          <div className="tab-pane fade " id="quote-3" role="tabpanel">
-          </div>
-
-          <div className="tab-pane fade " id="quote-4" role="tabpanel">
-          </div>
-
+          <div className="tab-pane fade show active" id="quote-1" role="tabpanel"> </div>
+          <div className="tab-pane fade " id="quote-2" role="tabpanel"> </div>
+          <div className="tab-pane fade " id="quote-3" role="tabpanel"> </div>
+          <div className="tab-pane fade " id="quote-4" role="tabpanel"> </div>
+          <div className="tab-pane fade " id="quote-5" role="tabpanel"> </div>
+          <div className="tab-pane fade " id="quote-6" role="tabpanel"> </div>
         </div>
       </div>
     </div>

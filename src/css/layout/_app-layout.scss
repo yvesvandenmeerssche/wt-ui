@@ -1,9 +1,26 @@
 /* Layout: app-layout */
 
-
-.section-wrapper {
+.app-section {
+  position: relative;
   padding: ($spacer * 10) 0;
   @include media-breakpoint-down('sm') {
     padding: ($spacer * 5) ($spacer * 2);
+  }
+
+  .app-section-img {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    pointer-events: none;
+
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include media-breakpoint-down('sm') {
+      background-size: cover;
+    }
+
+
+    &+.container {position: relative; z-index: 10;}
   }
 }

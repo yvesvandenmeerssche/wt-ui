@@ -1,7 +1,7 @@
 /* Slick Carousel */
 
 // Devs Block
-.devs-block {
+.devs-marquee {
   pointer-events: none;
   height: 160px;
   opacity: 0;
@@ -50,7 +50,7 @@
 
 
 // Partners Block
-.partners-block {
+.partners-marquee {
   overflow: hidden;
   max-height: 80px;
   margin-bottom: ($spacer * 3);
