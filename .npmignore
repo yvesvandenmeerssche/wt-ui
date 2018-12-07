@@ -11,3 +11,4 @@ webpack
 .travis.yml
 .github
 .stylelintrc
+docs
