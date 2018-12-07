@@ -105,7 +105,7 @@ export function withVariableNavBar(WrappedComponent) {
 
       function navbarShow() {
         if (typeof(navbarBtn) != 'undefined' && navbarBtn != null) {
-          if (navbarNav.classList.contains("navbar-nav--animated-btn")) {
+          if (navbarNav.classList.contains("navbar-nav-animated-btn")) {
             if (window.matchMedia(MQ.up).matches) {
               navbarNav.setAttribute('style', 'transform: translateX(' + (navbarBtn.offsetWidth + 30) + 'px)');
             } else {
@@ -120,7 +120,7 @@ export function withVariableNavBar(WrappedComponent) {
       }
 
       function navbarToggle() {
-        if (navbar.classList.contains("navbar--toggle-bg")) {
+        if (navbar.classList.contains("navbar-toggle-bg")) {
           if (navbarToggler.getAttribute('aria-expanded') === 'false') {
             if (window.pageYOffset > navbar.offsetHeight) {
               navbar.classList.add('navbar-light');
@@ -156,7 +156,7 @@ export function withVariableNavBar(WrappedComponent) {
         const icon = toggleButton.querySelector('.mdi');
 
         if (toggleButton.getAttribute('aria-expanded') === 'false') {
-          if (navbar.classList.contains("navbar--toggle-bg")) {
+          if (navbar.classList.contains("navbar-toggle-bg")) {
             navbar.classList.add('navbar-light', 'bg-white');
             navbar.classList.remove('navbar-dark');
           }
@@ -165,7 +165,7 @@ export function withVariableNavBar(WrappedComponent) {
           icon.classList.add('mdi-close');
         } else {
           setTimeout(function() {
-            if (navbar.classList.contains("navbar--toggle-bg")) {
+            if (navbar.classList.contains("navbar-toggle-bg")) {
               if (document.documentElement.scrollTop <= navbar.offsetHeight) {
                 navbar.classList.add('navbar-dark');
                 navbar.classList.remove('navbar-light', 'bg-white');

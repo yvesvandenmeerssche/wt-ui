@@ -8,7 +8,7 @@ h3, .h3,
 h4, .h4,
 .lead {
   margin-bottom: ($spacer * 2);
-  &.title--display {
+  &.title-display {
     @extend .display-4;
   }
 }
@@ -49,42 +49,8 @@ a.text-alpha-inverse {
   &:hover {opacity: .7;}
 }
 
-
-// Blockquote
-.blockquote {
-  > p {
-    .mdi[class*="mdi-format-quote"] {
-      position: absolute;
-      color: $primary;
-      &.mdi-format-quote-open {
-        top: -36px;
-        left: 0;
-      }
-      &.mdi-format-quote-close {
-        bottom: -36px;
-        right: 0;
-      }
-    }
-  }
+// Del
+del {
+  opacity: .8;
+  text-decoration: line-through;
 }
-
-.blockquote-footer {
-  &::before { display: none; }
-  cite.media-body {font-style: normal;}
-}
-
-
-// Alternative blockquote
-.blockquote.blockquote--alt {
-  margin-bottom: 0;
-  a {
-    &:last-child {
-      margin-left: 1rem;
-      @include scale($small-font-size, up);
-    }
-  }
-  .media {
-    font-size: $font-size-base;
-  }
-}
-

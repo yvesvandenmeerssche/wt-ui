@@ -31,6 +31,35 @@
     font-size: 125%;
     line-height: 1.4;
   }
+
+
+  .app-section {
+    h2 {
+      @extend h2;
+      font-family: Raleway;
+      font-weight: 700;
+      border: 0;
+      line-height: 1.25;
+      padding: 0;
+    }
+    p {
+      @extend p;
+      &.lead {@extend .lead;}
+    }
+    .btn {@extend .btn;}
+    .btn-primary {
+      @extend .btn-primary;
+      &:hover {
+        @extend .btn-primary:hover;
+      }
+    }
+  }
+
+  .nav-pointers {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .doc-preview {
@@ -76,7 +105,7 @@
 
   &.doc-preview--layout {
     position: relative;
-    height: 400px;
+    min-height: 400px;
     padding: 0;
     margin-bottom: 0;
   }
@@ -129,3 +158,115 @@
 // FIX - TO REVIEW
 // Content in cads is not clickable on mobile
 .card-body, .card-footer {position: relative;}
+
+
+
+// REVIEW AND DISTRUBUTE IN THE APPROPIATED FILES
+// Hotel Explorer imported styles
+
+
+/* Map Container */
+.map-container {
+  margin: 0 auto;
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  &, > div {
+    height: 300px;
+  }
+
+  @media all and (min-width: 400px) {
+    &, > div {
+      width: 100%;
+    }
+  }
+}
+
+.map-popup {
+  text-align: center;
+  p {
+    margin: 3px 0!important;
+    font-size: 14px;
+  }
+}
+
+.leaflet-popup-content {
+  margin: 15px 8px;
+}
+
+
+// Button (img hover)
+.area-btn {
+  overflow:hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+
+  &:hover  {
+    cursor: pointer;
+    &::before {
+      background-color: rgba(95, 41, 135, .9);
+    }
+    .area-btn__btn {
+      display: flex;
+      align-items: center;
+      background: none;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+
+      i {width: 40px; margin: 0 auto;}
+    }
+
+  }
+}
+.area-btn__btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  background: #5F2987;
+}
+
+.area-btn::before {
+  content: '';
+  display:block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+/* Crop for card and carousel images */
+.img-crop {
+  overflow: hidden;
+
+  padding-bottom: 65%;
+  height: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  img {visibility: hidden;}
+}
+
+
+
+
+/* Masonry grid */
+.masonry-grid {
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.masonry-grid__col {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}

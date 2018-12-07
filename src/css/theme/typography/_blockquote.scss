@@ -1,0 +1,115 @@
+// BLOCKQUOTE - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.blockquote {
+  padding-top: 0;
+
+  @include media-breakpoint-up('lg') {
+    &.card {max-width: 50rem; }
+  }
+
+  &, &.card {
+    margin-bottom: ($spacer * 2);
+
+    @include media-breakpoint-up('lg') {
+      padding-top: ($spacer * 3);
+    }
+
+    &, & > .card-body {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      @include media-breakpoint-up('lg') {
+        flex-direction: column;
+      }
+
+    }
+  }
+
+  .blockquote-body {
+    position: relative;
+    margin-bottom: 0;
+    text-align: center;
+
+    font-size: $h3-font-size - 3; // UNDER REVIEW
+
+    @include media-breakpoint-down('md') {
+      margin-bottom: ($spacer * 2);
+      padding-left: ($spacer * 2);
+      padding-right: ($spacer * 2);
+      font-size: $fontSizeLg;
+    }
+    @include media-breakpoint-down('lg') {
+      padding-left: ($spacer * 3);
+      padding-right: ($spacer * 3);
+    }
+
+    // queote icons
+    .mdi[class*="mdi-format-quote"] {
+      position: absolute;
+      color: $primary;
+      &.mdi-format-quote-open {
+        top: -36px;
+        left: 0;
+      }
+      &.mdi-format-quote-close {
+        bottom: -36px;
+        right: 0;
+      }
+    }
+
+    a {
+      &:last-child {
+        font-size: $fontSizeSm;
+        margin-left: ($spacer);
+        border-bottom: 1px solid $gray-300;
+      }
+    }
+
+  }
+
+  .blockquote-footer {
+    margin-bottom: ($spacer *2);
+    text-align: center;
+    font-size: $font-size-base;
+
+    @include media-breakpoint-up('md') {
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      text-align: left;
+    }
+
+    @include media-breakpoint-up('lg') {
+      padding-top: ($spacer *2);
+      margin-bottom: 0;
+    }
+
+    // hides the hyphen
+    &::before { display: none; }
+  }
+
+}
+
+
+
+// Alternative blockquote
+.blockquote.blockquote-alt {
+
+    padding-top: 0;
+    flex-direction: column-reverse;
+
+    @include media-breakpoint-up('lg') {
+      align-items: start;
+    }
+
+  .blockquote-body {
+    padding: 0;
+    @include media-breakpoint-up('lg') {
+    padding-top: ($spacer);
+      text-align: left;
+    }
+  }
+
+}
+

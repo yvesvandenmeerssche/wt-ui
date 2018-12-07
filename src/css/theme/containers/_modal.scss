@@ -1,11 +1,18 @@
-.modal {
+/* MODALS */
 
+// Default modal
+.modal {
+  .modal-dialog {
+    animation: fade-in-move-down 0.7s;
+  }
   .modal-header {
     padding-bottom: 0;
   }
   .modal-body {
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    img {max-width: 100%;}
   }
   .modal-footer {
     padding-top: 0;
@@ -25,14 +32,149 @@
   }
 
 
+  // Image modal
+  &.modal-img {
+    .modal-content {
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background: none;
+      text-align: center;
+      pointer-events: none;
+      box-shadow: none;
+    }
+    .modal-body {
+      padding: 0;
+      img {
+        // box-shadow: $shadow;
+        filter: drop-shadow(10px 10px 10px rgba(0,0,0,.4));
+      }
+    }
+  }
 
 
+  &.modal-carousel {
+    padding: 0!important;
+
+    .modal-dialog {
+      max-width: none;
+      margin: 0;
+      border-radius: 0;
+
+      animation: none;
+
+      .modal-content,
+      .modal-body {
+        background: none;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+      }
+
+      .modal-content {
+
+        .modal-header {
+
+          border: none;
+
+          .close {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            font-size: 32px;
+            @media all and (max-height: 529px) {
+              padding: 10px;
+            }
+          }
+
+          .modal-title {
+            display: none;
+            font-weight: 600;
+            color: #fff;
+            @media all and (min-height: 991px), screen and (orientation: portrait) and (min-height: 480px) {
+              display: block;
+            }
+            @media all and (orientation: landscape) and (min-width: 480px) {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 100px;
+              text-align: center;
+            }
+            @media all and (min-width: 991px) {
+              bottom: 110px;
+            }
+          }
+        }
+
+        .modal-body {
+          margin-top: -30px;
+          padding: 0 20px;
+        }
+
+        .carousel {
+          width: 900px;
+
+          margin: 0 auto;
+
+          filter: none;
+        }
+        .carousel-inner {
+          overflow: visible;
+          animation: fade-in-move-down 0.7s;
+
+          .carousel-item {
+            height: 85vh;
+            min-height: 750px;
+            min-height: calc(100vh - 400px);
+
+            img {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              max-height: 100%;
+              max-width: 100%;
+              object-fit: contain;
+
+              filter: drop-shadow(7px 7px 10px rgba(0,0,0,.4));
+              // Replaces ↓ (not working well with object-fit)
+              // border: 15px solid #fff;
+              // box-shadow: 1px 5px 5px rgba(0,0,0,.2);
+            }
+          }
+        }
 
 
+        @media screen and (min-width: 1310px) {
+          .carousel-control-prev,
+          .carousel-control-next {
+            width: 200px;
+          }
+          .carousel-control-prev {left: -200px;}
+          .carousel-control-next {right: -200px;}
+        }
+
+        .carousel-indicators {
+          position: fixed;
+          bottom: 15px;
+          @media screen and (min-height: 480px) {
+            bottom: 80px;
+          }
+
+        }
+
+      }
+    }
+  }
 
 
-
-
+  // Video modal (TO REVIEW)
   &.modal-video {
     .close {
       position: fixed;
@@ -61,5 +203,24 @@
     .modal-body {
       padding: 0;
     }
+  }
+
+
+
+
+
+}
+
+
+
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

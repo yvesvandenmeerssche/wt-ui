@@ -101,7 +101,7 @@ export default class AppFooter extends Component {
             </div>
           </div>
 
-          <hr className="text-alpha"/>
+          <hr className="text-alpha my-0"/>
 
           <div className="py-1">
             <div className="d-flex flex-column-reverse flex-md-row align-items-center">

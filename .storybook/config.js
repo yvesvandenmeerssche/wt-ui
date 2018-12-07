@@ -29,7 +29,7 @@ function loadStories() {
   require('../src/stories/overview.stories.js');
   require('../src/stories/branding.stories.js');
   require('../src/stories/layout.stories.js');
-  require('../src/stories/content-blocks.stories.js');
+  require('../src/stories/preset-blocks.stories.js');
   require('../src/stories/typography.stories.js');
   require('../src/stories/images.stories.js');
   require('../src/stories/controls.stories.js');

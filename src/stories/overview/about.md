@@ -1,3 +1,3 @@
-# About the Winding Tree UI Kit
+# About the Winding Tree UI Framework
 
-Use this CSS framework to create apps that are visually aligned to the Winding Tree brand guidelines.
+<p class="lead">Use this framework to create apps that are visually aligned to the Winding Tree brand guidelines.</p>
