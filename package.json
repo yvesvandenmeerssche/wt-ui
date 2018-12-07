@@ -1,6 +1,6 @@
 {
   "name": "@windingtree/wt-ui",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Winding Tree's UI Components",
   "keywords": [
     "bootstrap",
@@ -13,7 +13,7 @@
   },
   "license": "Apache-2.0",
   "author": "Winding Tree",
-  "main": "index.js",
+  "main": "dist/styles.css",
   "scripts": {
     "npm-build": "npm run npm-clean && webpack --bail -p --config ./webpack/prod/webpack.prod.config.js",
     "npm-clean": "rm -rf dist && mkdir dist",
