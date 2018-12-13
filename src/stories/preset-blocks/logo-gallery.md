@@ -8,7 +8,7 @@ The component relays on two classes: `.logo-gallery` and `.logo-gallery-item`. T
 
 ```html
 <ul class="logo-gallery">
-  <li class="logo-galery-item">
+  <li class="logo-gallery-item">
     <a href="...">
       <img src="..." alt="..." title="..."/>
     </a>
@@ -18,7 +18,7 @@ The component relays on two classes: `.logo-gallery` and `.logo-gallery-item`. T
 
 <!-- No links -->
 <ul class="logo-gallery">
-  <li class="logo-galery-item">
+  <li class="logo-gallery-item">
     <a href="...">
       <img src="..." alt="..." title="..."/>
     </a>
@@ -28,7 +28,7 @@ The component relays on two classes: `.logo-gallery` and `.logo-gallery-item`. T
 
 <!-- No links, on gray -->
 <ul class="logo-gallery logo-gallery-muted">
-  <li class="logo-galery-item">
+  <li class="logo-gallery-item">
     <a href="...">
       <img src="..." alt="..." title="..."/>
     </a>

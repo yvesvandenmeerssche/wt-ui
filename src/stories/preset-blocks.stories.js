@@ -217,7 +217,7 @@ storiesOf('Preset Blocks', module)
       <ul className="logo-gallery">
         {gallery.data.items.map(item => {
           return (
-            <li className="logo-galery-item">
+            <li className="logo-gallery-item">
               <a href={item.url}>
                 <img src={item.img} alt={item.name} title={item.name}/>
               </a>
@@ -233,7 +233,7 @@ storiesOf('Preset Blocks', module)
           <ul className="logo-gallery">
             {gallery.data.items.map(item => {
               return (
-                <li className="logo-galery-item">
+                <li className="logo-gallery-item">
                   <img src={item.img} alt={item.name} title={item.name}/>
                 </li>
               )})}
@@ -247,7 +247,7 @@ storiesOf('Preset Blocks', module)
           <ul className="logo-gallery logo-gallery-muted">
             {gallery.data.items.map(item => {
               return (
-                <li className="logo-galery-item">
+                <li className="logo-gallery-item">
                   <img src={item.img} alt={item.name} title={item.name}/>
                 </li>
               )})}
