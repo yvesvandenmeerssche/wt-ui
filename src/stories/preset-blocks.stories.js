@@ -15,6 +15,7 @@ import Slider from "react-slick";
 // Readme files
 import DevsMarquee from './preset-blocks/devs-marquee.md';
 import PartnersMarquee from './preset-blocks/partners-marquee.md';
+import LogoGallery from './preset-blocks/logo-gallery.md';
 
 // COMPONENTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -76,6 +77,83 @@ const slider = {
 }
 
 
+const gallery = {
+  data: {
+    items: [
+        {
+          name: 'The Cointelegraph',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/Cointelegraph.png",
+          url: "https://cointelegraph.com/news/swiss-aviation-services-company-launches-blockchain-pilot-for-cargo-handling?utm_source=Telegram&amp;utm_medium=Social"
+        },
+        {
+          name: 'Cash',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/cash.png",
+          url: "https://www.cash.ch/news/boersenticker-firmen/swissport-lotet-moeglichkeiten-der-blockchain-technologie-aus-1177476"
+        },
+        {
+          name: 'Le Figaro',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/Le_Figaro.png",
+          url: "http://bourse.lefigaro.fr/indices-actions/actu-conseils/lufthansa-signe-un-partenariat-avec-la-start-up-suisse-winding-tree-6293447"
+        },
+        {
+          name: 'Reuters',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/reuters.png",
+          url: "https://www.reuters.com/article/us-blockchain-travel-airnewzealand/air-new-zealand-swiss-travel-platform-winding-tree-in-blockchain-tie-up-idUSKBN1DM2KQ?il=0"
+        },
+        {
+          name: 'Venture Beat',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/VentureBeat.png",
+          url: "https://venturebeat.com/2017/08/23/blockchain-startup-winding-tree-could-upend-the-travel-industry/"
+        },
+        {
+          name: 'Forbes',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/Forbes.png",
+          url: "https://www.forbes.com/sites/francistapon/2018/02/12/what-winding-trees-ico-and-its-blockchain-based-technology-mean-to-the-travel-industry/#9fd472244dcf"
+        },
+        {
+          name: 'Nasdaq',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/nasdaq.png",
+          url: "https://www.nasdaq.com/g00/article/what-might-lufthansas-adoption-of-the-blockchain-technology-mean-for-the-otas-cm859538?i10c.encReferrer=&amp;i10c.ua=1&amp;i10c.dv=14"
+        },
+        {
+          name: 'Tagesspiegel',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/spiegel.png",
+          url: "https://www.tagesspiegel.de/wirtschaft/airbnb-ohne-airbnb-wie-konzerne-die-blockchain-nutzen/20425860.html"
+        },
+        {
+          name: 'Cryptocoin News',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/ccn.png",
+          url: "https://www.ccn.com/lufthansa-partners-blockchain-startup-travel-apps-participates-ico/"
+        },
+        {
+          name: 'Tnooz',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/tnooz.png",
+          url: "https://www.tnooz.com/article/applications-of-blockchain-travel/"
+        },
+        {
+          name: 'The Next Web',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/tnw.svg",
+          url: "https://thenextweb.com/money/2017/09/08/1075124/"
+        },
+        {
+          name: 'Financial Times',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/financial-times.png",
+          url: "https://www.ft.com/content/06bb9a76-c7b7-11e8-ba8f-ee390057b8c9"
+        },
+        {
+          name: 'Yahoo! Finance',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/yahoofinance.png",
+          url: "https://finance.yahoo.com/news/world-fifth-largest-airline-firm-134000588.html"
+        },
+        {
+          name: 'Investing.com',
+          img: "https://windingtree.com/assets/img/in-the-press/mentions/investingcom.png",
+          url: "https://www.investing.com/news/cryptocurrency-news/leading-airline-consortium-air-franceklm-mulls-blockchain-solutions-1634081"
+        }
+    ]
+  }
+}
+
 // APP HEADER
 storiesOf('Preset Blocks', module)
 
@@ -130,4 +208,52 @@ storiesOf('Preset Blocks', module)
       </Slider>
     </div>
 
+  ))
+
+  // Logo Gallery
+  .add('Logo Gallery', withCodePreview(LogoGallery, () =>
+    <div>
+
+      <ul className="logo-gallery">
+        {gallery.data.items.map(item => {
+          return (
+            <li className="logo-gallery-item">
+              <a href={item.url}>
+                <img src={item.img} alt={item.name} title={item.name}/>
+              </a>
+            </li>
+          )})}
+      </ul>
+
+      <div className="row">
+        <div className="col-lg-6">
+          <h3 className="mt-4">Gallery without links</h3>
+          <p className="mb-2">Simply remove the links, the the logos will be shown on their original color.</p>
+
+          <ul className="logo-gallery">
+            {gallery.data.items.map(item => {
+              return (
+                <li className="logo-gallery-item">
+                  <img src={item.img} alt={item.name} title={item.name}/>
+                </li>
+              )})}
+          </ul>
+        </div>
+
+        <div className="col col-sm-6">
+         <h3 className="mt-4">Gallery without links and gray logos</h3>
+          <p className="mb-2">Use the <code>.logo-gallery-muted</code> modifier to turn the logos gray.</p>
+
+          <ul className="logo-gallery logo-gallery-muted">
+            {gallery.data.items.map(item => {
+              return (
+                <li className="logo-gallery-item">
+                  <img src={item.img} alt={item.name} title={item.name}/>
+                </li>
+              )})}
+          </ul>
+        </div>
+      </div>
+
+    </div>
   ))

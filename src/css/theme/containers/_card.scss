@@ -1,4 +1,5 @@
 .card {
+  margin-bottom: ($spacer * 2);
   box-shadow: $box-shadow;
 
   @at-root a#{&} {
@@ -48,9 +49,16 @@
   }
 }
 
+
 .card-header {
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  &.carousel {
+    min-width: 100%;
+    padding: 0;
+    filter: none;
+  }
 }
 
 .card-body {
@@ -72,6 +80,8 @@
 }
 
 .card-title {
+  @extend h4;
+  &.card-title-lg {@extend h3;}
   &:not(:last-child) {
     margin-bottom: $spacer;
   }
@@ -106,9 +116,26 @@
 }
 
 .card-text {
+  color: $text-muted;
   @include media-breakpoint-up('md') {
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 }
+
+
+.card-footer {background: none;}
+
+a.card .card-header,
+a.card .card-body {
+  color: $text-muted;
+}
+
+a.card {
+  .card-link {color: $link-color;}
+  &:hover .card-link {
+    color: $link-hover-color;
+  }
+
 }

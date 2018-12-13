@@ -25,7 +25,11 @@ The carousel is based on Slick, please reffer to [its website](http://kenwheeler
     ...
   </div>
 </div>
+```
 
+### Required Javascript
+
+```js
 <script type="text/javascript">
   window.addEventListener('load', function() {
     $('.js-partners-marquee').each(function(index) {
