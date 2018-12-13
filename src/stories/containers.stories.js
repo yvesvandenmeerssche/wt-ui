@@ -26,6 +26,9 @@ import Modal from './containers/modal.md';
 import ModalImage from './containers/modal-image.md';
 import ModalCarousel from './containers/modal-carousel.md';
 
+// Icon images
+import airplaneTicket from '@windingtree/wt-ui-assets/custom-icons/wt-icon--airplane-ticket.svg';
+
 
 function NavArrow(props) {
   const { className, style, onClick, dir } = props;
@@ -180,13 +183,106 @@ storiesOf('Containers', module)
   ))
   // Card
   .add('Card', withCodePreview(Card, () =>
-    <div className="card" style={{width: '18rem'}}>
-      <img className="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap"/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" className="btn btn-primary">Go somewhere</a>
+    <div>
+
+      <div className="row">
+
+        <div className="col-md-6 col-lg-3">
+          <div className="card">
+            <div class="card-header pb-0 d-none d-md-block text-center bg-white">
+              <i className="mdi mdi-lg mdi-github-circle"/>
+            </div>
+            <div className="card-body text-center">
+              <h3 className="card-title h3">Card title</h3>
+              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3">
+          <div className="card">
+            <div className="card-body text-center">
+              <h3 className="card-title card-title-lg">Support</h3>
+              <p className="card-text">Whether it's technology expertise or sponsorship - put your organization in the spotlight of the top industry innovators and travel startups.</p>
+            </div>
+            <div class="card-footer text-center">
+              <p className="py-1">Admission: Free 2 days</p>
+              <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3">
+          <div className="card">
+            <img className="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap"/>
+            <div className="card-body text-center">
+              <h3 className="card-title">Suppliers</h3>
+              <p className="card-text">New proffitable distribution channel.</p>
+              <a href="#" className="btn btn-primary">Learn more <span className="d-none">about Winding Tree suppliers</span></a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <h6 className="mt-2">Link-cards</h6>
+      <p className="mb-2">Turn cards into links by adding the <code>.card</code> class to the coninainer link, and replacce the inner link with a spann with class <code>.card-link</code>.</p>
+
+      <div className="row">
+        <div className="col-md-6 col-lg-3">
+          <a className="card" href="#">
+            <div class="card-header d-none d-md-block text-center">
+              <img src={airplaneTicket} width="80" alt="Card image cap"/>
+            </div>
+            <div className="card-body">
+              <h5 className="card-title">Suppliers</h5>
+              <p className="card-text">Suppliers can distribute inventory directly to points of sale, skipping costly intermediaries and bottlenecks to data.</p>
+              <span className="card-link">Load more</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    <h6 className="mt-2">Carousel-cards</h6>
+    <p className="mb-2">Is possible to add a carousel on top of the card, simple combine the <code>.card-deader</code> with the <code>.carousel</code> component.</p>
+
+    <div className="row">
+
+        <div className="col-md-6 col-lg-3">
+          <div className="card">
+
+              <div id="img-carousel" className="card-header carousel slide" data-ride="carousel" style={{maxWidth: 300}}>
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img className="d-block w-100" src="http://via.placeholder.com/300x180/9f09e0/ffffff" alt="First slide"/>
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src="http://via.placeholder.com/300x180/1ac592/ffffff" alt="Second slide"/>
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src="http://via.placeholder.com/300x180/0b8fdf/ffffff" alt="Third slide"/>
+                  </div>
+                </div>
+                <a className="carousel-control-prev" href="#img-carousel" role="button" data-slide="prev">
+                  <i className="mdi mdi-48px mdi-chevron-left" aria-hidden="true"/>
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a className="carousel-control-next" href="#img-carousel" role="button" data-slide="next">
+                  <i className="mdi mdi-48px mdi-chevron-right" aria-hidden="true"/>
+                  <span className="sr-only">Next</span>
+                </a>
+              </div>
+
+            <div className="card-body text-center">
+              <h3 className="card-title">Suppliers</h3>
+              <p className="card-text">New proffitable distribution channel.</p>
+              <a href="#" className="btn btn-primary">Learn more <span className="d-none">about Winding Tree suppliers</span></a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
     </div>
   ))
   // Collapse

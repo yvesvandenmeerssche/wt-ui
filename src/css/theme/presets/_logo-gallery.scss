@@ -1,0 +1,47 @@
+// LOGO GALLERY
+
+.logo-gallery {
+
+  @extend .row;
+  @extend .justify-content-md-center;
+  @extend .align-items-md-center;
+
+  padding-left: 0;
+  margin-bottom: ($spacer * 2);
+
+  & .logo-gallery-item {
+    @extend .col-md-auto;
+    list-style: none;
+    text-align: center;
+  }
+
+  & a {
+    display: inline-block;
+    width: 160px + ($spacer * 2);
+    max-width: 100%;
+  }
+
+  & img {
+    display: inline-block;
+    margin: ($spacer * 2) ($spacer);
+    max-width: 160px;
+    max-height: 80px;
+  }
+
+  & a img {
+    transition: all 0.2s ease-in-out;
+    will-change: filter;
+    filter: grayscale(100%)
+  }
+
+  & a:hover img {
+    filter: grayscale(0)
+  }
+
+  &.logo-gallery-muted img {
+    filter: grayscale(100%)
+  }
+
+
+}
+
